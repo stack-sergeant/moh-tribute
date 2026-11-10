@@ -1,0 +1,68 @@
+---
+import Base from "../../layouts/Base.astro";
+import { allBattles, eras } from "../../lib/records";
+
+const curated = allBattles.filter((battle) => battle.curated);
+const rest = allBattles.filter((battle) => !battle.curated);
+---
+<Base title="Battles and actions" description="Battle and action pages for Medal of Honor citations, including single-recipient actions.">
+  <p class="kicker">Actions</p>
+  <h1>Battles and actions</h1>
+  <p class="lede">
+    Curated pages gather recipients, a short factual summary, and links that were
+    checked. The remaining pages are grouped from the place named in the official citation.
+  </p>
+  <h2>Curated hubs</h2>
+  <ul class="hub-list">
+    {curated.map((hub) => (
+      <li>
+        <a href={`/battles/${hub.id}`}>{hub.title}</a>
+        <p class="meta">{hub.era} · {hub.dateLabel} · {hub.recipientIds.length} recipients</p>
+      </li>
+    ))}
+  </ul>
+  <form id="battle-filters" class="filters" role="search">
+    <label>
+      Find a place or name
+      <input id="bq" type="search" name="q" />
+    </label>
+    <label>
+      Era
+      <select id="bera" name="era">
+        <option value="">Any era</option>
+        {eras().map(([era]) => <option value={era}>{era}</option>)}
+      </select>
+    </label>
+  </form>
+  <p id="bcount" class="result-count" aria-live="polite"></p>
+  <ul id="battles" class="hub-list">
+    {rest.map((hub) => (
+      <li data-name={`${hub.title} ${hub.location ?? ""} ${hub.conflict}`.toLowerCase()} data-era={hub.era}>
+        <a href={`/battles/${hub.id}`}>{hub.title}</a>
+        <p class="meta">{hub.conflict} · {hub.dateLabel} · {hub.recipientIds.length} {hub.recipientIds.length === 1 ? "recipient" : "recipients"}</p>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<script>
+  const items = [...document.querySelectorAll("#battles li")];
+  const q = document.querySelector("#bq");
+  const era = document.querySelector("#bera");
+  const count = document.querySelector("#bcount");
+  function render() {
+    const query = q instanceof HTMLInputElement ? q.value.trim().toLowerCase() : "";
+    const wanted = era instanceof HTMLSelectElement ? era.value : "";
+    let shown = 0;
+    for (const item of items) {
+      const name = item.dataset.name ?? "";
+      const ok = (!query || name.includes(query)) && (!wanted || item.dataset.era === wanted);
+      item.hidden = !ok;
+      if (ok) shown += 1;
+    }
+    if (count) count.textContent = `${shown.toLocaleString()} action pages`;
+  }
+  render();
+  q?.addEventListener("input", render);
+  era?.addEventListener("change", render);
+</script>

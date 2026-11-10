@@ -1,0 +1,56 @@
+---
+import "@fontsource/source-sans-3/400.css";
+import "@fontsource/source-sans-3/600.css";
+import "@fontsource/source-serif-4/400.css";
+import "@fontsource/source-serif-4/600.css";
+import "../styles/global.css";
+import { disclaimer, site } from "../site";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = site.description } = Astro.props;
+const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <div>
+          <a class="wordmark" href="/">{site.name}</a>
+          <p class="tagline">{site.tagline}</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/recipients">Recipients</a>
+          <a href="/battles">Battles</a>
+          <a href="/on-this-day">On this day</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="content">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>{disclaimer}</p>
+        <p>
+          Official citations are U.S. government works. Photographs are shown only
+          when a public-domain or Creative Commons file could be matched, with the
+          license and credit on the page.
+          <a href="/about">Sources and photo rules</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

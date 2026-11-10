@@ -1,0 +1,51 @@
+---
+import Base from "../../layouts/Base.astro";
+import { allBattles, recipient, type Battle } from "../../lib/records";
+
+export function getStaticPaths() {
+  return allBattles.map((hub) => ({ params: { slug: hub.id }, props: { hub } }));
+}
+
+interface Props { hub: Battle }
+const { hub } = Astro.props;
+const people = hub.recipientIds.map((id) => recipient(id)).filter(Boolean);
+const kinds = ["article", "footage", "book", "film", "documentary"];
+---
+<Base title={hub.title} description={hub.summary}>
+  <p class="kicker">{hub.curated ? "Curated action" : "Action from the citation index"} · {hub.era}</p>
+  <h1>{hub.title}</h1>
+  <p class="meta">{[hub.dateLabel, hub.location, hub.conflict].filter(Boolean).join(" · ")}</p>
+  <p class="lede">{hub.summary}</p>
+
+  <h2>Recipients</h2>
+  <ul class="roster">
+    {people.map((person) => person && (
+      <li>
+        <a href={`/recipients/${person.id}`}>{person.name}</a>
+        <p class="meta">
+          {person.awards.filter((award) => award.battleId === hub.id).map((award) =>
+            [award.rank, award.branch, award.actionDateLabel].filter(Boolean).join(" · ")
+          ).join(" / ")}
+        </p>
+      </li>
+    ))}
+  </ul>
+
+  <h2>Checked links</h2>
+  {hub.media.length === 0 ? (
+    <p>No curated articles, footage, books, or films have been verified for this action yet.</p>
+  ) : (
+    <ul class="media-list">
+      {hub.media
+        .slice()
+        .sort((a, b) => kinds.indexOf(a.kind) - kinds.indexOf(b.kind))
+        .map((item) => (
+          <li>
+            <span class="kind">{item.kind}</span>
+            <a href={item.url}>{item.title}</a>
+            <p class="meta">{item.publisher}. {item.note}</p>
+          </li>
+        ))}
+    </ul>
+  )}
+</Base>

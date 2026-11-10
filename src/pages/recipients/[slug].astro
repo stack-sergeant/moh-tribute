@@ -1,0 +1,78 @@
+---
+import Base from "../../layouts/Base.astro";
+import { allRecipients, battle, type Recipient } from "../../lib/records";
+
+export function getStaticPaths() {
+  return allRecipients.map((person) => ({ params: { slug: person.id }, props: { person } }));
+}
+
+interface Props { person: Recipient }
+const { person } = Astro.props;
+const photo = person.photo;
+---
+<Base title={person.name} description={`Official Medal of Honor citation record for ${person.name}.`}>
+  <p class="kicker">Recipient</p>
+  <div class="profile">
+    {photo ? (
+      <figure class="portrait">
+        <img
+          src={photo.url}
+          alt={`Photograph associated with ${person.name}`}
+          width={photo.width ?? 800}
+          height={photo.height ?? 1000}
+        />
+        <figcaption>
+          {photo.license}. {photo.credit}
+          {" "}
+          <a href={photo.pageUrl}>Source file</a>
+          {photo.licenseUrl && <> · <a href={photo.licenseUrl}>License</a></>}
+        </figcaption>
+      </figure>
+    ) : (
+      <div class="nophoto">
+        <p>No verified public-domain photo is on file yet.</p>
+      </div>
+    )}
+    <div>
+      <h1>{person.name}</h1>
+      {person.awards.length > 1 && <p class="note">This person is recorded with {person.awards.length} Medals of Honor.</p>}
+      <dl class="facts">
+        {person.homeState && <><dt>Home state</dt><dd>{person.homeState}</dd></>}
+        {person.birth && <><dt>Birth, as recorded</dt><dd>{person.birth}</dd></>}
+      </dl>
+      {person.awards.map((award, index) => (
+        <section class="award">
+          <h2>{person.awards.length > 1 ? `Award ${index + 1}` : "The action"}</h2>
+          <dl class="facts">
+            {award.rank && <><dt>Rank</dt><dd>{award.rank}</dd></>}
+            <dt>Branch</dt><dd>{award.branch}</dd>
+            {award.unit && <><dt>Unit</dt><dd>{award.unit}</dd></>}
+            <dt>Conflict</dt><dd><a href={`/recipients?conflict=${encodeURIComponent(award.conflict)}`}>{award.conflict}</a></dd>
+            <dt>Era</dt><dd>{award.era}</dd>
+            <dt>Date</dt><dd>{award.actionDateLabel ?? "Not recorded in the citation entry"}</dd>
+            <dt>Place</dt><dd>{award.actionPlace ?? "Not recorded in the citation entry"}</dd>
+            <dt>Posthumous</dt>
+            <dd>{award.posthumous ? "The source entry marks this award as posthumous, or the citation states that the person was killed." : "No posthumous marker in the source entry."}</dd>
+            {award.issueDate && <><dt>Date of issue</dt><dd>{award.issueDate}</dd></>}
+            {award.battleId && battle(award.battleId) && (
+              <>
+                <dt>Action page</dt>
+                <dd><a href={`/battles/${award.battleId}`}>{battle(award.battleId)?.title}</a></dd>
+              </>
+            )}
+          </dl>
+          <h3>Official citation</h3>
+          <blockquote class="citation" cite={award.sourceUrl}>
+            <p>{award.citation}</p>
+          </blockquote>
+          <h3>Sources</h3>
+          <ul class="source-list">
+            <li><a href={award.sourceUrl}>{award.sourceLabel}</a></li>
+            {award.extraSources.map((url) => <li><a href={url}>{url}</a></li>)}
+            {person.wikipedia && <li><a href={person.wikipedia}>Wikipedia article</a>. Linked for background. Its text is not copied here.</li>}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,73 @@
+---
+import Base from "../layouts/Base.astro";
+import { allBattles, datasetStats, eras } from "../lib/records";
+import { site } from "../site";
+
+const curated = allBattles.filter((battle) => battle.curated);
+---
+<Base title={site.name}>
+  <p class="kicker">Every recorded era</p>
+  <h1>{site.name}</h1>
+  <p class="lede">
+    A public reading room for the Medal of Honor: one profile for each recorded
+    recipient, the official citation, a photograph only when a reusable one
+    could be verified, and a page for the action that citation names.
+  </p>
+  <form class="search-form" action="/recipients" method="get" role="search">
+    <label>
+      Search by name
+      <input type="search" name="q" placeholder="Example: Alonzo Cushing" />
+    </label>
+    <button type="submit">Search recipients</button>
+  </form>
+
+  <h2>By era</h2>
+  <p class="meta">
+    {datasetStats.people.toLocaleString()} people and {datasetStats.awards.toLocaleString()} awards
+    in this archive. Counts follow the source compilations, which are larger for the
+    Civil War than for later wars. Each era below is listed the same way.
+  </p>
+  <table class="era-table">
+    <caption class="sr-only">Recipients by era</caption>
+    <thead>
+      <tr><th scope="col">Era</th><th scope="col">Awards</th></tr>
+    </thead>
+    <tbody>
+      {eras().map(([era, count]) => (
+        <tr>
+          <td><a href={`/eras/${era.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>{era}</a></td>
+          <td>{count.toLocaleString()}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Battle and action pages</h2>
+  <p>
+    Curated hubs below span the Civil War, World War I, World War II, Korea,
+    Vietnam, Somalia, Afghanistan, and Iraq. Every other named place in the
+    citation index has its own page, including actions with a single recipient.
+  </p>
+  <ul class="hub-list">
+    {curated.map((hub) => (
+      <li>
+        <a href={`/battles/${hub.id}`}>{hub.title}</a>
+        <p class="meta">{hub.era} · {hub.dateLabel} · {hub.recipientIds.length} {hub.recipientIds.length === 1 ? "recipient" : "recipients"}</p>
+      </li>
+    ))}
+  </ul>
+  <p><a href="/battles">All battle and action pages</a></p>
+</Base>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>
