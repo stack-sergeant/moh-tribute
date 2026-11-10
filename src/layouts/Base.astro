@@ -5,6 +5,8 @@ import "@fontsource/source-sans-3/400.css";
 import "@fontsource/source-sans-3/600.css";
 import "@fontsource/source-serif-4/400.css";
 import "@fontsource/source-serif-4/600.css";
+import { ClientRouter } from "astro:transitions";
+import CadencePlayer from "../components/CadencePlayer.astro";
 import "../styles/global.css";
 import { disclaimer, site } from "../site";
 
@@ -24,6 +26,7 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <ClientRouter />
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
@@ -37,6 +40,7 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
           <a href="/recipients">Recipients</a>
           <a href="/battles">Battles</a>
           <a href="/on-this-day">On this day</a>
+          <a href="/audio">Cadences</a>
           <a href="/about">About</a>
         </nav>
       </div>
@@ -52,8 +56,11 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
           when a public-domain or Creative Commons file could be matched, with the
           license and credit on the page.
           <a href="/about">Sources and photo rules</a>.
+          Optional cadence audio is a separate public-domain recording and stays off until you press play.
+          <a href="/audio">Cadence credits</a>.
         </p>
       </div>
     </footer>
+    <CadencePlayer />
   </body>
 </html>
