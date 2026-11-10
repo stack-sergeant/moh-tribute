@@ -16,6 +16,7 @@ const entries = allRecipients.flatMap((person) =>
 );
 ---
 <Base title="On this day" description="Medal of Honor actions that occurred on this calendar day.">
+  <div class="wrap">
   <p class="kicker">Calendar</p>
   <h1>On this day</h1>
   <p class="lede" id="today-label">Actions whose recorded date matches the calendar day in your browser.</p>
@@ -24,6 +25,7 @@ const entries = allRecipients.flatMap((person) =>
     <input id="day" type="date" />
   </label>
   <ul id="day-list" class="roster"></ul>
+  </div>
 </Base>
 
 <script define:vars={{ entries }}>

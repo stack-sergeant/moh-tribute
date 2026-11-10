@@ -16,13 +16,12 @@ Search and filters cover name, conflict, branch, home state, and whether the sou
 
 | | |
 | --- | --- |
-| People | 3,497 |
-| Awards | 3,514 |
-| People with more than one award in this dataset | 17 |
-| Verified reusable photographs | 1,349 (38.6%) |
+| People | 3,503 |
+| Awards | 3,520 |
+| Verified reusable photographs | 1,353 (38.6%) |
 | Action pages | 1,626, of which 9 are curated |
 
-Public totals are usually given as more than 3,500 awards, and about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive is close to that range and is not a complete official roll. Gaps are listed on the About page: rescinded 1917 awards are omitted on purpose; some recent Navy and Marine Corps awards are not in the Army general orders used here; a few general-order PDFs did not extract into clean text; and some citation-index entries could not be parsed.
+Public totals are usually given as more than 3,500 awards, and about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive is close to that range and is not a complete official roll. Gaps are listed on the About page. Rescinded 1917 awards are omitted on purpose. James Capers Jr., John W. Ripley, Elmer Royce Williams, and Nicholas Dockery were added from Army, Navy, and DVIDS releases. The Unknown Americans of World War II and Korea come from the Army special-legislation page. Williams’s entry uses the Navy’s published account of the action because that release does not print a separate full citation.
 
 Curated hubs and the number of recipients matched from the citation text:
 

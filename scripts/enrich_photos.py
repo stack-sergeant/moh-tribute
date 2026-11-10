@@ -109,10 +109,13 @@ def license_ok(meta: dict) -> tuple[bool, str, str]:
 
     name = value("LicenseShortName")
     terms = value("UsageTerms")
-    blob = f"{name} {terms}".lower()
-    if any(bad in blob for bad in ("noncommercial", "non-commercial", "fair use", "all rights reserved")):
+    blob = f"{name} {terms}".lower().replace("-", " ").replace("–", " ")
+    if any(bad in blob for bad in ("noncommercial", "non commercial", "fair use", "all rights reserved")):
         return False, name, terms
-    if not any(good in blob for good in ("public domain", "cc0", "cc by", "creative commons", "no restrictions", "pd-")):
+    if not any(
+        good in blob
+        for good in ("public domain", "cc0", "cc by", "creative commons", "no restrictions", "pd ", "attribution")
+    ):
         return False, name, terms
     return True, name or terms, value("LicenseUrl")
 

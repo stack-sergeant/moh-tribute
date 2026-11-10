@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import { allRecipients, branches, conflicts, states } from "../../lib/records";
 ---
 <Base title="Recipients" description="Search Medal of Honor recipients by name, conflict, branch, home state, and posthumous status.">
+  <div class="wrap">
   <p class="kicker">Directory</p>
   <h1>Recipients</h1>
   <p class="lede">
@@ -73,6 +74,7 @@ import { allRecipients, branches, conflicts, states } from "../../lib/records";
     <button type="button" id="prev">Previous</button>
     <span id="page-label"></span>
     <button type="button" id="next">Next</button>
+  </div>
   </div>
 </Base>
 

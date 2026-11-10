@@ -17542,6 +17542,45 @@
     "wikidataId": null
   },
   {
+    "id": "james-capers-jr",
+    "name": "James Capers Jr.",
+    "nameSort": "Capers, James Jr.",
+    "last": "Capers",
+    "first": "James",
+    "homeState": "South Carolina",
+    "birth": "Bishopville, South Carolina",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "james-capers-jr-1967-phu-loc",
+        "rank": "Second Lieutenant",
+        "unit": "3d Force Reconnaissance Company, 3d Reconnaissance Battalion",
+        "branch": "U.S. Marine Corps",
+        "conflict": "Vietnam War",
+        "era": "Vietnam War",
+        "actionPlace": "near Phu Loc, Republic of Vietnam",
+        "actionDate": "1967-03-31",
+        "actionDateEnd": "1967-04-03",
+        "actionDateLabel": "31 March–3 April 1967",
+        "actionYear": 1967,
+        "posthumous": false,
+        "citation": "Then-2nd Lt. James Capers, Jr. will receive the Medal of Honor for acts of gallantry and intrepidity above and beyond the call of duty as a team leader with 3d Force Reconnaissance Company, 3d Reconnaissance Battalion in the Republic of Vietnam from March 31 to April 3, 1967. During a four-day reconnaissance patrol, he and his team were tasked with locating a North Vietnamese regimental base camp. Despite making contact with a numerically superior enemy force on three separate occasions, he tenaciously continued the mission. He successfully directed fire onto an enemy base camp, thwarting an impending attack on a nearby Marine battalion. On the final day, his patrol was ambushed by a claymore mine and came under a dense barrage of enemy fire, where he sustained multiple severe wounds. Ignoring his injuries and extreme blood loss, he continued to lead his team, coordinate supporting fire, and direct their movement to an extraction site. Refusing to be evacuated before all his men were safe, he ensured the entire team was extracted before finally boarding the helicopter.",
+        "issueDate": "18 June 2026",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/article/293359/president_trump_to_award_medal_of_honor",
+        "sourceLabel": "The White House, published by the U.S. Army, 18 June 2026",
+        "extraSources": [
+          "https://www.dvidshub.net/news/568137/two-marine-corps-legends-awarded-medal-honor-inducted-into-hall-heroes"
+        ],
+        "nameNotes": [],
+        "battleId": "vietnam-war-near-phu-loc-republic-of-vietnam"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "vincent-r-capodanno",
     "name": "Vincent R. Capodanno",
     "nameSort": "Capodanno, Vincent R.",
@@ -31445,6 +31484,55 @@
     "wikidataId": "Q7609509"
   },
   {
+    "id": "nicholas-dockery",
+    "name": "Nicholas Dockery",
+    "nameSort": "Dockery, Nicholas",
+    "last": "Dockery",
+    "first": "Nicholas",
+    "homeState": "Indiana",
+    "birth": "Indianapolis, Indiana",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "nicholas-dockery-2012-kapisa",
+        "rank": "Second Lieutenant",
+        "unit": "Company C, 2nd Battalion, 12th Infantry Regiment, 4th Brigade, 4th Infantry Division",
+        "branch": "U.S. Army",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Kapisa Province, Afghanistan",
+        "actionDate": "2012-10-02",
+        "actionDateEnd": "2012-10-02",
+        "actionDateLabel": "2 October 2012",
+        "actionYear": 2012,
+        "posthumous": false,
+        "citation": "Then-2nd Lt. Nicholas Dockery will receive the Medal of Honor for acts of gallantry and intrepidity above and beyond the call of duty on Oct. 2, 2012, while serving as a platoon leader with 2nd Battalion, 12th Infantry Regiment, 4th Brigade, 4th Infantry Division in Kapisa Province, Afghanistan. On this day, a large and well-armed Taliban force ambushed 2nd Lt. Dockery's platoon. Over the course of four hours, he fought and maintained contact with the enemy in extremely restricted urban terrain, personally risking his life on numerous occasions to protect and evacuate three wounded members of his platoon. After consolidation and reorganization, he directed rotary wing aircraft in the defense against subsequent enemy counter-attacks from an exposed rooftop while his unit evacuated the wounded soldiers.",
+        "issueDate": "18 June 2026",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/article/293359/president_trump_to_award_medal_of_honor",
+        "sourceLabel": "The White House, published by the U.S. Army, 18 June 2026",
+        "extraSources": [
+          "https://www.army.mil/medalofhonor/dockery/"
+        ],
+        "nameNotes": [
+          "The Army feature page publishes the action narrative. A separate general order was not on the Army Publishing Directorate list when this record was compiled."
+        ],
+        "battleId": "war-in-afghanistan-kapisa-province-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Official_portrait_of_Retired_U.S._Army_Maj._Nicholas_Dockery.jpg/960px-Official_portrait_of_Retired_U.S._Army_Maj._Nicholas_Dockery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Retired_U.S._Army_Maj._Nicholas_Dockery.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "William Pratt",
+      "width": 800,
+      "height": 1000
+    },
+    "wikipedia": "https://en.wikipedia.org/wiki/Nicholas_Dockery",
+    "wikidataId": "Q140287704"
+  },
+  {
     "id": "warren-c-dockum",
     "name": "Warren C. Dockum",
     "nameSort": "Dockum, Warren C.",
@@ -31715,7 +31803,15 @@
         "battleId": "vietnam-war-republic-of-vietnam"
       }
     ],
-    "photo": null,
+    "photo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/David_Dolby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:David_Dolby.jpg",
+      "license": "Attribution",
+      "licenseUrl": null,
+      "credit": "HomeOfHeroes.com",
+      "width": 800,
+      "height": 1064
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/David_C._Dolby",
     "wikidataId": "Q5232006"
   },
@@ -40381,7 +40477,15 @@
         "battleId": "vietnam-war-quang-tri-province-republic-of-vietnam"
       }
     ],
-    "photo": null,
+    "photo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Col_Wesley_L_Fox.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Col_Wesley_L_Fox.jpg",
+      "license": "Attribution",
+      "licenseUrl": null,
+      "credit": "Vt-aoe at en.wikipedia",
+      "width": 800,
+      "height": 1054
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Wesley_L._Fox",
     "wikidataId": "Q7983951"
   },
@@ -104667,6 +104771,53 @@
     "wikidataId": null
   },
   {
+    "id": "john-w-ripley",
+    "name": "John W. Ripley",
+    "nameSort": "Ripley, John W.",
+    "last": "Ripley",
+    "first": "John",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "john-w-ripley-1972-dong-ha",
+        "rank": "Captain",
+        "unit": "Senior Marine advisor, 3d Vietnamese Marine Corps Infantry Battalion",
+        "branch": "U.S. Marine Corps",
+        "conflict": "Vietnam War",
+        "era": "Vietnam War",
+        "actionPlace": "Dong Ha, Republic of Vietnam",
+        "actionDate": "1972-04-02",
+        "actionDateEnd": "1972-04-02",
+        "actionDateLabel": "2 April 1972",
+        "actionYear": 1972,
+        "posthumous": true,
+        "citation": "Then-Capt. John W. Ripley will receive the Medal of Honor posthumously for acts of gallantry and intrepidity above and beyond the call of duty on April 2, 1972, while serving as senior marine advisor to the Third Vietnamese Marine Corps Infantry Battalion in the Republic of Vietnam. While serving in this capacity, he played a pivotal role in halting a major North Vietnamese mechanized assault. The enemy's rapid advance depended on the capture of a bridge in the village of Dong Ha. To destroy the bridge, Capt. Ripley single-handedly moved 500 pounds of explosives into position. For three hours, he repeatedly exposed himself to intense enemy fire as he climbed beneath the bridge along its steel beams to emplace the explosive charges at key structural points. After successfully setting the explosives, he detonated the charges, completely destroying the bridge and stopping the enemy's advance.",
+        "issueDate": "18 June 2026",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/article/293359/president_trump_to_award_medal_of_honor",
+        "sourceLabel": "The White House, published by the U.S. Army, 18 June 2026",
+        "extraSources": [
+          "https://www.dvidshub.net/news/568137/two-marine-corps-legends-awarded-medal-honor-inducted-into-hall-heroes"
+        ],
+        "nameNotes": [],
+        "battleId": "vietnam-war-dong-ha-republic-of-vietnam"
+      }
+    ],
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Col_John_W._Ripley.jpg/960px-Col_John_W._Ripley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Col_John_W._Ripley.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "USMC",
+      "width": 800,
+      "height": 998
+    },
+    "wikipedia": "https://en.wikipedia.org/wiki/John_Ripley_(USMC)",
+    "wikidataId": "Q6254978"
+  },
+  {
     "id": "william-y-w-ripley",
     "name": "William Y. W. Ripley",
     "nameSort": "Ripley, William Y. W.",
@@ -128106,6 +128257,80 @@
     "wikidataId": "Q5545392"
   },
   {
+    "id": "the-unknown-american-of-the-korean-war",
+    "name": "The Unknown American of the Korean War",
+    "nameSort": "Unknown, Korean War",
+    "last": "Unknown",
+    "first": "Korean War",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-american-korean-war",
+        "rank": null,
+        "unit": null,
+        "branch": "U.S. Armed Forces",
+        "conflict": "Korean War",
+        "era": "Korean War",
+        "actionPlace": "Overseas; buried at Arlington National Cemetery",
+        "actionDate": null,
+        "actionDateEnd": null,
+        "actionDateLabel": "Korean conflict",
+        "actionYear": 1957,
+        "posthumous": true,
+        "citation": "An Act to authorize the President to award the Medal of Honor to the unknown American who lost his life while serving overseas in the Armed Forces of the United States during the Korean conflict. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, That the President is hereby authorized and directed to award, in the name of the Congress, a Medal of Honor to the unknown American who lost his life while serving overseas in the Armed Forces of the United States during the Korean conflict, and who will lie buried in the Memorial Amphitheater of the National Cemetery at Arlington, Virginia, as authorized by the Act of August 3, 1956, Public Law 975, Eighty-fourth Congress. Approved August 31, 1957. Public Law 85-251.",
+        "issueDate": "31 August 1957",
+        "generalOrder": "Public Law 85-251",
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [],
+        "nameNotes": [],
+        "battleId": "korean-war-overseas-buried-at-arlington-national-cemetery"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "the-unknown-american-of-world-war-ii",
+    "name": "The Unknown American of World War II",
+    "nameSort": "Unknown, World War II",
+    "last": "Unknown",
+    "first": "World War II",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-american-world-war-ii",
+        "rank": null,
+        "unit": null,
+        "branch": "U.S. Armed Forces",
+        "conflict": "World War II",
+        "era": "World War II",
+        "actionPlace": "Overseas; buried at Arlington National Cemetery",
+        "actionDate": null,
+        "actionDateEnd": null,
+        "actionDateLabel": "Second World War",
+        "actionYear": 1948,
+        "posthumous": true,
+        "citation": "An Act to authorize the President to award the Medal of Honor to the unknown American who lost his life while serving overseas in the armed forces of the United States during the Second World War. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, That the President is hereby authorized and directed to award, in the name of Congress, a Medal of Honor to the unknown American who lost his life while serving overseas in the armed forces of the United States during the Second World War, and who will lie buried in the Memorial Amphitheater of the National Cemetery at Arlington, Virginia, as authorized by the Act of June 24, 1946, Public Law 429, Seventy-ninth Congress. Approved March 9, 1948. Public Law 438, 80th Congress.",
+        "issueDate": "9 March 1948",
+        "generalOrder": "Public Law 438, 80th Congress",
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [],
+        "nameNotes": [],
+        "battleId": "world-war-ii-overseas-buried-at-arlington-national-cemetery"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "oscar-j-upham",
     "name": "Oscar J. Upham",
     "nameSort": "Upham, Oscar J.",
@@ -136062,6 +136287,43 @@
     },
     "wikipedia": "https://en.wikipedia.org/wiki/Dewayne_T._Williams",
     "wikidataId": "Q5268116"
+  },
+  {
+    "id": "elmer-royce-williams",
+    "name": "Elmer Royce Williams",
+    "nameSort": "Williams, Elmer Royce",
+    "last": "Williams",
+    "first": "Elmer",
+    "homeState": "South Dakota",
+    "birth": "Wilmot, South Dakota",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "elmer-royce-williams-1952-korea",
+        "rank": "Lieutenant",
+        "unit": "Fighter Squadron 781, USS Oriskany",
+        "branch": "U.S. Navy",
+        "conflict": "Korean War",
+        "era": "Korean War",
+        "actionPlace": "skies over North Korea, from USS Oriskany",
+        "actionDate": "1952-11-18",
+        "actionDateEnd": "1952-11-18",
+        "actionDateLabel": "18 November 1952",
+        "actionYear": 1952,
+        "posthumous": false,
+        "citation": "Secretary of the Navy John Phelan, at the Hall of Heroes induction on 25 February 2026, described the action in these words: “On November 18, 1952, flying from USS Oriskany and outnumbered in the skies over North Korea, he chose to engage to protect the ships of Task Force 77 and the Sailors aboard them. In a 35-minute dogfight, he shot down three MiG-15s and severely damaged a fourth one. For decades, much of this story remained classified, but the facts never changed. His courage, airmanship, and devotion to duty saved lives and upheld the highest traditions of the Naval Service.” The Navy news release does not print a separate full citation.",
+        "issueDate": "24 February 2026",
+        "generalOrder": null,
+        "sourceUrl": "https://www.navy.mil/Press-Office/News-Stories/display-news/Article/4414311/secretary-of-war-inducts-naval-aviator-and-medal-of-honor-recipient-into-the-pe/",
+        "sourceLabel": "U.S. Navy, Hall of Heroes induction account, 25 February 2026",
+        "extraSources": [],
+        "nameNotes": [],
+        "battleId": "korean-war-skies-over-north-korea-from-uss-oriskany"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
   },
   {
     "id": "elwood-n-williams",

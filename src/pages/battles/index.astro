@@ -6,6 +6,7 @@ const curated = allBattles.filter((battle) => battle.curated);
 const rest = allBattles.filter((battle) => !battle.curated);
 ---
 <Base title="Battles and actions" description="Battle and action pages for Medal of Honor citations, including single-recipient actions.">
+  <div class="wrap">
   <p class="kicker">Actions</p>
   <h1>Battles and actions</h1>
   <p class="lede">
@@ -43,6 +44,7 @@ const rest = allBattles.filter((battle) => !battle.curated);
       </li>
     ))}
   </ul>
+  </div>
 </Base>
 
 <script>

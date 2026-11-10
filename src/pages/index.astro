@@ -1,73 +1,130 @@
 ---
 import Base from "../layouts/Base.astro";
-import { allBattles, datasetStats, eras } from "../lib/records";
+import { eraScenes, heroScene } from "../lib/imagery";
+import { actLine, datasetStats, eraSlug, featuredPool, storyLabel } from "../lib/records";
 import { site } from "../site";
 
-const curated = allBattles.filter((battle) => battle.curated);
+const conflictCount = Object.keys(datasetStats.byConflict).length;
+const pool = featuredPool().map((person) => {
+  const award = person.awards[0];
+  return {
+    id: person.id,
+    name: person.name,
+    rank: award.rank,
+    branch: award.branch,
+    conflict: award.conflict,
+    line: actLine(award.citation),
+    photo: person.photo?.url ?? "",
+    label: storyLabel(person.name),
+  };
+});
+const first = pool[0];
 ---
-<Base title={site.name}>
-  <p class="kicker">Every recorded era</p>
-  <h1>{site.name}</h1>
-  <p class="lede">
-    A public reading room for the Medal of Honor: one profile for each recorded
-    recipient, the official citation, a photograph only when a reusable one
-    could be verified, and a page for the action that citation names.
-  </p>
-  <form class="search-form" action="/recipients" method="get" role="search">
-    <label>
-      Search by name
-      <input type="search" name="q" placeholder="Example: Alonzo Cushing" />
-    </label>
-    <button type="submit">Search recipients</button>
-  </form>
+<Base title={site.name} overlay>
+  <section class="hero">
+    <img class="hero-photo" src={heroScene.url} alt={heroScene.alt} />
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="kicker">Unofficial archive · Every recorded recipient</p>
+      <h1>Above<br /><span>and beyond</span></h1>
+      <blockquote>
+        <p>“This medal does not belong to me. It belongs to the exceptional men who fought with me.”</p>
+        <footer>
+          James Capers Jr., Medal of Honor recipient, June 2026.
+          Published by the U.S. Marine Corps on DVIDS.
+        </footer>
+      </blockquote>
+      <div class="hero-actions">
+        <a class="btn" href="/recipients">Find a recipient</a>
+        <a class="btn ghost" href="#featured">Today’s hero</a>
+      </div>
+      <p class="hero-credit">
+        {heroScene.credit}. {heroScene.license}.
+        <a href={heroScene.sourceUrl}>Photograph source</a>.
+      </p>
+    </div>
+  </section>
 
-  <h2>By era</h2>
-  <p class="meta">
-    {datasetStats.people.toLocaleString()} people and {datasetStats.awards.toLocaleString()} awards
-    in this archive. Counts follow the source compilations, which are larger for the
-    Civil War than for later wars. Each era below is listed the same way.
-  </p>
-  <table class="era-table">
-    <caption class="sr-only">Recipients by era</caption>
-    <thead>
-      <tr><th scope="col">Era</th><th scope="col">Awards</th></tr>
-    </thead>
-    <tbody>
-      {eras().map(([era, count]) => (
-        <tr>
-          <td><a href={`/eras/${era.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>{era}</a></td>
-          <td>{count.toLocaleString()}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+  <section class="stat-row" aria-label="Archive totals">
+    <div class="stat">
+      <strong>{datasetStats.people.toLocaleString()}</strong>
+      <span>Recipients</span>
+    </div>
+    <div class="stat">
+      <strong>{conflictCount}</strong>
+      <span>Conflicts in the record</span>
+    </div>
+    <div class="stat">
+      <strong>{datasetStats.posthumousAwards.toLocaleString()}</strong>
+      <span>Marked as posthumous</span>
+    </div>
+  </section>
 
-  <h2>Battle and action pages</h2>
-  <p>
-    Curated hubs below span the Civil War, World War I, World War II, Korea,
-    Vietnam, Somalia, Afghanistan, and Iraq. Every other named place in the
-    citation index has its own page, including actions with a single recipient.
-  </p>
-  <ul class="hub-list">
-    {curated.map((hub) => (
-      <li>
-        <a href={`/battles/${hub.id}`}>{hub.title}</a>
-        <p class="meta">{hub.era} · {hub.dateLabel} · {hub.recipientIds.length} {hub.recipientIds.length === 1 ? "recipient" : "recipients"}</p>
-      </li>
-    ))}
-  </ul>
-  <p><a href="/battles">All battle and action pages</a></p>
+  <section class="spotlight" id="featured" aria-labelledby="featured-heading">
+    {first?.photo ? (
+      <img id="featured-photo" src={first.photo} alt="" />
+    ) : (
+      <div class="nophoto"><p>No verified public-domain photo is on file yet.</p></div>
+    )}
+    <div class="spotlight-copy">
+      <p class="kicker">Featured hero</p>
+      <h2 id="featured-heading">{first?.name}</h2>
+      <p class="rank-line" id="featured-rank">{[first?.rank, first?.branch, first?.conflict].filter(Boolean).join(" · ")}</p>
+      <p id="featured-line">{first?.line}</p>
+      <p><a class="btn" id="featured-link" href={first ? `/recipients/${first.id}` : "/recipients"}>{first?.label ?? "Read his story"}</a></p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <h2>From the Civil War to the war on terror</h2>
+    <p class="lede">The same standard, every war. Open an era.</p>
+  </div>
+  <div class="era-grid">
+    {eraScenes.map((item) => {
+      const count = datasetStats.byEra[item.era as keyof typeof datasetStats.byEra] ?? 0;
+      return (
+        <a class="era-tile" href={`/eras/${eraSlug(item.era)}`}>
+          <img src={item.scene.url} alt={item.scene.alt} />
+          <div>
+            <h3>{item.title}</h3>
+            <p>{count.toLocaleString()} awards</p>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+  <div class="wrap">
+    <p class="credit-line">
+      Era photographs are U.S. government works or Creative Commons files.
+      Credits are on each image’s Wikimedia page, linked from the battle hubs that use them.
+    </p>
+    <p><a href="/battles">All battle and action pages</a></p>
+  </div>
 </Base>
 
-<style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+<script define:vars={{ pool }}>
+  const photo = document.querySelector("#featured-photo");
+  const heading = document.querySelector("#featured-heading");
+  const rank = document.querySelector("#featured-rank");
+  const line = document.querySelector("#featured-line");
+  const link = document.querySelector("#featured-link");
+  if (!pool.length || !heading || !link) {
+    /* keep the server-rendered hero */
+  } else {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const day = Math.floor((now.getTime() - start.getTime()) / 86400000);
+    const pick = pool[(day + now.getFullYear()) % pool.length];
+    if (photo instanceof HTMLImageElement && pick.photo) {
+      photo.src = pick.photo;
+      photo.alt = `Photograph associated with ${pick.name}`;
+    }
+    heading.textContent = pick.name;
+    if (rank) rank.textContent = [pick.rank, pick.branch, pick.conflict].filter(Boolean).join(" · ");
+    if (line) line.textContent = pick.line;
+    if (link instanceof HTMLAnchorElement) {
+      link.href = `/recipients/${pick.id}`;
+      link.textContent = pick.label;
+    }
   }
-</style>
+</script>

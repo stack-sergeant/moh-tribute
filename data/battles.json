@@ -24921,5 +24921,89 @@
     "recipientIds": [
       "matt-urban"
     ]
+  },
+  {
+    "id": "vietnam-war-near-phu-loc-republic-of-vietnam",
+    "title": "near Phu Loc, Republic of Vietnam",
+    "conflict": "Vietnam War",
+    "era": "Vietnam War",
+    "dateLabel": "1967",
+    "location": "near Phu Loc, Republic of Vietnam",
+    "summary": "1 recipient in the Vietnam War have an official citation entry placing the action at near Phu Loc, Republic of Vietnam. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "james-capers-jr"
+    ]
+  },
+  {
+    "id": "vietnam-war-dong-ha-republic-of-vietnam",
+    "title": "Dong Ha, Republic of Vietnam",
+    "conflict": "Vietnam War",
+    "era": "Vietnam War",
+    "dateLabel": "1972",
+    "location": "Dong Ha, Republic of Vietnam",
+    "summary": "1 recipient in the Vietnam War have an official citation entry placing the action at Dong Ha, Republic of Vietnam. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "john-w-ripley"
+    ]
+  },
+  {
+    "id": "war-in-afghanistan-kapisa-province-afghanistan",
+    "title": "Kapisa Province, Afghanistan",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "2012",
+    "location": "Kapisa Province, Afghanistan",
+    "summary": "1 recipient in the War in Afghanistan have an official citation entry placing the action at Kapisa Province, Afghanistan. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "nicholas-dockery"
+    ]
+  },
+  {
+    "id": "korean-war-skies-over-north-korea-from-uss-oriskany",
+    "title": "skies over North Korea, from USS Oriskany",
+    "conflict": "Korean War",
+    "era": "Korean War",
+    "dateLabel": "1952",
+    "location": "skies over North Korea, from USS Oriskany",
+    "summary": "1 recipient in the Korean War have an official citation entry placing the action at skies over North Korea, from USS Oriskany. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "elmer-royce-williams"
+    ]
+  },
+  {
+    "id": "world-war-ii-overseas-buried-at-arlington-national-cemetery",
+    "title": "Overseas; buried at Arlington National Cemetery",
+    "conflict": "World War II",
+    "era": "World War II",
+    "dateLabel": "1948",
+    "location": "Overseas; buried at Arlington National Cemetery",
+    "summary": "1 recipient in the World War II have an official citation entry placing the action at Overseas; buried at Arlington National Cemetery. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-american-of-world-war-ii"
+    ]
+  },
+  {
+    "id": "korean-war-overseas-buried-at-arlington-national-cemetery",
+    "title": "Overseas; buried at Arlington National Cemetery",
+    "conflict": "Korean War",
+    "era": "Korean War",
+    "dateLabel": "1957",
+    "location": "Overseas; buried at Arlington National Cemetery",
+    "summary": "1 recipient in the Korean War have an official citation entry placing the action at Overseas; buried at Arlington National Cemetery. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-american-of-the-korean-war"
+    ]
   }
 ]

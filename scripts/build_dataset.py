@@ -338,6 +338,13 @@ def main() -> None:
             extra = json.loads(cached.read_text(encoding="utf-8"))
     print(f"general-order supplements: {len(extra)}")
     awards.extend(extra)
+    manual_path = DATA / "manual-additions.json"
+    if manual_path.exists():
+        manual = json.loads(manual_path.read_text(encoding="utf-8"))
+        known = {award["identity"] for award in awards}
+        added = [award for award in manual if award["identity"] not in known]
+        print(f"manual additions: {len(added)}")
+        awards.extend(added)
     people = group_people(awards)
     apply_photo_cache(people)
     battles = build_battles(people)

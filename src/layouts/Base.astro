@@ -1,4 +1,6 @@
 ---
+import "@fontsource/oswald/500.css";
+import "@fontsource/oswald/600.css";
 import "@fontsource/source-sans-3/400.css";
 import "@fontsource/source-sans-3/600.css";
 import "@fontsource/source-serif-4/400.css";
@@ -9,8 +11,9 @@ import { disclaimer, site } from "../site";
 interface Props {
   title: string;
   description?: string;
+  overlay?: boolean;
 }
-const { title, description = site.description } = Astro.props;
+const { title, description = site.description, overlay = false } = Astro.props;
 const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
 ---
 <!doctype html>
@@ -24,7 +27,7 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
-    <header class="site-header">
+    <header class:list={["site-header", { overlay }]}>
       <div class="header-inner">
         <div>
           <a class="wordmark" href="/">{site.name}</a>

@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { sceneForEra } from "../../lib/imagery";
 import { allRecipients, eras } from "../../lib/records";
 
 export function getStaticPaths() {
@@ -16,8 +17,18 @@ const { era, count } = Astro.props;
 const people = allRecipients.filter((person) => person.awards.some((award) => award.era === era));
 ---
 <Base title={era} description={`Medal of Honor recipients recorded for ${era}.`}>
-  <p class="kicker">Era</p>
-  <h1>{era}</h1>
+  {sceneForEra(era) && (
+    <header class="battle-hero">
+      <img src={sceneForEra(era)!.url} alt={sceneForEra(era)!.alt} />
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="kicker">Era</p>
+        <h1>{era}</h1>
+        <p class="hero-credit">{sceneForEra(era)!.credit}. {sceneForEra(era)!.license}.</p>
+      </div>
+    </header>
+  )}
+  <div class="wrap">
   <p class="lede">{count.toLocaleString()} awards in this era are in the archive. Open a name for the citation.</p>
   <p><a href="/recipients">Search the full directory</a></p>
   <ul class="roster">
@@ -31,4 +42,5 @@ const people = allRecipients.filter((person) => person.awards.some((award) => aw
       );
     })}
   </ul>
+  </div>
 </Base>

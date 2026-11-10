@@ -5626,6 +5626,19 @@
     "wikipedia": "https://en.wikipedia.org/wiki/Stephen_Holden_Doane",
     "wikidataId": "Q7609509"
   },
+  "nicholas-dockery": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Official_portrait_of_Retired_U.S._Army_Maj._Nicholas_Dockery.jpg/960px-Official_portrait_of_Retired_U.S._Army_Maj._Nicholas_Dockery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Retired_U.S._Army_Maj._Nicholas_Dockery.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "William Pratt",
+      "width": 800,
+      "height": 1000
+    },
+    "wikipedia": "https://en.wikipedia.org/wiki/Nicholas_Dockery",
+    "wikidataId": "Q140287704"
+  },
   "warren-c-dockum": {
     "photo": null,
     "wikipedia": "https://en.wikipedia.org/wiki/Warren_C._Dockum",
@@ -5673,7 +5686,15 @@
     "wikidataId": "Q7792041"
   },
   "david-charles-dolby": {
-    "photo": null,
+    "photo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/David_Dolby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:David_Dolby.jpg",
+      "license": "Attribution",
+      "licenseUrl": null,
+      "credit": "HomeOfHeroes.com",
+      "width": 800,
+      "height": 1064
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/David_C._Dolby",
     "wikidataId": "Q5232006"
   },
@@ -7222,7 +7243,15 @@
     "wikidataId": "Q16030159"
   },
   "wesley-l-fox": {
-    "photo": null,
+    "photo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Col_Wesley_L_Fox.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Col_Wesley_L_Fox.jpg",
+      "license": "Attribution",
+      "licenseUrl": null,
+      "credit": "Vt-aoe at en.wikipedia",
+      "width": 800,
+      "height": 1054
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Wesley_L._Fox",
     "wikidataId": "Q7983951"
   },
@@ -17708,6 +17737,19 @@
     "photo": null,
     "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Riley_(Medal_of_Honor)",
     "wikidataId": "Q106483732"
+  },
+  "john-w-ripley": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Col_John_W._Ripley.jpg/960px-Col_John_W._Ripley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Col_John_W._Ripley.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "USMC",
+      "width": 800,
+      "height": 998
+    },
+    "wikipedia": "https://en.wikipedia.org/wiki/John_Ripley_(USMC)",
+    "wikidataId": "Q6254978"
   },
   "william-y-w-ripley": {
     "photo": {

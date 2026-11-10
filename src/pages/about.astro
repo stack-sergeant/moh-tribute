@@ -4,6 +4,7 @@ import { datasetStats } from "../lib/records";
 import { disclaimer, site } from "../site";
 ---
 <Base title="About" description="Sources, photo rules, and the limits of this unofficial Medal of Honor archive.">
+  <div class="wrap">
   <p class="kicker">About this archive</p>
   <h1>About {site.name}</h1>
   <p class="lede">{disclaimer}</p>
@@ -64,9 +65,11 @@ import { disclaimer, site } from "../site";
       Public totals are usually given as more than 3,500 awards and about 3,526 people after
       the January 3, 2025 ceremony, with further awards in 2026. This archive currently holds
       {datasetStats.people.toLocaleString()} people and {datasetStats.awards.toLocaleString()} awards.
-      The difference includes awards whose general-order text did not extract cleanly, recent
-      Navy and Marine Corps awards that are not in the Army order series used here, and entries
-      the citation-index parser could not read.
+      Added from public Navy, Marine Corps, Army, and DVIDS releases: James Capers Jr.,
+      John W. Ripley, Elmer Royce Williams, and Nicholas Dockery. The Unknown Americans of
+      World War II and Korea are included from the Army’s special-legislation page.
+      Some older general-order scans were still too garbled to publish, and a few citation-index
+      entries could not be parsed.
     </li>
     <li>
       The 1917 review rescinded hundreds of earlier awards. Those rescinded awards are not in
@@ -99,4 +102,5 @@ import { disclaimer, site } from "../site";
     and publish directory <code>dist</code>. Regenerate the dataset with
     <code>python3 scripts/build_dataset.py</code>.
   </p>
+  </div>
 </Base>
