@@ -33,7 +33,7 @@ export const cadences: Cadence[] = [
     virin: "200803-A-GO806-426",
     sourceUrl: "https://www.dvidshub.net/video/777613/cadence-competition-drill-sgt-johnson",
     license,
-    clip: "Opening verse only (about 52 seconds), through the call to join the Army. Later verses in the same recording were left off.",
+    clip: "Opening of the call, about 52 seconds.",
   },
   {
     id: "bouchard-airborne-ranger",
@@ -49,7 +49,7 @@ export const cadences: Cadence[] = [
     virin: "200803-A-GO806-773",
     sourceUrl: "https://www.dvidshub.net/video/777616/cadence-competition-drill-sgt-bouchard",
     license,
-    clip: "About 73 seconds, ending on the Airborne Ranger response. This is an artillery drill sergeant calling that cadence, not a recording of an Airborne or Ranger unit. Later verses in the same video were left off.",
+    clip: "About 73 seconds, through the Airborne Ranger response.",
   },
   {
     id: "moses-lock-and-load",
@@ -81,7 +81,7 @@ export const cadences: Cadence[] = [
     virin: "200803-A-GO806-331",
     sourceUrl: "https://www.dvidshub.net/video/777618/cadence-competition-drill-sgt-wilcox",
     license,
-    clip: "The “Bandits lead the way” opening joined to the later “this army life is crazy” verses (about 89 seconds). One verse between those sections was left off.",
+    clip: "About 89 seconds, from “Bandits lead the way” and “this army life is crazy.”",
   },
   {
     id: "marines-di-contest",
