@@ -83,7 +83,16 @@
     "wikidataId": "Q8008185"
   },
   "bennie-g-adkins": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/bennie-g-adkins.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJoseph_Dunford_and_Bennie_Adkins_170119-D-PB383-002_%2832047590960%29.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "Chairman of the Joint Chiefs of Staff from Washington D.C, United States. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Bennie_G._Adkins",
     "wikidataId": "Q18057030"
   },
@@ -1407,7 +1416,16 @@
     "wikidataId": "Q6105750"
   },
   "david-g-bellavia": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/david-g-bellavia.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ADavid_G._Bellavia_%282%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Monica King. Wikimedia Commons.",
+      "width": 800,
+      "height": 1000,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/David_Bellavia",
     "wikidataId": "Q15453145"
   },
@@ -2133,7 +2151,16 @@
     "wikidataId": "Q7343928"
   },
   "robert-boody": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/robert-boody.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2023632006/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "Clarkson, F. K. (Francis Kimball), 1833-1910. Library of Congress.",
+      "width": 397,
+      "height": 640,
+      "source": "Library of Congress"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Robert_Boody",
     "wikidataId": "Q16058648"
   },
@@ -2696,7 +2723,16 @@
     "wikidataId": "Q16058444"
   },
   "christopher-c-bruton": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/christopher-c-bruton.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2025162032/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "Library of Congress.",
+      "width": 410,
+      "height": 640,
+      "source": "Library of Congress"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Christopher_C._Bruton",
     "wikidataId": "Q5112029"
   },
@@ -4036,7 +4072,16 @@
     "wikidataId": "Q150303"
   },
   "cecil-clay": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/cecil-clay.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2025160194/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "M'Clees, Jas. E. (James E.). Library of Congress.",
+      "width": 399,
+      "height": 640,
+      "source": "Library of Congress"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Cecil_Clay",
     "wikidataId": "Q5056005"
   },
@@ -4786,7 +4831,16 @@
     "wikidataId": "Q4262030"
   },
   "william-h-h-crosier": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/william-h-h-crosier.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWilliam_H._H._Crosier_1901.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1498,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/William_H._H._Crosier",
     "wikidataId": "Q16030758"
   },
@@ -6803,7 +6857,16 @@
     "wikidataId": "Q6135152"
   },
   "henry-s-finkenbiner": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/henry-s-finkenbiner.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHenry_S._Finkenbiner_1885_public_domain_-_Copy.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1282,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Henry_S._Finkenbiner",
     "wikidataId": "Q16031733"
   },
@@ -16325,7 +16388,16 @@
     "wikidataId": "Q7411767"
   },
   "thomas-parker": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/thomas-parker.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2021637472/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "John Goldin & Co.. Library of Congress.",
+      "width": 397,
+      "height": 640,
+      "source": "Library of Congress"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Parker_(soldier,_born_1822)",
     "wikidataId": "Q55635758"
   },
@@ -16673,7 +16745,16 @@
     "wikidataId": "Q1820399"
   },
   "philip-petty": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/philip-petty.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APhilip_Petty_1875_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1164,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Philip_Petty",
     "wikidataId": "Q60198209"
   },
@@ -16776,7 +16857,16 @@
     "wikidataId": "Q17183160"
   },
   "alonzo-h-pickle": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/alonzo-h-pickle.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAlonzo_H_Pickle_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1242,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Alonzo_H._Pickle",
     "wikidataId": "Q24033894"
   },
@@ -17315,7 +17405,16 @@
     "wikidataId": "Q7174455"
   },
   "peter-rafferty": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/peter-rafferty.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APeter_F._Rafferty_1897_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 976,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Peter_Rafferty_(Medal_of_Honor)",
     "wikidataId": "Q96911986"
   },
@@ -17374,7 +17473,16 @@
     "wikidataId": "Q5344992"
   },
   "jacob-f-raub": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/jacob-f-raub.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJacob_F_Raub_1896_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1338,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Jacob_F._Raub",
     "wikidataId": "Q104215696"
   },
@@ -17580,7 +17688,16 @@
     "wikidataId": "Q7147526"
   },
   "robert-reid": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/robert-reid.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARobert_Alexander_Reid_1880_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1142,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Robert_Reid_(soldier)",
     "wikidataId": "Q23620846"
   },
@@ -17631,7 +17748,16 @@
     "wikidataId": "Q106233954"
   },
   "sylvester-d-rhodes": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/sylvester-d-rhodes.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ASylvester_D_Rhodes_1897_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1322,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Sylvester_D._Rhodes",
     "wikidataId": "Q16031049"
   },
@@ -18434,7 +18560,16 @@
     "wikidataId": "Q107311799"
   },
   "john-t-rutherford": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/john-t-rutherford.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn_T_Rutherford_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 994,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/John_T._Rutherford",
     "wikidataId": "Q107747712"
   },
@@ -18457,7 +18592,16 @@
     "wikidataId": "Q126364212"
   },
   "peter-j-ryan": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/peter-j-ryan.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APeter_J_Ryan_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1320,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Peter_J._Ryan",
     "wikidataId": "Q7174895"
   },
@@ -18612,7 +18756,16 @@
     "wikidataId": "Q16006470"
   },
   "jackson-sargent": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/jackson-sargent.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJackson_George_Sargent_1913_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1170,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Jackson_Sargent",
     "wikidataId": "Q50749253"
   },
@@ -18794,7 +18947,16 @@
     "wikidataId": "Q7109568"
   },
   "george-schneider": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/george-schneider.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGeorge_Schneider_1890_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1142,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/George_Schneider_(Medal_of_Honor)",
     "wikidataId": "Q110542857"
   },
@@ -19235,7 +19397,16 @@
     "wikidataId": "Q6257405"
   },
   "john-shapland": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/john-shapland.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn_Shapland_1913_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1226,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/John_Shapland",
     "wikidataId": "Q65068338"
   },
@@ -19358,7 +19529,16 @@
     "wikidataId": "Q6143096"
   },
   "marshall-sherman": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/marshall-sherman.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMarshall_Sherman_1867_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1108,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Marshall_Sherman",
     "wikidataId": "Q98908454"
   },
@@ -19819,7 +19999,16 @@
     "wikidataId": "Q4710600"
   },
   "alonzo-smith": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/alonzo-smith.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAlonzo_Smith_1862_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1086,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Alonzo_Smith",
     "wikidataId": "Q21664959"
   },
@@ -20692,7 +20881,16 @@
     "wikidataId": "Q4830359"
   },
   "william-h-surles": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/william-h-surles.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWilliam_H_Surles_1885_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1082,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/William_H._Surles",
     "wikidataId": "Q107332160"
   },
@@ -23270,7 +23468,16 @@
     "wikidataId": "Q107210097"
   },
   "charles-e-wilson": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/charles-e-wilson.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2022631427/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "Reeve, J. C., (John C.). Library of Congress.",
+      "width": 408,
+      "height": 640,
+      "source": "Library of Congress"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Charles_E._Wilson_(Medal_of_Honor)",
     "wikidataId": "Q107210097"
   },
@@ -23887,5 +24094,714 @@
     },
     "wikipedia": "https://en.wikipedia.org/wiki/Raymond_Zussman",
     "wikidataId": "Q7299253"
+  },
+  "sylvester-antolak": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "henry-breault": {
+    "photo": {
+      "url": "/photos/henry-breault.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2002712384/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "Library of Congress.",
+      "width": 640,
+      "height": 514,
+      "source": "Library of Congress"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "wilbur-f-moore": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "charles-f-humphrey": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-m-wilson": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "milden-h-wilson": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "william-plimley": {
+    "photo": {
+      "url": "/photos/william-plimley.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWilliam_Plimley_1890_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1244,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "sylvester-bonnaffon-jr": {
+    "photo": {
+      "url": "/photos/sylvester-bonnaffon-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ACol._Sylvester_Bonnaffon%2C_Jr.%2C_20th_Regiment-Emergency%2C_Pennsylvania_National_Guard%2C_1877%2C_and_U.S._Medal_of_Honor_Winner.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Latta, James W. “History of the First Regiment Infantry National Guard of Pennsylvania (Gray Reserves), 1861-1911,” p. 623. Philadelphia, Pennsylvania: J.B. Lippincott Company, 1912. URL: https://babel.hathitrust.org/cgi/pt?id=iau.318580474. Wikimedia Commons.",
+      "width": 284,
+      "height": 310,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "alexander-bonnyman-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "gregory-boyington": {
+    "photo": {
+      "url": "/photos/gregory-boyington.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AU.S._Marine_Corps_Col._Gregory_%E2%80%9CPappy%E2%80%9D_Boyington_%2848641819971%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Arlington National Cemetery. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "hector-a-cafferata-jr": {
+    "photo": {
+      "url": "/photos/hector-a-cafferata-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHector_Cafferata_2010.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Corporal Christopher A. Green, United States Marine Corps. Wikimedia Commons.",
+      "width": 800,
+      "height": 860,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "henry-capehart": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "james-capers-jr": {
+    "photo": {
+      "url": "/photos/james-capers-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJames_Capers_Jr.%2C_United_States_Marine_Corps_%28cropped%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "SECWAR. Wikimedia Commons.",
+      "width": 734,
+      "height": 966,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "george-carter": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "edward-a-carter-jr": {
+    "photo": {
+      "url": "/photos/edward-a-carter-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Medal_of_Honor_recipient_Edward_A._Carter_Jr.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "The U.S. Army. Wikimedia Commons.",
+      "width": 450,
+      "height": 608,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "benjamin-h-cheever-jr": {
+    "photo": {
+      "url": "/photos/benjamin-h-cheever-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ABenjamin_H._Cheever_Jr_%28cropped%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Charles Milton Bell. Wikimedia Commons.",
+      "width": 800,
+      "height": 1150,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-chapman": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "anthony-peter-damato": {
+    "photo": {
+      "url": "/photos/anthony-peter-damato.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ANH_105933_Corporal_Anthony_P._Damato%2C_USMC.tiff",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Official U.S. Navy Photograph. Wikimedia Commons.",
+      "width": 800,
+      "height": 990,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "merlyn-hans-dethlefsen": {
+    "photo": {
+      "url": "/photos/merlyn-hans-dethlefsen.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AU.S._Air_Force_Col._Merlyn_H._Dethlefsen%2C_%2819749823922%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Arlington National Cemetery. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "james-h-doolittle": {
+    "photo": {
+      "url": "/photos/james-h-doolittle.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AU.S_Air_Force_Gen._James_H._Doolittle_%2819787922971%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Arlington National Cemetery. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "santiago-j-erevia": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "don-c-faith-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "paul-frederick-foster": {
+    "photo": {
+      "url": "/photos/paul-frederick-foster.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVADM_Paul_F_Foster_1950s.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 585,
+      "height": 740,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-henry": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "lewis-a-horton": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-r-kane": {
+    "photo": {
+      "url": "/photos/john-r-kane.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AU.S._Air_Force_Col._John_R._Kane%2C_%2819787915691%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Arlington National Cemetery. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "francis-kelly": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "gerry-h-kisters": {
+    "photo": {
+      "url": "/photos/gerry-h-kisters.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ASC_190637_-_Medal_of_Honor_Winner._Gerry_H._Kisters_%282nd_Lt.%29_Near_Gagliano%2C_Sicily%3B_2nd_Armored_Div.%3B_31_July%2C_1943.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Signal Corps Archive. Wikimedia Commons.",
+      "width": 800,
+      "height": 1020,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "william-f-leonard": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "angelo-j-liteky": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "charles-j-loring-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "arthur-macarthur-jr": {
+    "photo": {
+      "url": "/photos/arthur-macarthur-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ALt._Gen._Arthur_MacArthur_Jr._%2818736969583%29.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Arlington National Cemetery. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "walter-joseph-marm-jr": {
+    "photo": {
+      "url": "/photos/walter-joseph-marm-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWalter_Marm_2006.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Helene C. Stikkel. Wikimedia Commons.",
+      "width": 420,
+      "height": 506,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-j-mcginty-iii": {
+    "photo": {
+      "url": "/photos/john-j-mcginty-iii.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn_J._McGinty_III.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "United States Marine Corps. Wikimedia Commons.",
+      "width": 800,
+      "height": 1046,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "gino-j-merli": {
+    "photo": {
+      "url": "/photos/gino-j-merli.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGino_Merli_15_June_1945.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "USMC Archives from Quantico, USA. Wikimedia Commons.",
+      "width": 333,
+      "height": 422,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "melvin-morris": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "george-s-myers": {
+    "photo": {
+      "url": "/photos/george-s-myers.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGeorge_S_Myers_1875_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1318,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "hugh-r-nelson-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-n-opel": {
+    "photo": {
+      "url": "/photos/john-n-opel.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn_N_Opel_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1342,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "milton-l-olive-iii": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "byron-e-pay": {
+    "photo": {
+      "url": "/photos/byron-e-pay.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AByron_E_Pay_1875_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1144,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "platt-pearsall": {
+    "photo": {
+      "url": "/photos/platt-pearsall.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APlatt_Pearsall_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1348,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "cassius-peck": {
+    "photo": {
+      "url": "/photos/cassius-peck.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ACassius_Peck_1875_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1256,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "thomas-p-payne": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "thomas-h-l-payne": {
+    "photo": {
+      "url": "/photos/thomas-h-l-payne.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThomas_H_L_Payne_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1016,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "edward-m-pike": {
+    "photo": {
+      "url": "/photos/edward-m-pike.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AEdward_M_Pike_1900_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1324,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "robert-pinn": {
+    "photo": {
+      "url": "/photos/robert-pinn.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARobert_A._Pinn%2C_head-and-shoulders_portrait%2C_facing_slightly_left_LCCN97506000.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "African American Photographs Assembled for 1900 Paris Exposition. Wikimedia Commons.",
+      "width": 800,
+      "height": 1002,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-j-pinder-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "henry-e-plant": {
+    "photo": {
+      "url": "/photos/henry-e-plant.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHenry_E_Plant_1890_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1332,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "george-w-potter": {
+    "photo": {
+      "url": "/photos/george-w-potter.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGeorge_W_Potter_1865_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 950,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "hiram-w-purcell": {
+    "photo": {
+      "url": "/photos/hiram-w-purcell.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHiram_W_Purcell_1875_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1440,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "hugh-purvis": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "lawson-paterson-ramage": {
+    "photo": {
+      "url": "/photos/lawson-paterson-ramage.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVice_Admiral_Lawson_P._Ramage%2C_USN.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Photographed by PH1 E.G. Fredette, USN.. Wikimedia Commons.",
+      "width": 575,
+      "height": 740,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "terry-p-richardson": {
+    "photo": {
+      "url": "/photos/terry-p-richardson.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ACommand_Sgt._Maj._Terry_P._Richardson_is_presented_the_Medal_of_Honor.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Christopher Kaufmann. Wikimedia Commons.",
+      "width": 800,
+      "height": 534,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "archibald-h-rowand-jr": {
+    "photo": {
+      "url": "/photos/archibald-h-rowand-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AArchibald_H._Rowand%2C_Jr.%2C_U.S.Medal_of_Honor_Winner%2C_circa_1897.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "“The Story of American Heroism: Thrilling Narratives of Personal Adventures During the Great Civil War as Told by the Medal Winners and Roll of Honor Men\", p. 426. Springfield, Ohio: J.W. Jones, 1897. URL: https://archive.org/details/storyo. Wikimedia Commons.",
+      "width": 800,
+      "height": 884,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "leslie-h-sabo-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "martin-e-scheibner": {
+    "photo": {
+      "url": "/photos/martin-e-scheibner.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMartin_E_Scheibner_1913_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1094,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "oscar-schmidt-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "louis-j-sebille": {
+    "photo": {
+      "url": "/photos/louis-j-sebille.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ALouis_Sebille_in_Korea.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "United States Air Force. Wikimedia Commons.",
+      "width": 800,
+      "height": 996,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "randall-d-shughart": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "sherrod-e-skinner-jr": {
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "otis-w-smith": {
+    "photo": {
+      "url": "/photos/otis-w-smith.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AOtis_W_Smith_1920_public_domain_USGov.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 894,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "adolphus-staton": {
+    "photo": {
+      "url": "/photos/adolphus-staton.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ANH_44786_Lieutenant_Adolphus_Staton%2C_USN.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown photographer. Wikimedia Commons.",
+      "width": 495,
+      "height": 722,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "thomas-thompson": {
+    "photo": {
+      "url": "/photos/thomas-thompson.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThomas_W_Thompson_%281839-1927%29_c1865_MoH_Public_Domain.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown author Unknown author. Wikimedia Commons.",
+      "width": 800,
+      "height": 1496,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "oscar-j-upham": {
+    "photo": {
+      "url": "/photos/oscar-j-upham.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrivate_Oscar_J._Upham%2C_ca._1900.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "Oscar J. Upham. Wikimedia Commons.",
+      "width": 579,
+      "height": 820,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "dr-mary-e-walker": {
+    "photo": {
+      "url": "/photos/dr-mary-e-walker.jpg",
+      "pageUrl": "https://www.loc.gov/pictures/item/2021630282/",
+      "license": "No known restrictions on publication.",
+      "licenseUrl": null,
+      "credit": "Library of Congress Prints and Photographs.",
+      "width": 396,
+      "height": 640,
+      "source": "Library of Congress"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "jonathan-m-wainwright": {
+    "photo": {
+      "url": "/photos/jonathan-m-wainwright.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJonathan_M._Wainwright_as_a_Brigadier_General.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Unknown; released by the United States Department of Defense. Wikimedia Commons.",
+      "width": 800,
+      "height": 1012,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "jay-zeamer-jr": {
+    "photo": {
+      "url": "/photos/jay-zeamer-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJay_Zeamer_portrait.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "United States Air Force. Wikimedia Commons.",
+      "width": 800,
+      "height": 936,
+      "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
   }
 }
