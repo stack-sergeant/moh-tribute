@@ -49,7 +49,7 @@ export const cadences: Cadence[] = [
     virin: "200803-A-GO806-773",
     sourceUrl: "https://www.dvidshub.net/video/777616/cadence-competition-drill-sgt-bouchard",
     license,
-    clip: "About 73 seconds, through the Airborne Ranger response.",
+    clip: "About 89 seconds, through the Airborne Ranger response.",
   },
   {
     id: "moses-lock-and-load",
