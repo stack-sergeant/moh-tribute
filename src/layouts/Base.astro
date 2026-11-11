@@ -27,6 +27,7 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <ClientRouter />
+    <Fragment set:html={'<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "6674b1a24adb4708a64c73a6d81bf0e0"}\'></script><!-- End Cloudflare Web Analytics -->'} />
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
