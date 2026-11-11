@@ -19249,7 +19249,16 @@
         "battleId": "indian-wars-wolf-mountain-montana"
       }
     ],
-    "photo": null,
+    "photo": {
+      "url": "/photos/james-s-casey.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:James_S_Casey.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Beyer, Walter F. and O. F. Keydel. \"Deeds of Valor\", Vol. 2, p. 227. Detroit: Perrien-Keydel Company, 1902.",
+      "width": 586,
+      "height": 736,
+      "source": "Wikimedia Commons"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/James_S._Casey",
     "wikidataId": "Q6142609"
   },
