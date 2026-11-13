@@ -7,6 +7,7 @@ import "@fontsource/source-serif-4/400.css";
 import "@fontsource/source-serif-4/600.css";
 import { ClientRouter } from "astro:transitions";
 import CadencePlayer from "../components/CadencePlayer.astro";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 import "../styles/global.css";
 import { disclaimer, site } from "../site";
 
@@ -50,6 +51,7 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
       <slot />
     </main>
     <footer class="site-footer">
+      <NewsletterSignup />
       <div class="footer-inner">
         <p>{disclaimer}</p>
         <p>

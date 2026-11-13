@@ -160,6 +160,69 @@ h3 { font-size: 1.15rem; letter-spacing: 0.08em; }
 .footer-inner { max-width: 76rem; margin: 0 auto; font-size: 0.95rem; }
 .footer-inner p { margin: 0.45rem 0; }
 
+.newsletter {
+  max-width: 76rem;
+  margin: 0 auto 1.6rem;
+  scroll-margin-bottom: 8.5rem;
+  display: grid;
+  gap: 1rem 2rem;
+  padding: 1.15rem 1.05rem 1.1rem;
+  background:
+    linear-gradient(135deg, rgba(157, 36, 51, 0.32), transparent 42%),
+    var(--navy);
+  border: 1px solid var(--line);
+  box-shadow: inset 4px 0 0 var(--red);
+}
+.newsletter h2 {
+  margin: 0;
+  max-width: 16em;
+  font-size: clamp(1.65rem, 4.6vw, 2.35rem);
+}
+.newsletter-sub {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.newsletter-embed {
+  container-type: inline-size;
+  min-width: 0;
+  max-width: 100%;
+}
+/* Beehiiv's inline form keeps a wide email field. Give that field a stable
+   width, then scale the whole frame down when the column is narrower. */
+.newsletter-frame {
+  width: min(100%, 540px);
+}
+.newsletter-embed iframe {
+  max-width: 100%;
+}
+@container (max-width: 539px) {
+  .newsletter-scale {
+    height: calc(340px * 100cqi / 540px);
+    overflow: hidden;
+  }
+  .newsletter-frame {
+    width: 540px;
+    transform: scale(calc(100cqi / 540px));
+    transform-origin: top left;
+  }
+}
+.newsletter-fallback {
+  margin: 0.7rem 0 0;
+  font-family: Oswald, Impact, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.newsletter-fallback a { color: var(--gold); }
+@media (min-width: 960px) {
+  .newsletter {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 540px);
+    align-items: center;
+    padding: 1.4rem 1.5rem;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100svh;
