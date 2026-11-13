@@ -9,15 +9,21 @@ import { ClientRouter } from "astro:transitions";
 import CadencePlayer from "../components/CadencePlayer.astro";
 import NewsletterSignup from "../components/NewsletterSignup.astro";
 import "../styles/global.css";
+import { heroScene } from "../lib/imagery";
+import { absoluteAssetUrl, pageUrl } from "../lib/urls";
 import { disclaimer, site } from "../site";
 
 interface Props {
   title: string;
   description?: string;
   overlay?: boolean;
+  /** Absolute or site-root image. Omitted pages use the public-domain homepage photograph. */
+  image?: string;
 }
-const { title, description = site.description, overlay = false } = Astro.props;
+const { title, description = site.description, overlay = false, image } = Astro.props;
 const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
+const canonical = pageUrl(Astro.url.pathname);
+const socialImage = absoluteAssetUrl(image || heroScene.url);
 ---
 <!doctype html>
 <html lang="en">
@@ -26,6 +32,16 @@ const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <ClientRouter />
     <Fragment set:html={'<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "6674b1a24adb4708a64c73a6d81bf0e0"}\'></script><!-- End Cloudflare Web Analytics -->'} />

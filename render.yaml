@@ -5,3 +5,12 @@ services:
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
     pullRequestPreviewsEnabled: true
+    headers:
+      # Extension MIME types already cover these. The rules keep the types
+      # explicit: XML for every root sitemap, plain text for robots.txt.
+      - path: /*.xml
+        name: Content-Type
+        value: application/xml; charset=utf-8
+      - path: /robots.txt
+        name: Content-Type
+        value: text/plain; charset=utf-8

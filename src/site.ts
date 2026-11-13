@@ -4,6 +4,8 @@ export const site = {
   tagline: "An unofficial public archive of Medal of Honor recipients",
   description:
     "An unofficial archive of recorded Medal of Honor recipients, with official citations, source links, and battle pages.",
+  /** Apex origin. www and valorrecord.org already redirect here. */
+  origin: "https://valorrecord.com",
 };
 
 export const disclaimer =
