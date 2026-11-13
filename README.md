@@ -60,4 +60,12 @@ npm run build
 npm run preview
 ```
 
-The same values are in `render.yaml`.
+The same values are in `render.yaml`. That file also sets response headers so `sitemap.xml` is served as XML and `robots.txt` as plain text.
+
+## Search engines
+
+The production build writes `dist/sitemap.xml` from the pages it just generated. Every URL is `https://valorrecord.com/...` and includes a `lastmod` of the git commit being built. While the archive is under 50,000 URLs, that file is the sitemap. Above that limit it becomes a sitemap index, and the URLs are split across `sitemap-1.xml`, `sitemap-2.xml`, and so on.
+
+`public/robots.txt` allows every crawler and points to `https://valorrecord.com/sitemap.xml`.
+
+Canonical and social tags use those same page URLs, without a trailing slash except on the homepage. A recipient page uses that person's public-domain photograph when one is already on the page. Every other page uses the public-domain D-Day photograph already shown on the homepage.

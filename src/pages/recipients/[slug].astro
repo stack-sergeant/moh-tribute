@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { publicDomainPhotoUrl } from "../../lib/photos";
 import { allRecipients, battle, gaveLifeLabel, neighbors, type Recipient } from "../../lib/records";
 
 export function getStaticPaths() {
@@ -20,7 +21,7 @@ const mates = lead.battleId
       .filter(Boolean)
   : [];
 ---
-<Base title={person.name} description={`Medal of Honor record for ${person.name}.`}>
+<Base title={person.name} description={`Medal of Honor record for ${person.name}.`} image={publicDomainPhotoUrl(photo)}>
   <header class="hero-person">
     {photo ? (
       <img src={photo.url} alt={`Photograph associated with ${person.name}`} width={photo.width ?? 800} height={photo.height ?? 1000} />
