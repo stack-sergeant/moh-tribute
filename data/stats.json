@@ -44,12 +44,12 @@
     "U.S. Armed Forces": 2,
     "U.S. Coast Guard": 1
   },
-  "posthumousAwards": 626,
-  "awardsWithPlace": 3205,
-  "peopleWithHomeState": 3080,
+  "posthumousAwards": 602,
+  "awardsWithPlace": 3207,
+  "peopleWithHomeState": 3124,
   "peopleWithPhoto": 1418,
   "photoPercent": 40.5,
-  "battles": 1632,
+  "battles": 1635,
   "curatedBattles": [
     {
       "id": "battle-of-gettysburg",
@@ -97,6 +97,6 @@
       "recipients": 1
     }
   ],
-  "autoBattles": 1623,
+  "autoBattles": 1626,
   "officialComparison": "Public counts in 2025\u20132026 are usually given as more than 3,500 awards, about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive counts one row per award in the U.S. Army citation index plus Army general orders that were not already in that index. Navy, Marine Corps, Air Force, and Coast Guard awards are included when the Army index carries them. Rescinded 1917 awards are not included."
 }

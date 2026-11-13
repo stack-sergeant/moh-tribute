@@ -760,7 +760,7 @@
     "era": "Civil War",
     "dateLabel": "1862–1865",
     "location": "Petersburg, Virginia",
-    "summary": "94 recipients in the Civil War have an official citation entry placing the action at Petersburg, Virginia. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "summary": "95 recipients in the Civil War have an official citation entry placing the action at Petersburg, Virginia. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -799,6 +799,7 @@
       "charles-g-gould",
       "nathaniel-gwynne",
       "lester-g-hack",
+      "sidney-haight",
       "john-h-harbourne",
       "amzi-d-harmon",
       "john-h-havron",
@@ -1427,19 +1428,18 @@
     ]
   },
   {
-    "id": "civil-war-uss-new",
-    "title": "USS New",
+    "id": "civil-war-uss-new-ironsides",
+    "title": "USS New Ironsides",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1864",
-    "location": "USS New",
-    "summary": "8 recipients in the Civil War have an official citation entry placing the action at USS New. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS New Ironsides",
+    "summary": "7 recipients in the Civil War have an official citation entry placing the action at USS New Ironsides. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
       "james-barnum",
       "john-dempster",
-      "thomas-english",
       "edmund-haffee",
       "nicholas-lear",
       "daniel-milliken",
@@ -2374,18 +2374,17 @@
     ]
   },
   {
-    "id": "civil-war-uss-commodore",
-    "title": "USS Commodore",
+    "id": "civil-war-uss-commodore-perry",
+    "title": "USS Commodore Perry",
     "conflict": "Civil War",
     "era": "Civil War",
-    "dateLabel": "1862–1864",
-    "location": "USS Commodore",
-    "summary": "5 recipients in the Civil War have an official citation entry placing the action at USS Commodore. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "dateLabel": "1862",
+    "location": "USS Commodore Perry",
+    "summary": "4 recipients in the Civil War have an official citation entry placing the action at USS Commodore Perry. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
       "john-breen",
-      "patrick-colbert",
       "daniel-lakin",
       "alfred-peterson",
       "john-williams-1832"
@@ -3167,6 +3166,20 @@
     ]
   },
   {
+    "id": "civil-war-uss-commodore-hull",
+    "title": "USS Commodore Hull",
+    "conflict": "Civil War",
+    "era": "Civil War",
+    "dateLabel": "1864",
+    "location": "USS Commodore Hull",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Commodore Hull. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "patrick-colbert"
+    ]
+  },
+  {
     "id": "civil-war-richland-creek-tennessee",
     "title": "Richland Creek, Tennessee",
     "conflict": "Civil War",
@@ -3351,20 +3364,19 @@
     ]
   },
   {
-    "id": "civil-war-uss-baron",
-    "title": "USS Baron",
+    "id": "civil-war-uss-baron-de-kalb",
+    "title": "USS Baron De Kalb",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1862",
-    "location": "USS Baron",
-    "summary": "4 recipients in the Civil War have an official citation entry placing the action at USS Baron. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Baron De Kalb",
+    "summary": "3 recipients in the Civil War have an official citation entry placing the action at USS Baron De Kalb. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
       "peter-cotton",
       "pierre-leon",
-      "john-mcdonald",
-      "charles-robinson"
+      "john-mcdonald"
     ]
   },
   {
@@ -3596,13 +3608,13 @@
     ]
   },
   {
-    "id": "civil-war-uss-valley",
-    "title": "USS Valley",
+    "id": "civil-war-uss-valley-city",
+    "title": "USS Valley City",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1862",
-    "location": "USS Valley",
-    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Valley. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Valley City",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Valley City. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -3789,20 +3801,19 @@
     ]
   },
   {
-    "id": "civil-war-uss-fort",
-    "title": "USS Fort",
+    "id": "civil-war-uss-fort-hindman",
+    "title": "USS Fort Hindman",
     "conflict": "Civil War",
     "era": "Civil War",
-    "dateLabel": "1863–1864",
-    "location": "USS Fort",
-    "summary": "4 recipients in the Civil War have an official citation entry placing the action at USS Fort. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "dateLabel": "1864",
+    "location": "USS Fort Hindman",
+    "summary": "3 recipients in the Civil War have an official citation entry placing the action at USS Fort Hindman. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
       "james-k-l-duncan",
       "william-p-johnston",
-      "hugh-molloy",
-      "christopher-nugent"
+      "hugh-molloy"
     ]
   },
   {
@@ -3875,6 +3886,20 @@
     "media": [],
     "recipientIds": [
       "william-elise"
+    ]
+  },
+  {
+    "id": "civil-war-uss-new-iron",
+    "title": "USS New Iron",
+    "conflict": "Civil War",
+    "era": "Civil War",
+    "dateLabel": "1864",
+    "location": "USS New Iron",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS New Iron. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "thomas-english"
     ]
   },
   {
@@ -4144,13 +4169,13 @@
     ]
   },
   {
-    "id": "civil-war-uss-rhode",
-    "title": "USS Rhode",
+    "id": "civil-war-uss-rhode-island",
+    "title": "USS Rhode Island",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1862–1865",
-    "location": "USS Rhode",
-    "summary": "8 recipients in the Civil War have an official citation entry placing the action at USS Rhode. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Rhode Island",
+    "summary": "8 recipients in the Civil War have an official citation entry placing the action at USS Rhode Island. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -4433,20 +4458,6 @@
     "media": [],
     "recipientIds": [
       "osgood-t-hadley"
-    ]
-  },
-  {
-    "id": "action-sidney-haight-sidney-haight-undated-civil-war",
-    "title": "Sidney Haight, an unrecorded date",
-    "conflict": "Civil War",
-    "era": "Civil War",
-    "dateLabel": "an unrecorded date",
-    "location": null,
-    "summary": "The official citation for Sidney Haight does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated an unrecorded date, during the Civil War.",
-    "curated": false,
-    "media": [],
-    "recipientIds": [
-      "sidney-haight"
     ]
   },
   {
@@ -4831,7 +4842,7 @@
     "curated": false,
     "media": [],
     "recipientIds": [
-      "daniel-1-holcomb"
+      "daniel-i-holcomb"
     ]
   },
   {
@@ -5524,13 +5535,13 @@
     ]
   },
   {
-    "id": "civil-war-uss-hendrick",
-    "title": "USS Hendrick",
+    "id": "civil-war-uss-hendrick-hudson",
+    "title": "USS Hendrick Hudson",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1865",
-    "location": "USS Hendrick",
-    "summary": "2 recipients in the Civil War have an official citation entry placing the action at USS Hendrick. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Hendrick Hudson",
+    "summary": "2 recipients in the Civil War have an official citation entry placing the action at USS Hendrick Hudson. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -5861,6 +5872,20 @@
     "media": [],
     "recipientIds": [
       "john-j-nolan"
+    ]
+  },
+  {
+    "id": "civil-war-uss-fort-henry",
+    "title": "USS Fort Henry",
+    "conflict": "Civil War",
+    "era": "Civil War",
+    "dateLabel": "1863",
+    "location": "USS Fort Henry",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Fort Henry. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "christopher-nugent"
     ]
   },
   {
@@ -6360,6 +6385,20 @@
     "media": [],
     "recipientIds": [
       "george-f-robie"
+    ]
+  },
+  {
+    "id": "civil-war-uss-baron",
+    "title": "USS Baron",
+    "conflict": "Civil War",
+    "era": "Civil War",
+    "dateLabel": "1862",
+    "location": "USS Baron",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Baron. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "charles-robinson"
     ]
   },
   {
@@ -6939,13 +6978,13 @@
     ]
   },
   {
-    "id": "civil-war-uss-isaac",
-    "title": "USS Isaac",
+    "id": "civil-war-uss-isaac-smith",
+    "title": "USS Isaac Smith",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1863",
-    "location": "USS Isaac",
-    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Isaac. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Isaac Smith",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Isaac Smith. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -7096,13 +7135,13 @@
     ]
   },
   {
-    "id": "civil-war-uss-mount",
-    "title": "USS Mount",
+    "id": "civil-war-uss-mount-washington",
+    "title": "USS Mount Washington",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1863",
-    "location": "USS Mount",
-    "summary": "2 recipients in the Civil War have an official citation entry placing the action at USS Mount. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Mount Washington",
+    "summary": "2 recipients in the Civil War have an official citation entry placing the action at USS Mount Washington. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -7464,13 +7503,13 @@
     ]
   },
   {
-    "id": "civil-war-uss-ironclad",
-    "title": "USS Ironclad",
+    "id": "civil-war-uss-ironclad-steamer-monitor",
+    "title": "USS Ironclad Steamer Monitor",
     "conflict": "Civil War",
     "era": "Civil War",
     "dateLabel": "1862",
-    "location": "USS Ironclad",
-    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Ironclad. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Ironclad Steamer Monitor",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at USS Ironclad Steamer Monitor. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -10839,13 +10878,13 @@
     ]
   },
   {
-    "id": "peacetime-and-interim-uss-jean",
-    "title": "USS Jean",
+    "id": "peacetime-and-interim-uss-jean-sands",
+    "title": "USS Jean Sands",
     "conflict": "Peacetime and interim",
     "era": "Peacetime and other actions",
     "dateLabel": "1880",
-    "location": "USS Jean",
-    "summary": "2 recipients in the Peacetime and interim have an official citation entry placing the action at USS Jean. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS Jean Sands",
+    "summary": "2 recipients in the Peacetime and interim have an official citation entry placing the action at USS Jean Sands. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12205,13 +12244,13 @@
     ]
   },
   {
-    "id": "philippineamerican-war-uss-new",
-    "title": "USS New",
+    "id": "philippineamerican-war-uss-new-york",
+    "title": "USS New York",
     "conflict": "Philippine–American War",
     "era": "Expeditions, 1871–1933",
     "dateLabel": "1899",
-    "location": "USS New",
-    "summary": "1 recipient in the Philippine–American War have an official citation entry placing the action at USS New. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS New York",
+    "summary": "1 recipient in the Philippine–American War have an official citation entry placing the action at USS New York. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12441,12 +12480,12 @@
   },
   {
     "id": "action-john-olof-dahlgren-john-olof-dahlgren-1900-boxer-rebellion",
-    "title": "John Olof Dahlgren, 16 July 1900",
+    "title": "John Olof Dahlgren, 20 June to 16 July 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "16 July 1900",
+    "dateLabel": "20 June to 16 July 1900",
     "location": null,
-    "summary": "The official citation for John Olof Dahlgren does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 16 July 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for John Olof Dahlgren does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 20 June to 16 July 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12483,12 +12522,12 @@
   },
   {
     "id": "action-harry-fisher-harry-fisher-1900-boxer-rebellion",
-    "title": "Harry Fisher, 16 July 1900",
+    "title": "Harry Fisher, 20 June to 16 July 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "16 July 1900",
+    "dateLabel": "20 June to 16 July 1900",
     "location": null,
-    "summary": "The official citation for Harry Fisher does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 16 July 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for Harry Fisher does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 20 June to 16 July 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12553,12 +12592,12 @@
   },
   {
     "id": "action-martin-hunt-martin-hunt-1900-boxer-rebellion",
-    "title": "Martin Hunt, 16 July 1900",
+    "title": "Martin Hunt, 20 June to 16 July 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "16 July 1900",
+    "dateLabel": "20 June to 16 July 1900",
     "location": null,
-    "summary": "The official citation for Martin Hunt does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 16 July 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for Martin Hunt does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 20 June to 16 July 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12651,12 +12690,12 @@
   },
   {
     "id": "action-albert-moore-albert-moore-1900-boxer-rebellion",
-    "title": "Albert Moore, 17 August 1900",
+    "title": "Albert Moore, 21 July to 17 August 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "17 August 1900",
+    "dateLabel": "21 July to 17 August 1900",
     "location": null,
-    "summary": "The official citation for Albert Moore does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 17 August 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for Albert Moore does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 21 July to 17 August 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12707,12 +12746,12 @@
   },
   {
     "id": "action-france-silva-france-silva-1900-boxer-rebellion",
-    "title": "France Silva, 17 August 1900",
+    "title": "France Silva, 28 June to 17 August 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "17 August 1900",
+    "dateLabel": "28 June to 17 August 1900",
     "location": null,
-    "summary": "The official citation for France Silva does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 17 August 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for France Silva does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 28 June to 17 August 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12805,12 +12844,12 @@
   },
   {
     "id": "action-edward-alexander-walker-edward-alexander-walker-1900-boxer-rebellion",
-    "title": "Edward Alexander Walker, 16 July 1900",
+    "title": "Edward Alexander Walker, 20 June to 16 July 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "16 July 1900",
+    "dateLabel": "20 June to 16 July 1900",
     "location": null,
-    "summary": "The official citation for Edward Alexander Walker does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 16 July 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for Edward Alexander Walker does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 20 June to 16 July 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12819,12 +12858,12 @@
   },
   {
     "id": "action-axel-westermark-axel-westermark-1900-boxer-rebellion",
-    "title": "Axel Westermark, 17 August 1900",
+    "title": "Axel Westermark, 28 June to 17 August 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "17 August 1900",
+    "dateLabel": "28 June to 17 August 1900",
     "location": null,
-    "summary": "The official citation for Axel Westermark does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 17 August 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for Axel Westermark does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 28 June to 17 August 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -12847,12 +12886,12 @@
   },
   {
     "id": "action-frank-albert-young-frank-albert-young-1900-boxer-rebellion",
-    "title": "Frank Albert Young, 16 July 1900",
+    "title": "Frank Albert Young, 20 June to 16 July 1900",
     "conflict": "Boxer Rebellion",
     "era": "Expeditions, 1871–1933",
-    "dateLabel": "16 July 1900",
+    "dateLabel": "20 June to 16 July 1900",
     "location": null,
-    "summary": "The official citation for Frank Albert Young does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 16 July 1900, during the Boxer Rebellion.",
+    "summary": "The official citation for Frank Albert Young does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 20 June to 16 July 1900, during the Boxer Rebellion.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -13036,13 +13075,13 @@
     ]
   },
   {
-    "id": "peacetime-and-interim-uss-north",
-    "title": "USS North",
+    "id": "peacetime-and-interim-uss-north-dakota",
+    "title": "USS North Dakota",
     "conflict": "Peacetime and interim",
     "era": "Peacetime and other actions",
     "dateLabel": "1910",
-    "location": "USS North",
-    "summary": "6 recipients in the Peacetime and interim have an official citation entry placing the action at USS North. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS North Dakota",
+    "summary": "6 recipients in the Peacetime and interim have an official citation entry placing the action at USS North Dakota. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -13821,13 +13860,13 @@
     ]
   },
   {
-    "id": "peacetime-and-interim-uss-new",
-    "title": "USS New",
+    "id": "peacetime-and-interim-uss-new-york",
+    "title": "USS New York",
     "conflict": "Peacetime and interim",
     "era": "Peacetime and other actions",
     "dateLabel": "Date not recorded in the citation entry",
-    "location": "USS New",
-    "summary": "1 recipient in the Peacetime and interim have an official citation entry placing the action at USS New. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS New York",
+    "summary": "1 recipient in the Peacetime and interim have an official citation entry placing the action at USS New York. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -13835,13 +13874,13 @@
     ]
   },
   {
-    "id": "peacetime-and-interim-uss-san",
-    "title": "USS San",
+    "id": "peacetime-and-interim-uss-san-diego",
+    "title": "USS San Diego",
     "conflict": "Peacetime and interim",
     "era": "Peacetime and other actions",
     "dateLabel": "1915",
-    "location": "USS San",
-    "summary": "1 recipient in the Peacetime and interim have an official citation entry placing the action at USS San. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS San Diego",
+    "summary": "1 recipient in the Peacetime and interim have an official citation entry placing the action at USS San Diego. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -14293,7 +14332,7 @@
     "recipientIds": [
       "daniel-r-edwards",
       "matej-kocak",
-      "samuel-1-parker"
+      "samuel-i-parker"
     ]
   },
   {
@@ -14694,7 +14733,7 @@
     "curated": false,
     "media": [],
     "recipientIds": [
-      "james-1-mestrovitch"
+      "james-i-mestrovitch"
     ]
   },
   {
@@ -15641,13 +15680,13 @@
     ]
   },
   {
-    "id": "world-war-ii-uss-mcfarland",
-    "title": "USS McFarland",
+    "id": "world-war-ii-guadalcanal-solomon-islands",
+    "title": "Guadalcanal, Solomon Islands",
     "conflict": "World War II",
     "era": "World War II",
     "dateLabel": "1942",
-    "location": "USS McFarland",
-    "summary": "1 recipient in the World War II have an official citation entry placing the action at USS McFarland. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "Guadalcanal, Solomon Islands",
+    "summary": "1 recipient in the World War II have an official citation entry placing the action at Guadalcanal, Solomon Islands. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -15742,13 +15781,13 @@
     ]
   },
   {
-    "id": "world-war-ii-uss-west",
-    "title": "USS West",
+    "id": "world-war-ii-uss-west-virginia",
+    "title": "USS West Virginia",
     "conflict": "World War II",
     "era": "World War II",
     "dateLabel": "1941",
-    "location": "USS West",
-    "summary": "1 recipient in the World War II have an official citation entry placing the action at USS West. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "USS West Virginia",
+    "summary": "1 recipient in the World War II have an official citation entry placing the action at USS West Virginia. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -15884,17 +15923,17 @@
     ]
   },
   {
-    "id": "action-richard-1-bong-richard-1-bong-1944-world-war-ii",
-    "title": "Richard 1 Bong, 15 November 1944",
+    "id": "world-war-ii-over-borneo-and-leyte-philippine-islands",
+    "title": "over Borneo and Leyte, Philippine Islands",
     "conflict": "World War II",
     "era": "World War II",
-    "dateLabel": "15 November 1944",
-    "location": null,
-    "summary": "The official citation for Richard 1 Bong does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 15 November 1944, during the World War II.",
+    "dateLabel": "1944",
+    "location": "over Borneo and Leyte, Philippine Islands",
+    "summary": "1 recipient in the World War II have an official citation entry placing the action at over Borneo and Leyte, Philippine Islands. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
-      "richard-1-bong"
+      "richard-i-bong"
     ]
   },
   {
@@ -16626,12 +16665,12 @@
   },
   {
     "id": "action-anthony-peter-damato-anthony-peter-damato-1944-world-war-ii",
-    "title": "Anthony Peter Damato, 20 February 1944",
+    "title": "Anthony Peter Damato, 19-20 February 1944",
     "conflict": "World War II",
     "era": "World War II",
-    "dateLabel": "20 February 1944",
+    "dateLabel": "19-20 February 1944",
     "location": null,
-    "summary": "The official citation for Anthony Peter Damato does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 20 February 1944, during the World War II.",
+    "summary": "The official citation for Anthony Peter Damato does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 19-20 February 1944, during the World War II.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -16894,12 +16933,12 @@
   },
   {
     "id": "action-merritt-austin-edson-merritt-austin-edson-1942-world-war-ii",
-    "title": "Merritt Austin Edson, 14 September 1942",
+    "title": "Merritt Austin Edson, 13-14 September 1942",
     "conflict": "World War II",
     "era": "World War II",
-    "dateLabel": "14 September 1942",
+    "dateLabel": "13-14 September 1942",
     "location": null,
-    "summary": "The official citation for Merritt Austin Edson does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 14 September 1942, during the World War II.",
+    "summary": "The official citation for Merritt Austin Edson does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 13-14 September 1942, during the World War II.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -17136,7 +17175,7 @@
     "title": "Over Guadalcanal",
     "conflict": "World War II",
     "era": "World War II",
-    "dateLabel": "1943",
+    "dateLabel": "1942",
     "location": "Over Guadalcanal",
     "summary": "1 recipient in the World War II have an official citation entry placing the action at Over Guadalcanal. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
@@ -17983,13 +18022,13 @@
     ]
   },
   {
-    "id": "world-war-ii-uss-san",
-    "title": "USS San",
+    "id": "world-war-ii-off-savo-island-solomon-islands",
+    "title": "off Savo Island, Solomon Islands",
     "conflict": "World War II",
     "era": "World War II",
     "dateLabel": "1942",
-    "location": "USS San",
-    "summary": "1 recipient in the World War II have an official citation entry placing the action at USS San. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
+    "location": "off Savo Island, Solomon Islands",
+    "summary": "1 recipient in the World War II have an official citation entry placing the action at off Savo Island, Solomon Islands. This page was grouped from those entries. Articles, footage, books, and films have not been curated for this action yet.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -22442,7 +22481,7 @@
     "curated": false,
     "media": [],
     "recipientIds": [
-      "harvey-c-ir-barnum"
+      "harvey-c-barnum-jr"
     ]
   },
   {

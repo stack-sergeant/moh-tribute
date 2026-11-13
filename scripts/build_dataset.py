@@ -311,13 +311,24 @@ def write_stats(people: list[dict], battles: list[dict]) -> dict:
     return stats
 
 
+# Slugs from before middle-initial and suffix corrections. The photo cache is keyed
+# by the old id; the page id follows the corrected name.
+LEGACY_PHOTO_IDS = {
+    "richard-i-bong": "richard-1-bong",
+    "daniel-i-holcomb": "daniel-1-holcomb",
+    "james-i-mestrovitch": "james-1-mestrovitch",
+    "samuel-i-parker": "samuel-1-parker",
+    "harvey-c-barnum-jr": "harvey-c-ir-barnum",
+}
+
+
 def apply_photo_cache(people: list[dict]) -> None:
     cache = DATA / "photos.json"
     if not cache.exists():
         return
     photos = json.loads(cache.read_text(encoding="utf-8"))
     for person in people:
-        extra = photos.get(person["id"])
+        extra = photos.get(person["id"]) or photos.get(LEGACY_PHOTO_IDS.get(person["id"], ""))
         if not extra:
             continue
         person["photo"] = extra.get("photo")
