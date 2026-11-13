@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
+  FOUNDING_RATE,
   sponsorLinkRel,
   validateDirectory,
   verificationBadge,
@@ -35,6 +36,8 @@ test("sponsor links are marked only when they leave the site", () => {
   assert.equal(sponsorLinkRel("https://example.com/offer"), "sponsored noopener");
   assert.equal(sponsorLinkRel("/directory/sponsor"), undefined);
   assert.equal(sponsor.href, "/directory/sponsor");
+  assert.equal(sponsor.rate, FOUNDING_RATE);
+  assert.equal(sponsor.disclosure, "This is a paid placement. It is not an endorsement by Valor Record.");
 });
 
 test("every museum has a source and the set covers both maps", () => {

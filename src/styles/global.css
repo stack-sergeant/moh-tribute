@@ -768,6 +768,17 @@ button { cursor: pointer; }
   font-size: 1rem;
   max-width: 40rem;
 }
+.sponsor-rate {
+  margin: 0.45rem 0 0.85rem;
+  color: var(--ink);
+  font-size: 1rem;
+  max-width: 40rem;
+  overflow-wrap: break-word;
+}
+.sponsor-bar .sponsor-rate {
+  flex: 1 1 18rem;
+  margin: 0;
+}
 .sponsor-bar {
   max-width: 76rem;
   margin: 0 auto 1rem;

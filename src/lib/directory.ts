@@ -54,6 +54,7 @@ export interface Sponsor {
   action: string;
   href: string;
   disclosure: string;
+  rate: string;
 }
 
 export const museums = museumsData as Museum[];

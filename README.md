@@ -73,7 +73,7 @@ Museums are facts in `data/directory/museums.json`: name, city, state or country
 
 `veteranStatus` is `veteran` or `service-disabled-veteran`. `verification` is `sba-vetcert` or `sam-veteran-owned`. Do not store the contact email, phone, or UEI. `state` is the USPS code when the country is United States. For another country, put the country in `country` and a short region code in `state` only if you also change the validator; otherwise keep non-U.S. businesses out until that field is agreed. The template above is not a live listing. Do not commit a placeholder business.
 
-The sponsor card and footer bar read `data/directory/sponsor.json`. The launch copy is a placeholder that links to `/directory/sponsor`. Keep `label` as `Sponsored`, `kicker` as `Featured sponsor`, and `disclosure` as `This is a paid placement. It is not an endorsement by Valor Record.` When a real sponsor is approved, set `title` and `action`, and set `href` to the sponsor URL. An `https` href is rendered with `rel="sponsored noopener"`.
+The sponsor card, footer bar, and `/directory/sponsor` read `data/directory/sponsor.json`. The slot is one exclusive placement. The launch copy is still a placeholder that links to `/directory/sponsor`. Keep `label` as `Sponsored`, `kicker` as `Featured sponsor`, and `disclosure` as `This is a paid placement. It is not an endorsement by Valor Record.` The `rate` line is `Founding sponsor rate: $49/month for the first 6 months (or $250 prepaid for 6 months), then $99/month standard.` When a real sponsor is approved, set `title` and `action`, and set `href` to the sponsor URL. An `https` href is rendered with `rel="sponsored noopener"`.
 
 ### Submission forms
 

@@ -4,6 +4,9 @@ export const VETCERT_URL = "https://veterans.certify.sba.gov/";
 
 export const DISCLOSURE = "This is a paid placement. It is not an endorsement by Valor Record.";
 
+export const FOUNDING_RATE =
+  "Founding sponsor rate: $49/month for the first 6 months (or $250 prepaid for 6 months), then $99/month standard.";
+
 export const US_STATES = [
   ["AL", "Alabama"],
   ["AK", "Alaska"],
@@ -193,6 +196,7 @@ export function validateDirectory({ museums, businesses, sponsor }) {
 
   if (sponsor && typeof sponsor === "object") {
     if (sponsor.disclosure !== DISCLOSURE) errors.push("sponsor disclosure");
+    if (sponsor.rate !== FOUNDING_RATE) errors.push("sponsor rate");
     if (sponsor.label !== "Sponsored") errors.push("sponsor label");
     if (sponsor.kicker !== "Featured sponsor") errors.push("sponsor kicker");
     if (!sponsor.title || !sponsor.action) errors.push("sponsor copy");
