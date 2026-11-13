@@ -178,6 +178,9 @@ STATE_ABBR = {
 SUFFIXES = {
     "jr": "Jr.",
     "jr.": "Jr.",
+    # The Army index prints at least one "JR." suffix as "IR."
+    "ir": "Jr.",
+    "ir.": "Jr.",
     "sr": "Sr.",
     "sr.": "Sr.",
     "ii": "II",
@@ -190,8 +193,8 @@ SUFFIXES = {
 }
 
 LABEL_RE = re.compile(
-    r"\b(Rank and organization|Place and date|Entered service at|Enlisted in|"
-    r"Birth|Born|Date of issue|Accredited to|G\.O\. No\.|Citation)\s*[:.]?",
+    r"\b(Rank and organization|Place and date|Place and dare|Entered service at|Enlisted in|"
+    r"Birth|Born|Date of issue|Accredited to|Appointed from|G\.O\. No\.|Citation)\s*[:.]?",
     re.IGNORECASE,
 )
 
@@ -228,7 +231,9 @@ DATE_PATTERNS = [
     re.compile(rf"({DATE_TOKEN})\s+(\d{{4}})", re.I),
 ]
 
-DEATH_PHRASES = [
+# Phrases that attribute death to the recipient. Bare "mortally wounded" and
+# "killed in action" are not included: citations use them for comrades and enemies.
+RECIPIENT_DEATH_PHRASES = [
     "posthumously",
     "at the cost of his own life",
     "at the cost of her own life",
@@ -238,17 +243,15 @@ DEATH_PHRASES = [
     "gave her life",
     "sacrificed his life",
     "sacrificed her life",
-    "lost his life",
-    "lost her life",
+    "sacrificing his own life",
+    "sacrificing her own life",
     "he was killed",
     "she was killed",
-    "was mortally wounded",
-    "fell mortally wounded",
-    "mortally wounded",
-    "fell dead",
     "until he was killed",
     "until she was killed",
-    "killed in action",
+    "he was mortally wounded",
+    "she was mortally wounded",
+    "although mortally wounded",
 ]
 
 
@@ -278,6 +281,9 @@ def _cap_token(token: str) -> str:
     token = token.strip()
     if not token:
         return ""
+    # The index prints the middle initial I as the digit 1 (Richard 1. Bong).
+    if re.fullmatch(r"1\.?", token):
+        return "I."
     if re.fullmatch(r"[A-Za-z]\.?", token):
         return token[0].upper() + "."
     token = token.strip(".")
@@ -360,27 +366,61 @@ def name_identity(parts: dict) -> str:
     )
 
 
+def _strip_citation_trailer(citation: str) -> str:
+    return re.split(r"\bFor more info(?:rmation)?\b", citation or "", maxsplit=1, flags=re.I)[0].strip()
+
+
 def parse_labeled_block(text: str) -> dict:
     text = squash(text)
     matches = list(LABEL_RE.finditer(text))
     fields: dict[str, str] = {}
     if not matches:
-        return {"citation": text, "fields": fields}
+        return {"citation": _strip_citation_trailer(text), "fields": fields}
     # Citation consumes the remainder so later colons stay inside it.
     citation_at = next((m.start() for m in matches if m.group(1).lower() == "citation"), None)
     usable = [m for m in matches if citation_at is None or m.start() <= citation_at]
     for i, match in enumerate(usable):
         key = match.group(1).lower()
+        if key == "place and dare":
+            key = "place and date"
         start = match.end()
         end = usable[i + 1].start() if i + 1 < len(usable) else len(text)
         if key == "citation":
             end = len(text)
         value = squash(text[start:end]).strip(" ;")
         fields[key] = value
-    citation = fields.get("citation", "")
-    # Drop the "for more information" trailer the Army feature blurbs append.
-    citation = re.split(r"\bFor more information\b", citation, maxsplit=1, flags=re.I)[0].strip()
+    citation = _strip_citation_trailer(fields.get("citation", ""))
     return {"citation": citation, "fields": fields}
+
+
+def restore_collapsed_day_ranges(text: str) -> str:
+    """Turn a dropped hyphen in '1213 November 1942' back into '12-13 November 1942'.
+
+    A following year is required when the four digits could themselves be a year,
+    so '19-20 February 1944' is recovered and a bare year is left alone.
+    """
+
+    def repl(match: re.Match) -> str:
+        num, month, year = match.group(1), match.group(2), match.group(3)
+        if len(num) != 4:
+            return match.group(0)
+        d1, d2 = int(num[:2]), int(num[2:])
+        if not (1 <= d1 <= 31 and 1 <= d2 <= 31 and d1 < d2):
+            return match.group(0)
+        looks_like_year = num.startswith(("18", "19", "20"))
+        if looks_like_year and not year:
+            return match.group(0)
+        if looks_like_year and year and num == year:
+            return match.group(0)
+        tail = f" {year}" if year else ""
+        return f"{d1}-{d2} {month}{tail}"
+
+    return re.sub(
+        rf"\b(\d{{4}})\s+({DATE_TOKEN})\b(?:\s+((?:18|19|20)\d{{2}})\b)?",
+        repl,
+        text,
+        flags=re.I,
+    )
 
 
 def _month_num(token: str) -> int:
@@ -397,60 +437,128 @@ def _iso(year: int, month: int, day: int | None = None) -> str | None:
         return None
 
 
+def _span_from_match(pattern: re.Pattern, match: re.Match) -> tuple[str, str] | None:
+    groups = match.groups()
+    try:
+        if pattern is DATE_PATTERNS[0] or pattern is DATE_PATTERNS[1]:
+            d1, d2, month, year = groups
+            start = _iso(int(year), _month_num(month), int(d1))
+            end = _iso(int(year), _month_num(month), int(d2))
+        elif pattern is DATE_PATTERNS[2]:
+            d1, m1, y1, d2, m2, y2 = groups
+            start = _iso(int(y1), _month_num(m1), int(d1))
+            end = _iso(int(y2), _month_num(m2), int(d2))
+        elif pattern is DATE_PATTERNS[3]:
+            m1, d1, y1, m2, d2, y2 = groups
+            start = _iso(int(y1), _month_num(m1), int(d1))
+            end = _iso(int(y2), _month_num(m2), int(d2))
+        elif pattern is DATE_PATTERNS[4]:
+            month, d1, d2, year = groups
+            start = _iso(int(year), _month_num(month), int(d1))
+            end = _iso(int(year), _month_num(month), int(d2))
+        elif pattern is DATE_PATTERNS[5]:
+            d1, d2, month, year = groups
+            start = _iso(int(year), _month_num(month), int(d1))
+            end = _iso(int(year), _month_num(month), int(d2))
+        elif pattern is DATE_PATTERNS[6]:
+            day, month, year = groups
+            start = _iso(int(year), _month_num(month), int(day))
+            end = start
+        elif pattern is DATE_PATTERNS[7]:
+            month, day, year = groups
+            start = _iso(int(year), _month_num(month), int(day))
+            end = start
+        else:
+            month, year = groups
+            start = _iso(int(year), _month_num(month), None)
+            end = start
+    except (ValueError, KeyError):
+        return None
+    if not start or not end:
+        return None
+    return start, end
+
+
+def _cross_month_spans(text: str) -> list[tuple[int, int, str, str, str]]:
+    """Spans for '10 May to 14 November 1942'."""
+    found = []
+    pattern = re.compile(
+        rf"(\d{{1,2}})\s+({DATE_TOKEN})\s+to\s+(\d{{1,2}})\s+({DATE_TOKEN})\s+(\d{{4}})",
+        re.I,
+    )
+    for match in pattern.finditer(text):
+        d1, m1, d2, m2, year = match.groups()
+        try:
+            start = _iso(int(year), _month_num(m1), int(d1))
+            end = _iso(int(year), _month_num(m2), int(d2))
+        except (ValueError, KeyError):
+            continue
+        if start and end:
+            found.append((match.start(), match.end(), start, end, match.group(0)))
+    return found
+
+
+def _tidy_date_label(label: str) -> str:
+    return label.replace(" - ", "–").replace(" -", "–")
+
+
+def _adjacent_date(text: str, cursor: int) -> tuple[int, int, str, str, str] | None:
+    """A second date counts only when punctuation separates it from the first.
+
+    "9 October to 19 November 1942, 15 and 23 January 1943" stays one span.
+    A later "killed in action as of 2 November 1953" does not.
+    """
+    gap = re.match(r"\s*(?:,|and)\s*", text[cursor:])
+    if not gap:
+        return None
+    rest = text[cursor + gap.end() :]
+    found: tuple[int, int, str, str, str] | None = None
+    for pattern in DATE_PATTERNS:
+        match = pattern.match(rest)
+        if not match:
+            continue
+        parsed = _span_from_match(pattern, match)
+        if not parsed:
+            continue
+        found = (0, match.end(), parsed[0], parsed[1], match.group(0))
+        break
+    return found
+
+
 def parse_date_span(raw: str | None) -> dict:
     """Return start/end ISO dates and a year when a date can be read."""
-    result = {"start": None, "end": None, "year": None, "label": None}
+    result = {"start": None, "end": None, "year": None, "label": None, "matches": []}
     if not raw or blankish(raw):
         return result
     text = squash(raw)
     result["label"] = text
-    for pattern in DATE_PATTERNS:
-        match = pattern.search(text)
-        if not match:
-            continue
-        groups = match.groups()
-        try:
-            if pattern is DATE_PATTERNS[0] or pattern is DATE_PATTERNS[1]:
-                d1, d2, month, year = groups
-                result["start"] = _iso(int(year), _month_num(month), int(d1))
-                result["end"] = _iso(int(year), _month_num(month), int(d2))
-            elif pattern is DATE_PATTERNS[2]:
-                d1, m1, y1, d2, m2, y2 = groups
-                result["start"] = _iso(int(y1), _month_num(m1), int(d1))
-                result["end"] = _iso(int(y2), _month_num(m2), int(d2))
-            elif pattern is DATE_PATTERNS[3]:
-                m1, d1, y1, m2, d2, y2 = groups
-                result["start"] = _iso(int(y1), _month_num(m1), int(d1))
-                result["end"] = _iso(int(y2), _month_num(m2), int(d2))
-            elif pattern is DATE_PATTERNS[4]:
-                month, d1, d2, year = groups
-                result["start"] = _iso(int(year), _month_num(month), int(d1))
-                result["end"] = _iso(int(year), _month_num(month), int(d2))
-            elif pattern is DATE_PATTERNS[5]:
-                d1, d2, month, year = groups
-                result["start"] = _iso(int(year), _month_num(month), int(d1))
-                result["end"] = _iso(int(year), _month_num(month), int(d2))
-            elif pattern is DATE_PATTERNS[6]:
-                day, month, year = groups
-                result["start"] = _iso(int(year), _month_num(month), int(day))
-                result["end"] = result["start"]
-            elif pattern is DATE_PATTERNS[7]:
-                month, day, year = groups
-                result["start"] = _iso(int(year), _month_num(month), int(day))
-                result["end"] = result["start"]
-            else:
-                month, year = groups
-                result["start"] = _iso(int(year), _month_num(month), None)
-                result["end"] = result["start"]
-        except (ValueError, KeyError):
-            continue
-        if result["start"]:
-            result["year"] = int(result["start"][:4])
-            result["label"] = match.group(0).replace(" - ", "–").replace(" -", "–")
-            return result
-    year_only = re.search(r"\b(18|19|20)\d{2}\b", text)
-    if year_only:
-        result["year"] = int(year_only.group(0))
+    spans = _cross_month_spans(text)
+    if not spans:
+        for pattern in DATE_PATTERNS:
+            match = pattern.search(text)
+            if not match:
+                continue
+            parsed = _span_from_match(pattern, match)
+            if not parsed:
+                continue
+            spans = [(match.start(), match.end(), parsed[0], parsed[1], match.group(0))]
+            break
+    if not spans:
+        year_only = re.search(r"\b(18|19|20)\d{2}\b", text)
+        if year_only:
+            result["year"] = int(year_only.group(0))
+        return result
+    spans.sort()
+    first = spans[0]
+    chosen = [first]
+    extra = _adjacent_date(text, first[1])
+    if extra:
+        chosen.append((first[1], first[1] + extra[1], extra[2], extra[3], extra[4]))
+    result["start"] = min(item[2] for item in chosen)
+    result["end"] = max(item[3] for item in chosen)
+    result["year"] = int(result["start"][:4])
+    result["matches"] = [item[4] for item in chosen]
+    result["label"] = ", ".join(_tidy_date_label(item) for item in result["matches"])
     return result
 
 
@@ -460,8 +568,14 @@ def split_place_and_date(raw: str | None) -> tuple[str | None, dict]:
     text = squash(raw)
     dates = parse_date_span(text)
     place = text
-    if dates["label"] and dates["label"] in text:
-        place = text.replace(dates["label"], " ")
+    if dates["start"]:
+        for label in dates.get("matches") or []:
+            if label and label in place:
+                place = place.replace(label, " ")
+    else:
+        # No month-and-day date. The previous parser cleared the line so a
+        # bare year or "Winter of 1872" was not stored as a place.
+        place = ""
     place = re.sub(r"\s*[–\-]\s*", " ", place)
     place = squash(place).strip(" ,;.-")
     place = re.sub(r"^(?:at|near|in|aboard|on board)\s+", "", place, flags=re.I)
@@ -534,10 +648,22 @@ def detect_branch(rank_org: str | None, citation: str | None = None) -> str:
 
 
 def citation_implies_death(citation: str | None) -> bool:
+    """True when the citation says the recipient died.
+
+    A mention that someone else was mortally wounded, or that enemies were
+    killed in action, does not make the award posthumous.
+    """
     if not citation:
         return False
     low = citation.lower()
-    return any(phrase in low for phrase in DEATH_PHRASES)
+    if any(phrase in low for phrase in RECIPIENT_DEATH_PHRASES):
+        return True
+    # "lost his life" counts unless the sentence is about a person who was saved.
+    if "lost his life" in low or "lost her life" in low:
+        if "would have lost his life" in low or "would have lost her life" in low:
+            return False
+        return True
+    return False
 
 
 def tidy_place(place: str | None) -> str | None:
@@ -582,10 +708,46 @@ def clean_place_display(place: str | None) -> str | None:
     return " ".join(fix(w) for w in text.split())
 
 
-def ship_from_text(text: str | None) -> str | None:
+_SHIP_STOP = {
+    "a", "an", "after", "and", "as", "at", "but", "by", "capt", "captain",
+    "carrying", "colonel", "commander", "corporal", "during", "for", "from",
+    "he", "her", "his", "in", "into", "january", "february", "march", "april",
+    "may", "june", "july", "august", "september", "october", "november",
+    "december", "jan", "feb", "mar", "apr", "jun", "jul", "aug", "sept", "sep",
+    "oct", "nov", "dec", "lieutenant", "lt", "major", "near", "of", "off", "on",
+    "over", "private", "sergeant", "sgt", "she", "st", "that", "the", "then",
+    "this", "to", "undaunted", "under", "was", "were", "when", "where", "which",
+    "while", "who", "with",
+}
+
+
+def ship_from_text(text: str | None, last_name: str | None = None) -> str | None:
+    """Read a ship name, including two- and three-word names such as San Francisco."""
     if not text:
         return None
-    match = re.search(r"\bU\.?\s*S\.?\s*S\.?\s+([A-Z][A-Za-z0-9'’-]+)", text)
-    if match:
-        return f"USS {match.group(1)}"
-    return None
+    match = re.search(r"\bU\.?\s*S\.?\s*S\.?\s+", text)
+    if not match:
+        return None
+    rest = text[match.end():]
+    words: list[str] = []
+    for part in re.finditer(r"[A-Za-z][A-Za-z0-9'’.-]*", rest):
+        gap = rest[: part.start()]
+        # A comma or a sentence break ends the ship name: "U.S.S. Signal, Red River".
+        if words and re.search(r"[,.;:!?]", gap):
+            break
+        bare = part.group(0).strip(".")
+        if not bare:
+            continue
+        low = bare.lower()
+        if words and low in _SHIP_STOP:
+            break
+        if words and last_name and low == last_name.lower():
+            break
+        if words and not bare[0].isupper():
+            break
+        words.append(bare)
+        if len(words) == 4:
+            break
+    if not words:
+        return None
+    return "USS " + " ".join(words)

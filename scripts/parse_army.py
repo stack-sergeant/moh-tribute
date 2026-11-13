@@ -12,6 +12,7 @@ import json
 import re
 from pathlib import Path
 
+from corrections import apply_award_corrections, polish_citation
 from mohlib import (
     blankish,
     citation_implies_death,
@@ -22,6 +23,7 @@ from mohlib import (
     name_identity,
     parse_date_span,
     parse_labeled_block,
+    restore_collapsed_day_ranges,
     ship_from_text,
     slugify,
     split_place_and_date,
@@ -242,9 +244,10 @@ def parse_file(path: Path) -> list[dict]:
         text = html_to_text(rest.split("<h2")[0].split("<h1")[0])
         # Stop before the resources footer if it was pulled into the last entry.
         text = re.split(r"Additional Medal of Honor Resources", text, maxsplit=1)[0]
+        text = restore_collapsed_day_ranges(text)
         parsed = parse_labeled_block(text)
         fields = parsed["fields"]
-        citation = parsed["citation"]
+        citation = polish_citation(name_raw, parsed["citation"])
         if not citation or len(citation) < 12:
             continue
         rank_org = fields.get("rank and organization", "")
@@ -271,13 +274,21 @@ def parse_file(path: Path) -> list[dict]:
         if not place and re.search(r"\bIwo Jima\b", citation or ""):
             place = "Iwo Jima"
         if not place:
-            place = ship_from_text(rank_org) or ship_from_text(citation)
+            place = ship_from_text(rank_org, parts_name["last"]) or ship_from_text(
+                citation, parts_name["last"]
+            )
         if not rank:
             rank = rank_from_citation(citation) or ""
         birth = fields.get("birth") or fields.get("born") or ""
         entered = fields.get("entered service at") or ""
         accredited = fields.get("accredited to") or ""
-        home_state = find_state(accredited) or find_state(entered) or find_state(birth)
+        appointed = fields.get("appointed from") or ""
+        home_state = (
+            find_state(accredited)
+            or find_state(entered)
+            or find_state(appointed)
+            or find_state(birth)
+        )
         birth_year = None
         birth_date = parse_date_span(birth)
         if birth_date["year"]:
@@ -350,6 +361,7 @@ def parse_file(path: Path) -> list[dict]:
                 "campaignFile": path.name,
             }
         )
+        apply_award_corrections(awards[-1])
     return awards
 
 
