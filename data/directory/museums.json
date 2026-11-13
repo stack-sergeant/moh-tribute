@@ -1,0 +1,2079 @@
+[
+  {
+    "slug": "u-s-army-aviation-museum",
+    "name": "U.S. Army Aviation Museum",
+    "city": "Fort Rucker",
+    "state": "AL",
+    "country": "United States",
+    "region": "alabama",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "enlisted-heritage-research-institute",
+    "name": "Enlisted Heritage Research Institute",
+    "city": "Maxwell AFB",
+    "state": "AL",
+    "country": "United States",
+    "region": "alabama",
+    "branch": "Air Force",
+    "category": "Heritage center",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "arkansas-national-guard-museum",
+    "name": "Arkansas National Guard Museum",
+    "city": "North Little Rock",
+    "state": "AR",
+    "country": "United States",
+    "region": "arkansas",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "fort-huachuca-museum",
+    "name": "Fort Huachuca Museum",
+    "city": "Fort Huachuca",
+    "state": "AZ",
+    "country": "United States",
+    "region": "arizona",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "arizona-military-museum",
+    "name": "Arizona Military Museum",
+    "city": "Phoenix",
+    "state": "AZ",
+    "country": "United States",
+    "region": "arizona",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "website": "https://www.azdema.gov/MUSEUM/INDEX.HTML",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "flight-test-museum",
+    "name": "Flight Test Museum",
+    "city": "Edwards AFB",
+    "state": "CA",
+    "country": "United States",
+    "region": "california",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-training-center-and-11th-armored-cavalry-regiment-museum",
+    "name": "National Training Center and 11th Armored Cavalry Regiment Museum",
+    "city": "Fort Irwin",
+    "state": "CA",
+    "country": "United States",
+    "region": "california",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-navy-seabee-museum",
+    "name": "U.S. Navy Seabee Museum",
+    "city": "Port Hueneme",
+    "state": "CA",
+    "country": "United States",
+    "region": "california",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/seabee.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "mcrd-san-diego-command-museum",
+    "name": "MCRD San Diego Command Museum",
+    "city": "San Diego",
+    "state": "CA",
+    "country": "United States",
+    "region": "california",
+    "branch": "Marine Corps",
+    "category": "Marine Corps museum",
+    "website": "https://www.mcrdsd.marines.mil/Visitors/MCRDSD-Museum/",
+    "sources": [
+      {
+        "label": "Official U.S. Marine Corps museum page",
+        "url": "https://www.mcrdsd.marines.mil/Visitors/MCRDSD-Museum/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "uss-midway-museum",
+    "name": "USS Midway Museum",
+    "city": "San Diego",
+    "state": "CA",
+    "country": "United States",
+    "region": "california",
+    "branch": "Navy",
+    "category": "Historic ship",
+    "website": "https://www.midway.org/",
+    "sources": [
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "travis-afb-heritage-center",
+    "name": "Travis AFB Heritage Center",
+    "city": "Travis AFB",
+    "state": "CA",
+    "country": "United States",
+    "region": "california",
+    "branch": "Air Force",
+    "category": "Heritage center",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "4th-infantry-division-and-fort-carson-museum",
+    "name": "4th Infantry Division and Fort Carson Museum",
+    "city": "Fort Carson",
+    "state": "CO",
+    "country": "United States",
+    "region": "colorado",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "peterson-air-and-space-museum",
+    "name": "Peterson Air and Space Museum",
+    "city": "Peterson AFB",
+    "state": "CO",
+    "country": "United States",
+    "region": "colorado",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "submarine-force-museum",
+    "name": "Submarine Force Museum",
+    "city": "Groton",
+    "state": "CT",
+    "country": "United States",
+    "region": "connecticut",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/subforce.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-guard-memorial-museum",
+    "name": "National Guard Memorial Museum",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States",
+    "region": "district-of-columbia",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-museum-of-the-u-s-navy",
+    "name": "National Museum of the U.S. Navy",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States",
+    "region": "district-of-columbia",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/nmusn.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "air-mobility-command-museum",
+    "name": "Air Mobility Command Museum",
+    "city": "Dover AFB",
+    "state": "DE",
+    "country": "United States",
+    "region": "delaware",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "camp-blanding-museum",
+    "name": "Camp Blanding Museum",
+    "city": "Camp Blanding",
+    "state": "FL",
+    "country": "United States",
+    "region": "florida",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "air-force-space-and-missile-museum",
+    "name": "Air Force Space and Missile Museum",
+    "city": "Cape Canaveral AFS",
+    "state": "FL",
+    "country": "United States",
+    "region": "florida",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "air-force-armament-museum",
+    "name": "Air Force Armament Museum",
+    "city": "Eglin AFB",
+    "state": "FL",
+    "country": "United States",
+    "region": "florida",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-naval-aviation-museum",
+    "name": "National Naval Aviation Museum",
+    "city": "Pensacola",
+    "state": "FL",
+    "country": "United States",
+    "region": "florida",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://navalaviationmuseum.org/",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "the-national-infantry-museum-and-soldier-center",
+    "name": "The National Infantry Museum & Soldier Center",
+    "city": "Columbus",
+    "state": "GA",
+    "country": "United States",
+    "region": "georgia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "3rd-infantry-division-museum",
+    "name": "3rd Infantry Division Museum",
+    "city": "Fort Stewart",
+    "state": "GA",
+    "country": "United States",
+    "region": "georgia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "georgia-national-guard-museum",
+    "name": "Georgia National Guard Museum",
+    "city": "Marietta",
+    "state": "GA",
+    "country": "United States",
+    "region": "georgia",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "museum-of-aviation",
+    "name": "Museum of Aviation",
+    "city": "Robins AFB",
+    "state": "GA",
+    "country": "United States",
+    "region": "georgia",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-museum-of-hawaii",
+    "name": "U.S. Army Museum of Hawaii",
+    "city": "Fort DeRussy",
+    "state": "HI",
+    "country": "United States",
+    "region": "hawaii",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "uss-bowfin-submarine-museum-and-park",
+    "name": "USS Bowfin Submarine Museum & Park",
+    "city": "Honolulu",
+    "state": "HI",
+    "country": "United States",
+    "region": "hawaii",
+    "branch": "Navy",
+    "category": "Historic ship",
+    "website": "https://www.bowfin.org/",
+    "sources": [
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "tropic-lightning-museum",
+    "name": "Tropic Lightning Museum",
+    "city": "Schofield Barracks",
+    "state": "HI",
+    "country": "United States",
+    "region": "hawaii",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "iowa-gold-star-military-museum",
+    "name": "Iowa Gold Star Military Museum",
+    "city": "Johnston",
+    "state": "IA",
+    "country": "United States",
+    "region": "iowa",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "idaho-military-history-museum",
+    "name": "Idaho Military History Museum",
+    "city": "Boise",
+    "state": "ID",
+    "country": "United States",
+    "region": "idaho",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "website": "https://museum.mil.idaho.gov/",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-museum-of-the-american-sailor",
+    "name": "National Museum of the American Sailor",
+    "city": "Great Lakes",
+    "state": "IL",
+    "country": "United States",
+    "region": "illinois",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/nmas.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "rock-island-arsenal-museum",
+    "name": "Rock Island Arsenal Museum",
+    "city": "Rock Island",
+    "state": "IL",
+    "country": "United States",
+    "region": "illinois",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "camp-atterbury-veterans-memorial-museum",
+    "name": "Camp Atterbury Veterans' Memorial Museum",
+    "city": "Edinburgh",
+    "state": "IN",
+    "country": "United States",
+    "region": "indiana",
+    "branch": "Multiple",
+    "category": "Veterans museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "frontier-army-museum",
+    "name": "Frontier Army Museum",
+    "city": "Fort Leavenworth",
+    "state": "KS",
+    "country": "United States",
+    "region": "kansas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "1st-infantry-division-museum",
+    "name": "1st Infantry Division Museum",
+    "city": "Fort Riley",
+    "state": "KS",
+    "country": "United States",
+    "region": "kansas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-cavalry-museum",
+    "name": "U.S. Cavalry Museum",
+    "city": "Fort Riley",
+    "state": "KS",
+    "country": "United States",
+    "region": "kansas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "museum-of-the-kansas-national-guard",
+    "name": "Museum of the Kansas National Guard",
+    "city": "Topeka",
+    "state": "KS",
+    "country": "United States",
+    "region": "kansas",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "general-george-patton-museum",
+    "name": "General George Patton Museum",
+    "city": "Fort Knox",
+    "state": "KY",
+    "country": "United States",
+    "region": "kentucky",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "kentucky-military-history-museum",
+    "name": "Kentucky Military History Museum",
+    "city": "Frankfort",
+    "state": "KY",
+    "country": "United States",
+    "region": "kentucky",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "barksdale-global-power-museum",
+    "name": "Barksdale Global Power Museum",
+    "city": "Barksdale AFB",
+    "state": "LA",
+    "country": "United States",
+    "region": "louisiana",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "ansel-m-stroud-jr-military-history-and-weapons-museum-jackson-barracks-military-museum",
+    "name": "Ansel M. Stroud Jr. Military History & Weapons Museum (Jackson Barracks Military Museum)",
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "United States",
+    "region": "louisiana",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "louisiana-maneuvers-military-museum",
+    "name": "Louisiana Maneuvers Military Museum",
+    "city": "Pineville",
+    "state": "LA",
+    "country": "United States",
+    "region": "louisiana",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "uss-constitution-nhhc-detachment-boston",
+    "name": "USS Constitution (NHHC Detachment Boston)",
+    "city": "Boston",
+    "state": "MA",
+    "country": "United States",
+    "region": "massachusetts",
+    "branch": "Navy",
+    "category": "Historic ship",
+    "sources": [
+      {
+        "label": "10 U.S.C. § 8617A, United States Navy Museum System",
+        "url": "https://uscode.house.gov/view.xhtml"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "massachusetts-national-guard-museum-and-archives",
+    "name": "Massachusetts National Guard Museum and Archives",
+    "city": "Concord",
+    "state": "MA",
+    "country": "United States",
+    "region": "massachusetts",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-naval-academy-museum",
+    "name": "U.S. Naval Academy Museum",
+    "city": "Annapolis",
+    "state": "MD",
+    "country": "United States",
+    "region": "maryland",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.usna.edu/Museum/",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "maryland-museum-of-military-history",
+    "name": "Maryland Museum of Military History",
+    "city": "Baltimore",
+    "state": "MD",
+    "country": "United States",
+    "region": "maryland",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-chemical-corps-museum",
+    "name": "U.S. Army Chemical Corps Museum",
+    "city": "Fort Leonard Wood",
+    "state": "MO",
+    "country": "United States",
+    "region": "missouri",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-engineer-museum",
+    "name": "U.S. Army Engineer Museum",
+    "city": "Fort Leonard Wood",
+    "state": "MO",
+    "country": "United States",
+    "region": "missouri",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-military-police-corps-regimental-museum",
+    "name": "U.S. Army Military Police Corps Regimental Museum",
+    "city": "Fort Leonard Wood",
+    "state": "MO",
+    "country": "United States",
+    "region": "missouri",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "missouri-national-guard-museum",
+    "name": "Missouri National Guard Museum",
+    "city": "Jefferson City",
+    "state": "MO",
+    "country": "United States",
+    "region": "missouri",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "mississippi-armed-forces-museum",
+    "name": "Mississippi Armed Forces Museum",
+    "city": "Camp Shelby",
+    "state": "MS",
+    "country": "United States",
+    "region": "mississippi",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "montana-military-museum",
+    "name": "Montana Military Museum",
+    "city": "Fort Harrison",
+    "state": "MT",
+    "country": "United States",
+    "region": "montana",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "malmstrom-afb-museum",
+    "name": "Malmstrom AFB Museum",
+    "city": "Malmstrom AFB",
+    "state": "MT",
+    "country": "United States",
+    "region": "montana",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "airborne-and-special-operations-museum",
+    "name": "Airborne and Special Operations Museum",
+    "city": "Fayetteville",
+    "state": "NC",
+    "country": "United States",
+    "region": "north-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "82d-airborne-division-war-memorial-museum",
+    "name": "82d Airborne Division War Memorial Museum",
+    "city": "Fort Liberty",
+    "state": "NC",
+    "country": "United States",
+    "region": "north-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "john-f-kennedy-special-warfare-museum",
+    "name": "John F. Kennedy Special Warfare Museum",
+    "city": "Fort Liberty",
+    "state": "NC",
+    "country": "United States",
+    "region": "north-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-guard-militia-museum-of-new-jersey",
+    "name": "National Guard Militia Museum of New Jersey",
+    "city": "Sea Girt",
+    "state": "NJ",
+    "country": "United States",
+    "region": "new-jersey",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "white-sands-missile-range-museum",
+    "name": "White Sands Missile Range Museum",
+    "city": "White Sands Missile Range",
+    "state": "NM",
+    "country": "United States",
+    "region": "new-mexico",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "harbor-defense-museum",
+    "name": "Harbor Defense Museum",
+    "city": "Brooklyn",
+    "state": "NY",
+    "country": "United States",
+    "region": "new-york",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "10th-mountain-division-and-fort-drum-museum",
+    "name": "10th Mountain Division & Fort Drum Museum",
+    "city": "Fort Drum",
+    "state": "NY",
+    "country": "United States",
+    "region": "new-york",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "new-york-state-military-museum-and-research-center",
+    "name": "New York State Military Museum and Research Center",
+    "city": "Saratoga Springs",
+    "state": "NY",
+    "country": "United States",
+    "region": "new-york",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "west-point-museum",
+    "name": "West Point Museum",
+    "city": "West Point",
+    "state": "NY",
+    "country": "United States",
+    "region": "new-york",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "ohio-army-national-guard-museum",
+    "name": "Ohio Army National Guard Museum",
+    "city": "Columbus",
+    "state": "OH",
+    "country": "United States",
+    "region": "ohio",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-museum-of-the-united-states-air-force",
+    "name": "National Museum of the United States Air Force",
+    "city": "Wright-Patterson AFB",
+    "state": "OH",
+    "country": "United States",
+    "region": "ohio",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "website": "https://www.nationalmuseum.af.mil/",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "fort-sill-national-historic-landmark-and-museum",
+    "name": "Fort Sill National Historic Landmark and Museum",
+    "city": "Fort Sill",
+    "state": "OK",
+    "country": "United States",
+    "region": "oklahoma",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-artillery-museum",
+    "name": "U.S. Army Artillery Museum",
+    "city": "Fort Sill",
+    "state": "OK",
+    "country": "United States",
+    "region": "oklahoma",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "oregon-military-museum",
+    "name": "Oregon Military Museum",
+    "city": "Clackamas",
+    "state": "OR",
+    "country": "United States",
+    "region": "oregon",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "pennsylvania-national-guard-museum",
+    "name": "Pennsylvania National Guard Museum",
+    "city": "Annville",
+    "state": "PA",
+    "country": "United States",
+    "region": "pennsylvania",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-heritage-and-education-center",
+    "name": "U.S. Army Heritage and Education Center",
+    "city": "Carlisle Barracks",
+    "state": "PA",
+    "country": "United States",
+    "region": "pennsylvania",
+    "branch": "Army",
+    "category": "Heritage center",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "99th-rsc-museum",
+    "name": "99th RSC Museum",
+    "city": "Coraopolis",
+    "state": "PA",
+    "country": "United States",
+    "region": "pennsylvania",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "rhode-island-national-guard-museum",
+    "name": "Rhode Island National Guard Museum",
+    "city": "Cranston",
+    "state": "RI",
+    "country": "United States",
+    "region": "rhode-island",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "naval-war-college-museum",
+    "name": "Naval War College Museum",
+    "city": "Newport",
+    "state": "RI",
+    "country": "United States",
+    "region": "rhode-island",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.usnwc.edu/NWC-Museum",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "south-carolina-military-museum",
+    "name": "South Carolina Military Museum",
+    "city": "Columbia",
+    "state": "SC",
+    "country": "United States",
+    "region": "south-carolina",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-adjutant-general-corps-museum",
+    "name": "U.S. Army Adjutant General Corps Museum",
+    "city": "Fort Jackson",
+    "state": "SC",
+    "country": "United States",
+    "region": "south-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-basic-combat-training-museum",
+    "name": "U.S. Army Basic Combat Training Museum",
+    "city": "Fort Jackson",
+    "state": "SC",
+    "country": "United States",
+    "region": "south-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-chaplain-corps-museum",
+    "name": "U.S. Army Chaplain Corps Museum",
+    "city": "Fort Jackson",
+    "state": "SC",
+    "country": "United States",
+    "region": "south-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-finance-corps-museum",
+    "name": "U.S. Army Finance Corps Museum",
+    "city": "Fort Jackson",
+    "state": "SC",
+    "country": "United States",
+    "region": "south-carolina",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "parris-island-museum",
+    "name": "Parris Island Museum",
+    "city": "Parris Island",
+    "state": "SC",
+    "country": "United States",
+    "region": "south-carolina",
+    "branch": "Marine Corps",
+    "category": "Marine Corps museum",
+    "website": "https://www.mcrdpi.marines.mil/Visitors/Things-to-See/Parris-Island-Museum/",
+    "sources": [
+      {
+        "label": "Official U.S. Marine Corps museum page",
+        "url": "https://www.mcrdpi.marines.mil/Visitors/Things-to-See/Parris-Island-Museum/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "south-dakota-air-and-space-museum",
+    "name": "South Dakota Air and Space Museum",
+    "city": "Ellsworth AFB",
+    "state": "SD",
+    "country": "United States",
+    "region": "south-dakota",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "south-dakota-national-guard-museum",
+    "name": "South Dakota National Guard Museum",
+    "city": "Pierre",
+    "state": "SD",
+    "country": "United States",
+    "region": "south-dakota",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "wings-of-liberty-museum",
+    "name": "Wings of Liberty Museum",
+    "city": "Clarksville",
+    "state": "TN",
+    "country": "United States",
+    "region": "tennessee",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "texas-military-forces-museum",
+    "name": "Texas Military Forces Museum",
+    "city": "Austin",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "fort-bliss-and-old-ironsides-museums",
+    "name": "Fort Bliss and Old Ironsides Museums",
+    "city": "Fort Bliss",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-mounted-warrior-museum",
+    "name": "National Mounted Warrior Museum",
+    "city": "Fort Hood",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "fort-sam-houston-museum",
+    "name": "Fort Sam Houston Museum",
+    "city": "Fort Sam Houston",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-medical-department-museum",
+    "name": "U.S. Army Medical Department Museum",
+    "city": "Fort Sam Houston",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "usaf-airman-heritage-museum",
+    "name": "USAF Airman Heritage Museum",
+    "city": "Lackland AFB",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "sheppard-afb-heritage-center",
+    "name": "Sheppard AFB Heritage Center",
+    "city": "Sheppard AFB",
+    "state": "TX",
+    "country": "United States",
+    "region": "texas",
+    "branch": "Air Force",
+    "category": "Heritage center",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "hill-aerospace-museum",
+    "name": "Hill Aerospace Museum",
+    "city": "Hill AFB",
+    "state": "UT",
+    "country": "United States",
+    "region": "utah",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "96th-rsc-museum",
+    "name": "96th RSC Museum",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "region": "utah",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "fort-douglas-military-museum",
+    "name": "Fort Douglas Military Museum",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "region": "utah",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-corps-of-engineers-museum",
+    "name": "U.S. Army Corps of Engineers Museum",
+    "city": "Alexandria",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-museum-of-the-united-states-army",
+    "name": "National Museum of the United States Army",
+    "city": "Fort Belvoir",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-transportation-museum",
+    "name": "U.S. Army Transportation Museum",
+    "city": "Fort Eustis",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-quartermaster-museum",
+    "name": "U.S. Army Quartermaster Museum",
+    "city": "Fort Lee",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "u-s-army-women-s-museum",
+    "name": "U.S. Army Women's Museum",
+    "city": "Fort Lee",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "hampton-roads-naval-museum",
+    "name": "Hampton Roads Naval Museum",
+    "city": "Norfolk",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/hrnm.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-museum-of-the-marine-corps",
+    "name": "National Museum of the Marine Corps",
+    "city": "Triangle",
+    "state": "VA",
+    "country": "United States",
+    "region": "virginia",
+    "branch": "Marine Corps",
+    "category": "Marine Corps museum",
+    "website": "https://www.usmcmuseum.com/",
+    "sources": [
+      {
+        "label": "Official U.S. Marine Corps museum page",
+        "url": "https://www.usmcmuseum.com/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "the-vermont-national-guard-library-and-museum",
+    "name": "The Vermont National Guard Library and Museum",
+    "city": "Colchester",
+    "state": "VT",
+    "country": "United States",
+    "region": "vermont",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "puget-sound-navy-museum",
+    "name": "Puget Sound Navy Museum",
+    "city": "Bremerton",
+    "state": "WA",
+    "country": "United States",
+    "region": "washington",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/psnm.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "washington-national-guard-museum",
+    "name": "Washington National Guard Museum",
+    "city": "Camp Murray",
+    "state": "WA",
+    "country": "United States",
+    "region": "washington",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      },
+      {
+        "label": "IMLS Museum Data Files, FY 2018 (public domain)",
+        "url": "https://www.imls.gov/research-evaluation/data/museum-data-files"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "lewis-army-museum",
+    "name": "Lewis Army Museum",
+    "city": "Joint Base Lewis-McChord",
+    "state": "WA",
+    "country": "United States",
+    "region": "washington",
+    "branch": "Army",
+    "category": "Army museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "naval-undersea-museum",
+    "name": "Naval Undersea Museum",
+    "city": "Keyport",
+    "state": "WA",
+    "country": "United States",
+    "region": "washington",
+    "branch": "Navy",
+    "category": "Navy museum",
+    "website": "https://www.history.navy.mil/content/history/museums/undersea.html",
+    "sources": [
+      {
+        "label": "Naval History and Heritage Command museum list",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/for-the-fleet/navadmin-128-20.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "mcchord-heritage-center",
+    "name": "McChord Heritage Center",
+    "city": "McChord AFB",
+    "state": "WA",
+    "country": "United States",
+    "region": "washington",
+    "branch": "Air Force",
+    "category": "Heritage center",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "wisconsin-national-guard-museum",
+    "name": "Wisconsin National Guard Museum",
+    "city": "Camp Douglas",
+    "state": "WI",
+    "country": "United States",
+    "region": "wisconsin",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "fort-mccoy-historical-center",
+    "name": "Fort McCoy Historical Center",
+    "city": "Fort McCoy",
+    "state": "WI",
+    "country": "United States",
+    "region": "wisconsin",
+    "branch": "Army",
+    "category": "Heritage center",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "wyoming-national-guard-museum",
+    "name": "Wyoming National Guard Museum",
+    "city": "Cheyenne",
+    "state": "WY",
+    "country": "United States",
+    "region": "wyoming",
+    "branch": "National Guard",
+    "category": "National Guard museum",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "warren-icbm-and-heritage-museum",
+    "name": "Warren ICBM and Heritage Museum",
+    "city": "F.E. Warren AFB",
+    "state": "WY",
+    "country": "United States",
+    "region": "wyoming",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "sources": [
+      {
+        "label": "National Museum of the U.S. Air Force field museum list",
+        "url": "https://www.nationalmuseum.af.mil/Collections/Collection-Management/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "the-tank-museum",
+    "name": "The Tank Museum",
+    "city": "Bovington",
+    "country": "United Kingdom",
+    "region": "overseas",
+    "branch": "Army",
+    "category": "Army museum",
+    "website": "https://tankmuseum.org/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://tankmuseum.org/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "australian-war-memorial",
+    "name": "Australian War Memorial",
+    "city": "Campbell",
+    "country": "Australia",
+    "region": "overseas",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "website": "https://www.awm.gov.au/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.awm.gov.au/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "royal-air-force-museum-midlands",
+    "name": "Royal Air Force Museum Midlands",
+    "city": "Cosford",
+    "country": "United Kingdom",
+    "region": "overseas",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "website": "https://www.rafmuseum.org.uk/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.rafmuseum.org.uk/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "imperial-war-museum-london",
+    "name": "Imperial War Museum London",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "overseas",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "website": "https://www.iwm.org.uk/visits/iwm-london",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.iwm.org.uk/visits/iwm-london"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "national-army-museum",
+    "name": "National Army Museum",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "overseas",
+    "branch": "Army",
+    "category": "Army museum",
+    "website": "https://www.nam.ac.uk/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.nam.ac.uk/visit"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "royal-air-force-museum-london",
+    "name": "Royal Air Force Museum London",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "overseas",
+    "branch": "Air Force",
+    "category": "Air Force museum",
+    "website": "https://www.rafmuseum.org.uk/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.rafmuseum.org.uk/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "canadian-war-museum",
+    "name": "Canadian War Museum",
+    "city": "Ottawa",
+    "country": "Canada",
+    "region": "overseas",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "website": "https://www.warmuseum.ca/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.warmuseum.ca/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "mus-e-de-l-arm-e",
+    "name": "Musée de l'Armée",
+    "city": "Paris",
+    "country": "France",
+    "region": "overseas",
+    "branch": "Army",
+    "category": "Army museum",
+    "website": "https://www.musee-armee.fr/accueil.html",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://www.musee-armee.fr/en/your-visit/how-to-get-here.html"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "2nd-infantry-division-museum",
+    "name": "2nd Infantry Division Museum",
+    "city": "Pyeongtaek",
+    "country": "South Korea",
+    "region": "overseas",
+    "branch": "Army",
+    "category": "Army museum",
+    "website": "https://history.army.mil/Army-Museum-Enterprise/Find-an-Army-Museum/2d-Infantry-Division-Museum/",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      },
+      {
+        "label": "2d Infantry Division Museum page, U.S. Army",
+        "url": "https://history.army.mil/Army-Museum-Enterprise/Find-an-Army-Museum/2d-Infantry-Division-Museum/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "war-memorial-of-korea",
+    "name": "War Memorial of Korea",
+    "city": "Seoul",
+    "country": "South Korea",
+    "region": "overseas",
+    "branch": "Multiple",
+    "category": "National military museum",
+    "website": "https://www.warmemo.or.kr/",
+    "sources": [
+      {
+        "label": "Official museum site",
+        "url": "https://edu.warmemo.or.kr/introduce/location"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  },
+  {
+    "slug": "reed-museum-and-2d-regiment-of-dragoons-heritage-center-2d-cavalry-regiment-museum",
+    "name": "Reed Museum and 2d Regiment of Dragoons Heritage Center (2d Cavalry Regiment Museum)",
+    "city": "Vilseck",
+    "country": "Germany",
+    "region": "overseas",
+    "branch": "Army",
+    "category": "Heritage center",
+    "website": "https://history.army.mil/Army-Museum-Enterprise/Find-an-Army-Museum/Reed-Museum-and-2d-Regiment-of-Dragoons-Heritage-Center/",
+    "sources": [
+      {
+        "label": "U.S. Army Museum Enterprise directory",
+        "url": "https://history.army.mil/museums/Army-Museum-Directory/"
+      },
+      {
+        "label": "Reed Museum page, U.S. Army",
+        "url": "https://history.army.mil/Army-Museum-Enterprise/Find-an-Army-Museum/Reed-Museum-and-2d-Regiment-of-Dragoons-Heritage-Center/"
+      }
+    ],
+    "lastChecked": "2026-11-13"
+  }
+]

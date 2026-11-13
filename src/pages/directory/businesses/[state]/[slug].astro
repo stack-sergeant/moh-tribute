@@ -1,0 +1,60 @@
+---
+import DirectoryLayout from "../../../../layouts/Directory.astro";
+import {
+  businesses,
+  businessAreaLabel,
+  businessRegion,
+  metaDescription,
+  stateName,
+  verificationBadge,
+  VETCERT_URL,
+  veteranStatusLabel,
+} from "../../../../lib/directory";
+import type { Business } from "../../../../lib/directory";
+
+export function getStaticPaths() {
+  return businesses.map((business) => ({
+    params: { state: businessRegion(business), slug: business.slug },
+    props: { business },
+  }));
+}
+
+interface Props {
+  business: Business;
+}
+const { business } = Astro.props;
+const region = businessRegion(business);
+const area = businessAreaLabel(business);
+const place = business.country === "United States" ? `${business.city}, ${stateName(business.state)}` : `${business.city}, ${business.country}`;
+const description = metaDescription(`${business.name} is a veteran-owned ${business.category.toLowerCase()} business in ${place}.`);
+---
+<DirectoryLayout title={business.name} description={description}>
+  <div class="wrap directory">
+    <p class="crumbs">
+      <a href="/directory">Directory</a> /
+      <a href="/directory/businesses">Businesses</a> /
+      <a href={`/directory/businesses/${region}`}>{area}</a>
+    </p>
+    <p class="kicker">Veteran-owned business</p>
+    <h1>{business.name}</h1>
+    <p class="badge-row"><span class="badge">{verificationBadge(business.verification)}</span></p>
+    <p>{business.description}</p>
+    <dl class="facts">
+      <dt>Owner</dt>
+      <dd>{veteranStatusLabel(business.veteranStatus)}</dd>
+      <dt>Branch</dt>
+      <dd>{business.branch}</dd>
+      <dt>Category</dt>
+      <dd>{business.category}</dd>
+      <dt>Place</dt>
+      <dd>{place}</dd>
+      <dt>Website</dt>
+      <dd><a href={business.website}>{business.website}</a></dd>
+    </dl>
+    <p><a href={VETCERT_URL}>Verify on SBA VetCert</a></p>
+    <p class="note">
+      This is a reviewed opt-in listing. It is not an endorsement by Valor Record.
+      The contact email used to submit it is not published. SBA VetCert and a SAM veteran-owned registration are separate checks.
+    </p>
+  </div>
+</DirectoryLayout>

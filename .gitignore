@@ -8,3 +8,6 @@ data/raw/ago/ago-index.html
 data/awards-army.json
 data/raw/photo-hunt/
 .DS_Store
+.env
+.env.*
+!.env.example

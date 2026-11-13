@@ -1,0 +1,53 @@
+---
+import DirectoryLayout from "../../../layouts/Directory.astro";
+import {
+  businesses,
+  businessHref,
+  metaDescription,
+  stateName,
+  verificationBadge,
+  VETCERT_URL,
+  veteranStatusLabel,
+} from "../../../lib/directory";
+
+const description = metaDescription(
+  "Veteran-owned businesses that asked to be listed. Valor Record reviews each opt-in before publishing.",
+);
+---
+<DirectoryLayout title="Veteran-owned businesses" description={description}>
+  <div class="wrap directory">
+    <p class="crumbs"><a href="/directory">Directory</a> / Businesses</p>
+    <p class="kicker">Businesses</p>
+    <h1>Veteran-owned businesses</h1>
+    <p class="lede">
+      A business is listed only when the owner opts in. Valor Record does not bulk-import SAM.gov extracts
+      and does not scrape SAM.gov or SBA VetCert.
+    </p>
+    {businesses.length === 0 ? (
+      <div class="empty-cta">
+        <h2>No businesses are published yet</h2>
+        <p>
+          After a listing is approved it shows one badge, either SBA VetCert verified or Registered in SAM as veteran-owned.
+          A reviewer uses those systems separately. The public page does not treat them as the same thing.
+        </p>
+        <p><a href={VETCERT_URL}>Verify on SBA VetCert</a></p>
+        <p><a class="btn" href="/directory/submit">List your veteran-owned business</a></p>
+      </div>
+    ) : (
+      <>
+        <p><a href={VETCERT_URL}>Verify on SBA VetCert</a></p>
+        <ul class="roster">
+          {businesses.map((business) => (
+            <li>
+              <a href={businessHref(business)}>{business.name}</a>
+              <span class="badge">{verificationBadge(business.verification)}</span>
+              <p class="meta">
+                {[business.city, business.country === "United States" ? stateName(business.state) : business.country, business.branch, business.category, veteranStatusLabel(business.veteranStatus)].join(" · ")}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+  </div>
+</DirectoryLayout>

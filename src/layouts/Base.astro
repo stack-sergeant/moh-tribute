@@ -8,6 +8,7 @@ import "@fontsource/source-serif-4/600.css";
 import { ClientRouter } from "astro:transitions";
 import CadencePlayer from "../components/CadencePlayer.astro";
 import NewsletterSignup from "../components/NewsletterSignup.astro";
+import SponsorBar from "../components/SponsorBar.astro";
 import "../styles/global.css";
 import { heroScene } from "../lib/imagery";
 import { absoluteAssetUrl, pageUrl } from "../lib/urls";
@@ -19,8 +20,10 @@ interface Props {
   overlay?: boolean;
   /** Absolute or site-root image. Omitted pages use the public-domain homepage photograph. */
   image?: string;
+  /** Directory pages add the labeled sponsor bar in the footer. */
+  sponsorBar?: boolean;
 }
-const { title, description = site.description, overlay = false, image } = Astro.props;
+const { title, description = site.description, overlay = false, image, sponsorBar = false } = Astro.props;
 const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
 const canonical = pageUrl(Astro.url.pathname);
 const socialImage = absoluteAssetUrl(image || heroScene.url);
@@ -59,6 +62,7 @@ const socialImage = absoluteAssetUrl(image || heroScene.url);
           <a href="/battles">Battles</a>
           <a href="/on-this-day">On this day</a>
           <a href="/audio">Cadences</a>
+          <a href="/directory">Directory</a>
           <a href="/about">About</a>
         </nav>
       </div>
@@ -67,6 +71,7 @@ const socialImage = absoluteAssetUrl(image || heroScene.url);
       <slot />
     </main>
     <footer class="site-footer">
+      {sponsorBar && <SponsorBar />}
       <NewsletterSignup />
       <div class="footer-inner">
         <p>{disclaimer}</p>
@@ -77,6 +82,7 @@ const socialImage = absoluteAssetUrl(image || heroScene.url);
           <a href="/about">Sources and photo rules</a>.
           Optional cadence audio is a separate public-domain recording and stays off until you press play.
           <a href="/audio">Cadence credits</a>.
+          <a href="/directory">Veteran-owned businesses and military museums</a>.
         </p>
       </div>
     </footer>

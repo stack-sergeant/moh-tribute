@@ -1,0 +1,107 @@
+---
+import SponsorCard from "../../components/SponsorCard.astro";
+import DirectoryLayout from "../../layouts/Directory.astro";
+import {
+  businesses,
+  businessHref,
+  checkedOn,
+  formatDay,
+  imlsCitation,
+  imlsDataUrl,
+  metaDescription,
+  museumHref,
+  museums,
+  placeLabel,
+} from "../../lib/directory";
+
+const description = metaDescription(
+  "Search veteran-owned businesses that opt in and military museums in the United States and overseas.",
+);
+const index = [
+  ...museums.map((museum) => ({
+    name: museum.name,
+    href: museumHref(museum),
+    meta: `${placeLabel(museum)} · ${museum.branch}`,
+    kind: "Museum",
+  })),
+  ...businesses.map((business) => ({
+    name: business.name,
+    href: businessHref(business),
+    meta: `${business.city} · ${business.category}`,
+    kind: "Business",
+  })),
+];
+---
+<DirectoryLayout title="Veteran-owned businesses and military museums" description={description}>
+  <div class="wrap directory">
+    <p class="kicker">Directory</p>
+    <h1>Veteran-owned businesses and military museums</h1>
+    <p class="lede">
+      Businesses appear here only after the owner opts in and a person reviews the submission.
+      Museums are names, places, and source links. This page is not an endorsement.
+    </p>
+    <SponsorCard />
+    <form class="filters" role="search">
+      <label>
+        Search the directory
+        <input id="directory-q" type="search" name="q" autocomplete="off" placeholder="Name, city, or branch" />
+      </label>
+    </form>
+    <p id="directory-count" class="result-count" aria-live="polite"></p>
+    <ul id="directory-hits" class="roster"></ul>
+    <div class="dir-paths">
+      <a class="dir-path" href="/directory/businesses">
+        <p class="kicker">Businesses</p>
+        <h2>Veteran-owned businesses</h2>
+        <p>{businesses.length === 0 ? "No businesses published yet." : `${businesses.length} published listings.`}</p>
+        <p class="dir-path-cta">List your veteran-owned business</p>
+      </a>
+      <a class="dir-path" href="/directory/museums">
+        <p class="kicker">Museums</p>
+        <h2>Military museums</h2>
+        <p>{museums.length.toLocaleString()} museums in the United States and overseas.</p>
+        <p class="dir-path-cta">Browse museums</p>
+      </a>
+    </div>
+    <p class="note">
+      Museum facts checked {formatDay(checkedOn)}. Names and places tied to IMLS come from the FY 2018 Museum Data Files, a public-domain U.S. government release.
+      <a href={imlsDataUrl}>IMLS Museum Data Files</a>.
+      {imlsCitation}
+    </p>
+    <p>
+      A museum link is a source, not a partnership. A business badge means a reviewer checked that one submission against
+      <a href="https://veterans.certify.sba.gov/">SBA VetCert</a>
+      or SAM. Those are different checks and are never combined into one badge.
+    </p>
+  </div>
+</DirectoryLayout>
+
+<script define:vars={{ index }}>
+  const input = document.querySelector("#directory-q");
+  const list = document.querySelector("#directory-hits");
+  const count = document.querySelector("#directory-count");
+  function render() {
+    const query = input instanceof HTMLInputElement ? input.value.trim().toLowerCase() : "";
+    if (!list || !count) return;
+    list.replaceChildren();
+    if (query.length < 2) {
+      count.textContent = "Type at least two letters to search museums and businesses.";
+      return;
+    }
+    const hits = index.filter((item) => `${item.name} ${item.meta}`.toLowerCase().includes(query)).slice(0, 30);
+    count.textContent = hits.length ? `${hits.length} matching ${hits.length === 1 ? "listing" : "listings"}` : "No listings match that search.";
+    for (const hit of hits) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = hit.href;
+      link.textContent = hit.name;
+      const meta = document.createElement("p");
+      meta.className = "meta";
+      meta.textContent = `${hit.kind} · ${hit.meta}`;
+      item.append(link, meta);
+      list.append(item);
+    }
+  }
+  render();
+  input?.addEventListener("input", render);
+</script>

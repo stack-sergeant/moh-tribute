@@ -1,0 +1,52 @@
+---
+import DirectoryLayout from "../../../layouts/Directory.astro";
+import {
+  businesses,
+  businessAreaLabel,
+  businessHref,
+  businessRegion,
+  metaDescription,
+  stateName,
+  verificationBadge,
+  VETCERT_URL,
+  veteranStatusLabel,
+} from "../../../lib/directory";
+import type { Business } from "../../../lib/directory";
+
+export function getStaticPaths() {
+  const regions = [...new Set(businesses.map((business) => businessRegion(business)))];
+  return regions.map((region) => ({
+    params: { state: region },
+    props: { region, listings: businesses.filter((business) => businessRegion(business) === region) },
+  }));
+}
+
+interface Props {
+  region: string;
+  listings: Business[];
+}
+const { region, listings } = Astro.props;
+const label = businessAreaLabel(listings[0]);
+const description = metaDescription(`Veteran-owned businesses in ${label} that opted in to Valor Record.`);
+---
+<DirectoryLayout title={`Veteran-owned businesses in ${label}`} description={description}>
+  <div class="wrap directory">
+    <p class="crumbs"><a href="/directory">Directory</a> / <a href="/directory/businesses">Businesses</a> / {label}</p>
+    <p class="kicker">Businesses</p>
+    <h1>Veteran-owned businesses in {label}</h1>
+    <p class="lede">{listings.length} published {listings.length === 1 ? "listing" : "listings"}. Each one was submitted by the business and reviewed before it went live.</p>
+    <p><a href={VETCERT_URL}>Verify on SBA VetCert</a></p>
+    <ul class="roster">
+      {listings.map((business) => (
+        <li>
+          <a href={businessHref(business)}>{business.name}</a>
+          <span class="badge">{verificationBadge(business.verification)}</span>
+          <p class="meta">
+            {[business.city, business.country === "United States" ? stateName(business.state) : business.country, business.branch, veteranStatusLabel(business.veteranStatus)].join(" · ")}
+          </p>
+        </li>
+      ))}
+    </ul>
+    <p><a class="btn" href="/directory/submit">List your veteran-owned business</a></p>
+  </div>
+</DirectoryLayout>

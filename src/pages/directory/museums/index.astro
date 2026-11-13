@@ -1,0 +1,146 @@
+---
+import DirectoryLayout from "../../../layouts/Directory.astro";
+import {
+  formatDay,
+  imlsCitation,
+  imlsDataUrl,
+  metaDescription,
+  museumHref,
+  museums,
+  optionList,
+  placeFilters,
+  placeKey,
+  placeLabel,
+  regionLinks,
+  checkedOn,
+} from "../../../lib/directory";
+
+const description = metaDescription(
+  "Military museums in the United States and overseas, with the place, branch, and public source for each one.",
+);
+const places = placeFilters();
+const branches = optionList(museums.map((museum) => museum.branch));
+const categories = optionList(museums.map((museum) => museum.category));
+---
+<DirectoryLayout title="Military museums" description={description}>
+  <div class="wrap directory">
+    <p class="crumbs"><a href="/directory">Directory</a> / Museums</p>
+    <p class="kicker">Museums</p>
+    <h1>Military museums</h1>
+    <p class="lede">
+      United States museums and an overseas group. Every listing has a source link. Valor Record wrote no text from those sites and is not endorsed by them.
+    </p>
+    <nav class="chip-row" aria-label="Museum regions">
+      {regionLinks().map((region) => (
+        <a href={region.href}>{region.label} <span>{region.count}</span></a>
+      ))}
+    </nav>
+    <form id="museum-filters" class="filters" role="search">
+      <label>
+        Name
+        <input id="mq" type="search" name="q" autocomplete="off" />
+      </label>
+      <label>
+        State or country
+        <select id="mplace" name="place">
+          <option value="">Any place</option>
+          {places.map((place) => <option value={place.value}>{place.label}</option>)}
+        </select>
+      </label>
+      <label>
+        Branch
+        <select id="mbranch" name="branch">
+          <option value="">Any branch</option>
+          {branches.map((branch) => <option value={branch}>{branch}</option>)}
+        </select>
+      </label>
+      <label>
+        Category
+        <select id="mcategory" name="category">
+          <option value="">Any category</option>
+          {categories.map((category) => <option value={category}>{category}</option>)}
+        </select>
+      </label>
+    </form>
+    <p id="mcount" class="result-count" aria-live="polite"></p>
+    <ul id="museum-list" class="roster">
+      {museums.map((museum) => (
+        <li
+          data-name={`${museum.name} ${museum.city} ${museum.country}`.toLowerCase()}
+          data-place={placeKey(museum)}
+          data-branch={museum.branch}
+          data-category={museum.category}
+        >
+          <a href={museumHref(museum)}>{museum.name}</a>
+          <p class="meta">{placeLabel(museum)} · {museum.branch} · {museum.category}</p>
+        </li>
+      ))}
+    </ul>
+    <h2>Sources</h2>
+    <p>
+      U.S. records that name IMLS use the Institute of Museum and Library Services, Museum Data Files, FY 2018 release.
+      IMLS states that this documentation is in the public domain when cited.
+      <a href={imlsDataUrl}>Museum Data Files</a>.
+      {imlsCitation}
+    </p>
+    <p>
+      Other records use official Army, Navy, Air Force, and Marine Corps museum lists, or the museum's own site for overseas museums.
+      Army names and cities are facts from the Army Museum Enterprise directory. This site does not copy that directory’s text or photographs.
+    </p>
+    <p class="meta">Facts checked {formatDay(checkedOn)}. <a href="/directory/submit">Suggest a museum</a>.</p>
+  </div>
+</DirectoryLayout>
+
+<script>
+  const items = [...document.querySelectorAll("#museum-list li")];
+  const q = document.querySelector("#mq");
+  const place = document.querySelector("#mplace");
+  const branch = document.querySelector("#mbranch");
+  const category = document.querySelector("#mcategory");
+  const count = document.querySelector("#mcount");
+
+  function readParams() {
+    const params = new URLSearchParams(location.search);
+    if (q instanceof HTMLInputElement) q.value = params.get("q") ?? "";
+    if (place instanceof HTMLSelectElement) place.value = params.get("place") ?? "";
+    if (branch instanceof HTMLSelectElement) branch.value = params.get("branch") ?? "";
+    if (category instanceof HTMLSelectElement) category.value = params.get("category") ?? "";
+  }
+
+  function writeParams() {
+    const params = new URLSearchParams();
+    if (q instanceof HTMLInputElement && q.value.trim()) params.set("q", q.value.trim());
+    if (place instanceof HTMLSelectElement && place.value) params.set("place", place.value);
+    if (branch instanceof HTMLSelectElement && branch.value) params.set("branch", branch.value);
+    if (category instanceof HTMLSelectElement && category.value) params.set("category", category.value);
+    const next = `${location.pathname}${params.toString() ? `?${params}` : ""}`;
+    history.replaceState(null, "", next);
+  }
+
+  function render() {
+    const query = q instanceof HTMLInputElement ? q.value.trim().toLowerCase() : "";
+    const wantedPlace = place instanceof HTMLSelectElement ? place.value : "";
+    const wantedBranch = branch instanceof HTMLSelectElement ? branch.value : "";
+    const wantedCategory = category instanceof HTMLSelectElement ? category.value : "";
+    let shown = 0;
+    for (const item of items) {
+      const row = item as HTMLElement;
+      const ok =
+        (!query || (row.dataset.name ?? "").includes(query)) &&
+        (!wantedPlace || row.dataset.place === wantedPlace) &&
+        (!wantedBranch || row.dataset.branch === wantedBranch) &&
+        (!wantedCategory || row.dataset.category === wantedCategory);
+      row.hidden = !ok;
+      if (ok) shown += 1;
+    }
+    if (count) count.textContent = `${shown.toLocaleString()} museums`;
+    writeParams();
+  }
+
+  readParams();
+  render();
+  for (const control of [q, place, branch, category]) {
+    control?.addEventListener("input", render);
+    control?.addEventListener("change", render);
+  }
+</script>

@@ -47,6 +47,42 @@ SKIP_AGO_FETCH=1 python3 scripts/build_dataset.py
 
 `scripts/build_dataset.py` writes `data/recipients.json`, `data/battles.json`, `data/awards.csv`, and `data/stats.json`. Wikipedia prose is not copied. Portraits and narrative text are not taken from the Congressional Medal of Honor Society, the National Medal of Honor Museum, Home of Heroes, Military Times, or Honoring American Troops.
 
+## Directory
+
+`/directory` lists military museums and veteran-owned businesses. Businesses are published only after someone opts in and a person approves the submission. Do not import SAM.gov extracts, and do not scrape SAM.gov or SBA VetCert. A reviewer may open [SBA VetCert](https://veterans.certify.sba.gov/) or SAM while checking one submission. The public badge is either `SBA VetCert verified` or `Registered in SAM as veteran-owned`.
+
+Museums are facts in `data/directory/museums.json`: name, city, state or country, branch, category, website when one was checked, source URL, and `lastChecked`. U.S. rows that cite IMLS use the public-domain FY 2018 Museum Data Files. Cite them as: Frehill, L. M. and Pelczar, M. (2018). Data File Documentation: Museum Data Files, FY 2018 Release. Institute of Museum and Library Services: Washington, DC. Other rows use official service lists or the museum's own site. Do not paste prose or photographs from those sites. One neutral sentence is allowed in an optional `description` of 140 characters or fewer. Leave it off when you do not need it.
+
+`data/directory/businesses.json` ships as an empty array. `npm test` includes a check that the array is still empty for this launch. Delete that one test when the first approved business is added. To publish a reviewed business, add one object and rebuild:
+
+```json
+{
+  "slug": "river-city-machine",
+  "name": "River City Machine",
+  "veteranStatus": "veteran",
+  "branch": "Army",
+  "website": "https://example.com",
+  "city": "Columbus",
+  "state": "OH",
+  "country": "United States",
+  "category": "Manufacturing",
+  "description": "One sentence written for this listing.",
+  "verification": "sba-vetcert"
+}
+```
+
+`veteranStatus` is `veteran` or `service-disabled-veteran`. `verification` is `sba-vetcert` or `sam-veteran-owned`. Do not store the contact email, phone, or UEI. `state` is the USPS code when the country is United States. For another country, put the country in `country` and a short region code in `state` only if you also change the validator; otherwise keep non-U.S. businesses out until that field is agreed. The template above is not a live listing. Do not commit a placeholder business.
+
+The sponsor card, footer bar, and `/directory/sponsor` read `data/directory/sponsor.json`. The slot is one exclusive placement. The launch copy is still a placeholder that links to `/directory/sponsor`. Keep `label` as `Sponsored`, `kicker` as `Featured sponsor`, and `disclosure` as `This is a paid placement. It is not an endorsement by Valor Record.` The `rate` line is `Founding sponsor rate: $49/month for the first 6 months (or $250 prepaid for 6 months), then $99/month standard.` When a real sponsor is approved, set `title` and `action`, and set `href` to the sponsor URL. An `https` href is rendered with `rel="sponsored noopener"`.
+
+### Submission forms
+
+`/directory/submit` and `/directory/sponsor` post to `PUBLIC_DIRECTORY_FORM_ENDPOINT` when that variable is present at build time. A Formspree-style URL such as `https://formspree.io/f/yourFormId` works. The honeypot field is `_gotcha`. Leave the variable unset until the review inbox is chosen. The forms then say submissions open soon and the submit button stays disabled. Do not point the form at a personal email address.
+
+```bash
+PUBLIC_DIRECTORY_FORM_ENDPOINT=https://formspree.io/f/yourFormId npm run build
+```
+
 ## Render static site
 
 | Setting | Value |

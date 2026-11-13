@@ -1,0 +1,73 @@
+---
+import DirectoryLayout from "../../../../layouts/Directory.astro";
+import {
+  blurb,
+  formatDay,
+  imlsOnly,
+  metaDescription,
+  museums,
+  placeLabel,
+  regionLabel,
+  sameUrl,
+} from "../../../../lib/directory";
+import type { Museum } from "../../../../lib/directory";
+
+export function getStaticPaths() {
+  return museums.map((museum) => ({
+    params: { region: museum.region, slug: museum.slug },
+    props: { museum },
+  }));
+}
+
+interface Props {
+  museum: Museum;
+}
+const { museum } = Astro.props;
+const description = metaDescription(blurb(museum));
+const showWebsite = Boolean(museum.website && !museum.sources.some((source) => sameUrl(source.url, museum.website)));
+---
+<DirectoryLayout title={museum.name} description={description}>
+  <div class="wrap directory">
+    <p class="crumbs">
+      <a href="/directory">Directory</a> /
+      <a href="/directory/museums">Museums</a> /
+      <a href={`/directory/museums/${museum.region}`}>{regionLabel(museum.region)}</a>
+    </p>
+    <p class="kicker">{museum.category}</p>
+    <h1>{museum.name}</h1>
+    <p class="lede">{blurb(museum)}</p>
+    <dl class="facts">
+      <dt>Place</dt>
+      <dd>{placeLabel(museum)}</dd>
+      <dt>Branch</dt>
+      <dd>{museum.branch}</dd>
+      <dt>Category</dt>
+      <dd>{museum.category}</dd>
+      {showWebsite && museum.website && (
+        <>
+          <dt>Website</dt>
+          <dd><a href={museum.website}>{museum.website.replace(/^https:\/\//, "")}</a></dd>
+        </>
+      )}
+      <dt>{museum.sources.length === 1 ? "Source" : "Sources"}</dt>
+      <dd>
+        <ul class="source-list">
+          {museum.sources.map((source) => (
+            <li><a href={source.url}>{source.label}</a></li>
+          ))}
+        </ul>
+      </dd>
+      <dt>Last checked</dt>
+      <dd>{formatDay(museum.lastChecked)}</dd>
+    </dl>
+    {imlsOnly(museum) && (
+      <p class="note">
+        The name and place come from the 2018 IMLS Museum Data Files. Confirm current details on the museum website.
+      </p>
+    )}
+    <p class="note">
+      Listing this museum is not an endorsement by Valor Record, and it does not mean the museum endorses this site.
+      The page stores the name, place, branch, and source link only.
+    </p>
+  </div>
+</DirectoryLayout>
