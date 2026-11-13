@@ -1,0 +1,64 @@
+---
+import Base from "../layouts/Base.astro";
+import { allRecipients } from "../lib/records";
+
+const entries = allRecipients.flatMap((person) =>
+  person.awards
+    .filter((award) => award.actionDate && award.actionDate.length >= 10)
+    .map((award) => ({
+      id: person.id,
+      name: person.name,
+      monthDay: award.actionDate!.slice(5, 10),
+      label: award.actionDateLabel,
+      conflict: award.conflict,
+      place: award.actionPlace,
+    })),
+);
+---
+<Base title="On this day" description="Medal of Honor actions that occurred on this calendar day.">
+  <div class="wrap">
+  <p class="kicker">Calendar</p>
+  <h1>On this day</h1>
+  <p class="lede" id="today-label">Actions whose recorded date matches the calendar day in your browser.</p>
+  <label>
+    Month and day
+    <input id="day" type="date" />
+  </label>
+  <ul id="day-list" class="roster"></ul>
+  </div>
+</Base>
+
+<script define:vars={{ entries }}>
+  const input = document.querySelector("#day");
+  const list = document.querySelector("#day-list");
+  const label = document.querySelector("#today-label");
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  if (input instanceof HTMLInputElement) input.value = `${today.getFullYear()}-${month}-${day}`;
+
+  function render() {
+    if (!(input instanceof HTMLInputElement) || !list) return;
+    const key = input.value.slice(5, 10);
+    const rows = entries.filter((entry) => entry.monthDay === key);
+    list.innerHTML = "";
+    if (label) {
+      label.textContent = rows.length
+        ? `${rows.length} recorded actions on this calendar day.`
+        : "No action in this archive is recorded on this calendar day.";
+    }
+    for (const row of rows) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `/recipients/${row.id}`;
+      link.textContent = row.name;
+      const meta = document.createElement("p");
+      meta.className = "meta";
+      meta.textContent = [row.label, row.conflict, row.place].filter(Boolean).join(" · ");
+      item.append(link, meta);
+      list.append(item);
+    }
+  }
+  input?.addEventListener("change", render);
+  render();
+</script>

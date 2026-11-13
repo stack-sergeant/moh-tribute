@@ -1,0 +1,73 @@
+---
+import Base from "../../layouts/Base.astro";
+import { sceneForBattle } from "../../lib/imagery";
+import { allBattles, recipient, type Battle } from "../../lib/records";
+
+export function getStaticPaths() {
+  return allBattles.map((hub) => ({ params: { slug: hub.id }, props: { hub } }));
+}
+
+interface Props { hub: Battle }
+const { hub } = Astro.props;
+const people = hub.recipientIds.map((id) => recipient(id)).filter(Boolean);
+const scene = sceneForBattle(hub.id, hub.era);
+const kinds = ["article", "footage", "book", "film", "documentary"];
+---
+<Base title={hub.title} description={hub.summary}>
+  <header class="battle-hero">
+    <img src={scene.url} alt={scene.alt} />
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="kicker">{hub.curated ? "Curated action" : "From the citation index"} · {hub.era}</p>
+      <h1>{hub.title}</h1>
+      <p class="hero-credit">{scene.credit}. {scene.license}. <a href={scene.sourceUrl}>Photograph source</a>.</p>
+    </div>
+  </header>
+  <section class="quick-facts" aria-label="Facts">
+    <div><span>Conflict</span><strong>{hub.conflict}</strong></div>
+    <div><span>When</span><strong>{hub.dateLabel}</strong></div>
+    <div><span>Where</span><strong>{hub.location ?? "See the citations"}</strong></div>
+    <div><span>Recipients</span><strong>{people.length}</strong></div>
+  </section>
+  <div class="wrap">
+    <p class="lede">{hub.summary}</p>
+    <h2>Who stood there</h2>
+    <div class="card-row">
+      {people.map((person) => person && (
+        <a class="person-card" href={`/recipients/${person.id}`}>
+          {person.photo ? (
+            <img src={person.photo.url} alt="" />
+          ) : (
+            <div class="nophoto"><p>No photo on file</p></div>
+          )}
+          <div>
+            <h3>{person.name}</h3>
+            {person.awards.some((award) => award.battleId === hub.id && award.posthumous) && <span class="badge">Gave his life</span>}
+            <p class="meta">
+              {person.awards.filter((award) => award.battleId === hub.id).map((award) =>
+                [award.rank, award.branch].filter(Boolean).join(" · ")
+              ).join(" / ")}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+    <h2>Articles, footage, books, films</h2>
+    {hub.media.length === 0 ? (
+      <p>No curated articles, footage, books, or films have been verified for this action yet.</p>
+    ) : (
+      <ul class="media-list">
+        {hub.media
+          .slice()
+          .sort((a, b) => kinds.indexOf(a.kind) - kinds.indexOf(b.kind))
+          .map((item) => (
+            <li>
+              <span class="kind">{item.kind}</span>
+              <a href={item.url}>{item.title}</a>
+              <p class="meta">{item.publisher}. {item.note}</p>
+            </li>
+          ))}
+      </ul>
+    )}
+  </div>
+</Base>

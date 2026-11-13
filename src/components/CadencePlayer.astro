@@ -1,0 +1,194 @@
+---
+import { cadences } from "../lib/cadences";
+
+const playlist = cadences.map((track) => ({
+  src: track.src,
+  label: track.playerLabel,
+}));
+---
+<div id="cadence-player" class="cadence" transition:persist="cadence-player" transition:animate="none">
+  <audio id="cadence-audio" preload="none"></audio>
+  <button type="button" id="cadence-toggle" aria-pressed="false" aria-label="Play cadences">
+    <span class="cadence-label">Play cadences</span>
+  </button>
+  <p class="cadence-now">
+    <span class="cadence-kicker" id="cadence-kicker">Ready</span>
+    <span id="cadence-name" aria-live="polite">{playlist[0]?.label}</span>
+  </p>
+  <button type="button" id="cadence-next" aria-label="Next cadence">Next</button>
+  <label class="cadence-vol">
+    <span id="cadence-vol-label">Volume</span>
+    <input
+      id="cadence-volume"
+      type="range"
+      min="0"
+      max="100"
+      value="25"
+      step="5"
+      aria-labelledby="cadence-vol-label"
+    />
+  </label>
+  <a class="cadence-credits" href="/audio">Audio credits</a>
+</div>
+<script define:vars={{ playlist }}>
+  const storageKey = "valor-record-cadence";
+  const root = document.getElementById("cadence-player");
+  const audio = document.getElementById("cadence-audio");
+  const toggle = document.getElementById("cadence-toggle");
+  const nextButton = document.getElementById("cadence-next");
+  const volume = document.getElementById("cadence-volume");
+  const nameEl = document.getElementById("cadence-name");
+  const kicker = document.getElementById("cadence-kicker");
+  const label = toggle?.querySelector(".cadence-label");
+
+  function readState() {
+    try {
+      const raw = localStorage.getItem(storageKey);
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function writeState(patch) {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify({ ...readState(), ...patch }));
+    } catch {
+      /* private mode and blocked storage still leave the player usable */
+    }
+  }
+
+  const mark = window;
+  if (
+    !playlist.length ||
+    !(audio instanceof HTMLAudioElement) ||
+    !(toggle instanceof HTMLButtonElement) ||
+    !(nextButton instanceof HTMLButtonElement) ||
+    !(volume instanceof HTMLInputElement) ||
+    !nameEl ||
+    !root ||
+    mark.__cadenceBound
+  ) {
+    /* A view transition keeps this element. Do not bind twice or restart playback. */
+  } else {
+    mark.__cadenceBound = true;
+    const saved = readState();
+    let index = Number.isInteger(saved.index) ? saved.index : 0;
+    if (index < 0 || index >= playlist.length) index = 0;
+    let resumeAt = typeof saved.time === "number" && saved.time > 1 ? saved.time : 0;
+    const startVolume = typeof saved.volume === "number" ? saved.volume : 0.25;
+    audio.volume = Math.min(1, Math.max(0, startVolume));
+    volume.value = String(Math.round(audio.volume * 100));
+
+    function show(i) {
+      const track = playlist[i];
+      nameEl.textContent = track.label;
+      const upcoming = playlist[(i + 1) % playlist.length];
+      nextButton.setAttribute("aria-label", `Next cadence: ${upcoming.label}`);
+    }
+
+    function setPlaying(on) {
+      toggle.setAttribute("aria-pressed", on ? "true" : "false");
+      toggle.setAttribute("aria-label", on ? "Pause cadences" : "Play cadences");
+      if (label) label.textContent = on ? "Pause" : "Play cadences";
+      if (kicker) kicker.textContent = on ? "Playing" : "Ready";
+      root.dataset.playing = on ? "true" : "false";
+    }
+
+    function absolute(src) {
+      return new URL(src, location.origin).href;
+    }
+
+    function cue(i, time, shouldPlay) {
+      index = (i + playlist.length) % playlist.length;
+      show(index);
+      const src = playlist[index].src;
+      if (audio.currentSrc !== absolute(src)) audio.src = src;
+      const seek = () => {
+        if (typeof time !== "number" || !(time > 0)) return;
+        const duration = Number.isFinite(audio.duration) ? audio.duration : time;
+        const nextTime = Math.min(time, Math.max(0, duration - 0.35));
+        if (Math.abs(audio.currentTime - nextTime) > 0.25) audio.currentTime = nextTime;
+      };
+      if (audio.readyState >= 1) seek();
+      else audio.addEventListener("loadedmetadata", seek, { once: true });
+      writeState({ index, time: typeof time === "number" ? time : 0 });
+      if (!shouldPlay) return Promise.resolve();
+      return audio.play();
+    }
+
+    show(index);
+    setPlaying(false);
+    if (saved.enabled) {
+      toggle.setAttribute("aria-label", "Resume cadences");
+      if (label) label.textContent = "Resume cadences";
+    }
+
+    toggle.addEventListener("click", async () => {
+      if (!audio.paused && !audio.ended) {
+        audio.pause();
+        setPlaying(false);
+        writeState({ enabled: false, time: audio.currentTime, index });
+        return;
+      }
+      const time = resumeAt > 1 ? resumeAt : audio.currentTime;
+      resumeAt = 0;
+      try {
+        await cue(index, time, true);
+        setPlaying(true);
+        writeState({ enabled: true, index, volume: audio.volume });
+      } catch {
+        setPlaying(false);
+      }
+    });
+
+    nextButton.addEventListener("click", async () => {
+      const wasPlaying = !audio.paused && !audio.ended;
+      resumeAt = 0;
+      try {
+        await cue(index + 1, 0, wasPlaying);
+        if (wasPlaying) {
+          setPlaying(true);
+          writeState({ enabled: true });
+        }
+      } catch {
+        setPlaying(false);
+      }
+    });
+
+    volume.addEventListener("input", () => {
+      audio.volume = Number(volume.value) / 100;
+      writeState({ volume: audio.volume });
+    });
+
+    audio.addEventListener("ended", async () => {
+      resumeAt = 0;
+      try {
+        await cue(index + 1, 0, true);
+        setPlaying(true);
+        writeState({ enabled: true, index, time: 0 });
+      } catch {
+        setPlaying(false);
+        writeState({ enabled: false });
+      }
+    });
+
+    let lastSave = 0;
+    audio.addEventListener("timeupdate", () => {
+      if (audio.paused) return;
+      const now = Date.now();
+      if (now - lastSave < 2000) return;
+      lastSave = now;
+      writeState({ time: audio.currentTime, index, enabled: true, volume: audio.volume });
+    });
+
+    window.addEventListener("pagehide", () => {
+      writeState({
+        time: audio.currentTime || 0,
+        index,
+        volume: audio.volume,
+        enabled: !audio.paused && !audio.ended,
+      });
+    });
+  }
+</script>

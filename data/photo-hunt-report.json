@@ -1,0 +1,373 @@
+{
+  "searched": 2150,
+  "newPhotos": 64,
+  "bySource": {
+    "Wikimedia Commons": 57,
+    "Library of Congress": 7,
+    "NARA": 0
+  },
+  "paidCandidates": 1,
+  "ambiguousSkipped": 1505,
+  "skipReasons": {
+    "shared-name": 45,
+    "ambiguous": 755,
+    "group": 591,
+    "rights": 80,
+    "use-Undetermined": 15,
+    "use-Restricted - Fully": 2,
+    "use-Restricted - Possibly": 16,
+    "generated-or-restored": 1
+  },
+  "skipExamples": [
+    {
+      "id": "samuel-wright",
+      "name": "Samuel Wright",
+      "source": "Library of Congress",
+      "reason": "shared-name",
+      "title": "[Civil War veteran Samuel Cole Wright]",
+      "url": "https://www.loc.gov/pictures/item/2017659679/"
+    },
+    {
+      "id": "john-wilson",
+      "name": "John Wilson",
+      "source": "Library of Congress",
+      "reason": "shared-name",
+      "title": "MEDAL OF HONOR OFFICERS. GEN. CHARLES F. HUMPHREY; GEN. JOHN M. WILSON; COL. CHARLES H. HEYL; GEN. THEODORE SCHWAN; COL. FREDERICK FUGER; GEN. W.H. CARTER; GEN. A.L. MILLS; LT. GOR",
+      "url": "https://www.loc.gov/pictures/item/2016864107/"
+    },
+    {
+      "id": "bobbie-e-brown",
+      "name": "Bobbie E. Brown",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "Gen. R.B. Brown",
+      "url": "https://www.loc.gov/pictures/item/2014691665/"
+    },
+    {
+      "id": "samuel-wright",
+      "name": "Samuel Wright",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Sergeant Samuel Cole Wright of Co. E, 29th Massachusetts Infantry Regiment in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2016652787/"
+    },
+    {
+      "id": "john-brown",
+      "name": "John Brown",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Captain John Harties Brown of 36th Massachusetts Infantry Regiment, 12th Massachusetts Infantry Regiment, 5th Massachusetts Infantry Regiment and Co. D, 12th Kentucky Infantry Reg",
+      "url": "https://www.loc.gov/pictures/item/2023630557/"
+    },
+    {
+      "id": "john-brown-1838",
+      "name": "John Brown",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Captain John Harties Brown of 36th Massachusetts Infantry Regiment, 12th Massachusetts Infantry Regiment, 5th Massachusetts Infantry Regiment and Co. D, 12th Kentucky Infantry Reg",
+      "url": "https://www.loc.gov/pictures/item/2023630557/"
+    },
+    {
+      "id": "charles-wilson",
+      "name": "Charles Wilson",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[First Lieutenant Charles E. Wilson of Co. A, 1st New Jersey Cavalry Regiment in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2022631427/"
+    },
+    {
+      "id": "andrew-davidson",
+      "name": "Andrew Davidson",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Captain Andrew Davidson of Co. E, 121st New York Infantry Regiment and Co. H, 30th U.S. Colored Troops Infantry Regiment in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2022631502/"
+    },
+    {
+      "id": "andrew-davidson-1840",
+      "name": "Andrew Davidson",
+      "source": "Library of Congress",
+      "reason": "shared-name",
+      "title": "[Captain Andrew Davidson of Co. E, 121st New York Infantry Regiment and Co. H, 30th U.S. Colored Troops Infantry Regiment in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2022631502/"
+    },
+    {
+      "id": "thomas-j-mcmahon",
+      "name": "Thomas J. McMahon",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Major General Martin Thomas McMahon of Aide-de-Camp U.S. Volunteers Infantry Regiment and U.S. Volunteers Adjutant General Department in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2022631553/"
+    },
+    {
+      "id": "thomas-j-mcmahon",
+      "name": "Thomas J. McMahon",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Major General Martin Thomas McMahon of Aide-de-Camp U.S. Volunteers Infantry Regiment and U.S. Volunteers Adjutant General Department in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2022886835/"
+    },
+    {
+      "id": "samuel-wright",
+      "name": "Samuel Wright",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Sergeant Samuel Cole Wright of Co. E, 29th Massachusetts Infantry Regiment, standing in uniform with revolver and musket in front of painted backdrop]",
+      "url": "https://www.loc.gov/pictures/item/2017659677/"
+    },
+    {
+      "id": "samuel-wright",
+      "name": "Samuel Wright",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Sergeant Samuel Cole Wright of Co. E, 29th Massachusetts Infantry Regiment, seated in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2017659678/"
+    },
+    {
+      "id": "william-wells-1832",
+      "name": "William Wells",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Brigadier General William Wells of Co. C, 1st Vermont Cavalry Regiment in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2019630415/"
+    },
+    {
+      "id": "john-robinson",
+      "name": "John Robinson",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Major General John Cleveland Robinson, 1st Michigan Infantry Regiment and U.S. Volunteers General Staff in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2023630404/"
+    },
+    {
+      "id": "julius-stahel",
+      "name": "Julius Stahel",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Major General Julius S. Stahel of Field and Staff, 8th New York Infantry Regiment and U.S. Volunteers General Staff in uniform]",
+      "url": "https://www.loc.gov/pictures/item/2025160147/"
+    },
+    {
+      "id": "robert-pinn",
+      "name": "Robert Pinn",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[Robert A. Pinn, head-and-shoulders portrait, facing slightly left]",
+      "url": "https://www.loc.gov/pictures/item/97506000/"
+    },
+    {
+      "id": "james-l-harris",
+      "name": "James L. Harris",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[James H. Harris, three-quarter length portrait, seated, facing front]",
+      "url": "https://www.loc.gov/pictures/item/97506092/"
+    },
+    {
+      "id": "william-ahern",
+      "name": "William Ahern",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[First Assistant Engineer William Ahern of Confederate States Navy in uniform",
+      "url": "https://www.loc.gov/pictures/item/2014645457/"
+    },
+    {
+      "id": "abner-p-allen",
+      "name": "Abner P. Allen",
+      "source": "Wikimedia Commons",
+      "reason": "group",
+      "title": "1637-1887, the Munson record - a genealogical and biographical account of Captain Thomas Munson (a pioneer of Hartford and New Haven) and his descendants (IA 16371887munsonre02muns",
+      "url": "https://commons.wikimedia.org/wiki/File%3A1637-1887%2C_the_Munson_record_-_a_genealogical_and_biographical_account_of_Captain_Thomas_Munson_%28a_pioneer_of_Hartford_and_New_Haven%29_and_his_descendants_%28IA_16371887munsonre02muns%29.pdf"
+    },
+    {
+      "id": "abner-p-allen",
+      "name": "Abner P. Allen",
+      "source": "Wikimedia Commons",
+      "reason": "group",
+      "title": "Soldiers' Memorial, Portsmouth, New Hampshire (IA soldiersmemorial00fost).pdf",
+      "url": "https://commons.wikimedia.org/wiki/File%3ASoldiers%27_Memorial%2C_Portsmouth%2C_New_Hampshire_%28IA_soldiersmemorial00fost%29.pdf"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photograph of Edward Allen",
+      "url": "https://catalog.archives.gov/id/122659436"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photograph of Edward Allen",
+      "url": "https://catalog.archives.gov/id/83858720"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photograph of Edward Allen",
+      "url": "https://catalog.archives.gov/id/82573941"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Captain Samuel Edward Allen, 5th Artillery",
+      "url": "https://catalog.archives.gov/id/405229688"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "group",
+      "title": "West Point Cadets from MISSISSIPPI. Class of 1924",
+      "url": "https://catalog.archives.gov/id/329588410"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "group",
+      "title": "William E. Allen, Class of 1944, Single Engine Pilots",
+      "url": "https://catalog.archives.gov/id/185821425"
+    },
+    {
+      "id": "edward-allen",
+      "name": "Edward Allen",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Seamen's Identification Card for Edward Jay Allen",
+      "url": "https://catalog.archives.gov/id/6569427"
+    },
+    {
+      "id": "thomas-anderson",
+      "name": "Thomas Anderson",
+      "source": "Wikimedia Commons",
+      "reason": "group",
+      "title": "1637-1887, the Munson record - a genealogical and biographical account of Captain Thomas Munson (a pioneer of Hartford and New Haven) and his descendants (IA 16371887munsonre02muns",
+      "url": "https://commons.wikimedia.org/wiki/File%3A1637-1887%2C_the_Munson_record_-_a_genealogical_and_biographical_account_of_Captain_Thomas_Munson_%28a_pioneer_of_Hartford_and_New_Haven%29_and_his_descendants_%28IA_16371887munsonre02muns%29.pdf"
+    },
+    {
+      "id": "john-andrews",
+      "name": "John Andrews",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "UNIVERSITY OF WISCONSIN-MADISON DESIGN CONCEPT FOR A ROBOTIC UNIT TO EXTRACT GASES FROM LUNAR SOIL. ARTIST: JOHN ANDREWS, PHOTO COURTESY OF WISCONSIN CENTER FOR SPACE AUTOMATION AN",
+      "url": "https://catalog.archives.gov/id/201874666"
+    },
+    {
+      "id": "john-andrews",
+      "name": "John Andrews",
+      "source": "Library of Congress",
+      "reason": "ambiguous",
+      "title": "[John Andrews, head-and-shoulders portrait, facing slightly right]",
+      "url": "https://www.loc.gov/pictures/item/2022676588/"
+    },
+    {
+      "id": "william-anderson",
+      "name": "William Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photograph of William Anderson",
+      "url": "https://catalog.archives.gov/id/82576421"
+    },
+    {
+      "id": "william-anderson",
+      "name": "William Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photograph of William Anderson",
+      "url": "https://catalog.archives.gov/id/75434554"
+    },
+    {
+      "id": "william-anderson",
+      "name": "William Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photograph of William Anderson",
+      "url": "https://catalog.archives.gov/id/54984139"
+    },
+    {
+      "id": "william-anderson",
+      "name": "William Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "CASE UNIVERSITY CLEVELAND OHIO GRADUATES - WILLIAM ANDERSON",
+      "url": "https://catalog.archives.gov/id/354824799"
+    },
+    {
+      "id": "william-anderson",
+      "name": "William Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Photographic Image from the Pension File of Private William Anderson",
+      "url": "https://catalog.archives.gov/id/200062175"
+    },
+    {
+      "id": "sylvester-antolak",
+      "name": "Sylvester Antolak",
+      "source": "Wikimedia Commons",
+      "reason": "group",
+      "title": "Remembering 3rd Infantry Division Medal of Honor recipient Sgt Sylvester Antolak (9645027).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File%3ARemembering_3rd_Infantry_Division_Medal_of_Honor_recipient_Sgt_Sylvester_Antolak_%289645027%29.jpg"
+    },
+    {
+      "id": "robert-anderson",
+      "name": "Robert Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Gen. Robert Anderson",
+      "url": "https://catalog.archives.gov/id/530166"
+    },
+    {
+      "id": "robert-anderson",
+      "name": "Robert Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Gen. Robert Anderson",
+      "url": "https://catalog.archives.gov/id/529416"
+    },
+    {
+      "id": "robert-anderson",
+      "name": "Robert Anderson",
+      "source": "NARA",
+      "reason": "ambiguous",
+      "title": "Col. Robert Anderson",
+      "url": "https://catalog.archives.gov/id/528161"
+    }
+  ],
+  "chroniclingAmerica": {
+    "query": "\"medal of honor\" portrait",
+    "reportedTotal": 148,
+    "sampled": 100,
+    "formats": {
+      "newspaper": 100
+    },
+    "usedAsPortraits": 0,
+    "note": "Results are full newspaper pages. A page is not a confirmed portrait of one recipient, so none were used as likenesses."
+  },
+  "otherSources": {
+    "NHHC": {
+      "url": "https://www.history.navy.mil/our-collections/photography.html",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>"
+    },
+    "USMC History Division": {
+      "url": "https://www.usmcu.edu/Research/Marine-Corps-History-Division/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "USAHEC": {
+      "url": "https://arena.usahec.org/",
+      "error": "<urlopen error [Errno -2] Name or service not known>"
+    },
+    "DVIDS": {
+      "url": "https://api.dvidshub.net/search?q=medal%20of%20honor&type=image",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  },
+  "reviewRemoved": 40,
+  "reviewNote": "The search accepted 104 files. A review then removed graves, medals, documents, group photographs, reenactors, and records whose title named a different person. 64 portraits remain."
+}

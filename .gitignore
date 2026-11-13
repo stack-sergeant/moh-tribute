@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+__pycache__/
+*.pyc
+data/raw/ago/*.pdf
+data/raw/ago/ago-index.html
+data/awards-army.json
+data/raw/photo-hunt/
+.DS_Store

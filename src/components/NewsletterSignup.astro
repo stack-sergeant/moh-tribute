@@ -1,0 +1,36 @@
+---
+/**
+ * Daily newsletter on every page.
+ * The script tag is Beehiiv's official inline embed and is left unprocessed,
+ * the same way the analytics beacon is included. Persisting this block loads
+ * that async script once per full page view; client-side navigations keep the
+ * mounted form instead of fetching the loader again.
+ */
+---
+<section
+  class="newsletter"
+  aria-labelledby="newsletter-heading"
+  transition:persist="newsletter-signup"
+  transition:animate="none"
+>
+  <div class="newsletter-copy">
+    <p class="kicker">Daily newsletter</p>
+    <h2 id="newsletter-heading">One Medal of Honor story in your inbox every day</h2>
+    <p class="newsletter-sub">Free. Unsubscribe anytime.</p>
+  </div>
+  <div class="newsletter-embed">
+    <div class="newsletter-scale">
+      <div class="newsletter-frame">
+        <Fragment set:html={'<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="1ba99e52-3fea-45bb-bbef-c66e8cf8068c"></script>'} />
+        <noscript>
+          <p class="newsletter-fallback">
+            <a href="https://valor-record.beehiiv.com/subscribe">Or subscribe here</a>
+          </p>
+        </noscript>
+      </div>
+    </div>
+    <p class="newsletter-fallback">
+      <a href="https://valor-record.beehiiv.com/subscribe">Or subscribe here</a>
+    </p>
+  </div>
+</section>

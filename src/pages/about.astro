@@ -1,0 +1,117 @@
+---
+import Base from "../layouts/Base.astro";
+import { datasetStats } from "../lib/records";
+import { disclaimer, site } from "../site";
+---
+<Base title="About" description="Sources, photo rules, and the limits of this unofficial Medal of Honor archive.">
+  <div class="wrap">
+  <p class="kicker">About this archive</p>
+  <h1>About {site.name}</h1>
+  <p class="lede">{disclaimer}</p>
+  <p>
+    The name of the site is set in one file, <code>src/site.ts</code>, so it can be changed
+    without rewriting the pages. The archive does not use the Medal of Honor as a logo
+    and does not use official seals.
+  </p>
+
+  <h2>What is in this version</h2>
+  <ul>
+    <li>{datasetStats.people.toLocaleString()} people</li>
+    <li>{datasetStats.awards.toLocaleString()} awards</li>
+    <li>{datasetStats.doubleRecipientsInThisArchive} people with more than one award in this dataset</li>
+    <li>{datasetStats.posthumousAwards.toLocaleString()} awards marked posthumous</li>
+    <li>{datasetStats.peopleWithPhoto.toLocaleString()} people with a verified reusable photograph ({datasetStats.photoPercent}%)</li>
+    <li>{datasetStats.peopleWithHomeState.toLocaleString()} people with a home state read from the citation entry</li>
+    <li>{datasetStats.battles.toLocaleString()} battle and action pages, including {datasetStats.curatedBattles.length} curated hubs</li>
+  </ul>
+  <p>{datasetStats.officialComparison}</p>
+
+  <h2>Sources</h2>
+  <p>
+    The roster and citation text come from the U.S. Army Medal of Honor citation index,
+    a public-domain government compilation that includes Army, Navy, Marine Corps, Air Force,
+    and Coast Guard awards:
+    <a href="https://www.army.mil/medalofhonor/recipients.html">army.mil/medalofhonor/recipients.html</a>.
+    The pipeline stores a snapshot of each campaign page because some clients are refused by the live site,
+    and it can refresh those snapshots from the Internet Archive. Awards published after a snapshot
+    are added from Army general orders on the Army Publishing Directorate, which are also government works.
+    Each profile links to the source used for that citation.
+  </p>
+  <p>
+    Wikipedia and Wikidata are used only to match a photograph and to offer a background link.
+    Wikipedia prose is not copied. Wikimedia material is credited under its own license, including
+    CC BY-SA where that is the license on the file. A profile with a Creative Commons photo names
+    the license, the credit, and the file page.
+  </p>
+  <p>
+    This project does not copy portraits or prose from the Congressional Medal of Honor Society,
+    the National Medal of Honor Museum, Home of Heroes, Military Times, or Honoring American Troops.
+    Linking to them from a curated battle page is limited to pages that were checked; the citation
+    text itself is taken from government sources.
+  </p>
+
+  <h2>Photographs</h2>
+  <p>
+    A photo is shown only when the person in the file is the recipient and the file may be
+    reused. The first pass used Wikidata images on Wikimedia Commons. A later pass added
+    portraits from the National Archives Catalog, the Library of Congress Prints and
+    Photographs catalog, and additional Commons files. The license has to be public domain,
+    CC0, or Creative Commons Attribution, including ShareAlike. Non-commercial and fair-use
+    files are left out. Graves, medals, documents, group pictures, and files that do not
+    name this recipient are left out. If no such file matches, the page says: “No verified
+    public-domain photo is on file yet.” The archive does not use generated or restored likenesses.
+  </p>
+
+  <h2>Gaps</h2>
+  <ul>
+    <li>
+      Public totals are usually given as more than 3,500 awards and about 3,526 people after
+      the January 3, 2025 ceremony, with further awards in 2026. This archive currently holds
+      {datasetStats.people.toLocaleString()} people and {datasetStats.awards.toLocaleString()} awards.
+      Added from public Navy, Marine Corps, Army, and DVIDS releases: James Capers Jr.,
+      John W. Ripley, Elmer Royce Williams, and Nicholas Dockery. The Unknown Americans of
+      World War II and Korea are included from the Army’s special-legislation page.
+      Some older general-order scans were still too garbled to publish, and a few citation-index
+      entries could not be parsed.
+    </li>
+    <li>
+      The 1917 review rescinded hundreds of earlier awards. Those rescinded awards are not in
+      the Army citation index and are not republished here. Restored awards, including Mary Edwards Walker,
+      remain when the index includes them.
+    </li>
+    <li>
+      Home state is taken from “accredited to,” “entered service at,” or the birth line when one
+      of those names a U.S. state. { (datasetStats.people - datasetStats.peopleWithHomeState).toLocaleString() } people
+      have no state in the source line.
+    </li>
+    <li>
+      Posthumous status is marked when the index puts an asterisk by the name or the citation
+      says the person was killed or gave their life. Older entries do not always say so.
+      The filter is labeled as a marker, not as a complete list of who lived.
+    </li>
+    <li>
+      Place names are the words in the citation entry, lightly cleaned. Some naval citations
+      name a ship instead of a town. Curated hubs correct the famous battles; other pages follow the entry.
+    </li>
+    <li>
+      Only the curated hubs have checked articles, footage, books, and films. Other action pages
+      say that media has not been curated yet. Footage is linked, never copied onto this site.
+    </li>
+  </ul>
+
+  <h2>Cadences</h2>
+  <p>
+    Optional background calls are excerpts of U.S. military public-affairs recordings published
+    on DVIDS with the public-domain mark and no note of copyrighted music. They never start on
+    their own. Credits and units are on the
+    <a href="/audio">cadence audio</a> page.
+  </p>
+
+  <h2>Build</h2>
+  <p>
+    The site is a static Astro project. On Render, use build command <code>npm ci && npm run build</code>
+    and publish directory <code>dist</code>. Regenerate the dataset with
+    <code>python3 scripts/build_dataset.py</code>.
+  </p>
+  </div>
+</Base>

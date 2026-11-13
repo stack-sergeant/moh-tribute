@@ -1,0 +1,102 @@
+{
+  "people": 3503,
+  "awards": 3520,
+  "doubleRecipientsInThisArchive": 17,
+  "byConflict": {
+    "Civil War": 1527,
+    "World War II": 472,
+    "Indian Wars": 414,
+    "Vietnam War": 272,
+    "Peacetime and interim": 183,
+    "Korean War": 153,
+    "World War I": 126,
+    "Spanish\u2013American War": 111,
+    "Philippine\u2013American War": 95,
+    "Boxer Rebellion": 57,
+    "Veracruz occupation": 56,
+    "War in Afghanistan": 16,
+    "Korean Expedition": 14,
+    "Haitian Campaign": 8,
+    "Iraq War": 7,
+    "Dominican Campaign": 3,
+    "Somalia": 2,
+    "Nicaraguan Campaign": 2,
+    "Operation Inherent Resolve": 1,
+    "Operation Absolute Resolve": 1
+  },
+  "byEra": {
+    "Civil War": 1527,
+    "Indian Wars": 414,
+    "Expeditions, 1871\u20131933": 346,
+    "World War I": 126,
+    "World War II": 472,
+    "Korean War": 153,
+    "Vietnam War": 272,
+    "Since 1975": 27,
+    "Peacetime and other actions": 183
+  },
+  "byBranch": {
+    "U.S. Army": 2415,
+    "U.S. Navy": 743,
+    "U.S. Marine Corps": 299,
+    "U.S. Army Air Forces": 42,
+    "U.S. Air Force": 18,
+    "U.S. Armed Forces": 2,
+    "U.S. Coast Guard": 1
+  },
+  "posthumousAwards": 626,
+  "awardsWithPlace": 3205,
+  "peopleWithHomeState": 3080,
+  "peopleWithPhoto": 1418,
+  "photoPercent": 40.5,
+  "battles": 1632,
+  "curatedBattles": [
+    {
+      "id": "battle-of-gettysburg",
+      "title": "Battle of Gettysburg",
+      "recipients": 61
+    },
+    {
+      "id": "belleau-wood",
+      "title": "Belleau Wood",
+      "recipients": 4
+    },
+    {
+      "id": "lost-battalion",
+      "title": "The Lost Battalion in the Argonne",
+      "recipients": 6
+    },
+    {
+      "id": "battle-of-iwo-jima",
+      "title": "Battle of Iwo Jima",
+      "recipients": 27
+    },
+    {
+      "id": "chosin-reservoir",
+      "title": "Chosin Reservoir",
+      "recipients": 11
+    },
+    {
+      "id": "ia-drang",
+      "title": "Battle of Ia Drang",
+      "recipients": 3
+    },
+    {
+      "id": "battle-of-kamdesh",
+      "title": "Battle of Kamdesh",
+      "recipients": 2
+    },
+    {
+      "id": "mogadishu-1993",
+      "title": "Battle of Mogadishu",
+      "recipients": 2
+    },
+    {
+      "id": "second-battle-of-fallujah",
+      "title": "Second Battle of Fallujah",
+      "recipients": 1
+    }
+  ],
+  "autoBattles": 1623,
+  "officialComparison": "Public counts in 2025\u20132026 are usually given as more than 3,500 awards, about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive counts one row per award in the U.S. Army citation index plus Army general orders that were not already in that index. Navy, Marine Corps, Air Force, and Coast Guard awards are included when the Army index carries them. Rescinded 1917 awards are not included."
+}

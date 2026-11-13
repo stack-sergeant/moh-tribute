@@ -1,0 +1,157 @@
+[
+  {
+    "id": "battle-of-gettysburg",
+    "title": "Battle of Gettysburg",
+    "conflict": "Civil War",
+    "era": "Civil War",
+    "dateLabel": "July 1–3, 1863",
+    "location": "Gettysburg, Pennsylvania",
+    "summary": "The Battle of Gettysburg was fought on July 1–3, 1863, around the town of Gettysburg, Pennsylvania. It was a major battle of the Civil War. The recipients listed here are the people whose official citation entries place the action at Gettysburg. Period photographs survive; motion-picture footage of the battle does not.",
+    "keywords": ["gettysburg"],
+    "years": [1863],
+    "media": [
+      {"kind": "article", "title": "Gettysburg National Military Park", "url": "https://www.nps.gov/gett/index.htm", "publisher": "National Park Service", "note": "Official battlefield site."},
+      {"kind": "article", "title": "Gettysburg", "url": "https://www.battlefields.org/learn/civil-war/battles/gettysburg", "publisher": "American Battlefield Trust", "note": "Battle overview and maps."},
+      {"kind": "article", "title": "Battle of Gettysburg", "url": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "book", "title": "The Killer Angels", "url": "https://openlibrary.org/works/OL82664W/The_Killer_Angels", "publisher": "Open Library", "note": "Novel by Michael Shaara, 1974. A work of fiction grounded in the battle."},
+      {"kind": "film", "title": "Gettysburg (1993)", "url": "https://www.imdb.com/title/tt0107007/", "publisher": "IMDb", "note": "Feature film adapted from The Killer Angels. Commercial drama, not a documentary."}
+    ]
+  },
+  {
+    "id": "belleau-wood",
+    "title": "Belleau Wood",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "June 1918",
+    "location": "Belleau Wood, France",
+    "summary": "Belleau Wood, northeast of Paris, was fought in June 1918 during the German offensive along the Marne. U.S. Army and Marine units fought in the woods and the nearby villages. This hub lists recipients whose citations name Belleau Wood, Bois de Belleau, or Bouresches.",
+    "keywords": ["belleau", "bouresche"],
+    "years": [1918],
+    "media": [
+      {"kind": "article", "title": "Aisne-Marne American Cemetery", "url": "https://www.abmc.gov/cemeteries-memorials/europe/aisne-marne-american-cemetery/", "publisher": "American Battle Monuments Commission", "note": "Cemetery beside Belleau Wood."},
+      {"kind": "article", "title": "Battle of Belleau Wood", "url": "https://en.wikipedia.org/wiki/Battle_of_Belleau_Wood", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "book", "title": "Miracle at Belleau Wood", "url": "https://openlibrary.org/works/OL26331417W/Miracle_at_Belleau_Wood", "publisher": "Open Library", "note": "History by Alan Axelrod, with an introduction by Bing West."}
+    ]
+  },
+  {
+    "id": "lost-battalion",
+    "title": "The Lost Battalion in the Argonne",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "October 2–8, 1918",
+    "location": "Charlevaux, Argonne Forest, France",
+    "summary": "In early October 1918, units under Major Charles W. Whittlesey were cut off in the Argonne Forest near Charlevaux and Binarville. The pocket is remembered as the Lost Battalion. The recipients here are the soldiers and the two airmen whose citations name that pocket.",
+    "keywords": ["charlevaux", "binarville", "lost battalion"],
+    "years": [1918],
+    "media": [
+      {"kind": "article", "title": "Lost Battalion (World War I)", "url": "https://en.wikipedia.org/wiki/Lost_Battalion_(World_War_I)", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "article", "title": "Meuse-Argonne American Cemetery", "url": "https://www.abmc.gov/cemeteries-memorials/europe/meuse-argonne-american-cemetery/", "publisher": "American Battle Monuments Commission", "note": "Cemetery for the Meuse-Argonne offensive."},
+      {"kind": "film", "title": "The Lost Battalion (2001)", "url": "https://www.imdb.com/title/tt0287535/", "publisher": "IMDb", "note": "Television drama about the pocket. Not a documentary."}
+    ]
+  },
+  {
+    "id": "battle-of-iwo-jima",
+    "title": "Battle of Iwo Jima",
+    "conflict": "World War II",
+    "era": "World War II",
+    "dateLabel": "February 19–March 26, 1945",
+    "location": "Iwo Jima, Volcano Islands",
+    "summary": "U.S. Marines and Navy corpsmen assaulted Iwo Jima on February 19, 1945, and fighting continued until March 26. Standard compilations record 27 Medals of Honor for the battle. This hub lists recipients whose citation entries name Iwo Jima, Mount Suribachi, or the Volcano Islands in 1945.",
+    "keywords": ["iwo jima", "suribachi", "volcano islands"],
+    "years": [1945],
+    "media": [
+      {"kind": "article", "title": "Battle of Iwo Jima", "url": "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "article", "title": "Anniversary of the Battle for Iwo Jima", "url": "https://www.archives.gov/news/topics/iwo-jima-75", "publisher": "National Archives and Records Administration", "note": "Government overview with links to photographs and film held by the Archives."},
+      {"kind": "footage", "title": "To the Shores of Iwo Jima", "url": "https://www.youtube.com/watch?v=h4E9t2D1obo", "publisher": "YouTube", "note": "1945 U.S. government film about the battle. Linked for viewing, not copied onto this site."},
+      {"kind": "footage", "title": "Marines Assault Iwo Jima", "url": "https://www.dvidshub.net/video/285204/marines-assault-iwo-jima", "publisher": "DVIDS", "note": "Color footage of the landing and the flag raising, credited by DVIDS to the National Archives. Embedded only as a link."},
+      {"kind": "footage", "title": "World War II photographs at the National Archives", "url": "https://www.archives.gov/research/military/ww2/photos", "publisher": "National Archives and Records Administration", "note": "Research guide to government photographs."},
+      {"kind": "book", "title": "Flags of Our Fathers", "url": "https://openlibrary.org/works/OL211764W/Flags_of_Our_Fathers", "publisher": "Open Library", "note": "Book by James Bradley with Ron Powers, 2000."},
+      {"kind": "film", "title": "Flags of Our Fathers (2006)", "url": "https://www.imdb.com/title/tt0418689/", "publisher": "IMDb", "note": "Feature film directed by Clint Eastwood."},
+      {"kind": "film", "title": "Letters from Iwo Jima (2006)", "url": "https://www.imdb.com/title/tt0498380/", "publisher": "IMDb", "note": "Feature film directed by Clint Eastwood, in Japanese, about the Japanese garrison."},
+      {"kind": "film", "title": "Sands of Iwo Jima (1949)", "url": "https://www.imdb.com/title/tt0041841/", "publisher": "IMDb", "note": "Wartime-era feature film starring John Wayne. Fiction."}
+    ]
+  },
+  {
+    "id": "chosin-reservoir",
+    "title": "Chosin Reservoir",
+    "conflict": "Korean War",
+    "era": "Korean War",
+    "dateLabel": "November 27–December 13, 1950",
+    "location": "Chosin Reservoir, northeastern Korea",
+    "summary": "After Chinese forces entered the Korean War, United Nations troops fought around the Chosin Reservoir from late November into mid-December 1950. The 1st Marine Division and nearby Army units withdrew toward Hungnam through Hagaru-ri, Yudam-ni, and Koto-ri. This hub lists recipients whose citations name the reservoir or those villages.",
+    "keywords": ["chosin", "changjin", "hagaru", "yudam", "toktong", "koto-ri", "koto ri", "kotori"],
+    "years": [1950],
+    "media": [
+      {"kind": "article", "title": "Battle of Chosin Reservoir", "url": "https://en.wikipedia.org/wiki/Battle_of_Chosin_Reservoir", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "book", "title": "The Coldest Winter", "url": "https://openlibrary.org/works/OL109600W/The_Coldest_Winter", "publisher": "Open Library", "note": "History of the Korean War by David Halberstam, 2007, with an account of the reservoir campaign."},
+      {"kind": "film", "title": "Chosin (2010)", "url": "https://www.imdb.com/title/tt1561406/", "publisher": "IMDb", "note": "Documentary directed by Brian Iglesias."}
+    ]
+  },
+  {
+    "id": "ia-drang",
+    "title": "Battle of Ia Drang",
+    "conflict": "Vietnam War",
+    "era": "Vietnam War",
+    "dateLabel": "November 14–18, 1965",
+    "location": "Ia Drang Valley, Pleiku Province, South Vietnam",
+    "summary": "In November 1965 the 1st Cavalry Division (Airmobile) fought North Vietnamese Army units in the Ia Drang Valley. The best-known fighting was at Landing Zone X-Ray and Landing Zone Albany. This hub lists recipients whose citations name the valley or those landing zones.",
+    "keywords": ["drang", "landing zone x-ray", "lz x-ray"],
+    "years": [1965],
+    "media": [
+      {"kind": "article", "title": "Battle of Ia Drang", "url": "https://en.wikipedia.org/wiki/Battle_of_Ia_Drang", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "book", "title": "We Were Soldiers Once… and Young", "url": "https://openlibrary.org/works/OL3919996W/We_Were_Soldiers_Once_and_Young", "publisher": "Open Library", "note": "Book by Harold G. Moore and Joseph L. Galloway, 1992."},
+      {"kind": "film", "title": "We Were Soldiers (2002)", "url": "https://www.imdb.com/title/tt0277434/", "publisher": "IMDb", "note": "Feature film based on the Moore and Galloway book."}
+    ]
+  },
+  {
+    "id": "battle-of-kamdesh",
+    "title": "Battle of Kamdesh",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "October 3, 2009",
+    "location": "Combat Outpost Keating, Kamdesh, Nuristan Province, Afghanistan",
+    "summary": "On October 3, 2009, Taliban fighters attacked Combat Outpost Keating near Kamdesh in Nuristan Province. The outpost was nearly overrun. Clinton L. Romesha and Ty M. Carter later received the Medal of Honor for actions that day.",
+    "keywords": ["kamdesh", "keating"],
+    "years": [2009],
+    "media": [
+      {"kind": "article", "title": "Clinton L. Romesha, U.S. Army feature", "url": "https://www.army.mil/medalofhonor/romesha/", "publisher": "U.S. Army", "note": "Official Army page."},
+      {"kind": "article", "title": "Ty M. Carter, U.S. Army feature", "url": "https://www.army.mil/medalofhonor/carter/", "publisher": "U.S. Army", "note": "Official Army page."},
+      {"kind": "article", "title": "Battle of Kamdesh", "url": "https://en.wikipedia.org/wiki/Battle_of_Kamdesh", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "book", "title": "Red Platoon", "url": "https://openlibrary.org/works/OL20026444W/Red_Platoon", "publisher": "Open Library", "note": "Memoir by Clinton Romesha, 2016."},
+      {"kind": "film", "title": "The Outpost (2020)", "url": "https://www.imdb.com/title/tt3833480/", "publisher": "IMDb", "note": "Feature film about Combat Outpost Keating, based on Jake Tapper's book The Outpost."}
+    ]
+  },
+  {
+    "id": "mogadishu-1993",
+    "title": "Battle of Mogadishu",
+    "conflict": "Somalia",
+    "era": "Since 1975",
+    "dateLabel": "October 3–4, 1993",
+    "location": "Mogadishu, Somalia",
+    "summary": "On October 3, 1993, during a raid in Mogadishu, two U.S. Army helicopters were shot down. Master Sergeant Gary I. Gordon and Sergeant First Class Randall D. Shughart received the Medal of Honor, both posthumously, for defending the crew of the second crashed aircraft.",
+    "keywords": ["mogadishu"],
+    "years": [1993],
+    "media": [
+      {"kind": "article", "title": "Battle of Mogadishu (1993)", "url": "https://en.wikipedia.org/wiki/Battle_of_Mogadishu_(1993)", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "article", "title": "Somalia citation index", "url": "https://www.army.mil/medalofhonor/citations27.html", "publisher": "U.S. Army", "note": "Public-domain citation text for the two recipients."},
+      {"kind": "book", "title": "Black Hawk Down", "url": "https://openlibrary.org/works/OL491846W/Black_Hawk_Down", "publisher": "Open Library", "note": "Book by Mark Bowden, 1999."},
+      {"kind": "film", "title": "Black Hawk Down (2001)", "url": "https://www.imdb.com/title/tt0265086/", "publisher": "IMDb", "note": "Feature film based on Bowden's book."}
+    ]
+  },
+  {
+    "id": "second-battle-of-fallujah",
+    "title": "Second Battle of Fallujah",
+    "conflict": "Iraq War",
+    "era": "Since 1975",
+    "dateLabel": "November–December 2004",
+    "location": "Fallujah, Iraq",
+    "summary": "The Second Battle of Fallujah was fought in November and December 2004, when U.S. and Iraqi forces assaulted the city. Staff Sergeant David G. Bellavia received the Medal of Honor for actions on November 10, 2004, during Operation Phantom Fury. A battle with one recipient uses the same page structure as a larger action.",
+    "keywords": ["fallujah"],
+    "years": [2004],
+    "media": [
+      {"kind": "article", "title": "David G. Bellavia, U.S. Army feature", "url": "https://www.army.mil/medalofhonor/bellavia/", "publisher": "U.S. Army", "note": "Official Army page."},
+      {"kind": "article", "title": "Second Battle of Fallujah", "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Fallujah", "publisher": "Wikipedia", "note": "Collaborative article. Text is CC BY-SA. This archive links to it and does not copy it."},
+      {"kind": "book", "title": "House to House", "url": "https://openlibrary.org/works/OL8755601W/House_to_House", "publisher": "Open Library", "note": "Memoir by David Bellavia with John R. Bruning, 2007."}
+    ]
+  }
+]
