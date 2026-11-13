@@ -1,0 +1,132 @@
+---
+import DirectoryLayout from "../../../layouts/Directory.astro";
+import {
+  metaDescription,
+  museumHref,
+  museums,
+  museumsInRegion,
+  optionList,
+  overseasGroups,
+  placeLabel,
+  regionLabel,
+} from "../../../lib/directory";
+import type { Museum } from "../../../lib/directory";
+
+export function getStaticPaths() {
+  const regions = [...new Set(museums.map((museum) => museum.region))];
+  return regions.map((region) => ({
+    params: { region },
+    props: {
+      region,
+      listings: museumsInRegion(region),
+      groups: region === "overseas" ? overseasGroups() : [],
+    },
+  }));
+}
+
+interface Props {
+  region: string;
+  listings: Museum[];
+  groups: { country: string; museums: Museum[] }[];
+}
+const { region, listings, groups } = Astro.props;
+const label = regionLabel(region);
+const description = metaDescription(
+  region === "overseas"
+    ? "Overseas military museums grouped by country, each with a source link."
+    : `Military museums in ${label}, with the city, branch, and source for each one.`,
+);
+const branches = optionList(listings.map((museum) => museum.branch));
+const categories = optionList(listings.map((museum) => museum.category));
+---
+<DirectoryLayout title={region === "overseas" ? "Overseas military museums" : `Military museums in ${label}`} description={description}>
+  <div class="wrap directory">
+    <p class="crumbs"><a href="/directory">Directory</a> / <a href="/directory/museums">Museums</a> / {label}</p>
+    <p class="kicker">{region === "overseas" ? "Overseas" : "State"}</p>
+    <h1>{region === "overseas" ? "Overseas military museums" : `Military museums in ${label}`}</h1>
+    <p class="lede">
+      {region === "overseas"
+        ? "Grouped by country. Each museum links to the official page used to check the name and place."
+        : `${listings.length} ${listings.length === 1 ? "museum" : "museums"} in ${label}.`}
+    </p>
+    <form class="filters" role="search">
+      <label>
+        Name
+        <input id="rq" type="search" autocomplete="off" />
+      </label>
+      <label>
+        Branch
+        <select id="rbranch">
+          <option value="">Any branch</option>
+          {branches.map((branch) => <option value={branch}>{branch}</option>)}
+        </select>
+      </label>
+      <label>
+        Category
+        <select id="rcategory">
+          <option value="">Any category</option>
+          {categories.map((category) => <option value={category}>{category}</option>)}
+        </select>
+      </label>
+    </form>
+    <p id="rcount" class="result-count" aria-live="polite"></p>
+    {region === "overseas" ? (
+      groups.map((group) => (
+        <section>
+          <h2>{group.country}</h2>
+          <ul class="roster museum-region-list">
+            {group.museums.map((museum) => (
+              <li data-name={museum.name.toLowerCase()} data-branch={museum.branch} data-category={museum.category}>
+                <a href={museumHref(museum)}>{museum.name}</a>
+                <p class="meta">{placeLabel(museum)} · {museum.branch} · {museum.category}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    ) : (
+      <ul class="roster museum-region-list">
+        {listings.map((museum) => (
+          <li data-name={museum.name.toLowerCase()} data-branch={museum.branch} data-category={museum.category}>
+            <a href={museumHref(museum)}>{museum.name}</a>
+            <p class="meta">{placeLabel(museum)} · {museum.branch} · {museum.category}</p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</DirectoryLayout>
+
+<script>
+  const items = [...document.querySelectorAll(".museum-region-list li")];
+  const q = document.querySelector("#rq");
+  const branch = document.querySelector("#rbranch");
+  const category = document.querySelector("#rcategory");
+  const count = document.querySelector("#rcount");
+  function render() {
+    const query = q instanceof HTMLInputElement ? q.value.trim().toLowerCase() : "";
+    const wantedBranch = branch instanceof HTMLSelectElement ? branch.value : "";
+    const wantedCategory = category instanceof HTMLSelectElement ? category.value : "";
+    let shown = 0;
+    for (const item of items) {
+      const row = item as HTMLElement;
+      const ok =
+        (!query || (row.dataset.name ?? "").includes(query)) &&
+        (!wantedBranch || row.dataset.branch === wantedBranch) &&
+        (!wantedCategory || row.dataset.category === wantedCategory);
+      row.hidden = !ok;
+      if (ok) shown += 1;
+    }
+    for (const heading of document.querySelectorAll(".directory h2")) {
+      const section = heading.parentElement;
+      const visible = section?.querySelector("li:not([hidden])");
+      if (section) section.hidden = !visible;
+    }
+    if (count) count.textContent = `${shown.toLocaleString()} museums`;
+  }
+  render();
+  for (const control of [q, branch, category]) {
+    control?.addEventListener("input", render);
+    control?.addEventListener("change", render);
+  }
+</script>

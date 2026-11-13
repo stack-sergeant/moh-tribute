@@ -1,0 +1,69 @@
+---
+import DirectoryForm from "../../components/DirectoryForm.astro";
+import DirectoryLayout from "../../layouts/Directory.astro";
+import { formEndpoint, metaDescription, sponsor } from "../../lib/directory";
+
+const description = metaDescription(
+  "Ask about the featured sponsor slot on the Valor Record directory. The price is not set. Each placement is labeled as paid.",
+);
+---
+<DirectoryLayout title="Featured sponsor" description={description}>
+  <div class="wrap directory">
+    <p class="crumbs"><a href="/directory">Directory</a> / Sponsor</p>
+    <p class="kicker">Featured sponsor</p>
+    <h1>One paid slot on the directory</h1>
+    <p class="lede">{sponsor.disclosure}</p>
+    <h2>What the slot is</h2>
+    <p>
+      There is one featured card at the top of the directory and a short sponsored bar in the footer of directory pages.
+      Both say Sponsored or Featured sponsor. The disclosure above stays on the placement.
+    </p>
+    <h2>Who can buy it</h2>
+    <p>
+      The slot is for a veteran-owned business, a military museum, or a veterans organization.
+    The owner of Valor Record approves each placement. A directory listing and this paid slot are separate.
+    </p>
+    <h2>How the ad is labeled</h2>
+    <p>
+      The card and the footer bar are labeled as paid placement. If the sponsor link leaves this site, it uses
+      <code>rel="sponsored noopener"</code>.
+      The price is not set, and this page does not quote one.
+    </p>
+    {formEndpoint ? (
+      <p class="note">Send an inquiry. Nothing is sold from this form, and no price is shown.</p>
+    ) : (
+      <p class="note" role="status">Submissions open soon. The review inbox is not connected yet, so this form cannot be sent.</p>
+    )}
+    <DirectoryForm endpoint={formEndpoint} formId="sponsor-inquiry" subject="Valor Record sponsor inquiry">
+      <label>
+        Organization
+        <input name="organization" required autocomplete="organization" />
+      </label>
+      <label>
+        Website
+        <input name="website" type="url" required placeholder="https://" autocomplete="url" />
+      </label>
+      <label>
+        What kind of organization
+        <select name="organization_type" required>
+          <option value="">Choose one</option>
+          <option>Veteran-owned business</option>
+          <option>Military museum</option>
+          <option>Veterans organization</option>
+        </select>
+      </label>
+      <label>
+        Contact name
+        <input name="contact_name" required autocomplete="name" />
+      </label>
+      <label>
+        Contact email
+        <input name="contact_email" type="email" required autocomplete="email" />
+      </label>
+      <label>
+        Inquiry
+        <textarea name="message" required maxlength="800" rows="5"></textarea>
+      </label>
+    </DirectoryForm>
+  </div>
+</DirectoryLayout>

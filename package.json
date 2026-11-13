@@ -6,7 +6,8 @@
     "data": "SKIP_AGO_FETCH=1 python3 scripts/build_dataset.py",
     "dev": "astro dev --host 0.0.0.0 --port 4321",
     "build": "astro build",
-    "preview": "astro preview --host 0.0.0.0 --port 4321"
+    "preview": "astro preview --host 0.0.0.0 --port 4321",
+    "test": "node --test scripts/check-directory.mjs"
   },
   "dependencies": {
     "@fontsource/oswald": "^5.3.0",

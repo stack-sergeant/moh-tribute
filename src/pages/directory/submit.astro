@@ -1,0 +1,127 @@
+---
+import DirectoryForm from "../../components/DirectoryForm.astro";
+import DirectoryLayout from "../../layouts/Directory.astro";
+import { businessBranches, businessCategories, formEndpoint, metaDescription, US_STATES, stateName } from "../../lib/directory";
+
+const states = US_STATES as [string, string][];
+const description = metaDescription(
+  "Ask Valor Record to list a veteran-owned business or suggest a military museum. Submissions are reviewed before publishing.",
+);
+---
+<DirectoryLayout title="List a business or suggest a museum" description={description}>
+  <div class="wrap directory">
+    <p class="crumbs"><a href="/directory">Directory</a> / Submit</p>
+    <p class="kicker">Submissions</p>
+    <h1>List a business or suggest a museum</h1>
+    <p class="lede">
+      Businesses are added only from this opt-in form. A person reviews every submission before it is published.
+      The contact email stays private.
+    </p>
+    {formEndpoint ? (
+      <p class="note">Send the form once. A reviewer will check it before anything goes on the public directory.</p>
+    ) : (
+      <p class="note" role="status">Submissions open soon. The review inbox is not connected yet, so this form cannot be sent.</p>
+    )}
+
+    <h2>List your veteran-owned business</h2>
+    <p>
+      A reviewer may look up the business on SBA VetCert or in SAM. Those are separate checks.
+      The public listing uses one badge, either SBA VetCert verified or Registered in SAM as veteran-owned.
+      <a href="https://veterans.certify.sba.gov/">Verify on SBA VetCert</a>.
+    </p>
+    <DirectoryForm endpoint={formEndpoint} formId="business" subject="Valor Record business listing">
+      <label>
+        Business name
+        <input name="business_name" required autocomplete="organization" />
+      </label>
+      <label>
+        Owner veteran status
+        <select name="veteran_status" required>
+          <option value="">Choose one</option>
+          <option value="veteran">Veteran</option>
+          <option value="service-disabled-veteran">Service-disabled veteran</option>
+        </select>
+      </label>
+      <label>
+        Branch
+        <select name="branch" required>
+          <option value="">Choose one</option>
+          {businessBranches.map((branch) => <option value={branch}>{branch}</option>)}
+        </select>
+      </label>
+      <label>
+        Website
+        <input name="website" type="url" required placeholder="https://" autocomplete="url" />
+      </label>
+      <label>
+        City
+        <input name="city" required autocomplete="address-level2" />
+      </label>
+      <label>
+        State
+        <select name="state" required>
+          <option value="">Choose one</option>
+          {states.map(([code]) => <option value={code}>{stateName(code)}</option>)}
+          <option value="OUTSIDE">Outside the United States</option>
+        </select>
+      </label>
+      <label>
+        Country
+        <input name="country" required value="United States" autocomplete="country-name" />
+      </label>
+      <label>
+        Category
+        <select name="category" required>
+          <option value="">Choose one</option>
+          {businessCategories.map((category) => <option value={category}>{category}</option>)}
+        </select>
+      </label>
+      <label>
+        Short description
+        <textarea name="description" required maxlength="400" rows="4"></textarea>
+      </label>
+      <label>
+        UEI or VetCert information, optional
+        <input name="uei_or_vetcert" autocomplete="off" />
+      </label>
+      <p class="meta">The UEI or VetCert note is for the reviewer. It is not published.</p>
+      <label>
+        Contact email, kept private
+        <input name="contact_email" type="email" required autocomplete="email" />
+      </label>
+      <label class="plain">
+        <input type="checkbox" name="consent" value="yes" required />
+        <span>I agree that Valor Record may publish this listing after review. I understand my contact email is not published.</span>
+      </label>
+    </DirectoryForm>
+
+    <h2>Suggest a military museum</h2>
+    <p>Suggestions are reviewed the same way. A museum is added only when a public source confirms the name and place.</p>
+    <DirectoryForm endpoint={formEndpoint} formId="museum-suggestion" subject="Valor Record museum suggestion">
+      <label>
+        Museum name
+        <input name="museum_name" required />
+      </label>
+      <label>
+        City
+        <input name="city" required />
+      </label>
+      <label>
+        State or country
+        <input name="state_or_country" required />
+      </label>
+      <label>
+        Official website
+        <input name="website" type="url" required placeholder="https://" />
+      </label>
+      <label>
+        Why it belongs in the directory
+        <textarea name="notes" required maxlength="600" rows="4"></textarea>
+      </label>
+      <label>
+        Contact email, kept private
+        <input name="contact_email" type="email" required autocomplete="email" />
+      </label>
+    </DirectoryForm>
+  </div>
+</DirectoryLayout>

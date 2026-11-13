@@ -1,0 +1,28 @@
+---
+interface Props {
+  endpoint: string;
+  formId: string;
+  subject: string;
+}
+const { endpoint, formId, subject } = Astro.props;
+const open = endpoint.length > 0;
+---
+<form
+  class="dir-form"
+  method="post"
+  action={open ? endpoint : undefined}
+  data-open={open ? "yes" : "no"}
+>
+  <fieldset disabled={!open}>
+    <input type="hidden" name="form" value={formId} />
+    <input type="hidden" name="_subject" value={subject} />
+    <div class="hp-field" aria-hidden="true">
+      <label>
+        Company website
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+      </label>
+    </div>
+    <slot />
+    <button class="btn" type="submit">Submit for review</button>
+  </fieldset>
+</form>

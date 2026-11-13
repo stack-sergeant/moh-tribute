@@ -1,0 +1,10 @@
+---
+import { sponsor, sponsorLinkRel } from "../lib/directory";
+
+const rel = sponsorLinkRel(sponsor.href);
+---
+<aside class="sponsor-bar" aria-label="Sponsored">
+  <span class="badge">{sponsor.label}</span>
+  <a href={sponsor.href} rel={rel}>{sponsor.title}: {sponsor.action}</a>
+  <p class="sponsor-disclosure">{sponsor.disclosure}</p>
+</aside>
