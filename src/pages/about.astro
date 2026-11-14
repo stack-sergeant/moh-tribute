@@ -1,28 +1,33 @@
 ---
 import Base from "../layouts/Base.astro";
-import { datasetStats } from "../lib/records";
+import { allBattles, allRecipients, datasetStats } from "../lib/records";
 import { disclaimer, site } from "../site";
+
+const awards = allRecipients.flatMap((person) => person.awards);
+const people = allRecipients.length;
+const awardCount = awards.length;
+const peopleWithMoreThanOneAward = allRecipients.filter((person) => person.awards.length > 1).length;
+const posthumousAwards = awards.filter((award) => award.posthumous).length;
+const peopleWithPhoto = allRecipients.filter((person) => person.photo).length;
+const photoPercent = people === 0 ? 0 : Math.round((peopleWithPhoto * 1000) / people) / 10;
+const peopleWithHomeState = allRecipients.filter((person) => person.homeState).length;
+const curatedBattles = allBattles.filter((battle) => battle.curated).length;
 ---
 <Base title="About" description="Sources, photo rules, and the limits of this unofficial Medal of Honor archive.">
   <div class="wrap">
   <p class="kicker">About this archive</p>
   <h1>About {site.name}</h1>
   <p class="lede">{disclaimer}</p>
-  <p>
-    The name of the site is set in one file, <code>src/site.ts</code>, so it can be changed
-    without rewriting the pages. The archive does not use the Medal of Honor as a logo
-    and does not use official seals.
-  </p>
 
-  <h2>What is in this version</h2>
+  <h2>The Archive So Far</h2>
   <ul>
-    <li>{datasetStats.people.toLocaleString()} people</li>
-    <li>{datasetStats.awards.toLocaleString()} awards</li>
-    <li>{datasetStats.doubleRecipientsInThisArchive} people with more than one award in this dataset</li>
-    <li>{datasetStats.posthumousAwards.toLocaleString()} awards marked posthumous</li>
-    <li>{datasetStats.peopleWithPhoto.toLocaleString()} people with a verified reusable photograph ({datasetStats.photoPercent}%)</li>
-    <li>{datasetStats.peopleWithHomeState.toLocaleString()} people with a home state read from the citation entry</li>
-    <li>{datasetStats.battles.toLocaleString()} battle and action pages, including {datasetStats.curatedBattles.length} curated hubs</li>
+    <li>{people.toLocaleString()} people</li>
+    <li>{awardCount.toLocaleString()} awards</li>
+    <li>{peopleWithMoreThanOneAward.toLocaleString()} people with more than one award in this archive</li>
+    <li>{posthumousAwards.toLocaleString()} awards marked posthumous</li>
+    <li>{peopleWithPhoto.toLocaleString()} people with a verified reusable photograph ({photoPercent}%)</li>
+    <li>{peopleWithHomeState.toLocaleString()} people with a home state read from the citation entry</li>
+    <li>{allBattles.length.toLocaleString()} battle and action pages, including {curatedBattles.toLocaleString()} curated hubs</li>
   </ul>
   <p>{datasetStats.officialComparison}</p>
 
@@ -32,8 +37,8 @@ import { disclaimer, site } from "../site";
     a public-domain government compilation that includes Army, Navy, Marine Corps, Air Force,
     and Coast Guard awards:
     <a href="https://www.army.mil/medalofhonor/recipients.html">army.mil/medalofhonor/recipients.html</a>.
-    The pipeline stores a snapshot of each campaign page because some clients are refused by the live site,
-    and it can refresh those snapshots from the Internet Archive. Awards published after a snapshot
+    Saved copies of those campaign pages are kept so the citations stay available, and those
+    copies can be refreshed from the Internet Archive. Awards published after a saved copy
     are added from Army general orders on the Army Publishing Directorate, which are also government works.
     Each profile links to the source used for that citation.
   </p>
@@ -44,7 +49,7 @@ import { disclaimer, site } from "../site";
     the license, the credit, and the file page.
   </p>
   <p>
-    This project does not copy portraits or prose from the Congressional Medal of Honor Society,
+    This archive does not copy portraits or prose from the Congressional Medal of Honor Society,
     the National Medal of Honor Museum, Home of Heroes, Military Times, or Honoring American Troops.
     Linking to them from a curated battle page is limited to pages that were checked; the citation
     text itself is taken from government sources.
@@ -53,9 +58,9 @@ import { disclaimer, site } from "../site";
   <h2>Photographs</h2>
   <p>
     A photo is shown only when the person in the file is the recipient and the file may be
-    reused. The first pass used Wikidata images on Wikimedia Commons. A later pass added
-    portraits from the National Archives Catalog, the Library of Congress Prints and
-    Photographs catalog, and additional Commons files. The license has to be public domain,
+    reused. Photographs are matched from Wikidata images on Wikimedia Commons, the National
+    Archives Catalog, the Library of Congress Prints and Photographs catalog, and additional
+    Commons files. The license has to be public domain,
     CC0, or Creative Commons Attribution, including ShareAlike. Non-commercial and fair-use
     files are left out. Graves, medals, documents, group pictures, and files that do not
     name this recipient are left out. If no such file matches, the page says: “No verified
@@ -67,12 +72,12 @@ import { disclaimer, site } from "../site";
     <li>
       Public totals are usually given as more than 3,500 awards and about 3,526 people after
       the January 3, 2025 ceremony, with further awards in 2026. This archive currently holds
-      {datasetStats.people.toLocaleString()} people and {datasetStats.awards.toLocaleString()} awards.
+      {people.toLocaleString()} people and {awardCount.toLocaleString()} awards.
       Added from public Navy, Marine Corps, Army, and DVIDS releases: James Capers Jr.,
       John W. Ripley, Elmer Royce Williams, and Nicholas Dockery. The Unknown Americans of
       World War II and Korea are included from the Army’s special-legislation page.
       Some older general-order scans were still too garbled to publish, and a few citation-index
-      entries could not be parsed.
+      entries could not be included.
     </li>
     <li>
       The 1917 review rescinded hundreds of earlier awards. Those rescinded awards are not in
@@ -81,7 +86,7 @@ import { disclaimer, site } from "../site";
     </li>
     <li>
       Home state is taken from “accredited to,” “entered service at,” or the birth line when one
-      of those names a U.S. state. { (datasetStats.people - datasetStats.peopleWithHomeState).toLocaleString() } people
+      of those names a U.S. state. { (people - peopleWithHomeState).toLocaleString() } people
       have no state in the source line.
     </li>
     <li>
@@ -112,18 +117,12 @@ import { disclaimer, site } from "../site";
   <h2>Directory</h2>
   <p>
     The <a href="/directory">directory</a> lists military museums and veteran-owned businesses that ask to be included.
-    Businesses are not copied from SAM.gov or SBA VetCert. Museum rows store a name, a place, and a source link.
+    Businesses are not copied from SAM.gov or SBA VetCert. Each museum listing gives a name, a place, and a source link.
     Some U.S. rows cite the public-domain IMLS Museum Data Files, FY 2018 release
     (Frehill, L. M. and Pelczar, M., Institute of Museum and Library Services, Washington, DC).
     Others cite official service museum lists or the museum's own site. Valor Record does not copy prose or photographs from those sites,
     and a listing is not an endorsement.
   </p>
 
-  <h2>Build</h2>
-  <p>
-    The site is a static Astro project. On Render, use build command <code>npm ci && npm run build</code>
-    and publish directory <code>dist</code>. Regenerate the dataset with
-    <code>python3 scripts/build_dataset.py</code>.
-  </p>
   </div>
 </Base>
