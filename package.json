@@ -7,12 +7,16 @@
     "dev": "astro dev --host 0.0.0.0 --port 4321",
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0 --port 4321",
-    "test": "node --test scripts/check-directory.mjs"
+    "render:og": "node scripts/render-og.mjs",
+    "test": "node --test scripts/check-directory.mjs scripts/check-social.mjs"
   },
   "dependencies": {
     "@fontsource/oswald": "^5.3.0",
     "@fontsource/source-sans-3": "^5.2.6",
     "@fontsource/source-serif-4": "^5.2.6",
     "astro": "^5.15.9"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

@@ -6,7 +6,12 @@ export interface Scene {
   sourceUrl: string;
 }
 
-/** Public-domain or CC BY photographs. Credits were read from Wikimedia Commons. The homepage hero is the default social image for pages without a public-domain portrait. */
+/**
+ * Public-domain or CC BY photographs. Credits were read from Wikimedia Commons.
+ * The homepage still shows the hero file below and prints its credit.
+ * Link previews use the self-hosted card at /og.png, rendered from this photograph
+ * by scripts/render-og.mjs. Crawlers are refused by the Wikimedia thumbnail host.
+ */
 export const heroScene: Scene = {
   url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg/1920px-Into_the_Jaws_of_Death_23-0455M_edit.jpg",
   alt: "U.S. soldiers wade from a Coast Guard landing craft toward Omaha Beach on D-Day, 6 June 1944.",

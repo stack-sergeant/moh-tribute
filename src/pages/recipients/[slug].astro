@@ -20,8 +20,16 @@ const mates = lead.battleId
       .map((id) => allRecipients.find((item) => item.id === id))
       .filter(Boolean)
   : [];
+const cardImage = publicDomainPhotoUrl(photo);
 ---
-<Base title={person.name} description={`Medal of Honor record for ${person.name}.`} image={publicDomainPhotoUrl(photo)}>
+<Base
+  title={person.name}
+  description={`Medal of Honor record for ${person.name}.`}
+  image={cardImage}
+  imageAlt={cardImage ? `Photograph associated with ${person.name}` : undefined}
+  imageWidth={cardImage ? photo?.width : undefined}
+  imageHeight={cardImage ? photo?.height : undefined}
+>
   <header class="hero-person">
     {photo ? (
       <img src={photo.url} alt={`Photograph associated with ${person.name}`} width={photo.width ?? 800} height={photo.height ?? 1000} />
