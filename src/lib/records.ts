@@ -163,6 +163,11 @@ export function neighbors(id: string) {
   return { prev: ordered[index - 1], next: ordered[index + 1] };
 }
 
+/** Pin a recipient as the homepage feature on a specific date (YYYY-MM-DD, visitor's local date). */
+export const featuredOverrides: Record<string, string> = {
+  "2026-11-14": "eric-a-slover",
+};
+
 export function featuredPool() {
   const buckets = new Map<string, Recipient[]>();
   const ranked = [...allRecipients]
