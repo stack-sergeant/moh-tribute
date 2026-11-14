@@ -23,6 +23,6 @@ const open = endpoint.length > 0;
       </label>
     </div>
     <slot />
-    <button class="btn" type="submit">Submit for review</button>
+    {open && <button class="btn" type="submit">Submit for review</button>}
   </fieldset>
 </form>

@@ -1,21 +1,21 @@
 {
-  "people": 3503,
-  "awards": 3520,
+  "people": 3515,
+  "awards": 3532,
   "doubleRecipientsInThisArchive": 17,
   "byConflict": {
     "Civil War": 1527,
-    "World War II": 472,
-    "Indian Wars": 414,
+    "World War II": 474,
+    "Indian Wars": 422,
     "Vietnam War": 272,
     "Peacetime and interim": 183,
     "Korean War": 153,
     "World War I": 126,
     "Spanish\u2013American War": 111,
     "Philippine\u2013American War": 95,
-    "Boxer Rebellion": 57,
+    "Boxer Rebellion": 58,
     "Veracruz occupation": 56,
     "War in Afghanistan": 16,
-    "Korean Expedition": 14,
+    "Korean Expedition": 15,
     "Haitian Campaign": 8,
     "Iraq War": 7,
     "Dominican Campaign": 3,
@@ -26,30 +26,30 @@
   },
   "byEra": {
     "Civil War": 1527,
-    "Indian Wars": 414,
-    "Expeditions, 1871\u20131933": 346,
+    "Indian Wars": 422,
+    "Expeditions, 1871\u20131933": 348,
     "World War I": 126,
-    "World War II": 472,
+    "World War II": 474,
     "Korean War": 153,
     "Vietnam War": 272,
     "Since 1975": 27,
     "Peacetime and other actions": 183
   },
   "byBranch": {
-    "U.S. Army": 2415,
+    "U.S. Army": 2423,
     "U.S. Navy": 743,
-    "U.S. Marine Corps": 299,
+    "U.S. Marine Corps": 303,
     "U.S. Army Air Forces": 42,
     "U.S. Air Force": 18,
     "U.S. Armed Forces": 2,
     "U.S. Coast Guard": 1
   },
-  "posthumousAwards": 602,
-  "awardsWithPlace": 3207,
-  "peopleWithHomeState": 3124,
+  "posthumousAwards": 610,
+  "awardsWithPlace": 3264,
+  "peopleWithHomeState": 3137,
   "peopleWithPhoto": 1418,
-  "photoPercent": 40.5,
-  "battles": 1635,
+  "photoPercent": 40.3,
+  "battles": 1600,
   "curatedBattles": [
     {
       "id": "battle-of-gettysburg",
@@ -97,6 +97,6 @@
       "recipients": 1
     }
   ],
-  "autoBattles": 1626,
+  "autoBattles": 1591,
   "officialComparison": "Public counts in 2025\u20132026 are usually given as more than 3,500 awards, about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive counts one row per award in the U.S. Army citation index plus Army general orders that were not already in that index. Navy, Marine Corps, Air Force, and Coast Guard awards are included when the Army index carries them. Rescinded 1917 awards are not included."
 }

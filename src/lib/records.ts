@@ -108,14 +108,42 @@ export function eraSlug(era: string) {
 
 export function actLine(citation: string) {
   const text = citation.replace(/\s+/g, " ").trim();
-  const stripped = text.replace(
-    /^for conspicuous gallantry and intrepidity[^.]{0,240}?\.\s*/i,
+  let source = text.replace(
+    /^for conspicuous gallantry and intrepidity[^:]{0,260}?:\s*/i,
     "",
   );
-  const source = stripped.length > 48 ? stripped : text;
-  const sentence = source.split(/(?<=\.)\s+/)[0] ?? source;
-  if (sentence.length <= 170) return sentence;
-  return `${sentence.slice(0, 160).replace(/\s+\S*$/, "")}…`;
+  if (source === text) {
+    const awarded = source.match(/^.{0,320}?\bto:\s+/i);
+    if (awarded && awarded[0].length < source.length - 40) {
+      source = source.slice(awarded[0].length);
+    }
+  }
+  if (source === text) {
+    const stripped = source.replace(
+      /^for conspicuous gallantry and intrepidity[^.]{0,260}?\.\s*/i,
+      "",
+    );
+    if (stripped.length > 48 && stripped.length < text.length) source = stripped;
+  }
+  const sentence = firstSentence(source);
+  const clean = sentence.replace(/^\W+/, "");
+  if (clean.length <= 220) return clean;
+  return `${clean.slice(0, 200).replace(/\s+\S*$/, "")}…`;
+}
+
+function firstSentence(source: string) {
+  for (let i = 0; i < source.length; i += 1) {
+    if (source[i] !== ".") continue;
+    const prev = source[i - 1] ?? "";
+    const earlier = source[i - 2] ?? "";
+    // "R." and "U.S." are initials, not the end of the sentence.
+    if (/[A-Za-z]/.test(prev) && !/[A-Za-z]/.test(earlier)) continue;
+    const after = source.slice(i + 1);
+    if (after === "" || /^\s+[A-Z“"']/.test(after) || /^\s*$/.test(after)) {
+      return source.slice(0, i + 1).trim();
+    }
+  }
+  return source;
 }
 
 export function storyLabel(name: string) {

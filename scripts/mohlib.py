@@ -192,9 +192,15 @@ SUFFIXES = {
     "3rd": "3d",
 }
 
+# Citation is handled separately. A colon, a bare "Citation" before the
+# prose, and the word dropped into the middle of a citation are different.
 LABEL_RE = re.compile(
-    r"\b(Rank and organization|Place and date|Place and dare|Entered service at|Enlisted in|"
-    r"Birth|Born|Date of issue|Accredited to|Appointed from|G\.O\. No\.|Citation)\s*[:.]?",
+    r"\b(?:"
+    r"(Rank and organization|Places and dates|Place and date|Place and dare|Action date|"
+    r"Entered service at|Enlisted in|Birth|Born|Date of issue|Accredited to|Appointed from|"
+    r"G\.O\. No\.)\s*[:.]?"
+    r"|(Rank|Organization|Place|Date)\s*:"
+    r")",
     re.IGNORECASE,
 )
 
@@ -252,7 +258,22 @@ RECIPIENT_DEATH_PHRASES = [
     "he was mortally wounded",
     "she was mortally wounded",
     "although mortally wounded",
+    "cost him his life",
+    "cost her her life",
+    "laying down his own life",
+    "laying down her own life",
 ]
+
+
+# Indexed-name tokens the Army snapshot misspelled with l/I.
+# McGuire and McGarity are spelled that way in their own citation text.
+# McIntosh is the l/I error in "Mclntosh"; the citation repeats the bad OCR,
+# and the audit names this correction.
+OCR_NAME_TOKENS = {
+    "mcgulre": "McGuire",
+    "mcgarlty": "McGarity",
+    "mclntosh": "McIntosh",
+}
 
 
 def squash(text: str) -> str:
@@ -281,6 +302,11 @@ def _cap_token(token: str) -> str:
     token = token.strip()
     if not token:
         return ""
+    if "-" in token.strip("-"):
+        return "-".join(_cap_token(part) for part in token.split("-"))
+    mapped = OCR_NAME_TOKENS.get(token.lower().strip("."))
+    if mapped:
+        return mapped
     # The index prints the middle initial I as the digit 1 (Richard 1. Bong).
     if re.fullmatch(r"1\.?", token):
         return "I."
@@ -303,10 +329,27 @@ def _cap_token(token: str) -> str:
     return token.capitalize()
 
 
+def _surname_first_without_comma(cleaned: str) -> str | None:
+    tokens = cleaned.split()
+    if len(tokens) < 3 or not tokens[0].isupper() or len(tokens[0]) < 4:
+        return None
+    if not re.fullmatch(r"[A-Za-z]\.?", tokens[-1]):
+        return None
+    if not all(token.isupper() or re.fullmatch(r"[A-Za-z]\.?", token) for token in tokens):
+        return None
+    return tokens[0] + ", " + " ".join(tokens[1:])
+
+
 def format_indexed_name(raw: str) -> dict:
     """Turn 'MacARTHUR, ARTHUR, JR.' into display and sort fields."""
     cleaned = squash(raw).lstrip("*").strip()
     cleaned = cleaned.replace(" ,", ",")
+    # "PITSENBARGER WILLIAM H." has no comma. The last token is an initial
+    # and the first token is the surname.
+    if "," not in cleaned:
+        flipped = _surname_first_without_comma(cleaned)
+        if flipped:
+            cleaned = flipped
     if "," not in cleaned:
         display = " ".join(_cap_token(p) for p in cleaned.split())
         return {
@@ -337,6 +380,7 @@ def format_indexed_name(raw: str) -> dict:
     middle = " ".join(given[1:]) if len(given) > 1 else ""
     display_bits = [first, middle, last]
     display = " ".join(b for b in display_bits if b)
+    display = re.sub(r" {2,}", " ", display).strip()
     if suffix:
         display = f"{display} {suffix}".strip()
     sort = ", ".join(p for p in [last, " ".join(b for b in [first, middle] if b)] if p)
@@ -370,26 +414,107 @@ def _strip_citation_trailer(citation: str) -> str:
     return re.split(r"\bFor more info(?:rmation)?\b", citation or "", maxsplit=1, flags=re.I)[0].strip()
 
 
+def _label_key(match: re.Match) -> str:
+    raw = next(group for group in match.groups() if group)
+    key = raw.lower()
+    if key in {"place and dare", "places and dates"}:
+        return "place and date"
+    return key
+
+
+_CITATION_LABEL_RE = re.compile(
+    r"\b(?:Citation|Citatation|Citatian|Citarion|Citatlon|Cltation|Cltatlon|Cita\s+tion)\b\s*[:.]?",
+    re.I,
+)
+
+
+_FIELD_LEAD = re.compile(
+    r"^(?:Rank and organization|Place and date|Entered service at|Entered service|"
+    r"Date and place of birth|Date of issue|Accredited to|Appointed from|Born|Birth|"
+    r"G\.O\. No\.)\s*:\s*",
+    re.I,
+)
+
+
+def _narrative_offset(text: str) -> int | None:
+    """Index where the prose starts after a run of 'Label: value.' fields."""
+    if not _FIELD_LEAD.match(text):
+        return None
+    pos = 0
+    guard = 0
+    while guard < 12:
+        guard += 1
+        lead = _FIELD_LEAD.match(text[pos:])
+        if not lead:
+            return pos or None
+        rest = text[pos + lead.end() :]
+        cut = None
+        for mark in re.finditer(r"\.\s+", rest):
+            before = rest[mark.start() - 1] if mark.start() else ""
+            earlier = rest[mark.start() - 2] if mark.start() >= 2 else ""
+            # "U.S. Army" is an abbreviation, not the end of the field.
+            if before.isupper() and not earlier.isalpha():
+                continue
+            after = rest[mark.end() :]
+            if _FIELD_LEAD.match(after) or re.match(r"[A-Z]", after):
+                cut = mark.end()
+                break
+        if cut is None:
+            return None
+        pos += lead.end() + cut
+        if not _FIELD_LEAD.match(text[pos:]):
+            return pos
+    return None
+
+
+def _citation_body(text: str) -> tuple[str, int | None]:
+    """Return the citation prose and the index where field labels must stop.
+
+    "Citation:" is the normal label. A bare "Citation" before the prose is
+    the same label without a colon ("Citation 2d Lt. Murphy…"), and the index
+    also misspells that label. When the word is dropped into a citation that
+    already started ("Citation Shortly…") or introduces a note
+    ("Citation represents…"), it is not a field boundary.
+    """
+    bare = _CITATION_LABEL_RE.search(text)
+    if bare and bare.group(0).lower().startswith("citation") and text[bare.end() - 1 : bare.end()] == ":":
+        return text[bare.end() :], bare.start()
+    if bare:
+        before, after = text[: bare.start()], text[bare.end() :]
+        if re.match(r"\s*represents\b", after, flags=re.I):
+            return before, bare.start()
+        if len(before) > 180 and re.search(r"gallantry|intrepidity", before, flags=re.I):
+            return f"{before} {after}", None
+        return after, bare.start()
+    gallantry = re.search(r"\bFor conspicuous gallantry\b", text, flags=re.I)
+    if gallantry and gallantry.start() > 40:
+        return text[gallantry.start() :], gallantry.start()
+    narrative = _narrative_offset(text)
+    if narrative:
+        return text[narrative:], narrative
+    return text, None
+
+
 def parse_labeled_block(text: str) -> dict:
     text = squash(text)
-    matches = list(LABEL_RE.finditer(text))
+    citation, citation_at = _citation_body(text)
+    matches = [
+        match
+        for match in LABEL_RE.finditer(text)
+        if citation_at is None or match.start() < citation_at
+    ]
     fields: dict[str, str] = {}
-    if not matches:
-        return {"citation": _strip_citation_trailer(text), "fields": fields}
-    # Citation consumes the remainder so later colons stay inside it.
-    citation_at = next((m.start() for m in matches if m.group(1).lower() == "citation"), None)
-    usable = [m for m in matches if citation_at is None or m.start() <= citation_at]
-    for i, match in enumerate(usable):
-        key = match.group(1).lower()
-        if key == "place and dare":
-            key = "place and date"
+    # When the citation is the whole entry, labels still describe the header
+    # only if they sit in front of a citation label. Otherwise leave them in the prose.
+    if citation_at is None:
+        matches = []
+    for i, match in enumerate(matches):
+        key = _label_key(match)
         start = match.end()
-        end = usable[i + 1].start() if i + 1 < len(usable) else len(text)
-        if key == "citation":
-            end = len(text)
+        end = matches[i + 1].start() if i + 1 < len(matches) else citation_at
         value = squash(text[start:end]).strip(" ;")
         fields[key] = value
-    citation = _strip_citation_trailer(fields.get("citation", ""))
+    citation = _strip_citation_trailer(citation)
     return {"citation": citation, "fields": fields}
 
 
@@ -531,6 +656,7 @@ def parse_date_span(raw: str | None) -> dict:
     if not raw or blankish(raw):
         return result
     text = squash(raw)
+    text = re.sub(r"\b(\d{1,2})(?:st|nd|rd|th)\b", r"\1", text, flags=re.I)
     result["label"] = text
     spans = _cross_month_spans(text)
     if not spans:
@@ -613,6 +739,26 @@ def find_state(raw: str | None) -> str | None:
     return None
 
 
+def _service_in_closing(citation: str | None) -> str | None:
+    """The service named in the citation's closing sentence.
+
+    A passing mention of another service ("Air Force gunship", "Navy corpsman")
+    is not the recipient's branch. The closing credit line is.
+    """
+    if not citation:
+        return None
+    tail = citation[-400:].lower()
+    if "tradition" not in tail and "reflect" not in tail and "naval service" not in tail:
+        return None
+    if "marine corps" in tail:
+        return "U.S. Marine Corps"
+    if re.search(r"\bair force\b", tail) and "army air" not in tail:
+        return "U.S. Air Force"
+    if re.search(r"\bunited states navy\b", tail) and "marine corps" not in tail:
+        return "U.S. Navy"
+    return None
+
+
 def _branch_in(text: str) -> str | None:
     low = text.lower()
     if "coast guard" in low:
@@ -638,6 +784,9 @@ def detect_branch(rank_org: str | None, citation: str | None = None) -> str:
         found = _branch_in(rank_org)
         if found:
             return found
+    closing = _service_in_closing(citation)
+    if closing:
+        return closing
     if citation:
         # Do not treat a passing mention of naval gunfire as a Navy award.
         head = re.sub(r"\bnaval gunfire\b", " ", citation[:500], flags=re.I)
@@ -670,7 +819,12 @@ def tidy_place(place: str | None) -> str | None:
     """Drop leftover date fragments from a place string."""
     if not place:
         return None
-    text = re.split(r"\b(?:entered service at|accredited to)\b", place, maxsplit=1, flags=re.I)[0]
+    text = re.split(
+        r"\b(?:entered service|accredited to|appointed from)\b",
+        place,
+        maxsplit=1,
+        flags=re.I,
+    )[0]
     text = re.sub(r"\b(?:from|between)\b", " ", text, flags=re.I)
     text = re.sub(r"\b\d{1,2}\b", " ", text)
     text = re.sub(r"\b(?:and|to)\b", " ", text, flags=re.I)
@@ -701,6 +855,8 @@ def clean_place_display(place: str | None) -> str | None:
             text = text[: match.start()] + ", " + state
     # Title-case only all-caps locality words, leaving short abbreviations alone.
     def fix(word: str) -> str:
+        if word.upper() == "USS":
+            return "USS"
         if word.isupper() and len(word) > 2:
             return word.capitalize()
         return word
@@ -743,11 +899,105 @@ def ship_from_text(text: str | None, last_name: str | None = None) -> str | None
             break
         if words and last_name and low == last_name.lower():
             break
+        if words and low in {"de", "la", "da", "di", "du", "van", "von"}:
+            words.append(bare)
+            continue
         if words and not bare[0].isupper():
             break
         words.append(bare)
         if len(words) == 4:
             break
+    while words and words[-1].lower() in {"de", "la", "da", "di", "du", "van", "von"}:
+        words.pop()
     if not words:
         return None
     return "USS " + " ".join(words)
+
+
+_RANK_PERIOD_RE = re.compile(
+    r"\b((?:[A-Z]/)?(?:1st\s+)?)"
+    r"(Private First Class|Lance Corporal|First Sergeant|Staff Sergeant|Technical Sergeant|"
+    r"Master Sergeant|Gunnery Sergeant|Sergeant Major|Platoon Sergeant|"
+    r"Second Lieutenant|First Lieutenant|Lieutenant Colonel|Lieutenant Commander|"
+    r"Lieutenant|Sergeant|Corporal|Captain|Major|Colonel|General|Admiral|Commander|"
+    r"Private|Seaman)"
+    r"\.(?=\s+[A-Z])",
+)
+
+_BLEED_NAME_RE = re.compile(
+    r"(?<=[.?!]\s)[A-Z]{3,}(?:\s+[A-Z]{3,})?,\s+[A-Z]{2,}(?:\s+[A-Z]\.?)?\b"
+)
+
+
+def fix_ocr_years(text: str) -> str:
+    """Turn a leading or trailing i/l that stands in for the digit 1 back into a year."""
+
+    def lead(match: re.Match) -> str:
+        year = "1" + match.group(1)
+        if year.startswith(("18", "19")):
+            return year
+        return match.group(0)
+
+    def trail(match: re.Match) -> str:
+        year = match.group(1) + "1"
+        if year.startswith(("18", "19")) and 1800 <= int(year) <= 1999:
+            return year
+        return match.group(0)
+
+    text = re.sub(r"(?<![A-Za-z0-9])[ilI](\d{3})\b", lead, text)
+    text = re.sub(r"\b((?:18|19)\d)[ilI]\b", trail, text)
+    return text
+
+
+def fix_underscores(text: str) -> str:
+    """Underscores in the index are spaces, or hyphens between numbers."""
+    text = re.sub(r"(\d)_(\d)", r"\1-\2", text)
+    text = text.replace("_", " ")
+    text = re.sub(r"\s+,", ",", text)
+    text = re.sub(r" {2,}", " ", text)
+    return text
+
+
+def fix_rank_periods(text: str) -> str:
+    """Drop the period left behind when a rank abbreviation was expanded."""
+    return _RANK_PERIOD_RE.sub(r"\1\2", text)
+
+
+def truncate_entry_bleed(text: str) -> str:
+    """Cut a citation that runs into the next recipient's index entry."""
+    if not text:
+        return text
+    cut: int | None = None
+    ranks = list(re.finditer(r"Rank and organization", text, flags=re.I))
+    if len(ranks) >= 2:
+        cut = ranks[1].start()
+    for match in _BLEED_NAME_RE.finditer(text):
+        if match.start() < 80:
+            continue
+        window = text[match.end() : match.end() + 80]
+        if not re.search(r"Rank and organization|Place and date|Born:|G\.O\. No", window, flags=re.I):
+            continue
+        cut = match.start() if cut is None else min(cut, match.start())
+    if cut is None:
+        return text
+    head = text[:cut]
+    head = re.sub(
+        r"\s+[A-Z]{3,}(?:\s+[A-Z]{3,})?,\s+[A-Z]{2,}(?:\s+[A-Z]\.?)?\s*$",
+        "",
+        head,
+    )
+    return head.strip()
+
+
+def prepare_entry_text(text: str) -> str:
+    text = fix_ocr_years(text or "")
+    text = fix_underscores(text)
+    text = truncate_entry_bleed(text)
+    return text
+
+
+def polish_prose(text: str) -> str:
+    text = fix_rank_periods(text or "")
+    text = fix_underscores(text)
+    text = fix_ocr_years(text)
+    return squash(text)
