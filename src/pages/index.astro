@@ -1,13 +1,13 @@
 ---
 import Base from "../layouts/Base.astro";
 import { eraScenes, heroScene } from "../lib/imagery";
-import { actLine, datasetStats, eraSlug, featuredPool, storyLabel } from "../lib/records";
+import { actLine, datasetStats, eraSlug, featuredOverrides, featuredPool, recipient, storyLabel } from "../lib/records";
 import { site } from "../site";
 
 const conflictCount = Object.keys(datasetStats.byConflict).length;
 const capersSourceUrl =
   "https://www.dvidshub.net/news/568137/two-marine-corps-legends-awarded-medal-honor-inducted-into-hall-heroes";
-const pool = featuredPool().map((person) => {
+const toCard = (person) => {
   const award = person.awards[0];
   return {
     id: person.id,
@@ -19,8 +19,16 @@ const pool = featuredPool().map((person) => {
     photo: person.photo?.url ?? "",
     label: storyLabel(person.name),
   };
-});
-const first = pool[0];
+};
+const pool = featuredPool().map(toCard);
+const pinned = Object.fromEntries(
+  Object.entries(featuredOverrides)
+    .map(([date, id]) => [date, recipient(id)])
+    .filter(([, person]) => person)
+    .map(([date, person]) => [date, toCard(person)]),
+);
+const buildDate = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+const first = pinned[buildDate] ?? pool[0];
 ---
 <Base title={site.name} overlay>
   <section class="hero">
@@ -105,7 +113,7 @@ const first = pool[0];
   </div>
 </Base>
 
-<script define:vars={{ pool }}>
+<script define:vars={{ pool, pinned }}>
   const photo = document.querySelector("#featured-photo");
   const heading = document.querySelector("#featured-heading");
   const rank = document.querySelector("#featured-rank");
@@ -117,7 +125,8 @@ const first = pool[0];
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 0);
     const day = Math.floor((now.getTime() - start.getTime()) / 86400000);
-    const pick = pool[(day + now.getFullYear()) % pool.length];
+    const today = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-");
+    const pick = pinned[today] ?? pool[(day + now.getFullYear()) % pool.length];
     if (photo instanceof HTMLImageElement && pick.photo) {
       photo.src = pick.photo;
       photo.alt = `Photograph associated with ${pick.name}`;
