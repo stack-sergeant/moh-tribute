@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { recipientDocumentTitle, sourceLinkLabel } from "../../lib/page-title.mjs";
 import { publicDomainPhotoUrl } from "../../lib/photos";
 import { allRecipients, battle, gaveLifeLabel, neighbors, type Recipient } from "../../lib/records";
 
@@ -23,7 +24,7 @@ const mates = lead.battleId
 const cardImage = publicDomainPhotoUrl(photo);
 ---
 <Base
-  title={person.name}
+  title={recipientDocumentTitle(person, allRecipients)}
   description={`Medal of Honor record for ${person.name}.`}
   image={cardImage}
   imageAlt={cardImage ? `Photograph associated with ${person.name}` : undefined}
@@ -79,7 +80,9 @@ const cardImage = publicDomainPhotoUrl(photo);
         <h3>Sources</h3>
         <ul class="source-list">
           <li><a href={award.sourceUrl}>{award.sourceLabel}</a></li>
-          {award.extraSources.map((url) => <li><a href={url}>{url}</a></li>)}
+          {award.extraSources.map((url) => (
+            <li><a href={url}>{sourceLinkLabel(url, award.generalOrder)}</a></li>
+          ))}
           {person.wikipedia && <li><a href={person.wikipedia}>Wikipedia</a>. Linked only. The article text is not copied here.</li>}
         </ul>
       </section>

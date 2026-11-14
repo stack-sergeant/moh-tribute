@@ -23,6 +23,7 @@ from mohlib import (
     name_identity,
     parse_date_span,
     parse_labeled_block,
+    prepare_entry_text,
     restore_collapsed_day_ranges,
     ship_from_text,
     slugify,
@@ -82,6 +83,7 @@ RANK_RE = re.compile(
     r"Sergeant First Class|Technical Sergeant|Staff Sergeant|Technician Fifth Grade|"
     r"Technician Fourth Grade|Lance Corporal|Private First Class|"
     r"Specialist Six|Specialist Five|Specialist Four|Specialist|"
+    r"Airman First Class|Airman|"
     r"Petty Officer First Class|Petty Officer Second Class|Petty Officer Third Class|"
     r"Hospital Corpsman|Pharmacist's Mate First Class|Pharmacist's Mate|"
     r"Lieutenant General|Major General|Brigadier General|Lieutenant Colonel|"
@@ -92,7 +94,7 @@ RANK_RE = re.compile(
 
 CITATION_PLACE_RE = re.compile(
     r"\b(?:in|near|at|outside)\s+(?:the\s+)?(?:town of\s+|vicinity of\s+|city of\s+|village of\s+)?"
-    r"([A-Z][A-Za-z0-9 .'’\-]{2,90}?),\s*"
+    r"([A-Z][A-Za-z0-9 .'’\-]{2,90}?),\s*([A-Z][A-Za-z .'’\-]{2,40},\s*)?"
     r"(Iraq|Afghanistan|Somalia|Republic of Vietnam|South Vietnam|Vietnam|"
     r"North Korea|South Korea|Korea|France|Germany|Belgium|Italy|Japan|"
     r"the Philippines|Philippines|China|Cuba|Mexico|Haiti|Nicaragua)\b"
@@ -155,12 +157,47 @@ def place_from_citation(citation: str) -> str | None:
         if not match:
             continue
         locality = squash(match.group(1)).strip(" ,")
+        middle = ""
+        if pattern is CITATION_PLACE_RE:
+            middle = squash(match.group(2) or "").strip(" ,")
+            country = match.group(3)
+        else:
+            country = match.group(2)
         if len(locality) > 80 or " while " in locality.lower():
             continue
-        place = tidy_place(f"{locality}, {match.group(2)}")
+        pieces = [locality]
+        if middle:
+            pieces.append(middle)
+        pieces.append(country)
+        place = tidy_place(", ".join(pieces))
         if place:
             return place
     return None
+
+
+_UNIT_RE = re.compile(
+    r"(?:serving (?:as [^,]{0,80}?,?\s+)?with |assigned to )"
+    r"((?:Company|Battery|Troop|Detachment|Headquarters|(?:the\s+)?(?:First|Second|Third|\d+\w*)\s+Battalion)"
+    r"[^.]{0,140}?)"
+    r"(?=,?\s+(?:on|during|in|while|near|at)\b)",
+    re.I,
+)
+
+
+def unit_from_citation(citation: str) -> str | None:
+    """A unit named in 'serving with …' when the index left the unit blank."""
+    if not citation:
+        return None
+    match = _UNIT_RE.search(citation)
+    if not match:
+        return None
+    unit = squash(match.group(1)).strip(" ,.;")
+    unit = re.sub(r"^(?:the|a)\s+", "", unit, flags=re.I)
+    if len(unit) < 8 or len(unit) > 140:
+        return None
+    if re.search(r"place and|citation:|see p\.", unit, flags=re.I):
+        return None
+    return unit
 
 
 def rank_from_citation(citation: str) -> str | None:
@@ -245,12 +282,16 @@ def parse_file(path: Path) -> list[dict]:
         # Stop before the resources footer if it was pulled into the last entry.
         text = re.split(r"Additional Medal of Honor Resources", text, maxsplit=1)[0]
         text = restore_collapsed_day_ranges(text)
+        text = prepare_entry_text(text)
         parsed = parse_labeled_block(text)
         fields = parsed["fields"]
         citation = polish_citation(name_raw, parsed["citation"])
         if not citation or len(citation) < 12:
             continue
         rank_org = fields.get("rank and organization", "")
+        if not rank_org:
+            rank_bits = [fields.get("rank", ""), fields.get("organization", "")]
+            rank_org = ", ".join(bit for bit in rank_bits if bit)
         rank = ""
         unit = ""
         if rank_org:
@@ -261,10 +302,20 @@ def parse_file(path: Path) -> list[dict]:
                 if RANK_RE.fullmatch(head):
                     rank = head
             unit = ", ".join(bits[1:]).strip(" .")
-        place_raw, dates = split_place_and_date(fields.get("place and date"))
+        place_line = fields.get("place and date") or ""
+        extra_date = fields.get("action date") or fields.get("date") or ""
+        if extra_date and extra_date not in place_line:
+            place_line = f"{place_line} {extra_date}".strip()
+        place_raw, dates = split_place_and_date(place_line)
         if dates["start"] is None:
             dating = re.sub(r"March\s+3(?:rd)?,\s*1863", " ", citation or "", flags=re.I)
             dating = re.sub(r"\b3\s+March\s+1863\b", " ", dating, flags=re.I)
+            dating = re.sub(
+                r"\([^)]{0,500}(?:restored|rescinded|Board of Correction)[^)]*\)",
+                " ",
+                dating,
+                flags=re.I,
+            )
             fallback = parse_date_span(dating)
             if fallback["start"]:
                 dates = fallback
@@ -273,6 +324,8 @@ def parse_file(path: Path) -> list[dict]:
             place = place_from_citation(citation)
         if not place and re.search(r"\bIwo Jima\b", citation or ""):
             place = "Iwo Jima"
+        if not place and re.search(r"\bOkinawa\b", citation or ""):
+            place = "Okinawa"
         if not place:
             place = ship_from_text(rank_org, parts_name["last"]) or ship_from_text(
                 citation, parts_name["last"]

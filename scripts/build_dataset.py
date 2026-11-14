@@ -16,8 +16,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from mohlib import slugify, squash
-from parse_army import load_army_awards
+from corrections import apply_award_corrections, polish_citation
+from mohlib import citation_implies_death, parse_date_span, polish_prose, slugify, squash, tidy_place
+from parse_army import load_army_awards, place_from_citation, rank_from_citation, unit_from_citation
 from supplement_ago import load_supplements
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -181,15 +182,19 @@ def build_battles(people: list[dict]) -> list[dict]:
             summary = (
                 f"{count} {word} in the {conflict} have an official citation entry "
                 f"placing the action at {place}. "
-                "This page was grouped from those entries. Articles, footage, books, and films "
-                "have not been curated for this action yet."
+                "This page was grouped from those entries."
             )
         else:
             person, award = rows[0]
             place = None
-            when = award.get("actionDateLabel") or (
-                str(award["actionYear"]) if award.get("actionYear") else "an unrecorded date"
-            )
+            label = (award.get("actionDateLabel") or "").strip()
+            messy = bool(re.search(r"Rank and organization|Entered service|_{1,}|\bi\d{3}\b", label))
+            if label and not messy and len(label) <= 80:
+                when = label
+            elif award.get("actionYear"):
+                when = str(award["actionYear"])
+            else:
+                when = "an unrecorded date"
             title = f"{person['name']}, {when}"
             battle_id = slugify(f"action-{person['id']}-{award['awardId']}")[:90]
             date_label = when
@@ -319,7 +324,96 @@ LEGACY_PHOTO_IDS = {
     "james-i-mestrovitch": "james-1-mestrovitch",
     "samuel-i-parker": "samuel-1-parker",
     "harvey-c-barnum-jr": "harvey-c-ir-barnum",
+    "william-h-pitsenbarger": "pitsenbarger-william-h",
+    "james-mcintosh": "james-mclntosh",
+    "fred-henry-mcguire": "fred-henry-mcgulre",
+    "patrick-mcguire": "patrick-mcgulre",
+    "thomas-b-mcguire-jr": "thomas-b-mcgulre-jr",
+    "vernon-mcgarity": "vernon-mcgarlty",
 }
+
+
+def _credit_from_url(text: str) -> str:
+    low = text.lower()
+    if "navy.mil" in low:
+        return "U.S. Navy"
+    if "usmc" in low or "marines.mil" in low or "hqmc" in low:
+        return "U.S. Marine Corps"
+    if "af.mil" in low or "hurlburt.af" in low:
+        return "U.S. Air Force"
+    if "army.mil" in low:
+        return "U.S. Army"
+    if "findagrave.com" in low:
+        return "Find a Grave"
+    return "Wikimedia Commons"
+
+
+def clean_credit(credit: str) -> str:
+    """Show a name or a short label. Do not change the license fields."""
+    text = squash(re.sub(r"<[^>]+>", " ", credit or ""))
+    text = text.replace("&amp;", "&")
+    text = re.sub(
+        r"(?:Unknown author|Anonymous)(?:\s+(?:Unknown author|Anonymous))+",
+        "Unknown author",
+        text,
+        flags=re.I,
+    )
+    if re.fullmatch(
+        r"Unknown author(?:\s+or not provided)?(?:\.\s*Wikimedia Commons\.?)?",
+        text,
+        flags=re.I,
+    ):
+        return "Unknown author"
+    if re.fullmatch(r"\[\d+\]", text.strip()):
+        return "Wikimedia Commons"
+    without = re.sub(r"https?://\S+|www\.\S+|\[\d+\]", " ", text)
+    without = squash(without).strip(" .:-;,")
+    if not without or without.lower() in {"source", "from", "url", "photo"}:
+        return _credit_from_url(text)
+    if re.search(r"https?://|www\.\S", text):
+        cleaned = squash(re.sub(r"https?://\S+|www\.\S+", " ", text)).strip(" .:-;,")
+        cleaned = re.sub(r"\s*URL:\s*$", "", cleaned, flags=re.I).strip(" .:-;,")
+        if len(cleaned) >= 12:
+            return cleaned[:400]
+        return _credit_from_url(text)
+    return text[:400]
+
+
+def finalize_award(award: dict) -> None:
+    award["citation"] = polish_citation(award.get("indexedName") or "", award.get("citation"))
+    # General-order caches stored "posthumously" from anywhere in the PDF.
+    # The asterisk on an Army-index name is the only mark kept before the citation is read.
+    marked = bool(award.get("posthumousMarked")) and not str(award.get("awardId", "")).endswith("-ago")
+    award["posthumous"] = marked or citation_implies_death(award.get("citation") or "")
+    if not award.get("rank"):
+        award["rank"] = rank_from_citation(award.get("citation") or "")
+    if not award.get("unit"):
+        award["unit"] = unit_from_citation(award.get("citation") or "")
+    if not award.get("actionPlace"):
+        award["actionPlace"] = place_from_citation(award.get("citation") or "")
+    if not award.get("actionDate"):
+        dating = re.sub(
+            r"\([^)]{0,500}(?:restored|rescinded|Board of Correction)[^)]*\)",
+            " ",
+            award.get("citation") or "",
+            flags=re.I,
+        )
+        dating = re.sub(r"March\s+3(?:rd)?,\s*1863", " ", dating, flags=re.I)
+        dates = parse_date_span(dating)
+        if dates["start"]:
+            award["actionDate"] = dates["start"]
+            award["actionDateEnd"] = dates["end"]
+            award["actionDateLabel"] = dates["label"]
+            award["actionYear"] = dates["year"]
+    if award.get("actionPlace"):
+        award["actionPlace"] = tidy_place(str(award["actionPlace"]))
+    for field in ("actionPlace", "unit", "rank"):
+        if award.get(field):
+            text = polish_prose(str(award[field]))
+            if field == "unit":
+                text = re.sub(r"\s*\([^)]*see p\.[^)]*\)", "", text, flags=re.I).strip(" ,")
+            award[field] = text
+    apply_award_corrections(award)
 
 
 def apply_photo_cache(people: list[dict]) -> None:
@@ -331,7 +425,11 @@ def apply_photo_cache(people: list[dict]) -> None:
         extra = photos.get(person["id"]) or photos.get(LEGACY_PHOTO_IDS.get(person["id"], ""))
         if not extra:
             continue
-        person["photo"] = extra.get("photo")
+        photo = extra.get("photo")
+        if photo:
+            photo = dict(photo)
+            photo["credit"] = clean_credit(photo.get("credit") or "")
+        person["photo"] = photo
         person["wikipedia"] = extra.get("wikipedia")
         person["wikidataId"] = extra.get("wikidataId")
 
@@ -356,6 +454,24 @@ def main() -> None:
         added = [award for award in manual if award["identity"] not in known]
         print(f"manual additions: {len(added)}")
         awards.extend(added)
+    for award in awards:
+        finalize_award(award)
+    # A general order is kept only when the citation index does not already
+    # have that person for the same action year. Parsing fixes can recover an
+    # index entry that the order file was supplementing.
+    indexed = [award for award in awards if not str(award.get("awardId", "")).endswith("-ago")]
+    deduped = []
+    for award in awards:
+        if str(award.get("awardId", "")).endswith("-ago"):
+            name = (award.get("name") or "").lower()
+            year = award.get("actionYear")
+            if year and any(
+                (other.get("name") or "").lower() == name and other.get("actionYear") == year
+                for other in indexed
+            ):
+                continue
+        deduped.append(award)
+    awards = deduped
     people = group_people(awards)
     apply_photo_cache(people)
     battles = build_battles(people)

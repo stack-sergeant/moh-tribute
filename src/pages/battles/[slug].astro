@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { sceneForBattle } from "../../lib/imagery";
+import { battleDocumentTitle } from "../../lib/page-title.mjs";
 import { allBattles, recipient, type Battle } from "../../lib/records";
 
 export function getStaticPaths() {
@@ -13,7 +14,7 @@ const people = hub.recipientIds.map((id) => recipient(id)).filter(Boolean);
 const scene = sceneForBattle(hub.id, hub.era);
 const kinds = ["article", "footage", "book", "film", "documentary"];
 ---
-<Base title={hub.title} description={hub.summary}>
+<Base title={battleDocumentTitle(hub, allBattles)} description={hub.summary}>
   <header class="battle-hero">
     <img src={scene.url} alt={scene.alt} />
     <div class="hero-shade"></div>
@@ -52,10 +53,9 @@ const kinds = ["article", "footage", "book", "film", "documentary"];
         </a>
       ))}
     </div>
+    {hub.media.length > 0 && (
+      <>
     <h2>Articles, footage, books, films</h2>
-    {hub.media.length === 0 ? (
-      <p>No curated articles, footage, books, or films have been verified for this action yet.</p>
-    ) : (
       <ul class="media-list">
         {hub.media
           .slice()
@@ -68,6 +68,7 @@ const kinds = ["article", "footage", "book", "film", "documentary"];
             </li>
           ))}
       </ul>
+      </>
     )}
   </div>
 </Base>

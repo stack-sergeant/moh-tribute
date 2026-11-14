@@ -89,7 +89,7 @@ export const eraScenes: { era: string; title: string; scene: Scene }[] = [
   },
   {
     era: "Since 1975",
-    title: "War on Terror",
+    title: "Since 1975",
     scene: {
       url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Flickr_-_The_U.S._Army_-_Soldiers_on_patrol_in_Korengal_Valley.jpg/1920px-Flickr_-_The_U.S._Army_-_Soldiers_on_patrol_in_Korengal_Valley.jpg",
       alt: "U.S. Army soldiers on patrol in the Korengal Valley, Afghanistan.",
