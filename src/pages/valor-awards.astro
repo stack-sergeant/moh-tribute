@@ -1,0 +1,753 @@
+---
+import Base from "../layouts/Base.astro";
+import { disclaimer } from "../site";
+
+const description =
+  "The Medal of Honor leads this ranked guide to U.S. military valor awards, including the service crosses, the Silver Star, and the V device, with official sources.";
+
+const faqs = [
+  {
+    q: "What is the highest U.S. military award?",
+    a: "The Medal of Honor. DoD Manual 1348.33, Volume 1, says it is the United States’ highest military award and is worn first in order of precedence.",
+  },
+  {
+    q: "How does the Navy Cross compare with the Silver Star?",
+    a: "The Navy Cross is a service cross for extraordinary heroism that does not justify the Medal of Honor. The Silver Star is for gallantry in action that does not warrant a Medal of Honor or a service cross. The Navy awards manual lists the Silver Star as the next lower decoration under the Navy Cross. Both are valor awards, and neither uses a V device.",
+  },
+  {
+    q: "What is the order of U.S. military valor awards?",
+    a: "On this page the combat order is the Medal of Honor, then the service crosses in one shared place, then the Silver Star, then the Distinguished Flying Cross with V, the Bronze Star Medal with V, the Air Medal with V, the Joint Service Commendation Medal with V, and the service commendation medals with V. Official wear order also places non-combat heroism medals after the Distinguished Flying Cross and before the Bronze Star, and it places distinguished-service medals and the Legion of Merit among the decorations above. Those are not valor awards.",
+  },
+  {
+    q: "What does the V device mean?",
+    a: "A bronze letter V marks valor: heroism above what is normally expected in direct combat with an enemy or an opposing armed force, with exposure to enemy hostilities and personal risk. Since 7 January 2016 it is limited to that meaning. It is not worn on the Medal of Honor, the service crosses, or the Silver Star, because those medals are awarded only for valor.",
+  },
+  {
+    q: "Which medals recognize heroism outside combat?",
+    a: "The Soldier’s Medal, the Navy and Marine Corps Medal, the Airman’s Medal, and the Coast Guard Medal. Each is for heroism that does not involve actual conflict with an enemy. In wear order they come after the Distinguished Flying Cross and before the Bronze Star Medal.",
+  },
+];
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+});
+
+const vol1 = "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodm/134833_vol1.PDF";
+const vol3 = "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodm/134833_vol3.PDF";
+const vol4 = "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodm/134833_Vol04.pdf";
+const ar = "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46390-AR_600-8-22-000-WEB-1.pdf";
+const secnavInst = "https://www.secnav.navy.mil/doni/Directives/01000%20Military%20Personnel%20Support/01-600%20Performance%20and%20Discipline%20Programs/1650.1J.pdf";
+const secnavMan = "https://www.secnav.navy.mil/doni/SECNAV%20Manuals1/1650.1.pdf";
+const dafman = "https://static.e-publishing.af.mil/production/1/af_a1/publication/dafman36-2806/dafman36-2806.pdf";
+const cgMan = "https://media.defense.gov/2017/Mar/29/2001723556/-1/-1/0/CIM_1650_25E.PDF";
+const usc2732 = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title14-section2732&num=0&edition=prelim";
+const usc2735 = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title14-section2735&num=0&edition=prelim";
+const usc2739 = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title14-section2739&num=0&edition=prelim";
+const usc103 = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title14-section103&num=0&edition=prelim";
+const alcoast = "https://content.govdelivery.com/accounts/USDHSCG/bulletins/2a5d89b";
+---
+<Base title="U.S. Military Valor Awards, Ranked" description={description}>
+  <div class="wrap valor-page">
+    <p class="kicker">Order of valor</p>
+    <h1>U.S. Military Valor Awards, Ranked</h1>
+    <p class="lede">
+      The Medal of Honor stands alone at the top. Under it, this page ranks combat valor,
+      then keeps non-combat heroism in its own section. Wear order also includes medals
+      for distinguished service. Those are named where they change the sequence.
+    </p>
+    <p>{disclaimer}</p>
+
+    <section class="moh-stage" aria-labelledby="moh-heading">
+      <p class="rank-flag">Highest award</p>
+      <h2 id="moh-heading">Medal of Honor</h2>
+      <p>
+        Awarded for conspicuous gallantry and intrepidity at the risk of life, above and
+        beyond the call of duty, while a person is a member of the Army, the naval service,
+        the Air Force, or the Space Force. The act has to be one of three kinds: action
+        against an enemy of the United States; military operations involving conflict with
+        an opposing foreign force; or service with friendly foreign forces in an armed
+        conflict against an opposing armed force in which the United States is not a
+        belligerent party.
+      </p>
+      <p>
+        The recommendation has to prove the act beyond a reasonable doubt. The bravery or
+        self-sacrifice has to set the person apart from comrades, and it has to involve
+        risk of life. A wound is not required to meet that risk. No attachment is authorized
+        on the medal. It is worn first. Each later act that justifies the medal is marked
+        with a separate Medal of Honor.
+      </p>
+      <div class="valor-actions">
+        <a class="btn" href="/recipients">Recipient directory</a>
+        <a class="btn ghost" href="/on-this-day">On this day</a>
+      </div>
+      <p class="cite-line">
+        <a href={vol1}>DoD Manual 1348.33, Volume 1</a>, sections 3.1, 3.5, and 3.7, and Figure 1.
+        The current file is titled a Department of War manual, Change 6, 10 July 2026.
+        <a href={dafman}>DAFMAN 36-2806</a>, attachment 2, paragraph A2.2, for the Air Force and the Space Force.
+      </p>
+
+      <div class="medal-grid cols-3">
+        <article class="medal-card">
+          <div class="medal-plate plate-dark">
+            <img src="/medals/moh-army.png" alt="Army design of the Medal of Honor, a gold star hanging from a light blue ribbon with white stars, with the word Valor on the bar." width="520" height="780" />
+          </div>
+          <h3>Army design</h3>
+          <p>
+            The Army medal is a gold five-pointed star in a green laurel wreath, hung from a
+            bar inscribed “VALOR” and topped by an eagle. Volume 1 ties this design to a
+            member of the Army, under 10 U.S.C. § 7271.
+          </p>
+          <p class="credit-line">
+            U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+            <a href="https://commons.wikimedia.org/wiki/File:US_Army_Medal_of_Honor_Obverse.png">Source file</a>.
+            Catalog page cited on that file:
+            <a href="https://tioh.army.mil/Catalog/Heraldry.aspx?HeraldryId=15237&amp;CategoryId=3&amp;grp=4&amp;menu=Decorations%20and%20Medals&amp;from=search">Institute of Heraldry</a>.
+          </p>
+        </article>
+        <article class="medal-card">
+          <div class="medal-plate">
+            <img src="/medals/moh-navy.jpg" alt="Navy design of the Medal of Honor, a star medal on a light blue ribbon with an anchor above the star." width="700" height="890" />
+          </div>
+          <h3>Navy design</h3>
+          <p>
+            The Navy medal is a five-pointed star hung from the flukes of an anchor. Volume 1
+            uses it for the naval service. That term covers the Navy, the Marine Corps, and
+            their reserve components, and the Coast Guard when the Coast Guard, or a unit of
+            it, operates under Navy control.
+          </p>
+          <p>
+            A separate Coast Guard statute, 14 U.S.C. § 2732, authorizes a medal of honor of
+            appropriate design for a member of the Coast Guard. A 1963 amendment dropped the
+            older requirement that the design match the Navy medal. Volume 1 draws three
+            designs. This page does not claim that a fourth medal has been issued.
+          </p>
+          <p class="credit-line">
+            Arlington National Cemetery photograph. Public domain, U.S. government work.
+            <a href="https://commons.wikimedia.org/wiki/File:Navy_-_Medal_of_Honor_(16720735330).jpg">Source file</a>.
+          </p>
+        </article>
+        <article class="medal-card">
+          <div class="medal-plate">
+            <img src="/medals/moh-air-force.jpg" alt="Air Force design of the Medal of Honor, a gold star with the head of the Statue of Liberty, under a bar reading Valor." width="700" height="820" />
+          </div>
+          <h3>Air Force design</h3>
+          <p>
+            One Department of the Air Force design: a gold star, point down, with the head
+            of the Statue of Liberty, hung from a bar inscribed “VALOR” over a thunderbolt.
+            DAFMAN 36-2806 awards it to a member of the Air Force or the Space Force. The
+            same paragraph says federal statute directs that it not be officially called the
+            “Air Force Medal of Honor.” The manual’s own wording is “Medal of Honor—Air Force
+            design.” The Air Force design was presented for approvals on or after 1 November
+            1965. Earlier medals of the original design stay in effect.
+          </p>
+          <p class="credit-line">
+            Arlington National Cemetery photograph. Public domain, U.S. government work.
+            <a href="https://commons.wikimedia.org/wiki/File:Air_Force_-_Medal_of_Honor_(16285785564).jpg">Source file</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <h2>Service crosses</h2>
+    <p>
+      Volume 3 of the same manual names three Military Service Crosses: the Distinguished
+      Service Cross for the Army, the Navy Cross for the Navy and Marine Corps, and the Air
+      Force Cross for the Air Force and Space Force. They are the second-highest decorations.
+      They are worn after the Medal of Honor and before the Defense Distinguished Service
+      Medal. They share that place. The order of the cards is the usual service order.
+    </p>
+    <p>
+      Each cross is for extraordinary heroism that does not justify the Medal of Honor, in
+      the same three kinds of conflict. The heroism is a lesser degree than the Medal of
+      Honor and still has to be performed with marked distinction. It is for a singular act,
+      or for extraordinary heroism over a very brief period such as one or two days of a
+      battle. It is not for a stack of lesser acts, and it is not for meritorious service.
+    </p>
+    <p class="cite-line">
+      <a href={vol3}>DoD Manual 1348.33, Volume 3</a>, paragraph 3.1. Change 6, 14 July 2026.
+      That volume does not name the Coast Guard Cross. The Coast Guard medal is under the
+      fourth card.
+    </p>
+
+    <div class="medal-grid cols-4">
+      <article class="medal-card" id="distinguished-service-cross">
+        <div class="medal-placeholder">
+          <p>No confirmed public-domain government photograph of this medal is on file.</p>
+        </div>
+        <h3>Distinguished Service Cross</h3>
+        <p>
+          Army. Extraordinary heroism while serving in any capacity with the Army, in
+          circumstances that do not justify the Medal of Honor. Army Regulation 600-8-22 adds
+          that the act must have involved risk of life so extraordinary as to set the person
+          apart from comrades. Statute: 10 U.S.C. § 7272. The regulation dates the medal to
+          the Act of Congress of 9 July 1918.
+        </p>
+        <p class="cite-line"><a href={ar}>AR 600-8-22</a>, paragraph 3-10. 11 May 2026.</p>
+      </article>
+
+      <article class="medal-card" id="navy-cross">
+        <div class="medal-plate">
+          <img src="/medals/navy-cross-reverse.jpg" alt="Reverse of the Navy Cross, with crossed anchors and the letters U, S, and N." width="416" height="500" />
+        </div>
+        <h3>Navy Cross</h3>
+        <p>
+          Awarded to a person who, while serving in any capacity with the Navy or the Marine
+          Corps, distinguishes himself or herself by extraordinary heroism that does not
+          justify the Medal of Honor, in the three conflict settings. The act has to be
+          performed in the presence of great danger and has to render the person conspicuous
+          among comrades. It is a singular act. Statute: 10 U.S.C. § 8292.
+        </p>
+        <p>
+          SECNAVINST 1650.1J also applies to the Coast Guard when the Coast Guard is operating
+          as part of the Navy. While it operates as a service in the Navy, 14 U.S.C. § 103
+          makes Coast Guard personnel eligible for medals on the same basis as the naval service.
+        </p>
+        <p class="cite-line">
+          <a href={secnavMan}>SECNAV M-1650.1</a>, 16 August 2019, Appendix 2A, Tab 2.
+          <a href={secnavInst}>SECNAVINST 1650.1J</a>, 29 May 2019.
+          <a href={usc103}>14 U.S.C. § 103</a>.
+        </p>
+        <p class="credit-line">
+          Reverse. U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Navy_Cross_Reverse.jpg">Source file</a>.
+        </p>
+      </article>
+
+      <article class="medal-card" id="air-force-cross">
+        <div class="medal-plate">
+          <img src="/medals/air-force-cross.png" alt="Air Force Cross, a bronze cross with an eagle and a green laurel wreath." width="544" height="800" />
+        </div>
+        <h3>Air Force Cross</h3>
+        <p>
+          Awarded to a person serving in any capacity with the Air Force or the Space Force
+          for extraordinary heroism that does not justify the Medal of Honor, in the three
+          conflict settings. The gallantry is a lesser degree than the Medal of Honor and
+          still has to be performed with marked distinction. Deserving actions before
+          6 July 1960 were recognized with the Army Distinguished Service Cross. Statute:
+          10 U.S.C. § 9272.
+        </p>
+        <p class="cite-line"><a href={dafman}>DAFMAN 36-2806</a>, paragraph A2.3. <a href={vol3}>Volume 3</a>, paragraph 3.1.</p>
+        <p class="credit-line">
+          Illustration by Virginia Reyes, Air Force News Agency. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Air_Force_Cross_(United_States).png">Source file</a>.
+        </p>
+      </article>
+
+      <article class="medal-card" id="coast-guard-cross">
+        <div class="medal-plate">
+          <img src="/medals/coast-guard-cross.png" alt="Institute of Heraldry illustration of the Coast Guard Cross, a gold cross with a shield and anchors." width="390" height="700" />
+        </div>
+        <h3>Coast Guard Cross</h3>
+        <p class="rank-flag">Newer statute</p>
+        <p>
+          Authorized on 15 October 2010 by Public Law 111-281. It is newer than the other
+          service crosses. The President may award it to a person serving in any capacity
+          with the Coast Guard, when the Coast Guard is not operating under the Department
+          of the Navy, for extraordinary heroism that does not justify a medal of honor.
+          The settings match the other crosses, and the statute adds conflict with an
+          international terrorist organization to the second setting. Current citation:
+          14 U.S.C. § 2735.
+        </p>
+        <p>
+          The 2016 Coast Guard medals manual places this cross immediately after the Medal
+          of Honor and says the act must be done in the presence of great danger or at great
+          personal risk. A Coast Guard message of 14 October 2020 said the cross had not been
+          awarded as of that date. This page does not state a count after that message. The
+          defense.gov copy of the manual carries a November 2022 note that the directive may
+          no longer be current.
+        </p>
+        <p class="cite-line">
+          <a href={usc2735}>14 U.S.C. § 2735</a>.
+          <a href={cgMan}>COMDTINST M1650.25E</a>, 15 August 2016, chapter 2.
+          <a href={alcoast}>ALCOAST 384/20</a>, 14 October 2020.
+        </p>
+        <p class="credit-line">
+          Illustration, U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:US_Coast_Guard_Cross_Drawing.png">Source file</a>.
+        </p>
+      </article>
+    </div>
+
+    <p class="note">
+      After those crosses, wear order places the Defense Distinguished Service Medal and
+      then each service Distinguished Service Medal, and then the Silver Star. Volume 3
+      says the service Distinguished Service Medals are for exceptionally meritorious
+      service in a duty of great responsibility. Volume 4 says the Defense Distinguished
+      Service Medal is not authorized to recognize combat valor. They are left off this ladder.
+    </p>
+
+    <h2 id="silver-star">Silver Star</h2>
+    <article class="award-block">
+      <div class="medal-plate">
+        <img src="/medals/silver-star.jpg" alt="Silver Star Medal, a gold star with a small silver star inside a wreath, on a blue, white, and red ribbon." width="400" height="560" />
+      </div>
+      <div>
+        <p class="rank-flag">Next valor decoration</p>
+        <p>
+          Gallantry in action that does not warrant the Medal of Honor or a service cross.
+          The gallantry is a lesser degree than a service cross and still has to be performed
+          with marked distinction. It is for a singular act, or for heroism over a very brief
+          period such as one or two days of a battle. It is not for an accumulation of lesser
+          acts, and it is not for meritorious service. No V device is authorized, because the
+          medal is only a valor award.
+        </p>
+        <p>
+          Volume 3 authorizes it for a person serving with the Army, Navy, Marine Corps, Air
+          Force, or Space Force. The Army regulation uses the same standard for service with
+          the Army. The Navy manual uses it for service with the Navy or Marine Corps and
+          lists the Navy Cross as the next higher decoration. DAFMAN 36-2806 uses it for
+          service with the Air Force or the Space Force, short of the Medal of Honor or the
+          Air Force Cross. The 2016 Coast Guard manual authorizes a Silver Star, when the
+          Coast Guard is not operating under the Department of the Navy, for gallantry that
+          does not warrant the Medal of Honor or the Coast Guard Cross. That manual cites
+          the 15 October 2010 statute.
+        </p>
+        <p class="cite-line">
+          <a href={vol3}>Volume 3</a>, paragraph 3.3.
+          <a href={ar}>AR 600-8-22</a>, paragraph 3-12.
+          <a href={secnavMan}>SECNAV M-1650.1</a>, Tab 4.
+          <a href={dafman}>DAFMAN 36-2806</a>, paragraph A2.5.
+          <a href={cgMan}>COMDTINST M1650.25E</a>, chapter 2.
+        </p>
+        <p class="credit-line">
+          U.S. Air Force graphic, from the Air Force media gallery file named on the Wikimedia page. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Silver_Star_medal.jpg">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <p class="note">
+      Volume 3 places the Silver Star before the Defense Superior Service Medal, and it
+      places the Distinguished Flying Cross after the Legion of Merit. Volume 4 says the
+      Defense Superior Service Medal is not authorized to recognize combat valor. Volume 3
+      authorizes the Legion of Merit for exceptionally meritorious conduct, with a C device
+      and an R device. The current Army and Air Force device lists for the Legion of Merit
+      are the same pair, plus the oak-leaf cluster. The Navy manual says the V device is no
+      longer authorized on the Legion of Merit.
+    </p>
+
+    <h2>Combat awards that take a “V”</h2>
+    <p>
+      The V device is a bronze letter V. It denotes valor: an act of heroism above what is
+      normally expected while engaged in direct combat with an enemy of the United States,
+      or an opposing foreign or armed force, with exposure to enemy hostilities and personal
+      risk. A wound is not required. Since 7 January 2016, Army Regulation 600-8-22 prohibits
+      any use of the V other than to denote valor. The Navy manual says the same date is when
+      the department limited the device to valor.
+    </p>
+    <p>
+      In wear order, the non-combat heroism medals come after the Distinguished Flying Cross
+      and before the Bronze Star. They are kept in their own section below so combat valor
+      and non-combat heroism stay apart. A Bronze Star with V is a lower decoration than the
+      Soldier’s Medal.
+    </p>
+
+    <h3 id="distinguished-flying-cross">Distinguished Flying Cross with “V”</h3>
+    <article class="award-block">
+      <div class="medal-plate">
+        <img src="/medals/distinguished-flying-cross.jpg" alt="Distinguished Flying Cross, a bronze cross with a propeller, on a blue ribbon with a red and white center stripe." width="139" height="320" />
+      </div>
+      <div>
+        <p>
+          Heroism or extraordinary achievement while participating in aerial flight aboard
+          an aircraft or spacecraft. Volume 3 authorizes it for a person serving with the
+          Army, Navy, Marine Corps, Air Force, or Space Force. Civilians are not eligible.
+          The V signifies that the award was for combat heroism in one of the three conflict
+          settings. The medal can also recognize extraordinary achievement. On or after
+          7 January 2016, the C device can mark extraordinary achievement under combat
+          conditions. The Army regulation says a V is worn when the cross is awarded for
+          valor on or after that date. The Navy manual says the V is mandatory when this
+          medal is awarded for valor.
+        </p>
+        <p>
+          The Coast Guard manual also awards a Distinguished Flying Cross for heroism or
+          extraordinary achievement in aerial flight while serving with the Coast Guard.
+          Its general V-device rule covers a heroic act in direct combat, with approval kept
+          by the Commandant. That manual does not publish a closed list of medals.
+        </p>
+        <p class="cite-line">
+          <a href={vol3}>Volume 3</a>, paragraph 3.5. Worn after the Legion of Merit and, in the Army, before the Soldier’s Medal.
+          <a href={ar}>AR 600-8-22</a>, paragraph 3-14.
+          <a href={secnavMan}>SECNAV M-1650.1</a>, Tab 6 and Tab 13.
+          <a href={dafman}>DAFMAN 36-2806</a>, paragraphs A2.7 and A16.16.3.
+          <a href={cgMan}>COMDTINST M1650.25E</a>, chapter 2.
+        </p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work. The Wikimedia file is tagged as a government work. Its catalog link points at the Medal of Honor entry, so the credit here is the file page.
+          <a href="https://commons.wikimedia.org/wiki/File:Distinguished_Flying_Cross_Obverse.jpg">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <h3 id="bronze-star">Bronze Star Medal with “V”</h3>
+    <article class="award-block">
+      <div class="medal-plate">
+        <img src="/medals/bronze-star.png" alt="Bronze Star Medal, a bronze star on a red ribbon with a narrow blue and white center stripe." width="150" height="360" />
+      </div>
+      <div>
+        <p>
+          Heroic or meritorious achievement or service that does not involve aerial flight,
+          in the three conflict settings, after 6 December 1941. When the medal is awarded
+          for valor, Volume 3 says the V device will be authorized. The required valor is a
+          lesser degree than the Silver Star and still has to be performed with marked
+          distinction. The Navy manual says the V is mandatory on a Bronze Star awarded for valor.
+        </p>
+        <p>
+          For meritorious service that ended on or after 7 January 2016, the Bronze Star may
+          be awarded only if the person was exposed to hostile action or was at significant
+          risk of it. The C device is not authorized on this medal. After 30 October 2000,
+          10 U.S.C. § 1133 limits the medal to a member who was serving where hostile-fire
+          pay, imminent-danger pay, or specified hazardous-duty pay was authorized, or who
+          receives that pay because of the events. Volume 3 authorizes it for service with
+          the Army, Navy, Marine Corps, Air Force, or Space Force. The Coast Guard manual
+          also awards it for heroic achievement short of the Silver Star.
+        </p>
+        <p class="cite-line">
+          <a href={vol3}>Volume 3</a>, paragraph 3.6. In the Army it is worn after the Soldier’s Medal and before the Purple Heart.
+          <a href={ar}>AR 600-8-22</a>, paragraphs 3-16 and 6-5.
+          <a href={secnavMan}>SECNAV M-1650.1</a>, Tab 8 and Tab 13.
+          <a href={dafman}>DAFMAN 36-2806</a>, paragraph A2.9.
+          <a href={cgMan}>COMDTINST M1650.25E</a>, chapter 2.
+        </p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Bronze_Star_Medal_Obverse.PNG">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <p class="note">
+      Volume 3 places the Purple Heart after the Bronze Star and before the Defense
+      Meritorious Service Medal. The Purple Heart is awarded for a wound in the
+      circumstances the manual lists. This page does not rank it as a valor decoration.
+      The Meritorious Service Medal is worn after the Defense Meritorious Service Medal
+      and before the Air Medal.
+    </p>
+
+    <h3 id="air-medal">Air Medal with “V”</h3>
+    <article class="award-block">
+      <div class="medal-plate plate-dark">
+        <img src="/medals/air-medal.svg" alt="Air Medal, a compass rose with an eagle and lightning flashes, on a blue and gold ribbon." width="220" height="518" />
+      </div>
+      <div>
+        <p>
+          Volume 3 says the Air Medal will be awarded with the V device to signify valor in
+          the three conflict settings, while participating in aerial flight. The Army
+          regulation awards it for heroism in flight of a lesser degree than the Distinguished
+          Flying Cross, and also for single acts of merit and for sustained distinction in
+          flying duties. On or after 7 January 2016 it may take a C device for meritorious
+          service or achievement under combat conditions. Volume 3 authorizes it for service
+          with the Army, Navy, Marine Corps, Air Force, or Space Force. The Navy valor list
+          includes the Air Medal with V. DAFMAN 36-2806 limits the V, from 7 January 2016,
+          to the Distinguished Flying Cross, the Bronze Star, the Air Medal, and the Air and
+          Space Commendation Medal. The Coast Guard manual awards an Air Medal for heroic or
+          meritorious achievement in aerial flight.
+        </p>
+        <p class="cite-line">
+          <a href={vol3}>Volume 3</a>, paragraph 3.9.
+          <a href={ar}>AR 600-8-22</a>, paragraphs 3-18 and 6-5.
+          <a href={secnavMan}>SECNAV M-1650.1</a>, Tab 13.
+          <a href={dafman}>DAFMAN 36-2806</a>, paragraph A16.16.3.
+          <a href={cgMan}>COMDTINST M1650.25E</a>, chapter 2.
+        </p>
+        <p class="credit-line">
+          File tagged as U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:AirMedalObverse.svg">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <h3 id="joint-service-commendation">Joint Service Commendation Medal with “V”</h3>
+    <article class="award-block">
+      <div class="medal-plate">
+        <img src="/medals/joint-service-commendation.jpg" alt="Joint Service Commendation Medal, a green and gold medal with an eagle, on a ribbon of green and white stripes between blue edges." width="566" height="800" />
+      </div>
+      <div>
+        <p>
+          Awarded in the name of the Secretary of Defense to members of the U.S. Armed Forces
+          who, while assigned to a joint duty activity after 1 January 1963, distinguish
+          themselves by meritorious service or achievement. If it is awarded for an act of
+          valor, it is awarded with the V device. The narrative has to show valor above what
+          is normally expected in direct combat, with exposure to enemy hostilities and
+          personal risk. It is worn after the Air Medal and before each service’s
+          commendation medal. Volume 4’s device table authorizes the V on this medal and
+          says the V is not authorized on the Joint Service Achievement Medal.
+        </p>
+        <p class="cite-line">
+          <a href={vol4}>DoD Manual 1348.33, Volume 4</a>, paragraph 3.4 and the joint-device table. Change 6, 19 September 2023.
+          <a href={ar}>AR 600-8-22</a>, paragraph 6-5, also names the V on this medal for acts of valor.
+        </p>
+        <p class="credit-line">
+          U.S. Department of Defense graphic, from an Air Force Personnel Center fact sheet named on the file page. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Joint_Service_Commendation_Medal.jpg">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <h3>Service commendation medals with “V”</h3>
+    <p>
+      These sit at the same step, after the Joint Service Commendation Medal. Each service
+      names its own medal. The V marks valor of a lesser degree than the Bronze Star.
+    </p>
+    <div class="medal-grid cols-4">
+      <article class="medal-card" id="army-commendation">
+        <div class="medal-plate">
+          <img src="/medals/army-commendation.gif" alt="Army Commendation Medal, a hexagonal medal with an eagle, on a green and white ribbon." width="150" height="360" />
+        </div>
+        <h3>Army Commendation Medal</h3>
+        <p>
+          Heroism, meritorious achievement, or meritorious service while serving with the
+          Army after 6 December 1941. Valor under that standard, of a lesser degree than the
+          Bronze Star, is marked with the V. The acts may involve aerial flight.
+        </p>
+        <p class="cite-line"><a href={ar}>AR 600-8-22</a>, paragraphs 3-19 and 6-5.</p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:US_Army_Commendation_Medal_(16077662996860).gif">Source file</a>.
+        </p>
+      </article>
+      <article class="medal-card" id="navy-commendation">
+        <div class="medal-plate">
+          <img src="/medals/navy-marine-commendation.jpg" alt="Navy and Marine Corps Commendation Medal, a hexagonal medal with an eagle and crossed arrows, on a green and white ribbon." width="415" height="700" />
+        </div>
+        <h3>Navy and Marine Corps Commendation Medal</h3>
+        <p>
+          On the Navy valor list with the V device. When this medal is awarded for valor,
+          the Navy manual says the V is mandatory. It is for a singular act, such as one
+          mission or a short battle.
+        </p>
+        <p class="cite-line">
+          <a href={secnavInst}>SECNAVINST 1650.1J</a>, enclosure on personal decorations.
+          <a href={secnavMan}>SECNAV M-1650.1</a>, Tab 13.
+        </p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Navy_and_Marine_Corps_Commendation_Medal.jpg">Source file</a>.
+        </p>
+      </article>
+      <article class="medal-card" id="air-space-commendation">
+        <div class="medal-plate">
+          <img src="/medals/air-force-commendation.jpg" alt="Air Force Commendation Medal, a hexagonal medal with an eagle and a shield of lightning, on a yellow and blue ribbon." width="439" height="760" />
+        </div>
+        <h3>Air and Space Commendation Medal</h3>
+        <p>
+          Meritorious achievement or service, valor, or heroism. Valor or heroism that does
+          not rise to the Bronze Star can qualify, and so can heroism that does not rise to
+          the Airman’s Medal. From 7 January 2016 the V is authorized on this medal. On
+          16 November 2020 the Secretary of the Air Force renamed the Air Force Commendation
+          Medal to the Air and Space Commendation Medal. The photograph is the Institute of
+          Heraldry image of the Air Force Commendation Medal.
+        </p>
+        <p class="cite-line"><a href={dafman}>DAFMAN 36-2806</a>, paragraphs A2.14 and A16.16.3.</p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Air_Force_Commendation_Medal_(AFCM).jpg">Source file</a>.
+        </p>
+      </article>
+      <article class="medal-card" id="coast-guard-commendation">
+        <div class="medal-plate">
+          <img src="/medals/coast-guard-commendation.jpg" alt="Coast Guard Commendation Medal, a hexagonal medal with the Coast Guard emblem, on a green and white ribbon." width="420" height="740" />
+        </div>
+        <h3>Coast Guard Commendation Medal</h3>
+        <p>
+          The 2016 manual awards it for heroic or meritorious achievement or service while
+          serving with the Coast Guard. Combat heroism under that medal is short of the
+          Bronze Star. Heroism outside combat is short of the Coast Guard Medal. The same
+          manual says a V may be authorized when the award is for a heroic act while
+          directly participating in combat, and that the Commandant keeps approval of awards
+          for valor. It does not publish a closed list of which medals take the V. The
+          defense.gov copy says the manual may no longer be current.
+        </p>
+        <p class="cite-line"><a href={cgMan}>COMDTINST M1650.25E</a>, chapter 1 device rules and chapter 2.</p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Coast_Guard_Commendation_Medal_(CGCM).jpg">Source file</a>.
+        </p>
+      </article>
+    </div>
+
+    <h3>Medals this page leaves off the V list</h3>
+    <ul>
+      <li>
+        The Navy and Marine Corps Achievement Medal. SECNAV M-1650.1 says it shall not be
+        awarded for valor or for non-combat heroism, and that the V device is no longer
+        authorized. The manual records earlier periods, ending 6 January 2016, when a
+        combat V was authorized on it.
+      </li>
+      <li>
+        The Air and Space Achievement Medal. DAFMAN 36-2806 says a V was authorized for
+        acts between 11 January 1996 and 6 January 2016. From 7 January 2016 the manual
+        limits the V to four medals, and this is not one of them.
+      </li>
+      <li>
+        The Army Achievement Medal. Paragraph 6-5 of AR 600-8-22, the V-device paragraph,
+        names the Bronze Star, the Air Medal, the Army Commendation Medal, and the Joint
+        Service Commendation Medal. Paragraph 3-14 adds the Distinguished Flying Cross.
+        The achievement medal is not named there. Paragraph 6-6 does authorize a C device
+        on it for meritorious service or achievement under combat conditions.
+      </li>
+    </ul>
+
+    <h2 id="non-combat">Non-combat heroism</h2>
+    <p class="note">
+      These medals are for heroism that does not involve actual conflict with an enemy.
+      Volume 3 wears the Distinguished Flying Cross before them and the Bronze Star after
+      them. They outrank the Bronze Star. They are not combat valor awards, and they do
+      not take a V device.
+    </p>
+
+    <h3 id="soldiers-medal">Soldier’s Medal</h3>
+    <article class="award-block">
+      <div class="medal-plate">
+        <img src="/medals/soldiers-medal.jpg" alt="Soldier’s Medal, a bronze octagon with an eagle, on a ribbon with a blue edge and red and white stripes." width="134" height="320" />
+      </div>
+      <div>
+        <p>
+          Army. Heroism not involving actual conflict with an enemy, by a person serving in
+          any capacity with the Army. The regulation sets the minimum degree of heroism as
+          comparable to the Distinguished Flying Cross for heroism. The act has to involve
+          a clearly recognizable personal hazard and the voluntary risk of life. An award
+          is not made solely for saving a life. It may be awarded for non-combat heroism in
+          a combat zone. If the heroism was performed under combat conditions, the regulation
+          says a decoration for valor is the appropriate award. Statute: 10 U.S.C. § 7280.
+          The Army dates it to the Act of Congress of 2 July 1926.
+        </p>
+        <p class="cite-line"><a href={ar}>AR 600-8-22</a>, paragraph 3-15. <a href={vol3}>Volume 3</a>, paragraph 3.6, for its place ahead of the Bronze Star.</p>
+        <p class="credit-line">
+          U.S. Army Institute of Heraldry. Public domain, U.S. government work. As with the Distinguished Flying Cross file, the Wikimedia catalog link points at the Medal of Honor entry, so the credit here is the file page.
+          <a href="https://commons.wikimedia.org/wiki/File:Soldiers_Medal_Obverse.jpg">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <h3 id="navy-marine-medal">Navy and Marine Corps Medal</h3>
+    <article class="award-block">
+      <div class="medal-placeholder">
+        <p>No confirmed public-domain government photograph of this medal is on file.</p>
+      </div>
+      <div>
+        <p>
+          Heroism not involving actual conflict with the enemy, while serving in any
+          capacity with the Navy or the Marine Corps. The Navy manual says it is not solely
+          a lifesaving medal, and that lifesaving, or attempted lifesaving, has to be at the
+          risk of the person’s own life. The act can occur in a combat zone if it is not a
+          direct engagement with the enemy. The performance has to place the person in
+          life-threatening danger. The next higher decoration in that manual is the
+          Distinguished Flying Cross. Statute: 10 U.S.C. § 8296. Effective on or after
+          7 December 1941.
+        </p>
+        <p class="cite-line"><a href={secnavMan}>SECNAV M-1650.1</a>, Appendix 2A, Tab 7 and Tab 14.</p>
+      </div>
+    </article>
+
+    <h3 id="airmans-medal">Airman’s Medal</h3>
+    <article class="award-block">
+      <div class="medal-plate">
+        <img src="/medals/airmans-medal.jpg" alt="Airman’s Medal, a bronze disc of a seated figure releasing an eagle, on a ribbon of blue and gold stripes." width="461" height="760" />
+      </div>
+      <div>
+        <p>
+          DAFMAN 36-2806 awards it to a person who, while serving in any capacity with the
+          Air Force, distinguishes himself or herself by heroism involving voluntary risk of
+          life under conditions other than conflict with an armed enemy of the United States.
+          Saving a life, or success of the act, is not essential. The medal is not awarded
+          for normal performance of duties. The authorized device is an oak-leaf cluster.
+          The eligibility sentence names the Air Force and does not repeat “Space Force,”
+          which the Medal of Honor and Air Force Cross paragraphs in the same manual do.
+          Volume 3, in its July 2026 change, still places the Airman’s Medal in the Air Force
+          and Space Force order of precedence, after the Distinguished Flying Cross and
+          before the Bronze Star. Statute cited by the manual: 10 U.S.C. § 9280. The manual
+          says the medal was established in 1960.
+        </p>
+        <p class="cite-line"><a href={dafman}>DAFMAN 36-2806</a>, paragraph A2.8. <a href={vol3}>Volume 3</a>, paragraphs 3.5 and 3.6.</p>
+        <p class="credit-line">
+          Virginia Reyes, Air Force News Agency. Public domain, U.S. government work.
+          <a href="https://commons.wikimedia.org/wiki/File:Airman%27s_Medal.jpg">Source file</a>.
+        </p>
+      </div>
+    </article>
+
+    <h3 id="coast-guard-medal">Coast Guard Medal</h3>
+    <article class="award-block">
+      <div class="medal-placeholder">
+        <p>No confirmed public-domain government photograph of this medal is on file.</p>
+      </div>
+      <div>
+        <p>
+          14 U.S.C. § 2739 authorizes the President to present, not in the name of Congress,
+          a Coast Guard Medal to a person who, while serving in any capacity with the Coast
+          Guard, displays heroism not involving actual conflict with an enemy. The section
+          was numbered § 493 until the 2018 renumbering of Title 14. The 2016 Coast Guard
+          manual adds that the act has to be voluntary, in the face of great danger, and
+          such as to stand out above normal expectations. That manual’s defense.gov copy
+          says it may no longer be current. The statute is the criterion cited here for the
+          basic standard.
+        </p>
+        <p class="cite-line">
+          <a href={usc2739}>14 U.S.C. § 2739</a>.
+          <a href={cgMan}>COMDTINST M1650.25E</a>, chapter 2.
+          The 2016 manual’s precedence table places this medal after the Distinguished Flying Cross.
+        </p>
+      </div>
+    </article>
+
+    <h2>Questions</h2>
+    <div class="valor-faq">
+      {faqs.map((item) => (
+        <article>
+          <h3>{item.q}</h3>
+          <p>{item.a}</p>
+        </article>
+      ))}
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>
+        <a href={vol1}>DoD Manual 1348.33, Volume 1, “Manual of Military Decorations and Awards: Medal of Honor”</a>.
+        21 December 2016, incorporating Change 6, 10 July 2026. The file is now issued under the Department of War title.
+      </li>
+      <li>
+        <a href={vol3}>DoD Manual 1348.33, Volume 3, “Manual of Military Decorations and Awards: DoW-wide Personal Performance and Valor Decorations”</a>.
+        21 December 2016, incorporating Change 6, 14 July 2026.
+      </li>
+      <li>
+        <a href={vol4}>DoD Manual 1348.33, Volume 4, “Manual of Military Decorations and Awards: DoD Joint Decorations and Awards”</a>.
+        21 December 2016, incorporating Change 6, 19 September 2023.
+      </li>
+      <li><a href={ar}>Army Regulation 600-8-22, Military Awards</a>. 11 May 2026.</li>
+      <li><a href={secnavInst}>SECNAVINST 1650.1J</a>. 29 May 2019.</li>
+      <li><a href={secnavMan}>SECNAV M-1650.1, Navy and Marine Corps Awards Manual</a>. 16 August 2019.</li>
+      <li>
+        <a href={dafman}>DAFMAN 36-2806, Military Awards: Criteria and Procedures</a>.
+        The text used here is the 27 October 2022 manual incorporating Change 3, 13 August 2025, which says it applies to the Space Force.
+      </li>
+      <li>
+        <a href={cgMan}>COMDTINST M1650.25E, Coast Guard Military Medals and Awards Manual</a>.
+        15 August 2016. The defense.gov copy is marked, as of November 2022, that the directive may no longer be current.
+      </li>
+      <li><a href={usc103}>14 U.S.C. § 103</a>, department in which the Coast Guard operates.</li>
+      <li><a href={usc2732}>14 U.S.C. § 2732</a>, Coast Guard medal of honor.</li>
+      <li><a href={usc2735}>14 U.S.C. § 2735</a>, Coast Guard Cross.</li>
+      <li><a href={usc2739}>14 U.S.C. § 2739</a>, Coast Guard Medal.</li>
+      <li><a href={alcoast}>ALCOAST 384/20</a>, 14 October 2020, on the Coast Guard Cross.</li>
+    </ul>
+
+    <h2>Image credits</h2>
+    <p>
+      Medal images are files marked on Wikimedia Commons as U.S. government works and traced
+      to the Army Institute of Heraldry, Arlington National Cemetery, the Air Force, or the
+      Department of Defense. Three medals have a text plate because a public-domain
+      government photograph could not be confirmed: the Distinguished Service Cross, the
+      Navy and Marine Corps Medal, and the Coast Guard Medal. The Navy Cross image is the
+      reverse. The Coast Guard Cross image is an Institute of Heraldry illustration.
+    </p>
+  </div>
+  <script is:inline type="application/ld+json" set:html={jsonLd} />
+</Base>
