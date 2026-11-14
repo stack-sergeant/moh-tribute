@@ -760,7 +760,7 @@
     "era": "Civil War",
     "dateLabel": "1862–1865",
     "location": "Petersburg, Virginia",
-    "summary": "95 recipients in the Civil War have an official citation entry placing the action at Petersburg, Virginia. This page was grouped from those entries.",
+    "summary": "96 recipients in the Civil War have an official citation entry placing the action at Petersburg, Virginia. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -858,7 +858,8 @@
       "leander-a-wilkins",
       "francis-a-wilson",
       "albert-d-wright",
-      "benjamin-f-young"
+      "benjamin-f-young",
+      "isaac-james"
     ]
   },
   {
@@ -1889,7 +1890,7 @@
     "era": "Civil War",
     "dateLabel": "1862",
     "location": "Antietam, Maryland",
-    "summary": "16 recipients in the Civil War have an official citation entry placing the action at Antietam, Maryland. This page was grouped from those entries.",
+    "summary": "17 recipients in the Civil War have an official citation entry placing the action at Antietam, Maryland. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -1908,7 +1909,8 @@
       "jacob-g-orth",
       "william-h-paul",
       "charles-b-tanner",
-      "samuel-c-wright"
+      "samuel-c-wright",
+      "john-p-murphy"
     ]
   },
   {
@@ -1977,7 +1979,7 @@
     "era": "Civil War",
     "dateLabel": "1864",
     "location": "Wilderness, Virginia",
-    "summary": "19 recipients in the Civil War have an official citation entry placing the action at Wilderness, Virginia. This page was grouped from those entries.",
+    "summary": "20 recipients in the Civil War have an official citation entry placing the action at Wilderness, Virginia. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -1999,7 +2001,8 @@
       "stephen-rought",
       "jacob-e-swap",
       "william-p-thompson",
-      "benjamin-f-tracy"
+      "benjamin-f-tracy",
+      "patrick-de-lacey"
     ]
   },
   {
@@ -4012,7 +4015,7 @@
     "era": "Civil War",
     "dateLabel": "1862",
     "location": "Stone River, Tennessee",
-    "summary": "8 recipients in the Civil War have an official citation entry placing the action at Stone River, Tennessee. This page was grouped from those entries.",
+    "summary": "9 recipients in the Civil War have an official citation entry placing the action at Stone River, Tennessee. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -4023,7 +4026,8 @@
       "milton-russell",
       "john-tweedale",
       "wilson-vance",
-      "john-m-whitehead"
+      "john-m-whitehead",
+      "john-g-bourke"
     ]
   },
   {
@@ -7589,7 +7593,7 @@
     "era": "Indian Wars",
     "dateLabel": "1890",
     "location": "Wounded Knee Creek, South Dakota",
-    "summary": "15 recipients in the Indian Wars have an official citation entry placing the action at Wounded Knee Creek, South Dakota. This page was grouped from those entries.",
+    "summary": "16 recipients in the Indian Wars have an official citation entry placing the action at Wounded Knee Creek, South Dakota. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -7607,7 +7611,8 @@
       "thomas-sullivan-1890",
       "jacob-trautman",
       "james-ward-1890",
-      "paul-h-welnert"
+      "paul-h-welnert",
+      "frederick-e-toy"
     ]
   },
   {
@@ -7687,7 +7692,7 @@
     "era": "Indian Wars",
     "dateLabel": "1876–1877",
     "location": "Cedar Creek, etc, Montana",
-    "summary": "30 recipients in the Indian Wars have an official citation entry placing the action at Cedar Creek, etc, Montana. This page was grouped from those entries.",
+    "summary": "31 recipients in the Indian Wars have an official citation entry placing the action at Cedar Creek, etc, Montana. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
@@ -7720,7 +7725,8 @@
       "charles-sheppard",
       "william-wallace",
       "patton-g-whitehead",
-      "charles-wilson"
+      "charles-wilson",
+      "david-holland"
     ]
   },
   {
@@ -8898,12 +8904,14 @@
     "era": "Indian Wars",
     "dateLabel": "1890",
     "location": "White Clay Creek, South Dakota",
-    "summary": "2 recipients in the Indian Wars have an official citation entry placing the action at White Clay Creek, South Dakota. This page was grouped from those entries.",
+    "summary": "4 recipients in the Indian Wars have an official citation entry placing the action at White Clay Creek, South Dakota. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
       "marvin-c-hillock",
-      "charles-a-varnum"
+      "charles-a-varnum",
+      "richard-j-nolan",
+      "theodore-ragnar"
     ]
   },
   {
@@ -9025,11 +9033,12 @@
     "era": "Indian Wars",
     "dateLabel": "1890",
     "location": "Sioux campaign",
-    "summary": "1 recipient in the Indian Wars have an official citation entry placing the action at Sioux campaign. This page was grouped from those entries.",
+    "summary": "2 recipients in the Indian Wars have an official citation entry placing the action at Sioux campaign. This page was grouped from those entries.",
     "curated": false,
     "media": [],
     "recipientIds": [
-      "bernhard-jetter"
+      "bernhard-jetter",
+      "william-o-wilson"
     ]
   },
   {
@@ -24600,6 +24609,217 @@
     "media": [],
     "recipientIds": [
       "the-unknown-american-of-the-korean-war"
+    ]
+  },
+  {
+    "id": "civil-war-fort-de-russy-red-river",
+    "title": "Fort De Russy, Red River",
+    "conflict": "Civil War",
+    "era": "Civil War",
+    "dateLabel": "1863",
+    "location": "Fort De Russy, Red River",
+    "summary": "1 recipient in the Civil War have an official citation entry placing the action at Fort De Russy, Red River. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "james-brown-1826"
+    ]
+  },
+  {
+    "id": "action-jim-jim-1871-indian-wars",
+    "title": "Jim, Winter of 1871-73.",
+    "conflict": "Indian Wars",
+    "era": "Indian Wars",
+    "dateLabel": "Winter of 1871-73.",
+    "location": null,
+    "summary": "The official citation for Jim does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated Winter of 1871-73., during the Indian Wars.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "jim"
+    ]
+  },
+  {
+    "id": "spanishamerican-war-cienfuegos-cuba",
+    "title": "Cienfuegos, Cuba",
+    "conflict": "Spanish–American War",
+    "era": "Expeditions, 1871–1933",
+    "dateLabel": "1898",
+    "location": "Cienfuegos, Cuba",
+    "summary": "1 recipient in the Spanish–American War have an official citation entry placing the action at Cienfuegos, Cuba. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "anton-olsen"
+    ]
+  },
+  {
+    "id": "war-in-afghanistan-asadabad-konar-province-afghanistan",
+    "title": "Asadabad, Konar Province, Afghanistan",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "2005",
+    "location": "Asadabad, Konar Province, Afghanistan",
+    "summary": "1 recipient in the War in Afghanistan have an official citation entry placing the action at Asadabad, Konar Province, Afghanistan. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "michael-p-murphy"
+    ]
+  },
+  {
+    "id": "war-in-afghanistan-qarghahi-district-laghman-province-afghanistan",
+    "title": "Qarghah'i District, Laghman Province, Afghanistan",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "2012",
+    "location": "Qarghah'i District, Laghman Province, Afghanistan",
+    "summary": "1 recipient in the War in Afghanistan have an official citation entry placing the action at Qarghah'i District, Laghman Province, Afghanistan. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "edward-c-byers-jr"
+    ]
+  },
+  {
+    "id": "war-in-afghanistan-takur-ghar-afghanistan",
+    "title": "Takur Ghar, Afghanistan",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "2002",
+    "location": "Takur Ghar, Afghanistan",
+    "summary": "2 recipients in the War in Afghanistan have an official citation entry placing the action at Takur Ghar, Afghanistan. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "britt-k-slabinski",
+      "john-a-chapman"
+    ]
+  },
+  {
+    "id": "war-in-afghanistan-ganjgal-kunar-province-afghanistan",
+    "title": "Ganjgal, Kunar Province, Afghanistan",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "2009",
+    "location": "Ganjgal, Kunar Province, Afghanistan",
+    "summary": "1 recipient in the War in Afghanistan have an official citation entry placing the action at Ganjgal, Kunar Province, Afghanistan. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "dakota-l-meyer"
+    ]
+  },
+  {
+    "id": "war-in-afghanistan-marjah-district-helmand-province-afghanistan",
+    "title": "Marjah District, Helmand Province, Afghanistan",
+    "conflict": "War in Afghanistan",
+    "era": "Since 1975",
+    "dateLabel": "2010",
+    "location": "Marjah District, Helmand Province, Afghanistan",
+    "summary": "1 recipient in the War in Afghanistan have an official citation entry placing the action at Marjah District, Helmand Province, Afghanistan. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "william-kyle-carpenter"
+    ]
+  },
+  {
+    "id": "vietnam-war-hue-city-republic-of-vietnam",
+    "title": "Hue City, Republic of Vietnam",
+    "conflict": "Vietnam War",
+    "era": "Vietnam War",
+    "dateLabel": "1968",
+    "location": "Hue City, Republic of Vietnam",
+    "summary": "1 recipient in the Vietnam War have an official citation entry placing the action at Hue City, Republic of Vietnam. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "john-l-canley"
+    ]
+  },
+  {
+    "id": "action-the-unknown-belgian-soldier-unknown-belgian-soldier-world-war-i",
+    "title": "The Unknown Belgian Soldier, 1 Dec. 1922",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "1 Dec. 1922",
+    "location": null,
+    "summary": "The official citation for The Unknown Belgian Soldier does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 1 Dec. 1922, during the World War I.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-belgian-soldier"
+    ]
+  },
+  {
+    "id": "world-war-i-westminster-abbey-london-england",
+    "title": "Westminster Abbey, London, England",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "1921",
+    "location": "Westminster Abbey, London, England",
+    "summary": "1 recipient in the World War I have an official citation entry placing the action at Westminster Abbey, London, England. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-british-soldier"
+    ]
+  },
+  {
+    "id": "world-war-i-arc-de-triomphe-paris-france",
+    "title": "Arc de Triomphe, Paris, France",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "1921",
+    "location": "Arc de Triomphe, Paris, France",
+    "summary": "1 recipient in the World War I have an official citation entry placing the action at Arc de Triomphe, Paris, France. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-french-soldier"
+    ]
+  },
+  {
+    "id": "world-war-i-national-monument-victor-emmanuel-ii-rome-italy",
+    "title": "National Monument Victor Emmanuel Ii, Rome, Italy",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "1921",
+    "location": "National Monument Victor Emmanuel Ii, Rome, Italy",
+    "summary": "1 recipient in the World War I have an official citation entry placing the action at National Monument Victor Emmanuel Ii, Rome, Italy. This page was grouped from those entries.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-italian-soldier"
+    ]
+  },
+  {
+    "id": "action-the-unknown-rumanian-soldier-unknown-rumanian-soldier-world-war-i",
+    "title": "The Unknown Rumanian Soldier, 17 May 1923",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "17 May 1923",
+    "location": null,
+    "summary": "The official citation for The Unknown Rumanian Soldier does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 17 May 1923, during the World War I.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-rumanian-soldier"
+    ]
+  },
+  {
+    "id": "action-the-unknown-american-of-world-war-i-unknown-american-world-war-i",
+    "title": "The Unknown American of World War I, 24 August 1921",
+    "conflict": "World War I",
+    "era": "World War I",
+    "dateLabel": "24 August 1921",
+    "location": null,
+    "summary": "The official citation for The Unknown American of World War I does not name a shared battle that this archive has grouped with other recipients. The recorded action is dated 24 August 1921, during the World War I.",
+    "curated": false,
+    "media": [],
+    "recipientIds": [
+      "the-unknown-american-of-world-war-i"
     ]
   }
 ]

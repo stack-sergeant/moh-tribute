@@ -46,7 +46,7 @@ const cardImage = publicDomainPhotoUrl(photo);
       <p class="big-facts">{[lead.actionDateLabel ?? "Date not recorded", lead.actionPlace ?? "Place not recorded"].join(" · ")}</p>
       {photo && (
         <p class="credit-line">
-          {photo.license}. {photo.credit}
+          {photo.licenseUrl ? <a href={photo.licenseUrl}>{photo.license}</a> : photo.license}. {photo.credit}
           <a href={photo.pageUrl}>Source file</a>
         </p>
       )}

@@ -1,20 +1,20 @@
 {
-  "people": 3515,
-  "awards": 3532,
+  "people": 3540,
+  "awards": 3557,
   "doubleRecipientsInThisArchive": 17,
   "byConflict": {
-    "Civil War": 1527,
+    "Civil War": 1532,
     "World War II": 474,
-    "Indian Wars": 422,
-    "Vietnam War": 272,
+    "Indian Wars": 428,
+    "Vietnam War": 273,
     "Peacetime and interim": 183,
     "Korean War": 153,
-    "World War I": 126,
-    "Spanish\u2013American War": 111,
+    "World War I": 132,
+    "Spanish\u2013American War": 112,
     "Philippine\u2013American War": 95,
     "Boxer Rebellion": 58,
     "Veracruz occupation": 56,
-    "War in Afghanistan": 16,
+    "War in Afghanistan": 22,
     "Korean Expedition": 15,
     "Haitian Campaign": 8,
     "Iraq War": 7,
@@ -25,31 +25,32 @@
     "Operation Absolute Resolve": 1
   },
   "byEra": {
-    "Civil War": 1527,
-    "Indian Wars": 422,
-    "Expeditions, 1871\u20131933": 348,
-    "World War I": 126,
+    "Civil War": 1532,
+    "Indian Wars": 428,
+    "Expeditions, 1871\u20131933": 349,
+    "World War I": 132,
     "World War II": 474,
     "Korean War": 153,
-    "Vietnam War": 272,
-    "Since 1975": 27,
+    "Vietnam War": 273,
+    "Since 1975": 33,
     "Peacetime and other actions": 183
   },
   "byBranch": {
-    "U.S. Army": 2423,
-    "U.S. Navy": 743,
-    "U.S. Marine Corps": 303,
+    "U.S. Army": 2433,
+    "U.S. Navy": 748,
+    "U.S. Marine Corps": 306,
     "U.S. Army Air Forces": 42,
-    "U.S. Air Force": 18,
-    "U.S. Armed Forces": 2,
+    "U.S. Air Force": 19,
+    "Unknown": 5,
+    "U.S. Armed Forces": 3,
     "U.S. Coast Guard": 1
   },
-  "posthumousAwards": 610,
-  "awardsWithPlace": 3264,
-  "peopleWithHomeState": 3137,
-  "peopleWithPhoto": 1418,
+  "posthumousAwards": 618,
+  "awardsWithPlace": 3285,
+  "peopleWithHomeState": 3153,
+  "peopleWithPhoto": 1425,
   "photoPercent": 40.3,
-  "battles": 1600,
+  "battles": 1615,
   "curatedBattles": [
     {
       "id": "battle-of-gettysburg",
@@ -97,6 +98,6 @@
       "recipients": 1
     }
   ],
-  "autoBattles": 1591,
-  "officialComparison": "Public counts in 2025\u20132026 are usually given as more than 3,500 awards, about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive counts one row per award in the U.S. Army citation index plus Army general orders that were not already in that index. Navy, Marine Corps, Air Force, and Coast Guard awards are included when the Army index carries them. Rescinded 1917 awards are not included."
+  "autoBattles": 1606,
+  "officialComparison": "Public counts in 2025\u20132026 are usually given as more than 3,500 awards, about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. This archive counts one row per award in the U.S. Army citation index plus Army general orders that were not already in that index. Navy, Marine Corps, Air Force, and Coast Guard awards are included when the Army index carries them, and later awards are added when the service or the White House has published the citation. Rescinded 1917 awards are not included."
 }
