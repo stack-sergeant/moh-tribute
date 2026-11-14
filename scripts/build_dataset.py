@@ -309,7 +309,8 @@ def write_stats(people: list[dict], battles: list[dict]) -> dict:
             "about 3,526 people after the January 3, 2025 ceremony, with further awards in 2026. "
             "This archive counts one row per award in the U.S. Army citation index plus Army general orders "
             "that were not already in that index. Navy, Marine Corps, Air Force, and Coast Guard awards "
-            "are included when the Army index carries them. Rescinded 1917 awards are not included."
+            "are included when the Army index carries them, and later awards are added when the service "
+            "or the White House has published the citation. Rescinded 1917 awards are not included."
         ),
     }
     (DATA / "stats.json").write_text(json.dumps(stats, indent=2), encoding="utf-8")
@@ -416,6 +417,22 @@ def finalize_award(award: dict) -> None:
     apply_award_corrections(award)
 
 
+def apply_gap_photos(people: list[dict]) -> None:
+    """Portraits stored with the new records, used only when no photo is cached."""
+    path = DATA / "cmohs-gap-photos.json"
+    if not path.exists():
+        return
+    photos = json.loads(path.read_text(encoding="utf-8"))
+    for person in people:
+        if person.get("photo"):
+            continue
+        for award in person["awards"]:
+            photo = photos.get(award["awardId"])
+            if photo:
+                person["photo"] = photo
+                break
+
+
 def apply_photo_cache(people: list[dict]) -> None:
     cache = DATA / "photos.json"
     if not cache.exists():
@@ -454,6 +471,18 @@ def main() -> None:
         added = [award for award in manual if award["identity"] not in known]
         print(f"manual additions: {len(added)}")
         awards.extend(added)
+    # Recipients missing from the parsed Army index. Kept in separate files
+    # so a parallel correction of existing rows does not have to edit them.
+    known = {award["identity"] for award in awards}
+    for gap_name in ("cmohs-gap-additions.json", "cmohs-service-additions.json"):
+        gap_path = DATA / gap_name
+        if not gap_path.exists():
+            continue
+        gap = json.loads(gap_path.read_text(encoding="utf-8"))
+        added = [award for award in gap if award["identity"] not in known]
+        known.update(award["identity"] for award in added)
+        print(f"{gap_name}: {len(added)}")
+        awards.extend(added)
     for award in awards:
         finalize_award(award)
     # A general order is kept only when the citation index does not already
@@ -474,6 +503,7 @@ def main() -> None:
     awards = deduped
     people = group_people(awards)
     apply_photo_cache(people)
+    apply_gap_photos(people)
     battles = build_battles(people)
     people.sort(key=lambda person: person["nameSort"].lower())
     (DATA / "recipients.json").write_text(

@@ -10831,6 +10831,47 @@
     "wikidataId": "Q7103049"
   },
   {
+    "id": "john-g-bourke",
+    "name": "John G. Bourke",
+    "nameSort": "Bourke, John G.",
+    "last": "Bourke",
+    "first": "John",
+    "homeState": "Illinois",
+    "birth": "Philadelphia, Pa.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "john-g-bourke-1862-stone-river-tenn",
+        "rank": "Private",
+        "unit": "Company E, 15th Pennsylvania Cavalry",
+        "branch": "U.S. Army",
+        "conflict": "Civil War",
+        "era": "Civil War",
+        "actionPlace": "Stone River, Tennessee",
+        "actionDate": "1862-12-31",
+        "actionDateEnd": "1863-01-01",
+        "actionDateLabel": "31 December 1862-1 January 1863",
+        "actionYear": 1862,
+        "posthumous": false,
+        "citation": "Gallantry in action.",
+        "issueDate": "16 November 1887",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations1.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/john-g-bourke"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "civil-war-stone-river-tennessee"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "thomas-bourne",
     "name": "Thomas Bourne",
     "nameSort": "Bourne, Thomas",
@@ -13454,6 +13495,47 @@
     "photo": null,
     "wikipedia": "https://en.wikipedia.org/wiki/James_Brown_(sailor)",
     "wikidataId": "Q16198422"
+  },
+  {
+    "id": "james-brown-1826",
+    "name": "James Brown",
+    "nameSort": "Brown, James",
+    "last": "Brown",
+    "first": "James",
+    "homeState": "New York",
+    "birth": "1826 Rochester, N.Y.",
+    "birthYear": 1826,
+    "awards": [
+      {
+        "awardId": "james-brown-1863-civil-war",
+        "rank": "Quartermaster",
+        "unit": "U.S.S. Albatross",
+        "branch": "U.S. Navy",
+        "conflict": "Civil War",
+        "era": "Civil War",
+        "actionPlace": "Fort De Russy, Red River",
+        "actionDate": "1863-05-04",
+        "actionDateEnd": "1863-05-04",
+        "actionDateLabel": "4 May 1863",
+        "actionYear": 1863,
+        "posthumous": false,
+        "citation": "Served on board the U.S.S. Albatross during action against Fort De Russy in the Red River Area on 4 May 1863. After the steering wheel and wheel ropes had been shot away by rebel fire, Brown stood on the gun platform of the quarterdeck, exposing himself to a close fire of musketry from the shore, and rendered invaluable assistance by his expert management of the relieving tackles in extricating the vessel from a perilous position, and thereby aided in the capture of Fort De Russy's heavyworks.",
+        "issueDate": null,
+        "generalOrder": "32, 16 April 1864",
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations1.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/james-brown"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "civil-war-fort-de-russy-red-river"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
   },
   {
     "id": "jeremiah-z-brown",
@@ -16464,6 +16546,55 @@
     "wikidataId": null
   },
   {
+    "id": "edward-c-byers-jr",
+    "name": "Edward C. Byers Jr.",
+    "nameSort": "Byers, Edward C. Jr.",
+    "last": "Byers",
+    "first": "Edward",
+    "homeState": "Ohio",
+    "birth": "Toledo, Ohio",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "edward-c-byers-jr-2012-laghman",
+        "rank": "Chief Special Warfare Operator",
+        "unit": "Hostage Rescue Force, Naval Special Warfare",
+        "branch": "U.S. Navy",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Qarghah'i District, Laghman Province, Afghanistan",
+        "actionDate": "2012-12-08",
+        "actionDateEnd": "2012-12-09",
+        "actionDateLabel": "8–9 December 2012",
+        "actionYear": 2012,
+        "posthumous": false,
+        "citation": "For conspicuous gallantry and intrepidity at the risk of his life above and beyond the call of duty as a Hostage Rescue Force Team Member in Afghanistan in support of Operation ENDURING FREEDOM from 8 to 9 December 2012. As the rescue force approached the target building, an enemy sentry detected them and darted inside to alert his fellow captors. The sentry quickly reemerged, and the lead assaulter attempted to neutralize him. Chief Byers with his team sprinted to the door of the target building. As the primary breacher, Chief Byers stood in the doorway fully exposed to enemy fire while ripping down six layers of heavy blankets fastened to the inside ceiling and walls to clear a path for the rescue force. The first assaulter pushed his way through the blankets, and was mortally wounded by enemy small arms fire from within. Chief Byers, completely aware of the imminent threat, fearlessly rushed into the room and engaged an enemy guard aiming an AK-47 at him. He then tackled another adult male who had darted towards the corner of the room. During the ensuing hand-to-hand struggle, Chief Byers confirmed the man was not the hostage and engaged him. As other rescue team members called out to the hostage, Chief Byers heard a voice respond in English and raced toward it. He jumped atop the American hostage and shielded him from the high volume of fire within the small room. While covering the hostage with his body, Chief Byers immobilized another guard with his bare hands, and restrained the guard until a teammate could eliminate him. His bold and decisive actions under fire saved the lives of the hostage and several of his teammates. By his undaunted courage, intrepid fighting spirit, and unwavering devotion to duty in the face of near certain death, Chief Petty Officer Byers reflected great credit upon himself and upheld the highest traditions of the United States Naval Service.",
+        "issueDate": "29 February 2016",
+        "generalOrder": null,
+        "sourceUrl": "https://www.navy.mil/MEDAL-OF-HONOR-RECIPIENT-EDWARD-C-BYERS-JR/",
+        "sourceLabel": "U.S. Navy, official citation for Edward C. Byers Jr.",
+        "extraSources": [
+          "https://www.history.navy.mil/browse-by-topic/heritage/awards/decorations/medal-of-honor/global-war-on-terrorism-medal-of-honor-recipients.html",
+          "https://www.cmohs.org/recipients/edward-c-byers-jr"
+        ],
+        "nameNotes": [],
+        "battleId": "war-in-afghanistan-qarghahi-district-laghman-province-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "/photos/edward-c-byers-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Edward_Byers_operational_mode.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Navy",
+      "width": 1200,
+      "height": 1634,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "richard-evelyn-byrd-jr",
     "name": "Richard Evelyn Byrd Jr.",
     "nameSort": "Byrd, Richard Evelyn Jr.",
@@ -17438,6 +17569,56 @@
     "wikidataId": null
   },
   {
+    "id": "john-l-canley",
+    "name": "John L. Canley",
+    "nameSort": "Canley, John L.",
+    "last": "Canley",
+    "first": "John",
+    "homeState": "Arkansas",
+    "birth": "Caledonia, Arkansas",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "john-l-canley-1968-hue",
+        "rank": "Gunnery Sergeant",
+        "unit": "Company A, 1st Battalion, 1st Marines",
+        "branch": "U.S. Marine Corps",
+        "conflict": "Vietnam War",
+        "era": "Vietnam War",
+        "actionPlace": "Hue City, Republic of Vietnam",
+        "actionDate": "1968-01-31",
+        "actionDateEnd": "1968-02-06",
+        "actionDateLabel": "31 January–6 February 1968",
+        "actionYear": 1968,
+        "posthumous": false,
+        "citation": "Sergeant Major John L. Canley will receive the Medal of Honor for his actions from January 31 to February 6, 1968, while assigned to Company A, First Battalion, First Marines in the Republic of Vietnam. While serving as Company Gunnery Sergeant, he fought off multiple enemy attacks as his company moved along a highway toward Hue City to relieve friendly forces who were surrounded. On several occasions, despite his own wounds, he rushed across fire-swept terrain to carry wounded Marines to safety. When his commanding officer was severely wounded, he took command and led his company into Hue City. While in command of the company for three days, he led attacks against multiple enemy-fortified positions while exposing himself to enemy fire to carry wounded Marines to safety. On February 6, at a hospital compound, he twice scaled a wall in full view of the enemy to aid wounded Marines and carry them to safety. Then-Gunnery Sergeant Canley's heroic actions saved the lives of his teammates.",
+        "issueDate": "17 October 2018",
+        "generalOrder": null,
+        "sourceUrl": "https://www.marines.mil/News/Press-Releases/Press-Release-Display/Article/1644927/medal-of-honor-sgt-maj-john-canley/",
+        "sourceLabel": "The White House, published by the U.S. Marine Corps, 25 September 2018",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/johnny-l-canley"
+        ],
+        "nameNotes": [
+          "The Marine Corps release publishes the White House account of the action. A separate citation beginning “For conspicuous gallantry” was not printed in that release. The Congressional Medal of Honor Society lists him as Johnny L. Canley."
+        ],
+        "battleId": "vietnam-war-hue-city-republic-of-vietnam"
+      }
+    ],
+    "photo": {
+      "url": "/photos/john-l-canley.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:John_L._Canley.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Lance Cpl. Morgan Burgess, U.S. Marine Corps",
+      "width": 1200,
+      "height": 1504,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "tedford-h-cann",
     "name": "Tedford H. Cann",
     "nameSort": "Cann, Tedford H.",
@@ -18261,6 +18442,55 @@
     },
     "wikipedia": "https://en.wikipedia.org/wiki/Louis_H._Carpenter",
     "wikidataId": "Q16059138"
+  },
+  {
+    "id": "william-kyle-carpenter",
+    "name": "William Kyle Carpenter",
+    "nameSort": "Carpenter, William Kyle",
+    "last": "Carpenter",
+    "first": "William",
+    "homeState": "South Carolina",
+    "birth": "Flowood, Mississippi",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "william-k-carpenter-2010-marjah",
+        "rank": "Lance Corporal",
+        "unit": "Company F, 2d Battalion, 9th Marines, Regimental Combat Team 1, 1st Marine Division",
+        "branch": "U.S. Marine Corps",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Marjah District, Helmand Province, Afghanistan",
+        "actionDate": "2010-11-21",
+        "actionDateEnd": "2010-11-21",
+        "actionDateLabel": "21 November 2010",
+        "actionYear": 2010,
+        "posthumous": false,
+        "citation": "For conspicuous gallantry and intrepidity at the risk of his life above and beyond the call of duty while serving as an Automatic Rifleman with Company F, 2d Battalion, 9th Marines, Regimental Combat Team 1, 1st Marine Division (Forward), 1 Marine Expeditionary Force (Forward), in Helmand Province, Afghanistan in support of Operation Enduring Freedom on 21 November 2010. Lance Corporal Carpenter was a member of a platoon-sized coalition force, comprised of two reinforced Marine squads partnered with an Afghan National Army squad. The platoon had established Patrol Base Dakota two days earlier in a small village in the Marjah District in order to disrupt enemy activity and provide security for the local Afghan population. Lance Corporal Carpenter and a fellow Marine were manning a rooftop security position on the perimeter of Patrol Base Dakota when the enemy initiated a daylight attack with hand grenades, one of which landed inside their sandbagged position. Without hesitation, and with complete disregard for his own safety, Lance Corporal Carpenter moved toward the grenade in an attempt to shield his fellow Marine from the deadly blast. When the grenade detonated, his body absorbed the brunt of the blast, severely wounding him, but saving the life of his fellow Marine. By his undaunted courage, bold fighting spirit, and unwavering devotion to duty in the face of almost certain death, Lance Corporal Carpenter reflected great credit upon himself and upheld the highest traditions of the Marine Corps and the United States Naval Service.",
+        "issueDate": "19 June 2014",
+        "generalOrder": null,
+        "sourceUrl": "https://www.history.navy.mil/browse-by-topic/heritage/awards/decorations/medal-of-honor/global-war-on-terrorism-medal-of-honor-recipients.html",
+        "sourceLabel": "Naval History and Heritage Command, Global War on Terrorism Medal of Honor recipients",
+        "extraSources": [
+          "https://www.marines.mil/News/Press-Releases/Press-Release-Display/Article/496771/president-obama-to-award-medal-of-honor/",
+          "https://www.cmohs.org/recipients/william-k-carpenter"
+        ],
+        "nameNotes": [],
+        "battleId": "war-in-afghanistan-marjah-district-helmand-province-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "/photos/william-kyle-carpenter.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Kyle_Carpenter_portrait.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Lance Cpl. Daniel A. Wetzel, U.S. Marine Corps",
+      "width": 1200,
+      "height": 1565,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
   },
   {
     "id": "chris-carr",
@@ -20467,6 +20697,55 @@
       }
     ],
     "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "john-a-chapman",
+    "name": "John A. Chapman",
+    "nameSort": "Chapman, John A.",
+    "last": "Chapman",
+    "first": "John",
+    "homeState": "Connecticut",
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "john-a-chapman-2002-takur-ghar",
+        "rank": "Technical Sergeant",
+        "unit": "24th Special Tactics Squadron",
+        "branch": "U.S. Air Force",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Takur Ghar, Afghanistan",
+        "actionDate": "2002-03-04",
+        "actionDateEnd": "2002-03-04",
+        "actionDateLabel": "4 March 2002",
+        "actionYear": 2002,
+        "posthumous": true,
+        "citation": "The President of the United States of America, in the name of Congress, takes pride in presenting the Medal of Honor (Posthumously) to Technical Sergeant John A. Chapman, United States Air Force, for conspicuous gallantry and intrepidity at the risk of life above and beyond the call of duty. Technical Sergeant Chapman distinguished himself by extraordinary heroism as an Air Force Special Tactics Combat Controller of the 24th Special Tactics Squadron, attached to a Navy Sea, Air, and Land (SEAL) Team conducting reconnaissance operations in Takur Ghar, Afghanistan, on 4 March 2002. During insertion, the team's helicopter was ambushed causing a teammate to fall into an entrenched group of enemy combatants below. Sergeant Chapman and the team voluntarily reinserted onto the snow-capped mountain, into the heart of a known enemy stronghold to rescue one of their own. Without regard for his own safety, Sergeant Chapman immediately engaged, moving in the direction of the closest enemy position despite coming under heavy fire from multiple directions. He fearlessly charged an enemy bunker, up a steep incline in thigh-deep snow and into hostile fire, directly engaging the enemy. Upon reaching the bunker, Sergeant Chapman assaulted and cleared the position, killing all enemy occupants. With complete disregard for his own life, Sergeant Chapman deliberately moved from cover only 12 meters from the enemy, and exposed himself once again to attack a second bunker, from which an emplaced machine gun was firing on his team. During this assault from an exposed position directly in the line of intense fire, Sergeant Chapman was struck and injured by enemy fire. Despite severe, mortal wounds, he continued to fight relentlessly, sustaining a violent engagement with multiple enemy personnel before making the ultimate sacrifice. By his heroic actions and extraordinary valor, sacrificing his life for the lives of his teammates, Technical Sergeant Chapman upheld the highest traditions of military service and reflected great credit upon himself and the United States Air Force.",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.airforcespecialtactics.af.mil/About/History/Honors/",
+        "sourceLabel": "U.S. Air Force Special Tactics, award citation for John A. Chapman",
+        "extraSources": [
+          "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196830/tech-sgt-john-a-chapman/",
+          "https://www.cmohs.org/recipients/john-a-chapman"
+        ],
+        "nameNotes": [],
+        "battleId": "war-in-afghanistan-takur-ghar-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "/photos/john-a-chapman.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Airman_to_be_awarded_Medal_of_Honor_180727-F-F3227-1005.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Air Force",
+      "width": 1200,
+      "height": 1647,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
     "wikipedia": null,
     "wikidataId": null
   },
@@ -29719,6 +29998,47 @@
         "extraSources": [],
         "nameNotes": [],
         "battleId": "vietnam-war-da-nang-republic-of-vietnam"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "patrick-de-lacey",
+    "name": "Patrick De Lacey",
+    "nameSort": "De Lacey, Patrick",
+    "last": "De Lacey",
+    "first": "Patrick",
+    "homeState": "Pennsylvania",
+    "birth": "25 November 1834, Carbondale, Lackawanna County, Pa.",
+    "birthYear": 1834,
+    "awards": [
+      {
+        "awardId": "patrick-de-lacey-1864-wilderness-va",
+        "rank": "First Sergeant",
+        "unit": "Company A, 143d Pennsylvania Infantry",
+        "branch": "U.S. Army",
+        "conflict": "Civil War",
+        "era": "Civil War",
+        "actionPlace": "Wilderness, Virginia",
+        "actionDate": "1864-05-06",
+        "actionDateEnd": "1864-05-06",
+        "actionDateLabel": "6 May 1864",
+        "actionYear": 1864,
+        "posthumous": false,
+        "citation": "Running ahead of the line, under a concentrated fire, he shot the color bearer of a Confederate regiment on the works, thus contributing to the success of the attack.",
+        "issueDate": "24 April 1894",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations1.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/patrick-delacey"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "civil-war-wilderness-virginia"
       }
     ],
     "photo": null,
@@ -56959,6 +57279,47 @@
     "wikidataId": "Q109265957"
   },
   {
+    "id": "david-holland",
+    "name": "David Holland",
+    "nameSort": "Holland, David",
+    "last": "Holland",
+    "first": "David",
+    "homeState": "Michigan",
+    "birth": "Dearborn, Mich.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "david-holland-1877-cedar-creek-etc-mont-october-1876-to",
+        "rank": "Corporal",
+        "unit": "Company A, 5th U.S. Infantry",
+        "branch": "U.S. Army",
+        "conflict": "Indian Wars",
+        "era": "Indian Wars",
+        "actionPlace": "Cedar Creek, etc, Montana",
+        "actionDate": "1877-01-08",
+        "actionDateEnd": "1877-01-08",
+        "actionDateLabel": "8 January 1877",
+        "actionYear": 1877,
+        "posthumous": false,
+        "citation": "Gallantry in actions.",
+        "issueDate": "27 April 1877",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations3.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/david-holland"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "indian-wars-cedar-creek-etc-montana"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "lemuel-f-holland",
     "name": "Lemuel F. Holland",
     "nameSort": "Holland, Lemuel F.",
@@ -61351,6 +61712,47 @@
     "wikidataId": "Q110945349"
   },
   {
+    "id": "isaac-james",
+    "name": "Isaac James",
+    "nameSort": "James, Isaac",
+    "last": "James",
+    "first": "Isaac",
+    "homeState": "Ohio",
+    "birth": "Montgomery County, Ohio.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "isaac-james-1865-petersburg-va",
+        "rank": "Private",
+        "unit": "Company H, 110th Ohio Infantry",
+        "branch": "U.S. Army",
+        "conflict": "Civil War",
+        "era": "Civil War",
+        "actionPlace": "Petersburg, Virginia",
+        "actionDate": "1865-04-02",
+        "actionDateEnd": "1865-04-02",
+        "actionDateLabel": "2 April 1865",
+        "actionYear": 1865,
+        "posthumous": false,
+        "citation": "Capture of flag.",
+        "issueDate": "10 May 1865",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations1.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/isaac-james"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "civil-war-petersburg-virginia"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "john-james",
     "name": "John James",
     "nameSort": "James, John",
@@ -62178,6 +62580,47 @@
     },
     "wikipedia": "https://en.wikipedia.org/wiki/Erastus_W._Jewett",
     "wikidataId": "Q51395043"
+  },
+  {
+    "id": "jim",
+    "name": "Jim",
+    "nameSort": "Jim",
+    "last": "Jim",
+    "first": "",
+    "homeState": null,
+    "birth": "Arizona Territory.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "jim-1871-indian-wars",
+        "rank": "Sergeant",
+        "unit": "Indian Scouts",
+        "branch": "U.S. Army",
+        "conflict": "Indian Wars",
+        "era": "Indian Wars",
+        "actionPlace": null,
+        "actionDate": null,
+        "actionDateEnd": null,
+        "actionDateLabel": "Winter of 1871-73.",
+        "actionYear": 1871,
+        "posthumous": false,
+        "citation": "Gallant conduct during campaigns and engagements with Apaches.",
+        "issueDate": "12 April 1875",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations3.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/jim"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "action-jim-jim-1871-indian-wars"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
   },
   {
     "id": "jose-francisco-jimenez",
@@ -84602,6 +85045,56 @@
     "wikidataId": null
   },
   {
+    "id": "dakota-l-meyer",
+    "name": "Dakota L. Meyer",
+    "nameSort": "Meyer, Dakota L.",
+    "last": "Meyer",
+    "first": "Dakota",
+    "homeState": "Kentucky",
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "dakota-l-meyer-2009-ganjgal",
+        "rank": "Corporal",
+        "unit": "Marine Embedded Training Team, Regional Corps Advisory Command 3-7",
+        "branch": "U.S. Marine Corps",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Ganjgal, Kunar Province, Afghanistan",
+        "actionDate": "2009-09-08",
+        "actionDateEnd": "2009-09-08",
+        "actionDateLabel": "8 September 2009",
+        "actionYear": 2009,
+        "posthumous": false,
+        "citation": "Corporal Meyer maintained security at a patrol rally point while other members of his team moved on foot with two platoons of Afghan National Army and Border Police into the village of Ganjgal for a pre-dawn meeting with village elders. Moving into the village, the patrol was ambushed by more than 50 enemy fighters firing rocket propelled grenades, mortars, and machine guns from houses and fortified positions on the slopes above. Hearing over the radio that four U.S. team members were cut off, Corporal Meyer seized the initiative. With a fellow Marine driving, Corporal Meyer took the exposed gunner's position in a gun-truck as they drove down the steeply terraced terrain in a daring attempt to disrupt the enemy attack and locate the trapped U.S. team. Disregarding intense enemy fire now concentrated on their lone vehicle, Corporal Meyer killed a number of enemy fighters with the mounted machine guns and his rifle, some at near point blank range, as he and his driver made three solo trips into the ambush area. During the first two trips, he and his driver evacuated two dozen Afghan soldiers, many of whom were wounded. When one machine gun became inoperable, he directed a return to the rally point to switch to another gun-truck for a third trip into the ambush area where his accurate fire directly supported the remaining U.S. personnel and Afghan soldiers fighting their way out of the ambush. Despite a shrapnel wound to his arm, Corporal Meyer made two more trips into the ambush area in a third gun-truck accompanied by four other Afghan vehicles to recover more wounded Afghan soldiers and search for the missing U.S. team members. Still under heavy enemy fire, he dismounted the vehicle on the fifth trip and moved on foot to locate and recover the bodies of his team members. Corporal Meyer's daring initiative and bold fighting spirit throughout the 6-hour battle significantly disrupted the enemy's attack and inspired the members of the combined force to fight on. His unwavering courage and steadfast devotion to his U.S. and Afghan comrades in the face of almost certain death reflected great credit upon himself and upheld the highest traditions of the Marine Corps and the United States Naval Service.",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.history.navy.mil/browse-by-topic/heritage/awards/decorations/medal-of-honor/global-war-on-terrorism-medal-of-honor-recipients.html",
+        "sourceLabel": "Naval History and Heritage Command, Global War on Terrorism Medal of Honor recipients",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/dakota-l-meyer"
+        ],
+        "nameNotes": [
+          "The Naval History and Heritage Command page prints this citation beginning with the action at the rally point."
+        ],
+        "battleId": "war-in-afghanistan-ganjgal-kunar-province-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "/photos/dakota-l-meyer.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Dakota_L._Meyer.JPG",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Marine Corps",
+      "width": 1200,
+      "height": 1500,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "henry-c-meyer",
     "name": "Henry C. Meyer",
     "nameSort": "Meyer, Henry C.",
@@ -89958,6 +90451,47 @@
     "wikidataId": "Q6230851"
   },
   {
+    "id": "john-p-murphy",
+    "name": "John P. Murphy",
+    "nameSort": "Murphy, John P.",
+    "last": "Murphy",
+    "first": "John",
+    "homeState": "Ohio",
+    "birth": "Ireland.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "john-p-murphy-1862-antietam-md",
+        "rank": "Private",
+        "unit": "Company K, 5th Ohio Infantry",
+        "branch": "U.S. Army",
+        "conflict": "Civil War",
+        "era": "Civil War",
+        "actionPlace": "Antietam, Maryland",
+        "actionDate": "1862-09-17",
+        "actionDateEnd": "1862-09-17",
+        "actionDateLabel": "17 September 1862",
+        "actionYear": 1862,
+        "posthumous": false,
+        "citation": "Capture of flag of 13th Alabama Infantry (C.S.A.).",
+        "issueDate": "11 September 1866",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations2.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/john-p-murphy"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "civil-war-antietam-maryland"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "michael-c-murphy",
     "name": "Michael C. Murphy",
     "nameSort": "Murphy, Michael C.",
@@ -90001,6 +90535,55 @@
     },
     "wikipedia": "https://en.wikipedia.org/wiki/Michael_C._Murphy_(New_York_politician)",
     "wikidataId": "Q6829036"
+  },
+  {
+    "id": "michael-p-murphy",
+    "name": "Michael P. Murphy",
+    "nameSort": "Murphy, Michael P.",
+    "last": "Murphy",
+    "first": "Michael",
+    "homeState": "New York",
+    "birth": "Patchogue, New York",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "michael-p-murphy-2005-asadabad",
+        "rank": "Lieutenant",
+        "unit": "Naval Special Warfare Task Unit Afghanistan",
+        "branch": "U.S. Navy",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Asadabad, Konar Province, Afghanistan",
+        "actionDate": "2005-06-27",
+        "actionDateEnd": "2005-06-28",
+        "actionDateLabel": "27–28 June 2005",
+        "actionYear": 2005,
+        "posthumous": true,
+        "citation": "For conspicuous gallantry and intrepidity at the risk of his life, above and beyond the call of duty, as the leader of a special reconnaissance element with Naval Special Warfare Task Unit Afghanistan on 27 and 28 June 2005. While leading a mission to locate a high-level anti-coalition militia leader, Lieutenant Murphy demonstrated extraordinary heroism in the face of grave danger in the vicinity of Asadabad, Konar Province, Afghanistan. On 28 June 2005, operating in an extremely rugged, enemy-controlled area, Lieutenant Murphy's team was discovered by anti-coalition militia sympathizers who revealed their position to Taliban fighters. As a result, between 30 and 40 enemy fighters besieged his four-member team. Demonstrating exceptional resolve, Lieutenant Murphy valiantly led his men in engaging the large enemy force. The ensuing fierce firefight resulted in numerous enemy casualties, as well as the wounding of all four members of his team. Ignoring his own wounds and demonstrating exceptional composure, Lieutenant Murphy continued to lead and encourage his men. When the primary communicator fell mortally wounded, Lieutenant Murphy repeatedly attempted to call for assistance for his beleaguered teammates. Realizing the impossibility of communicating in the extreme terrain and in the face of almost certain death, he fought his way into an open terrain to gain a better position to transmit a call. This deliberate heroic act deprived him of cover, exposing him to direct enemy fire. Finally achieving contact with his headquarters, Lieutenant Murphy maintained his exposed position while he provided his location and requested immediate support for his team. In his final act of bravery, he continued to engage the enemy until he was mortally wounded, gallantly giving his life for his country and for the cause of freedom. By his selfless leadership, courageous actions, and extraordinary devotion to duty, Lieutenant Murphy reflected great credit upon himself and upheld the highest traditions of the United States Naval Service.",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.history.navy.mil/browse-by-topic/heritage/awards/decorations/medal-of-honor/global-war-on-terrorism-medal-of-honor-recipients.html",
+        "sourceLabel": "Naval History and Heritage Command, Global War on Terrorism Medal of Honor recipients",
+        "extraSources": [
+          "https://www.navy.mil/MEDAL-OF-HONOR-RECIPIENT-MICHAEL-P-MURPHY",
+          "https://www.cmohs.org/recipients/michael-p-murphy"
+        ],
+        "nameNotes": [],
+        "battleId": "war-in-afghanistan-asadabad-konar-province-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "/photos/michael-p-murphy.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:US_Navy_050628-N-0000X-003_Navy_file_photo_of_SEAL_Lt._Michael_P._Murphy,_from_Patchogue,_N.Y.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Navy",
+      "width": 1200,
+      "height": 1600,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
   },
   {
     "id": "patrick-murphy",
@@ -92525,6 +93108,47 @@
     "wikidataId": "Q6280835"
   },
   {
+    "id": "richard-j-nolan",
+    "name": "Richard J. Nolan",
+    "nameSort": "Nolan, Richard J.",
+    "last": "Nolan",
+    "first": "Richard",
+    "homeState": null,
+    "birth": "Ireland.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "richard-j-nolan-1890-white-clay-creek-s-dak",
+        "rank": "Farrier",
+        "unit": "Company I, 7th U.S. Cavalry",
+        "branch": "U.S. Army",
+        "conflict": "Indian Wars",
+        "era": "Indian Wars",
+        "actionPlace": "White Clay Creek, South Dakota",
+        "actionDate": "1890-12-30",
+        "actionDateEnd": "1890-12-30",
+        "actionDateLabel": "30 December 1890",
+        "actionYear": 1890,
+        "posthumous": false,
+        "citation": "Bravery.",
+        "issueDate": "1 April 1891",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations3.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/richard-j-nolan"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "indian-wars-white-clay-creek-south-dakota"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "conrad-noll",
     "name": "Conrad Noll",
     "nameSort": "Noll, Conrad",
@@ -94551,6 +95175,47 @@
         ],
         "nameNotes": [],
         "battleId": "action-michael-h-ollis-michael-h-ollis-2013-ago"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "anton-olsen",
+    "name": "Anton Olsen",
+    "nameSort": "Olsen, Anton",
+    "last": "Olsen",
+    "first": "Anton",
+    "homeState": "Massachusetts",
+    "birth": "26 April 1867, Norway.",
+    "birthYear": 1867,
+    "awards": [
+      {
+        "awardId": "anton-olsen-1898-spanishamerican-war",
+        "rank": "Ordinary Seaman",
+        "unit": "U.S.S. Marblehead",
+        "branch": "U.S. Navy",
+        "conflict": "Spanish–American War",
+        "era": "Expeditions, 1871–1933",
+        "actionPlace": "Cienfuegos, Cuba",
+        "actionDate": "1898-05-11",
+        "actionDateEnd": "1898-05-11",
+        "actionDateLabel": "11 May 1898",
+        "actionYear": 1898,
+        "posthumous": false,
+        "citation": "On board the U.S.S. Marblehead during the operation of cutting the cable leading from Cienfuegos, Cuba, 11 May 1898. Facing the heavy fire of the enemy, Olsen displayed extraordinary bravery and coolness throughout this period.",
+        "issueDate": null,
+        "generalOrder": "529, 2 November 1899",
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations7.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/anton-olsen"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "spanishamerican-war-cienfuegos-cuba"
       }
     ],
     "photo": null,
@@ -102985,6 +103650,47 @@
     },
     "wikipedia": "https://en.wikipedia.org/wiki/Peter_Rafferty_(Medal_of_Honor)",
     "wikidataId": "Q96911986"
+  },
+  {
+    "id": "theodore-ragnar",
+    "name": "Theodore Ragnar",
+    "nameSort": "Ragnar, Theodore",
+    "last": "Ragnar",
+    "first": "Theodore",
+    "homeState": null,
+    "birth": "Sweden.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "theodore-ragnar-1890-white-clay-creek-s-dak",
+        "rank": "First Sergeant",
+        "unit": "Company K, 7th U.S. Cavalry",
+        "branch": "U.S. Army",
+        "conflict": "Indian Wars",
+        "era": "Indian Wars",
+        "actionPlace": "White Clay Creek, South Dakota",
+        "actionDate": "1890-12-30",
+        "actionDateEnd": "1890-12-30",
+        "actionDateLabel": "30 December 1890",
+        "actionYear": 1890,
+        "posthumous": false,
+        "citation": "Bravery.",
+        "issueDate": "13 April 1891",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations3.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/theodore-ragnar"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "indian-wars-white-clay-creek-south-dakota"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
   },
   {
     "id": "lawson-paterson-ramage",
@@ -116545,6 +117251,55 @@
     "wikidataId": null
   },
   {
+    "id": "britt-k-slabinski",
+    "name": "Britt K. Slabinski",
+    "nameSort": "Slabinski, Britt K.",
+    "last": "Slabinski",
+    "first": "Britt",
+    "homeState": "Massachusetts",
+    "birth": "Northampton, Massachusetts",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "britt-k-slabinski-2002-takur-ghar",
+        "rank": "Senior Chief Special Warfare Operator",
+        "unit": "Naval Special Warfare",
+        "branch": "U.S. Navy",
+        "conflict": "War in Afghanistan",
+        "era": "Since 1975",
+        "actionPlace": "Takur Ghar, Afghanistan",
+        "actionDate": "2002-03-04",
+        "actionDateEnd": "2002-03-04",
+        "actionDateLabel": "4 March 2002",
+        "actionYear": 2002,
+        "posthumous": false,
+        "citation": "For conspicuous gallantry and intrepidity at the risk of his life above and beyond the call of duty while assigned to a Joint Task Force in support of Operation ENDURING FREEDOM. In the early morning of 4 March 2002, Senior Chief Special Warfare Operator Slabinski led a reconnaissance team to its assigned area atop a 10,000-foot snow-covered mountain. Their insertion helicopter was suddenly riddled with rocket-propelled grenades and small arms fire from previously undetected enemy positions. The crippled helicopter lurched violently and ejected one teammate onto the mountain before the pilots were forced to crash land in the valley far below. Senior Chief Slabinski boldly rallied his five remaining team members and marshalled supporting assets for an assault to rescue their stranded teammate. During reinsertion the team came under fire from three directions, and one teammate started moving uphill toward an enemy strongpoint. Without regard for his own safety, Senior Chief Slabinski charged directly toward enemy fire to join his teammate. Together, they fearlessly assaulted and cleared the first bunker they encountered. The enemy then unleashed a hail of machine gun fire from a second hardened position only twenty meters away. Senior Chief Slabinski repeatedly exposed himself to deadly fire to personally engage the second enemy bunker and orient his team's fires in the furious, close-quarters firefight. Proximity made air support impossible, and after several teammates became casualties, the situation became untenable. Senior Chief Slabinski maneuvered his team to a more defensible position, directed air strikes in very close proximity to his team's position, and requested reinforcements. As daylight approached, accurate enemy mortar fire forced the team further down the sheer mountainside. Senior Chief Slabinski carried a seriously wounded teammate through deep snow and led a difficult trek across precipitous terrain while calling in fire on the enemy, which was engaging the team from the surrounding ridges. Throughout the next 14 hours, Senior Chief Slabinski stabilized the casualties and continued the fight against the enemy until the hill was secured and his team was extracted. By his undaunted courage, bold initiative, leadership, and devotion to duty, Senior Chief Slabinski reflected great credit upon himself and upheld the highest traditions of the United States Naval Service.",
+        "issueDate": "24 May 2018",
+        "generalOrder": null,
+        "sourceUrl": "https://www.navy.mil/MEDAL-OF-HONOR-RECIPIENT-BRITT-K-SLABINSKI",
+        "sourceLabel": "U.S. Navy, official citation for Britt K. Slabinski",
+        "extraSources": [
+          "https://www.history.navy.mil/browse-by-topic/heritage/awards/decorations/medal-of-honor/global-war-on-terrorism-medal-of-honor-recipients.html",
+          "https://www.cmohs.org/recipients/britt-k-slabinski"
+        ],
+        "nameNotes": [],
+        "battleId": "war-in-afghanistan-takur-ghar-afghanistan"
+      }
+    ],
+    "photo": {
+      "url": "/photos/britt-k-slabinski.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:180507-N-N0101-110_-_MCPO_Britt_Slabinski,_USN.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Navy",
+      "width": 1200,
+      "height": 1680,
+      "source": "U.S. government photograph via Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "clayton-k-slack",
     "name": "Clayton K. Slack",
     "nameSort": "Slack, Clayton K.",
@@ -127701,6 +128456,47 @@
     "wikidataId": "Q6309737"
   },
   {
+    "id": "frederick-e-toy",
+    "name": "Frederick E. Toy",
+    "nameSort": "Toy, Frederick E.",
+    "last": "Toy",
+    "first": "Frederick",
+    "homeState": "New York",
+    "birth": "Buffalo, N.Y.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "frederick-e-toy-1890-wounded-knee-creek-s-dak",
+        "rank": "First Sergeant",
+        "unit": "Company C, 7th U.S. Cavalry",
+        "branch": "U.S. Army",
+        "conflict": "Indian Wars",
+        "era": "Indian Wars",
+        "actionPlace": "Wounded Knee Creek, South Dakota",
+        "actionDate": "1890-12-29",
+        "actionDateEnd": "1890-12-29",
+        "actionDateLabel": "29 December 1890",
+        "actionYear": 1890,
+        "posthumous": false,
+        "citation": "Bravery.",
+        "issueDate": "26 May 1891",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations3.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/frederick-e-toy"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "indian-wars-wounded-knee-creek-south-dakota"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "andrew-j-tozier",
     "name": "Andrew J. Tozier",
     "nameSort": "Tozier, Andrew J.",
@@ -129202,6 +129998,162 @@
     "wikidataId": "Q5545392"
   },
   {
+    "id": "the-unknown-belgian-soldier",
+    "name": "The Unknown Belgian Soldier",
+    "nameSort": "Unknown, Belgian",
+    "last": "Unknown",
+    "first": "Belgian",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-belgian-soldier-world-war-i",
+        "rank": "General",
+        "unit": null,
+        "branch": "Unknown",
+        "conflict": "World War I",
+        "era": "World War I",
+        "actionPlace": null,
+        "actionDate": "1922-12-01",
+        "actionDateEnd": "1922-12-01",
+        "actionDateLabel": "1 Dec. 1922",
+        "actionYear": 1922,
+        "posthumous": true,
+        "citation": "By virtue of the authority vested by law in the President of the United States, the Congressional Medal of Honor, emblem of the highest military ideals and virtues, is bestowed in the name of the Congress of the United States upon the unknown, unidentified Belgian soldier in a desire to add all that is possible to the imperishable glory won by the soldiers of Belgium who fought as comrades of the American soldiers during the World War, and to commemorate with them the deeds of the nations associated with the United States of America, by paying this tribute to their unknown dead (A.G. 220.523) (War Department General Orders, No. 52, 1 Dec. 1922, Sec. 1).",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/unknown-soldier-of-belgium"
+        ],
+        "nameNotes": [],
+        "battleId": "action-the-unknown-belgian-soldier-unknown-belgian-soldier-world-war-i"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "the-unknown-british-soldier",
+    "name": "The Unknown British Soldier",
+    "nameSort": "Unknown, British",
+    "last": "Unknown",
+    "first": "British",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-british-soldier-world-war-i",
+        "rank": "General",
+        "unit": null,
+        "branch": "Unknown",
+        "conflict": "World War I",
+        "era": "World War I",
+        "actionPlace": "Westminster Abbey, London, England",
+        "actionDate": "1921-03-04",
+        "actionDateEnd": "1921-03-04",
+        "actionDateLabel": "4 March 1921",
+        "actionYear": 1921,
+        "posthumous": true,
+        "citation": "By virtue of an act of Congress approved 4 March 1921, the Medal of Honor, emblem of highest ideals and virtues, is bestowed in the name of the Congress of the United States upon the unknown, unidentified British soldier and French soldier buried, respectively, in Westminster Abbey and Arc de Triomphe. The President is authorized to bestow the Congressional Medal of Honor upon the unknown, unidentified British soldier buried in Westminster Abbey, London, England (A.G. 220.523) (War Department General Orders, No. 52, 1 Dec. 1922, Sec. II).",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/unknown-soldier-of-great-britain"
+        ],
+        "nameNotes": [],
+        "battleId": "world-war-i-westminster-abbey-london-england"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "the-unknown-french-soldier",
+    "name": "The Unknown French Soldier",
+    "nameSort": "Unknown, French",
+    "last": "Unknown",
+    "first": "French",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-french-soldier-world-war-i",
+        "rank": "General",
+        "unit": null,
+        "branch": "Unknown",
+        "conflict": "World War I",
+        "era": "World War I",
+        "actionPlace": "Arc de Triomphe, Paris, France",
+        "actionDate": "1921-03-04",
+        "actionDateEnd": "1921-03-04",
+        "actionDateLabel": "4 March 1921",
+        "actionYear": 1921,
+        "posthumous": true,
+        "citation": "By virtue of an act of Congress approved 4 March 1921, the Medal of Honor, emblem of highest ideals and virtues, is bestowed in the name of the Congress of the United States upon the unknown, unidentified British soldier and French soldier buried, respectively, in Westminster Abbey and Arc de Triomphe. The President is authorized to bestow the Congressional Medal of Honor upon the unknown, unidentified French soldier buried in the Arc de Triomphe, Paris, France (A.G. 220.523) (War Department General Orders, No. 52, 1 Dec. 1922, Sec. II).",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/unknown-soldier-of-france"
+        ],
+        "nameNotes": [],
+        "battleId": "world-war-i-arc-de-triomphe-paris-france"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "the-unknown-italian-soldier",
+    "name": "The Unknown Italian Soldier",
+    "nameSort": "Unknown, Italian",
+    "last": "Unknown",
+    "first": "Italian",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-italian-soldier-world-war-i",
+        "rank": "General",
+        "unit": null,
+        "branch": "Unknown",
+        "conflict": "World War I",
+        "era": "World War I",
+        "actionPlace": "National Monument Victor Emmanuel Ii, Rome, Italy",
+        "actionDate": "1921-10-12",
+        "actionDateEnd": "1921-10-12",
+        "actionDateLabel": "12 October 1921",
+        "actionYear": 1921,
+        "posthumous": true,
+        "citation": "By virtue of a joint resolution of Congress, approved 12 October 1921, the Medal of Honor, emblem of highest ideals and virtues, is bestowed in the name of the Congress of the United States upon the unknown, unidentified Italian soldier to be buried in the National Monument to Victor Emmanuel II, in Rome, Italy (A.G. 220.523) (War Department General Orders, No. 52, 1 Dec. 1922, Sec. II).",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/unknown-soldier-of-italy"
+        ],
+        "nameNotes": [],
+        "battleId": "world-war-i-national-monument-victor-emmanuel-ii-rome-italy"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
     "id": "the-unknown-american-of-the-korean-war",
     "name": "The Unknown American of the Korean War",
     "nameSort": "Unknown, Korean War",
@@ -129232,6 +130184,86 @@
         "extraSources": [],
         "nameNotes": [],
         "battleId": "korean-war-overseas-buried-at-arlington-national-cemetery"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "the-unknown-rumanian-soldier",
+    "name": "The Unknown Rumanian Soldier",
+    "nameSort": "Unknown, Rumanian",
+    "last": "Unknown",
+    "first": "Rumanian",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-rumanian-soldier-world-war-i",
+        "rank": "General",
+        "unit": null,
+        "branch": "Unknown",
+        "conflict": "World War I",
+        "era": "World War I",
+        "actionPlace": null,
+        "actionDate": "1923-05-17",
+        "actionDateEnd": "1923-05-17",
+        "actionDateLabel": "17 May 1923",
+        "actionYear": 1923,
+        "posthumous": true,
+        "citation": "By virtue of the authority vested by law in the President of the United States, the Congressional Medal of Honor, emblem of the highest military ideals and virtues, is bestowed in the name of the Congress of the United States upon the unknown, unidentified Rumanian soldier in a desire to add all that is possible to the imperishable glory won by the soldiers of Rumania who fought as comrades of the American soldiers during the World War, and to commemorate with them the deeds of the nations associated with the United States of America, by paying this tribute to their unknown dead (A.G. 220.52, 17 May 1923) (War Department General Orders, No. 22, 6 June 1923).",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/unknown-soldier-of-rumania"
+        ],
+        "nameNotes": [],
+        "battleId": "action-the-unknown-rumanian-soldier-unknown-rumanian-soldier-world-war-i"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "the-unknown-american-of-world-war-i",
+    "name": "The Unknown American of World War I",
+    "nameSort": "Unknown, World War I",
+    "last": "Unknown",
+    "first": "World War I",
+    "homeState": null,
+    "birth": null,
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "unknown-american-world-war-i",
+        "rank": "General",
+        "unit": null,
+        "branch": "U.S. Armed Forces",
+        "conflict": "World War I",
+        "era": "World War I",
+        "actionPlace": null,
+        "actionDate": "1921-08-24",
+        "actionDateEnd": "1921-08-24",
+        "actionDateLabel": "24 August 1921",
+        "actionYear": 1921,
+        "posthumous": true,
+        "citation": "By virtue of an act of Congress approved 24 August 1921, the Medal of Honor, emblem of highest ideals and virtues is bestowed in the name of the Congress of the United States upon the unknown American, typifying the gallantry and intrepidity, at the risk of life above and beyond the call of duty, of our beloved heroes who made the supreme sacrifice in the World War. They died in order that others might live (293.8, A.G.O.) (War Department General Orders, No. 59, 13 Dec. 1921, sec. I).",
+        "issueDate": null,
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations28.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index, special legislation",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/unknown-soldier-of-united-states-1"
+        ],
+        "nameNotes": [
+          "The Vietnam War unknown's award was rescinded after the remains were identified and is not included."
+        ],
+        "battleId": "action-the-unknown-american-of-world-war-i-unknown-american-world-war-i"
       }
     ],
     "photo": null,
@@ -139243,6 +140275,47 @@
         "extraSources": [],
         "nameNotes": [],
         "battleId": "indian-wars-red-river-texas"
+      }
+    ],
+    "photo": null,
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  {
+    "id": "william-o-wilson",
+    "name": "William O. Wilson",
+    "nameSort": "Wilson, William O.",
+    "last": "Wilson",
+    "first": "William",
+    "homeState": "Minnesota",
+    "birth": "Hagerstown, Md.",
+    "birthYear": null,
+    "awards": [
+      {
+        "awardId": "william-o-wilson-1890-indian-wars",
+        "rank": "Corporal",
+        "unit": "Company I, 9th U.S. Cavalry",
+        "branch": "U.S. Army",
+        "conflict": "Indian Wars",
+        "era": "Indian Wars",
+        "actionPlace": "Sioux Campaign",
+        "actionDate": null,
+        "actionDateEnd": null,
+        "actionDateLabel": "1890",
+        "actionYear": 1890,
+        "posthumous": false,
+        "citation": "Bravery.",
+        "issueDate": "17 September 1891",
+        "generalOrder": null,
+        "sourceUrl": "https://www.army.mil/medalofhonor/citations3.html",
+        "sourceLabel": "U.S. Army Medal of Honor citation index",
+        "extraSources": [
+          "https://www.cmohs.org/recipients/william-o-wilson"
+        ],
+        "nameNotes": [
+          "The Army citation index prints this entry, and the site parser had dropped it. Awarded posthumously was checked on the Congressional Medal of Honor Society page listed with the sources. That page is a reference only. Its prose is not copied here."
+        ],
+        "battleId": "indian-wars-sioux-campaign"
       }
     ],
     "photo": null,
