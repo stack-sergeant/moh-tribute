@@ -49,12 +49,24 @@ const defaultCard = usesDefaultSocialImage(image, site.origin);
 const socialAlt = defaultCard ? DEFAULT_SOCIAL_ALT : imageAlt || title;
 const socialWidth = defaultCard ? DEFAULT_SOCIAL_WIDTH : imageWidth;
 const socialHeight = defaultCard ? DEFAULT_SOCIAL_HEIGHT : imageHeight;
+const navPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const navLinks = [
+  { href: "/recipients", label: "Recipients" },
+  { href: "/battles", label: "Battles" },
+  { href: "/on-this-day", label: "On this day" },
+  { href: "/audio", label: "Cadences" },
+  { href: "/directory", label: "Directory" },
+  { href: "/about", label: "About" },
+];
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      document.documentElement.classList.add("js");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -78,17 +90,29 @@ const socialHeight = defaultCard ? DEFAULT_SOCIAL_HEIGHT : imageHeight;
     <a class="skip" href="#content">Skip to content</a>
     <header class:list={["site-header", { overlay }]}>
       <div class="header-inner">
-        <div>
+        <div class="brand">
           <a class="wordmark" href="/">{site.name}</a>
-          <p class="tagline">{site.tagline}</p>
+          <p class="tagline">
+            <span class="tagline-full">{site.tagline}</span>
+            <span class="tagline-short">Unofficial archive</span>
+          </p>
         </div>
-        <nav class="nav" aria-label="Primary">
-          <a href="/recipients">Recipients</a>
-          <a href="/battles">Battles</a>
-          <a href="/on-this-day">On this day</a>
-          <a href="/audio">Cadences</a>
-          <a href="/directory">Directory</a>
-          <a href="/about">About</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-toggle-text">
+            <span class="nav-label-open">Menu</span>
+            <span class="nav-label-close">Close</span>
+          </span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          {navLinks.map((link) => (
+            <a
+              href={link.href}
+              aria-current={navPath === link.href || navPath.startsWith(`${link.href}/`) ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
@@ -99,6 +123,7 @@ const socialHeight = defaultCard ? DEFAULT_SOCIAL_HEIGHT : imageHeight;
       {sponsorBar && <SponsorBar />}
       <NewsletterSignup />
       <div class="footer-inner">
+        <slot name="credits" />
         <p>{disclaimer}</p>
         <p>
           Official citations are U.S. government works. Photographs are shown only
@@ -113,5 +138,43 @@ const socialHeight = defaultCard ? DEFAULT_SOCIAL_HEIGHT : imageHeight;
       </div>
     </footer>
     <CadencePlayer />
+    <script>
+      const mark = window;
+      if (!mark.__navBound) {
+        mark.__navBound = true;
+        const mobileNav = window.matchMedia("(max-width: 767px)");
+
+        function setMenu(open) {
+          const header = document.querySelector(".site-header");
+          const toggle = header?.querySelector(".nav-toggle");
+          if (!header || !(toggle instanceof HTMLButtonElement)) return;
+          const show = Boolean(open) && mobileNav.matches;
+          header.classList.toggle("menu-open", show);
+          toggle.setAttribute("aria-expanded", show ? "true" : "false");
+        }
+
+        document.addEventListener("click", (event) => {
+          if (!(event.target instanceof Element)) return;
+          const toggle = event.target.closest(".nav-toggle");
+          if (toggle) {
+            setMenu(toggle.getAttribute("aria-expanded") !== "true");
+            return;
+          }
+          const header = document.querySelector(".site-header");
+          if (!header?.classList.contains("menu-open")) return;
+          if (!header.contains(event.target) || event.target.closest("#site-nav a")) setMenu(false);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key !== "Escape") return;
+          const header = document.querySelector(".site-header.menu-open");
+          if (!header) return;
+          setMenu(false);
+          header.querySelector(".nav-toggle")?.focus();
+        });
+
+        mobileNav.addEventListener("change", () => setMenu(false));
+      }
+    </script>
   </body>
 </html>

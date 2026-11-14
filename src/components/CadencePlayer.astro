@@ -6,29 +6,42 @@ const playlist = cadences.map((track) => ({
   label: track.playerLabel,
 }));
 ---
-<div id="cadence-player" class="cadence" transition:persist="cadence-player" transition:animate="none">
+<div id="cadence-player" class="cadence" data-expanded="false" transition:persist="cadence-player" transition:animate="none">
   <audio id="cadence-audio" preload="none"></audio>
-  <button type="button" id="cadence-toggle" aria-pressed="false" aria-label="Play cadences">
+  <button
+    type="button"
+    id="cadence-toggle"
+    aria-pressed="false"
+    aria-expanded="false"
+    aria-controls="cadence-controls"
+    aria-label="Play cadences"
+  >
+    <span class="cadence-icon" aria-hidden="true"></span>
     <span class="cadence-label">Play cadences</span>
   </button>
-  <p class="cadence-now">
-    <span class="cadence-kicker" id="cadence-kicker">Ready</span>
-    <span id="cadence-name" aria-live="polite">{playlist[0]?.label}</span>
-  </p>
-  <button type="button" id="cadence-next" aria-label="Next cadence">Next</button>
-  <label class="cadence-vol">
-    <span id="cadence-vol-label">Volume</span>
-    <input
-      id="cadence-volume"
-      type="range"
-      min="0"
-      max="100"
-      value="25"
-      step="5"
-      aria-labelledby="cadence-vol-label"
-    />
-  </label>
-  <a class="cadence-credits" href="/audio">Audio credits</a>
+  <div id="cadence-controls" class="cadence-controls">
+    <p class="cadence-now">
+      <span class="cadence-kicker" id="cadence-kicker">Ready</span>
+      <span id="cadence-name" aria-live="polite">{playlist[0]?.label}</span>
+    </p>
+    <button type="button" id="cadence-next" aria-label="Next cadence">Next</button>
+    <label class="cadence-vol">
+      <span id="cadence-vol-label">Volume</span>
+      <input
+        id="cadence-volume"
+        type="range"
+        min="0"
+        max="100"
+        value="25"
+        step="5"
+        aria-labelledby="cadence-vol-label"
+      />
+    </label>
+    <a class="cadence-credits" href="/audio">Audio credits</a>
+    <button type="button" id="cadence-collapse" aria-label="Hide cadence controls">
+      <span aria-hidden="true">Close</span>
+    </button>
+  </div>
 </div>
 <script define:vars={{ playlist }}>
   const storageKey = "valor-record-cadence";
@@ -36,6 +49,7 @@ const playlist = cadences.map((track) => ({
   const audio = document.getElementById("cadence-audio");
   const toggle = document.getElementById("cadence-toggle");
   const nextButton = document.getElementById("cadence-next");
+  const collapse = document.getElementById("cadence-collapse");
   const volume = document.getElementById("cadence-volume");
   const nameEl = document.getElementById("cadence-name");
   const kicker = document.getElementById("cadence-kicker");
@@ -64,6 +78,7 @@ const playlist = cadences.map((track) => ({
     !(audio instanceof HTMLAudioElement) ||
     !(toggle instanceof HTMLButtonElement) ||
     !(nextButton instanceof HTMLButtonElement) ||
+    !(collapse instanceof HTMLButtonElement) ||
     !(volume instanceof HTMLInputElement) ||
     !nameEl ||
     !root ||
@@ -95,6 +110,18 @@ const playlist = cadences.map((track) => ({
       root.dataset.playing = on ? "true" : "false";
     }
 
+    const compactQuery = window.matchMedia("(max-width: 767px)");
+
+    function syncExpanded() {
+      const open = !compactQuery.matches || root.dataset.expanded === "true";
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    function setExpanded(open) {
+      root.dataset.expanded = open ? "true" : "false";
+      syncExpanded();
+    }
+
     function absolute(src) {
       return new URL(src, location.origin).href;
     }
@@ -119,12 +146,14 @@ const playlist = cadences.map((track) => ({
 
     show(index);
     setPlaying(false);
+    syncExpanded();
     if (saved.enabled) {
       toggle.setAttribute("aria-label", "Resume cadences");
       if (label) label.textContent = "Resume cadences";
     }
 
     toggle.addEventListener("click", async () => {
+      if (compactQuery.matches) setExpanded(true);
       if (!audio.paused && !audio.ended) {
         audio.pause();
         setPlaying(false);
@@ -160,6 +189,26 @@ const playlist = cadences.map((track) => ({
       audio.volume = Number(volume.value) / 100;
       writeState({ volume: audio.volume });
     });
+
+    collapse.addEventListener("click", () => {
+      setExpanded(false);
+      toggle.focus({ preventScroll: true });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!compactQuery.matches || root.dataset.expanded !== "true") return;
+      if (!(event.target instanceof Node) || root.contains(event.target)) return;
+      setExpanded(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !compactQuery.matches || root.dataset.expanded !== "true") return;
+      if (document.querySelector(".site-header.menu-open")) return;
+      setExpanded(false);
+      toggle.focus({ preventScroll: true });
+    }, true);
+
+    compactQuery.addEventListener("change", syncExpanded);
 
     audio.addEventListener("ended", async () => {
       resumeAt = 0;

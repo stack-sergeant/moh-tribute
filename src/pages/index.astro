@@ -5,6 +5,8 @@ import { actLine, datasetStats, eraSlug, featuredPool, storyLabel } from "../lib
 import { site } from "../site";
 
 const conflictCount = Object.keys(datasetStats.byConflict).length;
+const capersSourceUrl =
+  "https://www.dvidshub.net/news/568137/two-marine-corps-legends-awarded-medal-honor-inducted-into-hall-heroes";
 const pool = featuredPool().map((person) => {
   const award = person.awards[0];
   return {
@@ -25,23 +27,15 @@ const first = pool[0];
     <img class="hero-photo" src={heroScene.url} alt={heroScene.alt} />
     <div class="hero-shade"></div>
     <div class="hero-copy">
-      <p class="kicker">Unofficial archive · Every recorded recipient</p>
       <h1>Above<br /><span>and beyond</span></h1>
-      <blockquote>
+      <blockquote cite={capersSourceUrl}>
         <p>“This medal does not belong to me. It belongs to the exceptional men who fought with me.”</p>
-        <footer>
-          James Capers Jr., Medal of Honor recipient, June 2026.
-          Published by the U.S. Marine Corps on DVIDS.
-        </footer>
+        <footer>James Capers Jr., Medal of Honor recipient</footer>
       </blockquote>
       <div class="hero-actions">
         <a class="btn" href="/recipients">Find a recipient</a>
         <a class="btn ghost" href="#featured">Today’s hero</a>
       </div>
-      <p class="hero-credit">
-        {heroScene.credit}. {heroScene.license}.
-        <a href={heroScene.sourceUrl}>Photograph source</a>.
-      </p>
     </div>
   </section>
 
@@ -99,6 +93,15 @@ const first = pool[0];
       Credits are on each image’s Wikimedia page, linked from the battle hubs that use them.
     </p>
     <p><a href="/battles">All battle and action pages</a></p>
+  </div>
+  <div class="page-credits" slot="credits">
+    <p class="credit-line">
+      {heroScene.credit}. {heroScene.license}.
+      <a href={heroScene.sourceUrl}>Photograph source</a>.
+    </p>
+    <p class="credit-line">
+      Quotation published by the <a href={capersSourceUrl}>U.S. Marine Corps on DVIDS, June 2026</a>.
+    </p>
   </div>
 </Base>
 
