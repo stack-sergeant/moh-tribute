@@ -31,6 +31,8 @@ interface Props {
   imageHeight?: number;
   /** Directory pages add the labeled sponsor bar in the footer. */
   sponsorBar?: boolean;
+  /** Error document. Search engines should not index it. */
+  noindex?: boolean;
 }
 const {
   title,
@@ -41,6 +43,7 @@ const {
   imageWidth,
   imageHeight,
   sponsorBar = false,
+  noindex = false,
 } = Astro.props;
 const fullTitle = title === site.name ? title : `${title} · ${site.name}`;
 const canonical = pageUrl(Astro.url.pathname);
@@ -69,6 +72,7 @@ const navLinks = [
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : null}
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
