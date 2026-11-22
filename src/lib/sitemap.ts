@@ -1,6 +1,25 @@
 /** Sitemap protocol limit for URLs in one file. */
 export const SITEMAP_URL_LIMIT = 50_000;
 
+/**
+ * The not-found page is a host error document, not an archive URL.
+ * `/404` is the canonical form. `/404.html` is the file Render serves.
+ */
+const NOT_FOUND_PATHS = new Set(["/404", "/404.html", "/404/"]);
+
+export function isNotFoundLocation(value: string): boolean {
+  let path = value.split("?")[0].split("#")[0];
+  if (path.includes("://")) {
+    try {
+      path = new URL(path).pathname;
+    } catch {
+      return false;
+    }
+  }
+  if (!path.startsWith("/")) path = `/${path}`;
+  return NOT_FOUND_PATHS.has(path);
+}
+
 const URLSET_NS = "http://www.sitemaps.org/schemas/sitemap/0.9";
 
 export interface SitemapFile {
