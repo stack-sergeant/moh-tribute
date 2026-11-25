@@ -1,6 +1,9 @@
 import battles from "../../data/battles.json";
 import recipients from "../../data/recipients.json";
 import stats from "../../data/stats.json";
+import { eraSlug } from "./recipient-meta.mjs";
+
+export { eraSlug };
 
 export interface Photo {
   url: string;
@@ -100,10 +103,6 @@ export function states() {
 
 export function eras() {
   return Object.entries(datasetStats.byEra).filter(([, count]) => count > 0);
-}
-
-export function eraSlug(era: string) {
-  return era.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 export function actLine(citation: string) {
