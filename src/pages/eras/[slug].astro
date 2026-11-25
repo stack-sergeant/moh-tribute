@@ -1,13 +1,11 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { sceneForEra } from "../../lib/imagery";
-import { allRecipients, eras } from "../../lib/records";
+import { allRecipients, eraSlug, eras } from "../../lib/records";
 
 export function getStaticPaths() {
   return eras().map(([era, count]) => ({
-    params: {
-      slug: era.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-    },
+    params: { slug: eraSlug(era) },
     props: { era, count },
   }));
 }

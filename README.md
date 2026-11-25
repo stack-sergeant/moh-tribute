@@ -104,4 +104,4 @@ The production build writes `dist/sitemap.xml` from the pages it just generated.
 
 `public/robots.txt` allows every crawler and points to `https://valorrecord.com/sitemap.xml`.
 
-Canonical and social tags use those same page URLs, without a trailing slash except on the homepage. A recipient page uses that person's public-domain photograph when one is already on the page. Every other page uses the public-domain D-Day photograph already shown on the homepage.
+Canonical and social tags use those same page URLs, without a trailing slash except on the homepage. A recipient page with a photograph uses a 1200×630 card built from that photograph (`node scripts/render-recipient-og.mjs`), with the whole picture letterboxed beside the name. The page still shows the original file, license, and credit. Pages without a photograph, and every other page, use the public-domain D-Day card at `/og.png`.
