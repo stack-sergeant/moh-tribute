@@ -177,10 +177,16 @@ test("Person and BreadcrumbList JSON-LD use known facts and real site urls", () 
     origin,
     url: `${origin}/recipients/john-u-d-page`,
   });
-  assert.equal(page["@graph"][0].image, undefined);
+  assert.equal(page["@graph"][0].image, "https://valorrecord.com/photos/john-u-d-page.jpg");
   assert.equal(page["@graph"][0].birthDate, "1904-02-08");
   assert.equal(page["@graph"][0].deathDate, undefined);
   assert.equal(page["@graph"][1].itemListElement[2].item, "https://valorrecord.com/eras/korean-war");
+
+  const given = recipientStructuredData(person("john-j-given"), {
+    origin,
+    url: `${origin}/recipients/john-j-given`,
+  });
+  assert.equal(given["@graph"][0].image, undefined);
 
   const bellavia = recipientStructuredData(person("david-g-bellavia"), {
     origin,
@@ -283,7 +289,8 @@ test("photo recipients have a 1200 by 630 share card and others keep the default
   for (const id of ["david-g-bellavia", "william-kyle-carpenter", "roy-p-benavidez", "dr-mary-e-walker"]) {
     assert.equal(basename(recipientShareImagePath(person(id))), `${id}.jpg`);
   }
-  assert.equal(recipientShareImagePath(person("john-u-d-page")), null);
+  assert.equal(recipientShareImagePath(person("john-u-d-page")), "/og/recipients/john-u-d-page.jpg");
+  assert.equal(recipientShareImagePath(person("john-j-given")), null);
 });
 
 test("sample share cards contain the photograph, not a blank field", async () => {
