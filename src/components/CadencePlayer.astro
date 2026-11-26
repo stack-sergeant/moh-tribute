@@ -203,7 +203,7 @@ const playlist = cadences.map((track) => ({
 
     document.addEventListener("keydown", (event) => {
       if (event.key !== "Escape" || !compactQuery.matches || root.dataset.expanded !== "true") return;
-      if (document.querySelector(".site-header.menu-open")) return;
+      if (document.querySelector(".site-header.menu-open, .nav-check:checked")) return;
       setExpanded(false);
       toggle.focus({ preventScroll: true });
     }, true);

@@ -66,9 +66,6 @@ const navLinks = [
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <script is:inline>
-      document.documentElement.classList.add("js");
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -101,13 +98,21 @@ const navLinks = [
             <span class="tagline-short">Unofficial archive</span>
           </p>
         </div>
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="nav-toggle-text">
-            <span class="nav-label-open">Menu</span>
-            <span class="nav-label-close">Close</span>
-          </span>
-        </button>
+        <div class="nav-control">
+          <input
+            type="checkbox"
+            id="site-nav-toggle"
+            class="nav-check"
+            aria-controls="site-nav"
+          />
+          <label class="nav-toggle" for="site-nav-toggle">
+            <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="nav-toggle-text">
+              <span class="nav-label-open">Menu</span>
+              <span class="nav-label-close">Close</span>
+            </span>
+          </label>
+        </div>
         <nav class="nav" id="site-nav" aria-label="Primary">
           {navLinks.map((link) => (
             <a
@@ -148,36 +153,65 @@ const navLinks = [
         mark.__navBound = true;
         const mobileNav = window.matchMedia("(max-width: 767px)");
 
-        function setMenu(open) {
-          const header = document.querySelector(".site-header");
-          const toggle = header?.querySelector(".nav-toggle");
-          if (!header || !(toggle instanceof HTMLButtonElement)) return;
-          const show = Boolean(open) && mobileNav.matches;
-          header.classList.toggle("menu-open", show);
-          toggle.setAttribute("aria-expanded", show ? "true" : "false");
+        function inputEl(header = document.querySelector(".site-header")) {
+          const input = header?.querySelector(".nav-check");
+          return input instanceof HTMLInputElement ? input : null;
         }
+
+        function sync(input) {
+          if (!input) return;
+          const show = input.checked && mobileNav.matches;
+          if (input.checked !== show) input.checked = show;
+          input.setAttribute("role", "button");
+          input.setAttribute("aria-expanded", show ? "true" : "false");
+          input.setAttribute("aria-controls", "site-nav");
+          input.closest(".site-header")?.classList.toggle("menu-open", show);
+        }
+
+        document.addEventListener("change", (event) => {
+          const input = event.target;
+          if (input instanceof HTMLInputElement && input.classList.contains("nav-check")) sync(input);
+        });
 
         document.addEventListener("click", (event) => {
           if (!(event.target instanceof Element)) return;
-          const toggle = event.target.closest(".nav-toggle");
-          if (toggle) {
-            setMenu(toggle.getAttribute("aria-expanded") !== "true");
-            return;
-          }
+          if (event.target.closest(".nav-control")) return;
           const header = document.querySelector(".site-header");
-          if (!header?.classList.contains("menu-open")) return;
-          if (!header.contains(event.target) || event.target.closest("#site-nav a")) setMenu(false);
+          const input = inputEl(header ?? undefined);
+          if (!header || !input?.checked) return;
+          if (!header.contains(event.target) || event.target.closest("#site-nav a")) {
+            input.checked = false;
+            sync(input);
+          }
         });
 
         document.addEventListener("keydown", (event) => {
-          if (event.key !== "Escape") return;
-          const header = document.querySelector(".site-header.menu-open");
-          if (!header) return;
-          setMenu(false);
-          header.querySelector(".nav-toggle")?.focus();
+          const input = inputEl();
+          if (!input) return;
+          if ((event.key === "Enter" || event.key === " ") && event.target === input) {
+            event.preventDefault();
+            input.checked = !input.checked;
+            sync(input);
+            return;
+          }
+          if (event.key !== "Escape" || !input.checked) return;
+          input.checked = false;
+          sync(input);
+          input.focus();
         });
 
-        mobileNav.addEventListener("change", () => setMenu(false));
+        mobileNav.addEventListener("change", () => {
+          const input = inputEl();
+          if (!input?.checked) return;
+          input.checked = false;
+          sync(input);
+        });
+
+        document.addEventListener("astro:page-load", () => {
+          const input = inputEl();
+          if (input) sync(input);
+        });
+        sync(inputEl());
       }
     </script>
   </body>
