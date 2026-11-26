@@ -12,6 +12,7 @@
  *   node scripts/render-recipient-og.mjs
  *   node scripts/render-recipient-og.mjs --force roy-p-benavidez
  */
+import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -31,6 +32,13 @@ const BOX_H = 586;
 const TEXT_X = 608;
 const TEXT_W = WIDTH - TEXT_X - 48;
 const BYTE_BUDGET = 70_000;
+const RULE_Y = 96;
+const RULE_H = 3;
+const EYEBROW_SIZE = 18;
+const EYEBROW_BASELINE = 136;
+// Oswald round capitals reach 820/1000 of the em. Text y is the baseline,
+// so the name starts one eyebrow-gap below the label plus that cap height.
+const CAP_RATIO = 820 / 1000;
 
 const INK = "#f4efe4";
 const MUTED = "#c8bfb0";
@@ -58,7 +66,7 @@ function xmlEscape(value) {
     .replace(/'/g, "&apos;");
 }
 
-function textWidth(text, fontSize) {
+function approxWidth(text, fontSize) {
   let width = 0;
   for (const char of text) {
     const factor = /[ilI1.,'`|!]/.test(char) ? 0.28 : /[MWmwOQ@%]/.test(char) ? 0.68 : 0.5;
@@ -67,13 +75,92 @@ function textWidth(text, fontSize) {
   return width;
 }
 
-function wrapToWidth(text, fontSize, maxWidth) {
+// librsvg does not apply the embedded face, so it draws whatever fontconfig
+// resolves for "Oswald Semi". Wrapping uses the wider of that font and the
+// estimate above, so a line stays inside the card.
+function resolvedAdvances() {
+  let file;
+  try {
+    file = execFileSync("fc-match", ["-f", "%{file}", "Oswald Semi"], { encoding: "utf8" }).trim();
+  } catch {
+    return null;
+  }
+  try {
+    return readAdvances(readFileSync(file));
+  } catch {
+    return null;
+  }
+}
+
+function readAdvances(data) {
+  const u16 = (offset) => data.readUInt16BE(offset);
+  const u32 = (offset) => data.readUInt32BE(offset);
+  const i16 = (offset) => data.readInt16BE(offset);
+  const numTables = u16(4);
+  const tables = new Map();
+  for (let i = 0; i < numTables; i++) {
+    const base = 12 + i * 16;
+    tables.set(data.toString("latin1", base, base + 4), u32(base + 8));
+  }
+  const unitsPerEm = u16(tables.get("head") + 18);
+  const numHMetrics = u16(tables.get("hhea") + 34);
+  const hmtx = tables.get("hmtx");
+  const glyphAdvance = [];
+  for (let i = 0; i < numHMetrics; i++) glyphAdvance.push(u16(hmtx + i * 4));
+  const cmap = tables.get("cmap");
+  const encodings = u16(cmap + 2);
+  let subtable = null;
+  for (let i = 0; i < encodings; i++) {
+    const record = cmap + 4 + i * 8;
+    const offset = cmap + u32(record + 4);
+    if (u16(offset) === 4) subtable = offset;
+  }
+  if (subtable == null) return null;
+  const segCount = u16(subtable + 6) / 2;
+  const endCount = subtable + 14;
+  const startCount = endCount + segCount * 2 + 2;
+  const idDelta = startCount + segCount * 2;
+  const idRangeOffset = idDelta + segCount * 2;
+  const advances = new Map();
+  for (let i = 0; i < segCount; i++) {
+    const end = u16(endCount + i * 2);
+    const start = u16(startCount + i * 2);
+    const delta = i16(idDelta + i * 2);
+    const range = u16(idRangeOffset + i * 2);
+    for (let code = start; code <= end && code < 0xffff; code++) {
+      let glyph = range === 0 ? (code + delta) & 0xffff : u16(idRangeOffset + i * 2 + range + (code - start) * 2);
+      if (range !== 0 && glyph !== 0) glyph = (glyph + delta) & 0xffff;
+      if (glyph === 0) continue;
+      const units = glyph < numHMetrics ? glyphAdvance[glyph] : glyphAdvance[numHMetrics - 1];
+      advances.set(code, units / unitsPerEm);
+    }
+  }
+  return advances;
+}
+
+const drawnAdvances = resolvedAdvances();
+
+function drawnWidth(text, fontSize) {
+  if (!drawnAdvances) return 0;
+  let width = 0;
+  for (const char of text) {
+    const advance = drawnAdvances.get(char.codePointAt(0));
+    width += (advance ?? 0.5) * fontSize;
+  }
+  return width;
+}
+
+function textWidth(text, fontSize) {
+  return Math.max(approxWidth(text, fontSize), drawnWidth(text, fontSize));
+}
+
+function wrapToWidth(text, fontSize, maxWidth, measure = approxWidth) {
   const words = String(text || "").split(/\s+/).filter(Boolean);
   const lines = [];
   let current = "";
   for (const word of words) {
     const next = current ? `${current} ${word}` : word;
-    if (current && textWidth(next, fontSize) > maxWidth) {
+    if (current && measure(next, fontSize) > maxWidth) {
       lines.push(current);
       current = word;
     } else {
@@ -86,12 +173,19 @@ function wrapToWidth(text, fontSize, maxWidth) {
 
 function fitLines(text, { size, min, maxLines, width }) {
   let fontSize = size;
-  let lines = wrapToWidth(text, fontSize, width);
+  let lines = wrapToWidth(text, fontSize, width, textWidth);
   while (lines.length > maxLines && fontSize > min) {
     fontSize -= 1;
-    lines = wrapToWidth(text, fontSize, width);
+    lines = wrapToWidth(text, fontSize, width, textWidth);
   }
   return { fontSize, lines };
+}
+
+function nameBaseline(fontSize) {
+  const ruleBottom = RULE_Y + RULE_H;
+  const eyebrowTop = EYEBROW_BASELINE - EYEBROW_SIZE * CAP_RATIO;
+  const gap = eyebrowTop - ruleBottom;
+  return Math.round(EYEBROW_BASELINE + gap + fontSize * CAP_RATIO);
 }
 
 function compactCredit(credit) {
@@ -118,7 +212,7 @@ function textSvg(person) {
   const creditLines = credit ? wrapToWidth(credit, 16, TEXT_W).slice(0, 2) : [];
 
   const blocks = [];
-  let y = 168;
+  let y = nameBaseline(nameFit.fontSize);
   for (const line of nameFit.lines) {
     blocks.push(lineText(line, y, nameFit.fontSize, INK, "Oswald Semi", 0));
     y += nameFit.fontSize + 8;
@@ -148,8 +242,8 @@ function textSvg(person) {
   return Buffer.from(`<svg width="${WIDTH}" height="${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
   <defs><style><![CDATA[${fontCss}]]></style></defs>
   <text x="${TEXT_X}" y="78" font-family="Oswald Med" font-size="18" letter-spacing="3.2" fill="${GOLD}">VALOR RECORD</text>
-  <rect x="${TEXT_X}" y="96" width="64" height="3" fill="${GOLD}"/>
-  <text x="${TEXT_X}" y="136" font-family="Oswald Semi" font-size="18" letter-spacing="2.6" fill="${INK}">MEDAL OF HONOR</text>
+  <rect x="${TEXT_X}" y="${RULE_Y}" width="64" height="${RULE_H}" fill="${GOLD}"/>
+  <text x="${TEXT_X}" y="${EYEBROW_BASELINE}" font-family="Oswald Semi" font-size="${EYEBROW_SIZE}" letter-spacing="2.6" fill="${INK}">MEDAL OF HONOR</text>
   ${blocks.join("\n  ")}
   ${footer.join("\n  ")}
 </svg>`);

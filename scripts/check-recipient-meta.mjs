@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 import test from "node:test";
-import { basename } from "node:path";
+import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import {
@@ -291,6 +291,67 @@ test("photo recipients have a 1200 by 630 share card and others keep the default
   }
   assert.equal(recipientShareImagePath(person("john-u-d-page")), "/og/recipients/john-u-d-page.jpg");
   assert.equal(recipientShareImagePath(person("john-j-given")), null);
+});
+
+test("share card eyebrow clears the recipient name", async () => {
+  const dir = fileURLToPath(new URL("public/og/recipients/", root));
+  const files = readdirSync(dir).filter((name) => name.endsWith(".jpg"));
+  const failures = [];
+  for (const name of files) {
+    const { data, info } = await sharp(join(dir, name))
+      .extract({ left: 590, top: 60, width: 610, height: 570 })
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+    const inkAt = (y, x0 = 18, x1 = 560) => {
+      const row = y - 60;
+      if (row < 0 || row >= info.height) return 0;
+      let count = 0;
+      const end = Math.min(x1, info.width);
+      for (let x = x0; x < end; x++) {
+        const i = (row * info.width + x) * info.channels;
+        if (data[i] > 70 || data[i + 1] > 70) count++;
+      }
+      return count;
+    };
+    const problems = [];
+    let eyebrow = 0;
+    for (let y = 123; y <= 127; y++) eyebrow += inkAt(y);
+    if (eyebrow < 40) problems.push("eyebrow missing");
+    let nameInk = 0;
+    for (let y = 168; y <= 188; y++) nameInk += inkAt(y);
+    if (nameInk < 40) problems.push("name missing");
+    for (let y = 140; y <= 156; y++) {
+      if (inkAt(y) >= 6) {
+        problems.push(`label overlaps the name at y=${y}`);
+        break;
+      }
+    }
+    for (let y = 215; y <= 218; y++) {
+      if (inkAt(y) >= 6) {
+        problems.push(`name lines meet at y=${y}`);
+        break;
+      }
+    }
+    let right = 0;
+    for (let y = 110; y <= 420; y++) right += inkAt(y, 1168 - 590, 610);
+    if (right >= 6) problems.push("text passes the right edge");
+    let bottom = 0;
+    for (let y = 618; y <= 629; y++) bottom += inkAt(y);
+    if (bottom >= 6) problems.push("text passes the bottom edge");
+    let dark = 0;
+    let clearest = 0;
+    for (let y = 430; y <= 560; y++) {
+      if (inkAt(y) < 6) {
+        dark += 1;
+        if (dark > clearest) clearest = dark;
+      } else {
+        dark = 0;
+      }
+    }
+    if (clearest < 40) problems.push(`name block meets the credit (${clearest}px clear)`);
+    if (problems.length) failures.push(`${name}: ${problems.join("; ")}`);
+  }
+  assert.equal(failures.length, 0, failures.slice(0, 8).join("\n"));
 });
 
 test("sample share cards contain the photograph, not a blank field", async () => {
