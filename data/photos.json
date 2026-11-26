@@ -19727,7 +19727,16 @@
     "wikidataId": "Q6483544"
   },
   "edward-a-silk": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/edward-a-silk.jpg",
+      "pageUrl": "https://www.cmohs.org/recipients/edward-a-silk",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Army, via the Congressional Medal of Honor Society",
+      "width": 800,
+      "height": 966,
+      "source": "Congressional Medal of Honor Society"
+    },
     "wikipedia": "https://en.wikipedia.org/wiki/Edward_A._Silk",
     "wikidataId": "Q5341480"
   },
@@ -24172,7 +24181,16 @@
     "wikidataId": null
   },
   "alexander-bonnyman-jr": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/alexander-bonnyman-jr.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Alex_Bonnyman.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Marine Corps",
+      "width": 800,
+      "height": 1124,
+      "source": "U.S. Marine Corps"
+    },
     "wikipedia": null,
     "wikidataId": null
   },
@@ -24381,7 +24399,16 @@
     "wikidataId": null
   },
   "charles-j-loring-jr": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/charles-j-loring-jr.jpg",
+      "pageUrl": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196352/maj-charles-j-loring-jr/",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Air Force",
+      "width": 800,
+      "height": 1000,
+      "source": "U.S. Air Force"
+    },
     "wikipedia": null,
     "wikidataId": null
   },
@@ -24527,7 +24554,16 @@
     "wikidataId": null
   },
   "thomas-p-payne": {
-    "photo": null,
+    "photo": {
+      "url": "/photos/thomas-p-payne.jpg",
+      "pageUrl": "https://www.defense.gov/News/News-Stories/Article/Article/2345346/president-awards-medal-of-honor-to-army-ranger-for-hostage-rescue/",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Army",
+      "width": 800,
+      "height": 1000,
+      "source": "Department of Defense"
+    },
     "wikipedia": null,
     "wikidataId": null
   },
@@ -24809,6 +24845,62 @@
       "width": 800,
       "height": 936,
       "source": "Wikimedia Commons"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "john-u-d-page": {
+    "photo": {
+      "url": "/photos/john-u-d-page.jpg",
+      "pageUrl": "https://www.defense.gov/News/Feature-Stories/story/Article/1705875/medal-of-honor-monday-army-lt-col-john-ud-page/",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Army. Department of Defense.",
+      "width": 773,
+      "height": 960,
+      "source": "Department of Defense"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "elmer-royce-williams": {
+    "photo": {
+      "url": "/photos/elmer-royce-williams.jpg",
+      "pageUrl": "https://www.dvidshub.net/image/9536500/retired-us-navy-captain-e-royce-williams-hall-heroes-induction-ceremony",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "Mass Communication Specialist 1st Class Jared Mancuso, U.S. Navy",
+      "width": 800,
+      "height": 1120,
+      "source": "DVIDS"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "junior-j-spurrier": {
+    "photo": {
+      "url": "/photos/junior-j-spurrier.jpg",
+      "pageUrl": "https://www.cmohs.org/recipients/junior-j-spurrier",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Army Signal Corps, via the Congressional Medal of Honor Society",
+      "width": 800,
+      "height": 1002,
+      "source": "Congressional Medal of Honor Society"
+    },
+    "wikipedia": null,
+    "wikidataId": null
+  },
+  "laszlo-rabel": {
+    "photo": {
+      "url": "/photos/laszlo-rabel.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Laszlo_Rabel.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "credit": "U.S. Army, 173rd Airborne Brigade",
+      "width": 299,
+      "height": 352,
+      "source": "U.S. Army"
     },
     "wikipedia": null,
     "wikidataId": null
